@@ -9,7 +9,7 @@ The CSS for these templates was written using SASS. These files can be found in 
 
 Please visit our [Department Templates Pattern Library](http://www.northwestern.edu/templates/) (login required) for additional documentation on header lockups, navigation dropdowns, page types, etc.
 
-**Note:** We are currently not accepting updates via git. If you have a submission for us to consider or have an issue with these files, please use the Contact Us link on our Departmental Templates site and we will be in touch.
+**Note:** We are currently not accepting updates via git. If you have a submission for us to consider or have an issue with these files, please use the Contact Us link on our Department Templates site and we will be in touch.
 
 
 
