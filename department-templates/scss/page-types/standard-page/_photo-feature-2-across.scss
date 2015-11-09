@@ -1,0 +1,171 @@
+// photo feature (2 across)
+
+.standard-page {
+
+    .photo-feature-2-across {
+        margin-bottom: 2rem;
+        @extend %clearfix;
+        
+        .photo-feature { 
+            width: 50%;
+            float: left;
+            position: relative;
+            max-height: 235px;
+
+            img {
+                display: block;
+            }
+            
+            .back {
+                display: none;
+                background-color: #75619e;
+                width: 100%;
+            }  
+            
+            .text-over-image {
+                color: $white;
+                padding: 0 2em;
+                position: absolute;
+                bottom: 1rem;
+                z-index: 31;
+            }
+            
+            h4 {
+                font: 30px $AkkuratProBold;
+                color: $white;
+                margin-bottom: -.5rem;
+                text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
+            }
+            
+            p {
+                font: 16px $AkkuratProRegular;
+                text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
+
+                &.link {
+                    font-family: $AkkuratProBold;
+                    text-transform: uppercase;
+
+                    &:after {
+                        background: url("#{$path-images}/icons/arrow-right-white.svg") no-repeat 50% / 6px 10px;
+                        padding-right: 2rem;
+                        content: " ";
+                    }                     
+                } 
+            } 
+
+            .back-text {
+                color: $white;
+                padding: 0 2em;
+                position: absolute;
+                z-index: 31;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                // vertically center absolutely positioned text
+                -ms-transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                text-align: center;
+
+                h4 {
+                    font: 18px $AkkuratProBold;
+                    color: #fff;
+                    margin-bottom: 1.5em;
+                    text-shadow: none;
+                }
+                
+                p {
+                    text-shadow: none;
+                
+                    &.link {
+                        margin-top: 1em;
+                    }
+                }
+            }
+     
+            .text-over-image {
+                color: $white;
+                padding: 0 2em;
+                position: absolute;
+                bottom: 1rem;
+                z-index: 31;
+            }   
+        } 
+    }
+    
+    // media queries       
+    @media screen and (max-width: 1000px) {
+        
+        .photo-feature-2-across { 
+            
+            .photo-feature { 
+                width: inherit;
+                max-width: 418px;
+                float: none;
+                margin: 0 auto;
+            }   
+        }
+        
+        .showcase {
+            
+            .left-content {
+                float: none;
+                width: 100%;
+            }  
+            
+            .quote {
+                display: none;
+            }
+            
+            .right-content {
+                float: none;
+                width: 100%;
+                margin: 1rem 0 2rem 0;
+            }            
+            
+            ul.three-columns {
+                display: none;            
+            }
+        }        
+    }    
+    
+    @media screen and (max-width: 480px) {    
+        
+        .photo-feature-2-across {
+            
+            .photo-feature { 
+                
+                .back-text {
+                    padding: 0 .5rem;
+
+                    h4 {
+                        margin-bottom: .5rem;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 420px) {
+        
+        .photo-feature-2-across {
+            
+            .photo-feature { 
+                
+                .text-over-image {
+                    padding: 0 1em;
+                    bottom: 0;
+                }
+
+                h4 {
+                   font-size: 20px; 
+                }
+            } 
+        }     
+    } 
+    
+}  // end

@@ -1,0 +1,109 @@
+// people list
+
+.standard-page {
+
+    .people-big, .people-medium, .people-small {
+        margin: 1rem 0 2rem 0;
+        
+        // removes margin for optional paragraph below div.people-wrap
+        > p:first-of-type {
+            margin-top: 0;
+        }
+        
+        .people-wrap {
+            @extend %clearfix;
+        
+            // append to div.people-wrap if there's no image 
+            &.no-image {
+
+                .people-image {
+                    display: none;
+                }
+
+                .people-content {
+                    width: 100%;
+                }
+            }      
+        }
+        
+        .people-image {
+            float: left;
+            margin-right: 20px / 836px * 100%;
+            margin-bottom: .5rem;
+        }
+        .people-content {
+            float: right;
+            
+            h4 {
+                font: 30px/1.2em $CamptonBook;
+                color: $rich-black-50;
+            }
+        }
+    }
+    
+    // 360px square image
+    .people-big {
+    
+        .people-image {
+            width: 360px / 836px * 100%;
+        }
+
+        .people-content {
+            width: 456px / 836px * 100%;
+        }        
+    }
+    
+    // 265px square image
+    .people-medium {
+        
+        .people-image {
+            width: 265px / 836px * 100%;
+        }
+        
+        .people-content {
+            width: 551px / 836px * 100%;
+        }      
+    }
+    
+    // 170px square image
+    .people-small {
+
+        .people-image {
+            width: 170px / 836px * 100%;
+        }
+        
+        .people-content {
+            width: 646px / 836px * 100%;
+        }          
+    }
+    
+    // media queries   
+    @media screen and (max-width: 600px) {    
+        .people-big {
+        
+            .people-image, .people-content {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 540px) {    
+        .people-medium {
+        
+            .people-image, .people-content {
+                float: none;
+                width: 100%;
+            }
+        }
+        
+        .people-small {
+        
+            .people-image, .people-content {
+                float: none;
+                width: 100%;
+            }
+        }        
+    } 
+    
+}  // end

@@ -1,0 +1,85 @@
+// left navigation
+
+#left-nav {
+	width: 265px / 1120px * 100%;
+	float: left;
+	font-family: $AkkuratProBold;
+    margin-bottom: 3rem;
+    outline: none !important; // removes outline from tabindex
+
+    .mobile-back-to-top {
+        display: none;
+    }
+
+    h2 {
+        border-bottom: 4px solid $light-grey;
+        min-height: 30px;
+        padding-bottom: .5rem;
+        margin-bottom: 2rem;
+        font: 18px/1.5rem $AkkuratProBold;
+        text-transform: none;
+    
+        a {
+            color: $nu-purple;
+        }
+    }
+    
+    ul {
+        list-style: none;
+        
+        ul {
+            margin-top: 1.5rem;
+            padding-left: .3rem;
+            border-left: 4px solid $nu-purple-10;
+            
+            ul {
+                margin-top: 1rem;
+                padding-left: 0;
+            }
+        }
+    }
+    
+    li {
+        padding-bottom: 1rem;
+        font-size: 18px;
+        line-height: 1.4em;
+        
+        li {
+            margin-left: .5rem;
+            padding-bottom:1rem;
+            font-size: 14px;
+            
+            li {
+                margin-left: 1rem;
+                font-family: $AkkuratProBoldItalic;
+                color: #636262;
+            }
+        }
+        
+        &:last-child {
+            padding-bottom: .3rem;    
+        }
+    }
+    
+    a {
+        color: $rich-black-50;
+        text-decoration: none;
+        display: block;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+        
+        &.active {
+            color: $nu-purple;
+        }
+    }
+}
+
+// media queries
+@media screen and (max-width: 768px) {
+    
+    #left-nav {
+        display: none;
+    }
+}

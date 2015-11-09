@@ -1,0 +1,156 @@
+// standard page (with or without left navigation)
+
+.standard-page {
+    
+    // main content regions
+    .content {
+        width: 836px / 1120px * 100%;     
+        float: right;
+        margin-bottom: 3rem;
+    } 
+    
+    .content-full {
+        width: 100%;
+    }  
+    
+    p + h3 {
+        margin-top: 2rem;
+    }
+    
+    #page {
+        margin: 2rem auto 0 auto;
+        max-width: 1120px;
+        @extend %clearfix;
+    
+        section {
+            margin-bottom: 5rem;
+        }    
+    }
+    
+    // right sidebar option
+    #sidebar {
+        width: 260px / 836px * 100%;
+        float: right;
+        margin: 0 0 2rem 2rem;
+        
+        .box {
+            background: $nu-purple-10; 
+            padding: 1rem;
+            margin-bottom: 2rem;
+            font-size: 14px;
+            line-height: 1.2em;           
+            
+            h3 {
+                font: 18px/1.2em $CamptonBold;
+                color: $rich-black-80;
+            }
+            h4 {
+                font: 16px/1.2em $AkkuratProBold;
+                color: $rich-black-80;
+            }
+            
+            p {
+                margin: .5em 0;
+            }
+            
+            ul {
+                margin: 1em 0 .5em 0;
+                
+                li { 
+                    background-position: 0 .3em
+                }
+            }
+        }
+    }
+
+    // pagination 
+    .pagination {
+        margin: 2.5em 0 2em;
+        padding-left: 0;
+
+        li {
+            display: inline;
+            padding: 0;
+        }
+
+        a {
+            background: $white;
+            border: 1px solid $medium-grey;
+            color: $rich-black-50;
+            font: 16px $AkkuratProBold;
+            display: inline-block;
+            margin: 0 .4em .3em 0;
+            padding: .5rem .8rem;
+            text-decoration: none;
+
+            &:hover {
+                background: $nu-purple;
+                color: $white;
+            }
+        }
+
+        .current-page a {
+            background: #616161 none repeat scroll 0 0;
+            color: $white;
+        }
+    }    
+    
+
+    // media queries
+    @media screen and (max-width: 1145px) {
+        
+        #page { // gives left/right margin for smaller screen widths
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+    
+    @media screen and (max-width: 970px) {    
+        
+        #page-narrow { // gives left/right margin for smaller screen widths 
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }    
+    }
+    
+    @media screen and (max-width: 768px) {
+        
+        .content, .content-full {
+            float: none;
+            width: 100%;
+         
+        }
+
+        #sidebar {
+            width: 300px / 768px * 100%;
+        }
+        
+        
+        h2 {
+            font-size: 36px;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        
+        h2 {
+            font-size: 32px;
+        }
+        
+        h3 {
+            font-size: 24px;
+        }  
+        
+        #sidebar {
+            margin-left: 0;
+            width: 100%;
+            float: none;
+    
+            .box {
+                margin-bottom: 1rem;
+            }
+        }
+        
+    }
+
+} // end

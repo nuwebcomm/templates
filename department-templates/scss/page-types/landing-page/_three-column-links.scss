@@ -1,0 +1,75 @@
+// three columns of links with images
+
+.landing-page {
+    
+    .three-column-links {
+        @extend %clearfix;
+        
+        h4 {
+            font: 30px $AkkuratProRegular;
+            color: $rich-black-50;
+            border-bottom: 4px solid $medium-grey;
+            text-transform: none;
+            padding-bottom: .5rem;
+        } 
+        
+        article {
+            float: left;
+            width: 360px / 1120px * 100%;
+            margin-right: 20px / 1120px * 100%;
+        
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            img {
+                margin-bottom: 1rem;
+            }
+            
+            p {
+                margin-top: 0;
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0; 
+            
+            li {
+                background: none;
+                padding: 0 0 .8em 0;
+                line-height: 1.5rem;
+            }
+        }
+    }
+
+    // media queries 
+    @media screen and (max-width: 875px) {
+
+        .three-column-links {        
+                    
+            article {
+                float: none;
+                width: inherit;
+                max-width: 360px;
+                margin: 0 auto 2rem auto;
+
+                &:last-child {
+                    margin-right: auto; // override
+                }
+            }        
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        
+        .three-column-links {
+            
+            h4 {
+                font-size: 24px;
+            }
+        }
+    }
+
+} // end

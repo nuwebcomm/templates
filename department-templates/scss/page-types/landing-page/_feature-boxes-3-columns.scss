@@ -1,0 +1,59 @@
+// feature boxes (3 columns)
+
+.landing-page {
+    
+    .feature-three-col {
+        display: -webkit-flex;
+        display: -ms-flexbox;        
+        display: flex; // equal height columns
+        @extend %clearfix;
+
+        .feature-box {
+            width: 360px / 1120px * 100%;   
+            float: left;
+            background: $light-grey;
+            margin-left: 20px / 1120px * 100%;
+            position: relative;
+            
+            &:first-child {
+                margin-left: 0;
+            }
+
+            .feature-copy {
+                padding: 1rem 1.5rem 4rem 1.5rem;
+            
+                h4 { 
+                    font: 21px $AkkuratProRegular;
+                    text-transform: uppercase;
+                    color: $rich-black-80;
+                }
+                
+                ul {
+                    margin-left: 0;
+                    padding-left: .5em;
+                }             
+            }  
+        }        
+    } 
+    
+   // media queries
+    @media screen and (max-width: 875px) {    
+        
+        .feature-three-col {
+            display: inherit;
+
+            .feature-box {
+                width: inherit;
+                max-width: 360px; 
+                float: none;
+                background: $light-grey;
+                margin: 0 auto 2rem auto;
+
+                &:first-child {
+                    margin-left: auto;
+                }
+            }
+        }   
+    }
+
+} // end

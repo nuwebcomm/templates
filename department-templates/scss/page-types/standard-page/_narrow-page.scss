@@ -1,0 +1,87 @@
+// for narrow page width without left navigation (930px wide)
+// body class should have .narrow-page *and* .standard-page
+
+.narrow-page {
+
+    #page {
+        margin: 2rem auto 0 auto;
+        max-width: 930px;    
+    }
+    
+    .quote {
+        width: 265px / 930px * 100%;
+        margin-right: 20px / 930px * 100%;
+        float: left;
+    }
+    
+    .narrow-content {
+        width: 645px / 930px * 100%;
+        float: right;
+        
+        &.full { // append this class when there's no quote on left
+            width: 100%;
+            float: none;
+        }
+        
+        .intro {
+            font: 20px $CamptonExtraLight;
+        }
+        
+        .slashes {
+            font: 20px $CamptonExtraLight;
+            
+            ul {
+                padding: 0;
+                margin: 2rem 0 2rem 0;
+
+                li {
+                    background: url("#{$path-images}/icons/dkpurple-slash.svg") no-repeat 0 2px / 18px 18px;
+                    display: inline;
+                    padding: 0 .25rem 0 1.5rem;
+
+                    &:first-child {
+                        background: none;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 970px) {
+  
+        #page {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        
+        .narrow-wrap {
+            display: -webkit-flex;
+            display: -ms-flexbox;            
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;          
+        }
+        
+        .quote {
+            float: none;
+            width: 100%;
+            font-size: 24px;
+        }
+        
+        .narrow-content {
+            float: none;
+            width: 100%;
+            -webkit-order: -1;
+            -ms-flex-order: -1;
+            order: -1; // flexbox moves content to top   
+            margin-bottom: 2rem;
+        }
+    } 
+    
+} // end

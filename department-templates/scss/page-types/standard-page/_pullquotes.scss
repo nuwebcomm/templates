@@ -1,0 +1,44 @@
+// pullquotes
+
+.standard-page {
+
+    .quote {
+        font: 24px/1.2em $CamptonBook;
+        color: $nu-purple;
+        margin-bottom: .5em;
+
+        span {
+            background: url("#{$path-images}/icons/quote.png") no-repeat;
+            width: 35px;
+            height: 24px;
+            display: inline-block;
+            margin-right: .5rem;
+        }  
+        
+        p {
+            margin-top: 0;
+        }
+        
+        figcaption {
+            font: 16px/1.4em $AkkuratProRegular;
+            color: $rich-black-50;
+        }
+    }   
+    
+    // media queries
+    @media screen and (max-width: 1145px) {
+        
+        .quote {
+            font-size: 20px;
+        }
+    }    
+    
+    @media screen and (max-width: 900px) {
+        
+        .quote {
+            font-size: 18px;
+        }
+    }    
+ 
+}  
+// end

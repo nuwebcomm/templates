@@ -1,0 +1,124 @@
+// large feature (photo/text/links)
+
+.landing-page {
+
+    .large-feature {
+        padding: 4rem;
+        background: url("#{$path-images}/slashes-grey-bg.gif") repeat; 
+    }
+    
+    .large-feature-inner {
+        max-width: 1120px;
+        margin: 3rem auto 0 auto;
+        box-sizing: content-box;   
+        @extend %clearfix;
+    
+       .content-side {
+            width: 880px / 1120px * 100%;
+            float: left;   
+            border-right: 1px solid $medium-grey;
+            padding-right: 40px / 1120px * 100%;
+
+            img {
+                float: left;
+                margin: 0 2rem 2rem 0
+            }
+           
+            h4 {
+                font: 48px/1.1em $CamptonBold;
+                margin-bottom: 3rem;
+                color: $nu-purple;
+            }
+        }        
+
+        ul {
+            width: 240px / 1120px * 100%;
+            float: left;
+            padding-left: 0;
+            margin-left: 0;
+
+            li {
+                background: none;
+                line-height: 1.2rem;
+                margin-bottom: 1rem;
+
+                &:after {
+                    background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 50% / 6px;
+                    padding-right: 2rem;
+                    content: " ";            
+                }
+                
+                a {
+                    font-family: $AkkuratProBold;
+                }
+            }
+        }    
+    }
+
+    // media queries 
+    @media screen and (max-width: 850px) {
+        
+        .large-feature-wrap {
+            padding: 2rem;
+        }
+        
+        .large-feature {
+            padding: 2rem;
+            
+            .content-side {
+                
+                img {
+                    float: none;
+                    margin-bottom: 1rem;
+                }
+                
+                h4 {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        
+        .large-feature {
+            
+            .content-side, ul {
+                float: none;
+                width: 100%;
+                border: none;
+                
+                li {
+                    padding-left: 0;           
+                }
+            }             
+        }     
+    }
+
+    @media screen and (max-width: 480px) {
+        
+        .large-feature-wrap {
+            padding: 1rem;
+        }
+        
+        .large-feature {
+            padding: 2rem 1rem;
+                
+            h3 {
+                font-size: 20px;
+                
+                &:before, &:after {
+                    background: none;
+                }
+            }
+            
+            .content-side {
+                
+                h4 {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+} // end

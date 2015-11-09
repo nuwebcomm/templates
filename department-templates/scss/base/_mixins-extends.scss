@@ -1,0 +1,25 @@
+// mixins and extends
+
+// mixins
+@mixin clearfix() {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@mixin borderFade($s: .3s) {
+	-webkit-transition: $s linear border;
+	-moz-transition: $s linear border;
+	-ms-transition: $s linear border;
+	-o-transition: $s linear border;
+	transition: $s linear border;
+}
+
+// extends
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

@@ -1,0 +1,64 @@
+// number boxes (purple background with faint slashes)
+
+.landing-page {
+    
+    .number-boxes {
+        background: $nu-purple url("#{$path-images}/purple-slashes-bg.gif") repeat;
+        padding: 2em 1em;
+        text-align: center;
+        
+        .half {
+            width: 50%;
+            float: left;
+            border-right: 1px solid $nu-purple-60;
+            padding: 2rem 7rem;
+
+            &:last-child {
+                border-right: none;
+            }
+            
+            p {
+            
+                font: 24px $CamptonExtraBold;
+                color: $nu-purple-30;
+                
+                span {
+                    font: 96px $CamptonBold;
+                    color: $white;
+                }
+            }
+        }
+    }      
+
+    // media queries
+    @media screen and (max-width: 768px) {    
+        
+        .number-boxes .half {
+            padding: 2rem;
+
+            p {
+                font-size: 18px;
+
+                span {
+                   font-size: 60px; 
+                }
+            }
+        }     
+    }   
+    
+    @media screen and (max-width: 480px) {    
+        
+        .number-boxes .half {
+            width: 100%;
+            float: none;
+            padding: 2rem;
+            border-right: none;
+            border-bottom: 1px solid $nu-purple-60;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }   
+    }
+
+} // end

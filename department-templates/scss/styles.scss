@@ -1,0 +1,60 @@
+// Northwestern University :: Departmental Templates v1.0 - 9 November 2015
+// developed by Christopher Garcia :: Questions? Email: webcomm-support@northwestern.edu
+// Office of Web Communications/University Relations, in conjunction with Global Marketing
+
+// the base (do not modify)
+@import "base/reset";
+@import "base/variables";
+@import "base/ie";
+@import "base/mixins-extends";
+@import "base/core";
+@import "base/typography";
+@import "base/forms";
+
+// the main sections (do not modify)
+@import "sections/header";
+@import "sections/search";
+@import "sections/top-nav";
+@import "sections/left-nav";
+@import "sections/mobile-nav";
+@import "sections/footer";
+@import "sections/responsive-tabs";
+@import "sections/heroes";
+
+// standard-page modules (do not modify)
+@import "page-types/standard-page/main";
+@import "page-types/standard-page/photo-feature-2-across"; 
+@import "page-types/standard-page/feature-boxes-2-columns";
+@import "page-types/standard-page/stats-callout"; 
+@import "page-types/standard-page/alternate-photo-float";
+@import "page-types/standard-page/showcase";
+@import "page-types/standard-page/pullquotes";
+@import "page-types/standard-page/people-list";
+@import "page-types/standard-page/news-event";
+@import "page-types/standard-page/plus-section"; 
+@import "page-types/standard-page/two-column-links";
+@import "page-types/standard-page/expand-collapse";
+@import "page-types/standard-page/narrow-page";
+
+// landing-page modules (do not modify)
+@import "page-types/landing-page/main";
+@import "page-types/landing-page/photo-feature-2-across";
+@import "page-types/landing-page/photo-feature-3-across";
+@import "page-types/landing-page/feature-boxes-2-columns";
+@import "page-types/landing-page/feature-boxes-3-columns";
+@import "page-types/landing-page/three-column-links";
+@import "page-types/landing-page/three-column-list";
+@import "page-types/landing-page/large-feature";
+@import "page-types/landing-page/stats-callout";
+@import "page-types/landing-page/alternate-photo-float";
+@import "page-types/landing-page/background-select";
+@import "page-types/landing-page/pullquotes";
+@import "page-types/landing-page/number-boxes";
+@import "page-types/landing-page/news-events";
+@import "page-types/landing-page/slideshow";
+
+// add your own modules below
+
+
+// for specificity (do not modify)
+@import "base/buttons";

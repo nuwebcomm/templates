@@ -1,0 +1,123 @@
+// alternating photo float (images and text)
+
+.standard-page {
+
+    .alternate-photo-float {
+        margin-bottom: 5rem;
+        @extend %clearfix;
+        
+        h4 {
+            font: 30px $AkkuratProRegular;
+            color: $rich-black-50;
+            border-bottom: 4px solid $medium-grey;
+            text-transform: none;
+            padding-bottom: .5rem;
+        }
+        
+        .image-left, .image-right, .text {
+            width: 360px / 836px * 100%; 
+            max-width: 360px;
+            margin-right: 20px / 836px * 100%; 
+            float: left;
+            position: relative;
+            max-height: 360px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        
+        .text {    
+            width: 455px / 836px * 100%; 
+            max-width: 455px;  
+            margin-right: 20px / 836px * 100%; 
+            max-height: none;       
+            
+            &:last-child {
+                margin-right: 0;
+            }            
+            
+            img {
+                z-index: 30;
+            }
+        }
+    }      
+    
+    // media queries
+    @media screen and (max-width: 875px) {
+        
+        .alternate-photo-float {
+            display: -webkit-flex;
+            display: -ms-flexbox;            
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;  
+            margin-bottom: 2rem;
+
+            h4 {
+                margin-top: 1rem;
+            }
+
+            .image-left, .image-right, .text  {
+                width: 100%; 
+                float: none;
+                position: relative;
+
+                &:last-child {
+                    margin-right: auto;
+                }     
+
+                .quote p {
+                    margin-top: 1em;
+                }
+            } 
+
+            .text {
+                max-width: 360px;
+            }
+
+            .image-right {
+                -webkit-order: -1;
+                -ms-flex-order: -1;                
+                order: -1; // flexbox moves content to top
+            }            
+        } 
+    }    
+
+    @media screen and (max-width: 480px) {    
+         
+        .alternate-photo-float {
+            
+            .text {
+                
+                .column { // multiple column option
+                    width: 100%;
+                }              
+            }
+        }
+    }
+    
+    @media screen and (max-width: 420px) {
+        
+        .alternate-photo-float {
+            
+            .text {
+                
+                ul {
+                    
+                    &.two-columns {
+                        -moz-column-count: inherit;
+                        -moz-column-gap: inherit;;
+                        -webkit-column-count: inherit;
+                        -webkit-column-gap: inherit;
+                        column-count: inherit;
+                        column-gap: inherit;
+                    }
+                }
+            }
+        }      
+    }  
+     
+}  // end

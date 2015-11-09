@@ -1,0 +1,181 @@
+// Top Navigation 
+
+#mobile-links {
+    display: none;
+}
+
+#top-nav {
+	min-height: 50px;
+	background: $nu-purple;
+	color: #fff;
+	z-index: 9999;
+    border-bottom: 5px solid $white;
+ 
+    ul {
+        display: table;
+        width: 100%;
+        background: $white;
+        position: relative; 
+
+        li {
+            display: table-cell;
+            text-align: center;
+            font: 18px $AkkuratProBold;
+            width: 180px / 1120px * 100%;
+
+            &:hover a {
+                background: $light-grey;
+            } 
+          
+            &:hover .dropdown, &:hover .dropdown-one-column, &:hover .dropdown-two-column {
+                position: absolute;
+                left: 0;          
+            } 
+            
+            a {
+                color: $nu-purple;
+                text-decoration: none;
+                display: block;
+                padding: 1rem .3rem;                   
+         
+                &:hover {
+                    background: $light-grey;
+                }
+     
+                li:hover {
+                    background: $light-grey;
+                }   
+            }
+            
+            &.active a {
+                background: $nu-purple-60;
+                color: $white;
+            }
+            
+            .dropdown-arrow { // adds arrow
+                background: url("#{$path-images}/icons/arrow-down-ltpurple.svg") no-repeat 50%;
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                margin-left: .5em;                
+            }
+        }
+        
+        .dropdown, .dropdown-one-column, .dropdown-two-column {
+            position: absolute;
+            background: $light-grey;  
+            left: -9999em;
+            z-index: 9998;
+            width: 100%;
+            display: inherit;
+            padding: 2em;
+            text-align: left;            
+        
+            .nav-intro, .nav-links {
+                width: 50%;
+                float: left; 
+                text-align: left;
+            }
+
+            p.intro {
+                font: 30px $CamptonBold;
+                color: $nu-purple;
+                margin: 0 0 1rem 0;
+                padding-right: 2rem;
+            }           
+            
+            .nav-links {
+                border-left: 2px solid $medium-grey;
+                padding-left: 1rem;
+            }
+            
+            ul {  
+                display: block;
+                background: inherit;
+            
+                li {
+                    display: block;
+                    text-align: left;
+                    width: inherit;
+                    line-height: 1.4em;
+
+                    a {
+                        padding: .3em 0;  
+                        display: inline-block;
+                        background: inherit;
+                        color: $nu-purple;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }                                        
+                }
+            }
+        }
+        
+        // single column dropdown without nav intro text/button
+        .dropdown-one-column {
+            
+            .nav-links {
+                border-left: none;
+                padding-left: 0;
+                width: 100%;
+            }
+        }        
+
+        // two column dropdown without nav intro text/button
+        .dropdown-two-column {
+            
+            ul {
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                column-count: 2;
+                -webkit-column-gap: 2rem;
+                -moz-column-gap: 2rem;
+                column-gap: 2rem;
+                -webkit-column-rule: 2px solid $medium-grey;
+                -moz-column-rule: 2px solid $medium-grey;
+                column-rule: 2px solid $medium-grey;
+
+                li {
+                    background: none;
+                    -webkit-column-break-inside: avoid;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                    display: inline-block;
+                }
+            }         
+        }        
+    }
+    
+    // for standard-width dropdown menus (not to be mixed with full-width navigation)
+    &.narrow-dropdown { // appends to #top-nav
+
+        ul li {
+            position: relative;
+        
+            &:hover ul.nav-align-right { // for rightmost nav item so dropdown doesn't fall outside of site boundries
+                right: 0;
+                left: inherit;
+            }
+
+            &:hover ul.nav-align-right li {
+               text-align: right;
+
+            }        
+        }
+        
+        .dropdown {
+            width: 320px;
+            padding: 1em;
+        }
+    }    
+}
+
+// media queries 
+@media screen and (max-width: 768px) {
+    
+    #top-nav {
+        display: none;
+    } 
+}

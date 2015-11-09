@@ -1,0 +1,38 @@
+// twitter feed (aka plus section)
+
+.standard-page {
+
+    .plus-section { 
+        margin: 2rem 0;
+        padding-bottom: 1rem;
+        border-bottom: 4px solid $light-grey;
+        @extend %clearfix;
+        
+        &:last-of-type {
+            border-bottom: none;
+        }
+        
+        .left-side {
+            float: left;
+            width: 418px / 836px * 100%;
+        }
+        
+        .right-side {
+            float: right;
+            width: 365px / 836px * 100%;        
+        }
+    }    
+
+    // media queries       
+    @media screen and (max-width: 600px) {    
+        
+        .plus-section {
+            
+            .left-side, .right-side {
+                width: 100%;
+                float: none;
+            }
+        }   
+    }
+
+} // end

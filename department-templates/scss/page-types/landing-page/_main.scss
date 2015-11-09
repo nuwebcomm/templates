@@ -1,0 +1,124 @@
+// landing pages (full-width)
+
+.landing-page {
+    
+    section {
+        margin-bottom: 5rem;
+
+        &.no-bottom-margin { // this is for heroes when you don't want bottom margin
+            margin-bottom: 0;
+        }        
+    }
+
+    #back-to-top {
+        margin-bottom: 2rem;
+    }    
+
+    #page {
+        margin: 0 auto;
+        max-width: 1440px;
+        @extend %clearfix;
+    }    
+    
+     // main content region
+    .content {
+        font-size: 16px;
+        line-height: 1.7em;
+        width: 100%;
+        
+        // section headers
+        h3 {
+            font: 24px $CamptonExtraBold;
+            color: $nu-purple;
+            text-align: center;
+
+            &:before {
+                background: url("#{$path-images}/icons/grey-slash.svg") no-repeat 50% / 17px 21px;
+                padding: 0 20px;
+                content: " ";
+            }  
+
+            &:after {
+                background: url("#{$path-images}/icons/grey-slash.svg") no-repeat 50% / 17px 21px;
+                padding: 0 25px;
+                content: " ";
+            }
+        }
+
+        p.subhead {
+            color: #4e2a84;
+            font: 46px/1.2em $CamptonBook;
+            margin-bottom: 1rem;
+        }        
+        
+        h3+p  { // moves Campton Extra Light h2 up - conpensates for h1 margin-bottom
+           // margin-top: -3rem;
+        }  
+        
+        // section top wrapper for non-hero and non-background-select areas
+        .section-top {
+            margin-bottom: 3rem;
+            text-align: center;
+            
+            h3 {
+               margin-bottom: 4rem; 
+            
+                &+p {
+                    margin-top: -2rem;
+                }
+            }
+        }
+    }   
+
+    .center-list {
+        list-style: none;
+        margin: 2rem 0 0 0;
+        padding: 0;
+        text-align: center;
+     
+        li {
+            background: none;
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .content {
+            
+            // consistent headers across elements
+            .section-top, .background-select, .large-feature-wrap, .in-page {
+                
+                h3 {
+                    font: 20px $CamptonExtraBold;
+                    margin-bottom: 1rem;
+
+                    &+p {
+                        margin-top: 0;
+                    }                    
+                    
+                    &:before {
+                        background: none;
+                        padding: 0;
+                    } 
+
+                    &:after {
+                        background: none;
+                        padding: 0;
+                    }            
+                }
+                
+                p.subhead {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+} // end of .landing-page

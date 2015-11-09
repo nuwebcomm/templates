@@ -1,0 +1,56 @@
+// expand/collapse (i.e. for faq's)
+
+ul.expander {
+    margin-bottom:	2em;
+    padding: 0;
+    list-style: none;
+    margin: 0 0 3rem 0;
+
+    > li {
+        margin: 0;
+        padding: .5em 0;
+        border-top: 1px solid $light-grey;
+        background: none;
+
+        &:last-child {
+            border-bottom: 1px solid $light-grey;
+        }
+
+        span.plus, span.minus {
+            padding-left: 2.5rem;
+            color: $nu-purple;
+            font-weight: normal;
+            cursor: pointer;
+            display: inline-block;
+            font-family: $AkkuratProBold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        span.plus {
+             background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 8px 4px / 8px 16px;
+        }
+
+        span.minus {
+             background: url("#{$path-images}/icons/arrow-down-dkpurple.svg") no-repeat 4px 6px / 16px 8px;
+        }
+
+        div {
+            margin: 0 2.5rem;
+
+            &.showme {
+                max-height: 2000px;
+                overflow: hidden;
+            }
+            &.hideme {
+                max-height: 0;
+                overflow: hidden;
+                border: none;
+                margin: 0;
+            }             
+        }             
+    }
+
+} // end

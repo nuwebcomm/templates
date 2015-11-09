@@ -1,0 +1,305 @@
+// forms
+
+.web-form {
+
+	form {
+		margin-bottom: .5rem;
+    }
+
+	fieldset {
+		border: 1px solid $light-grey;
+		padding: .35em .625em .75em;
+		margin: 0;
+		border: 0;
+	}
+
+	legend {
+		white-space: normal;
+		margin-left: -7px;
+		display: block;
+		width: 100%;
+		padding: .3em 0;
+		margin-bottom: .3em;
+		color: $rich-black-80;
+		border-bottom: 1px solid $medium-grey;
+	}
+
+	.field {
+		margin-bottom: 1em;
+	   
+        p {
+            margin: 0;
+        }
+    }    
+    
+	label, .label {
+		margin: .5em 0 .2em;
+		display: block;
+
+        &.inline {
+            display: inline-block;
+            margin: .5em 1em .2em 0;
+        }
+        
+		&.right {
+			font-style: italic;
+			font-weight: normal;
+			font-size: .9em;
+		}
+
+		.required {
+			display: inline;
+		}
+	}
+
+	input+label, select+label, .label-secondary+label, .required+label {
+		margin: 1.5rem 0 0;
+	}
+
+	input, input[type="text"] {
+		border: 1px solid $medium-grey;
+		font: $form-font-size/#{$form-line-height} $AkkuratProBold;
+		color: $rich-black-80;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-webkit-border-radius: 0;
+		padding: .25rem .5rem;
+		margin: 0 .65rem 0 0;
+	}
+
+	input[type=checkbox], input[type=radio] {
+		box-sizing: border-box;
+		padding: 0;
+		height: 13px;
+		width: 13px
+	}
+
+	input[type=search] {
+		-webkit-appearance: textfield;
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box
+	}
+
+	input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
+
+	input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
+		display: inline-block;
+		border: 1px solid $medium-grey;
+		font-size: $form-font-size;
+		line-height: $form-line-height;
+		color: $rich-black-50;
+		border-radius: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-font-smoothing: antialiased;
+		height: 2.688rem;
+		min-width: 30rem;
+		background: $white;
+		@include borderFade();
+
+		&.required {
+			border: 1px solid $red;
+		}
+	}
+
+	input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=date]:focus, input[type=month]:focus, input[type=time]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=week]:focus, input[type=number]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=color]:focus, select:focus, textarea:focus {
+		outline: 0 none;
+		border-color: $nu-purple;
+	}
+    
+	input[type=text].required:focus, input[type=password].required:focus, input[type=email].required:focus, input[type=url].required:focus, input[type=date].required:focus, input[type=month].required:focus, input[type=time].required:focus, input[type=datetime].required:focus, input[type=datetime-local].required:focus, input[type=week].required:focus, input[type=number].required:focus, input[type=search].required:focus, input[type=tel].required:focus, input[type=color].required:focus, select.required:focus, textarea.required:focus {
+		border-color: $red;
+	};
+
+	input[type=file]:focus, input[type=radio]:focus, input[type=checkbox]:focus {
+		outline:thin dotted  $rich-black-80;
+		outline: 1px auto $nu-purple;
+	}
+
+	input[type=text][disabled], input[type=password][disabled], input[type=email][disabled], input[type=url][disabled], input[type=date][disabled], input[type=month][disabled], input[type=time][disabled], input[type=datetime][disabled], input[type=datetime-local][disabled], input[type=week][disabled], input[type=number][disabled], input[type=search][disabled], input[type=tel][disabled], input[type=color][disabled], select[disabled], textarea[disabled] {
+		cursor: not-allowed;
+		background-color: $light-grey;
+		color: $medium-grey;
+	}
+
+	input[readonly], select[readonly], textarea[readonly], input[readonly]:focus, select[readonly]:focus, textarea[readonly]:focus {
+		background: $light-grey;
+		color:  $rich-black-50;
+		border-color: $medium-grey;
+	}
+
+	input[type=file] {
+		background-image: none;
+		font: normal $form-font-size $form-base-font;
+
+		&:hover {
+			background-image: none;
+		}
+	}
+
+	select {
+		background: $white url("#{$path-images}/icons/arrow-down-dkgrey.svg")  no-repeat top 50% right .5rem / 17px 10px;
+		color: $rich-black-50;
+		font: $form-font-size/#{$form-line-height} $AkkuratProBold;
+		border: 1px solid $medium-grey;
+		display: inline-block;
+		height: 2.688rem;
+		margin: 0 .65rem 0 0;
+		padding: .25rem 1.5rem .25rem .5rem;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-webkit-border-radius: 0;
+		@include borderFade();
+
+		&::-ms-expand {
+			display: none;
+		}
+
+		&:-moz-focusring {
+			color: transparent;
+			text-shadow: 0 0 0 #000;
+		}
+
+		option {
+			font-family: $AkkuratProRegular;
+		}
+	}
+
+	select[multiple] {
+		height: auto
+	}
+
+	textarea {
+		border: 1px solid $medium-grey;
+		font: $form-font-size/#{$form-line-height} $AkkuratProBold;
+		padding: 0.3em 1.5em 0.3em .5em;
+		width: 100%;
+        height: 8em;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-webkit-border-radius: 0;
+		overflow: auto;
+		vertical-align: top
+	}
+
+	.checkbox {
+		margin-right: .3em;
+
+	.right {
+		font-weight: bold;
+		font-style: normal;
+		font-size: 1em;
+	}
+
+    // required
+
+		&.required {
+			display: inline;
+		}
+	}
+
+	.radio {
+		margin-right: .3em;
+
+		&.required {
+			display: inline;
+		}
+	}
+
+	.required {
+		color: $red;
+		font-weight: normal;
+		display: block;
+	}
+
+	label, .label {
+		span {
+			&.required {
+				display: inline;
+				margin-left: 0.5rem;
+			}
+		}
+	}
+
+	span {
+		&.required {
+			display: inline;
+		}
+	}
+
+	.form-help-inline, .form-message-inline {
+		display: inline-block;
+		padding-left: .3em;
+		color: $rich-black-50;
+		vertical-align: middle;
+	}
+
+	.form-message {
+		display: block;
+	}
+
+	.label-secondary, .suggestion {
+
+	}
+
+    // buttons
+	button::-moz-focus-inner, input::-moz-focus-inner {
+		border: 0;
+		padding: 0
+	}
+
+	button, input, select, textarea {
+		font-size: 100%;
+		vertical-align: baseline;
+		vertical-align: middle
+	}
+
+	button, input {
+		line-height: normal;
+	}
+
+	button, input[type=button], input[type=reset], input[type=submit] {
+		-webkit-appearance: button;
+		cursor: pointer;
+		overflow: visible;
+	}
+
+	button[disabled], input[disabled] {
+		cursor: default;
+	}
+}
+
+// media queries
+@media only screen and (max-width: 640px) {
+
+	.web-form {
+        
+		button[type=submit] {
+			margin: .7em 0 0
+		}
+
+		input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month],  input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search],  input[type=tel], input[type=color],  label {
+			margin-bottom: .3em;
+			display: block;
+		}
+
+		input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
+			width: 100%;
+			min-width: inherit;
+		}
+
+		.form-help-inline, -message-inline, -message {
+			display: block;
+			font-size: 80%;
+			padding: .2em 0 .8em
+		}
+	}
+}

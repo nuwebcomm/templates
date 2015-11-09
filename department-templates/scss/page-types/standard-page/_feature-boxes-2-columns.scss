@@ -1,0 +1,66 @@
+// feature boxes (2 columns)
+
+.standard-page {
+
+    .feature-two-col {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; // equal height columns        
+        margin-bottom: 20px / 836px * 100%;
+        @extend %clearfix;
+
+        .feature-box {
+            width: 407px / 836px * 100%;   
+            float: left;
+            background: $light-grey;
+            margin-left: 20px / 836px * 100%;
+            position: relative;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &.no-button { // tightens things up when there's no button
+                
+                .feature-copy {
+                    padding-bottom: 1rem;
+                }
+            }            
+            
+            .feature-copy {
+                padding: 1rem 1.5rem 4rem 1.5rem;
+     
+                h4 { 
+                    font: 21px $AkkuratProRegular;
+                    text-transform: uppercase;
+                    color: $rich-black-80;
+                }
+                
+                ul {
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+            }
+
+        }        
+    }
+    
+    // media queries 
+    @media screen and (max-width: 480px) {
+        
+        .feature-two-col {
+            display: inherit;
+            margin-bottom: 0;
+
+            .feature-box {
+                width: inherit;
+                max-width: 407px; 
+                float: none;
+                background: $light-grey;
+                margin-left: 0;
+                margin-bottom: 2rem;
+            }
+        }        
+    }
+     
+}  // end

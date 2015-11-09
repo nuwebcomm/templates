@@ -1,0 +1,17 @@
+// mixins and extends
+
+// mixins
+@mixin clearfix() {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+// extends
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

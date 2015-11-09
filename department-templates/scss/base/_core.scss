@@ -1,0 +1,356 @@
+// core
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll; // prevents scrollbar jumping on small pages
+}
+
+body {
+    font: 62.5%/1.7em $AkkuratProRegular;
+    text-rendering: optimizeLegibility; // enables kerning
+    -webkit-font-smoothing: antialiased; // fixes blurry fonts on chrome/safari
+    -moz-osx-font-smoothing: grayscale; // fixes blurry fonts on firefox for osx
+    -webkit-text-size-adjust: 100%; // disables auto-zoom text, allows user zoom
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    color: $rich-black-80;
+    background: $white;
+    min-width: 98%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+a.screen-reader-shortcut {
+    left: .5em;
+    position: absolute;
+    top: -99px;
+
+    &:focus {
+        background-color: $white;
+        box-shadow: 0 0 .3rem .3rem rgba(0, 0, 0, 0.6);
+        color: $nu-purple-120;
+        font: bold 1.5em sans-serif;
+        padding: 1rem;
+        top: .5rem;
+        z-index: 5;
+    }
+}
+
+#main-content {
+    font-size: 16px;
+    line-height: 1.7em;
+    outline: none !important; // removes outline from tabindex
+}
+    
+// centered containers
+.contain-780 {
+    margin: 0 auto;
+    max-width: 780px;
+    box-sizing: content-box;
+}
+
+.contain-850 {
+    margin: 0 auto;
+    max-width: 850px;
+    box-sizing: content-box;
+}
+
+.contain-970 {
+    margin: 0 auto;
+    max-width: 970px;
+    box-sizing: content-box;
+}
+
+.contain-1120 {
+    margin: 0 auto;
+    max-width: 1120px;
+    box-sizing: content-box;    
+}
+
+.contain-1440 {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+// hide from desktop {
+#back-to-top {
+    display: none;
+}
+
+// breadcrumbs
+ul#breadcrumbs {
+    list-style: none;
+    font: 12px/1.5rem $AkkuratProBold;
+    text-transform: uppercase;
+    padding: 0 0 .5rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid $light-grey;
+    min-height: 30px;
+
+    li { 
+        display: inline;
+        background: url("#{$path-images}/icons/arrow-right-ltpurple.svg") no-repeat .5rem .1rem / 5px 8px;
+        padding-left: 2em;    
+
+        &:first-child {
+            background: none;
+            padding-left: 0;
+        }
+
+        &.active {
+            color: $nu-purple-120;
+        }         
+    }
+
+    a {
+        color: $rich-black-50;
+    } 
+}
+
+// instagram box
+#instagram {
+
+    ul {
+        display: block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        
+        li {
+            background: none;
+            margin: 0;
+            padding: 0;
+            float: left;
+            width: 240px / 1440px * 100%;
+        }
+        
+        img {
+            display: block;  
+        }
+    }
+    
+    p {
+        font: 16px $AkkuratProBold;
+        padding: 1rem .5rem;
+        margin: 0;
+        text-transform: uppercase;
+        color: $white;
+        background: $nu-purple;
+        text-align: center;
+    
+        a {
+            color: $nu-purple-30;
+        }
+    }
+}
+
+// misc
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+
+    .outline { // adds border around images
+        border: 1px solid $medium-grey;
+    }
+}
+
+.responsive-table { // added by jquery (scripts.js) to enable mobile scrolling on large tables
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; // adds scrollbar when swiping table for ios
+    width: 100%;
+    margin: 1em 0 2em 0;
+}
+
+// for video embeds
+.responsive-container { 
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0; 
+        height: 100%;
+        width: 100%;
+
+    }
+    .overlay {
+        position: absolute;
+        bottom: 20%;
+        width: 100%;
+        text-align: center;
+        z-index: 5000;
+        cursor: default;  
+
+        h2 {
+            color: white;
+            font: 60px/1.2em "Campton Bold",Impact,sans-serif;
+            margin-bottom: 1rem;
+            position: relative;
+            text-shadow: 2px 2px 0 black;
+        }        
+    }
+}
+
+a.photo-hover:hover { // adds hover to large images with this class on the anchor
+    opacity: .8;
+}
+
+.hide-label {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.group:after { // clearfix
+    content: "";
+    display: table;
+    clear: both;
+}
+
+// adds icons to matched file type
+a[href$=".pdf"], a[href$=".PDF"], a.pdf {
+    padding-right: 1rem;
+    background: url("#{$path-images}/icons/pdf.png") no-repeat right center;
+}
+
+a[href$=".docx"], a[href$=".DOCX"], a.docx, a[href$=".doc"], a[href$=".DOC"], a.doc {
+    padding-right: 1rem;
+    background: url("#{$path-images}/icons/word.png") no-repeat right center;
+}
+
+a[href$=".xlsx"], a[href$=".XLSX"], a.xlsx, a[href$=".xls"], a[href$=".XLS"], a.xls {
+    padding-right: 1rem;
+    background: url("#{$path-images}/icons/excel.png") no-repeat right center;
+}
+
+// media queries
+@media screen and (max-width: 1140px) { // adds left/right margin for smaller screen widths
+    
+    #main-content .contain-1120 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .responsive-container {
+        .overlay {
+            bottom: 20%;
+            
+            h2 {
+                font-size: 48px;
+            }        
+        }
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    
+    .hide-mobile, a.screen-reader-shortcut {
+        display: none;
+    }
+    
+    #page { // sets stage to reorder #left-nav for mobile
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;              
+    }   
+    
+    .responsive-container {
+        .overlay {
+            bottom: 15%;
+            
+            h2 {
+                font-size: 36px;
+                margin-bottom: .5rem;
+            }        
+        }
+    }  
+    
+    #back-to-top {
+        display: block;
+        font: 18px $AkkuratProBold;
+        color: $nu-purple-120;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2rem 0;
+
+        &:before {
+            background: url("#{$path-images}/icons/arrow-down-ltpurple.svg") no-repeat 50% / 15px 19px;
+            padding: 0 25px;
+            content: " ";    
+        }
+
+        &:after {
+            background: url("#{$path-images}/icons/arrow-down-ltpurple.svg") no-repeat 50% / 15px 19px;
+            background-size: 15px 19px;
+            padding: 0 25px;
+            content: " ";    
+        }
+    }
+    
+    #back-to-top {
+        margin: 2rem 0 2rem 0;
+
+        &:before {
+            background: url("#{$path-images}/icons/arrow-up-ltpurple.svg") no-repeat 50% / 15px 19px;             
+        }
+        
+        &:after {
+            background: url("#{$path-images}/icons/arrow-up-ltpurple.svg") no-repeat 50% / 15px 19px;
+        }
+    }
+        
+    // instagram feed
+    #instagram {
+        
+        ul li {
+            
+            width: 256px / 768px * 100%;
+
+            img {
+               width: 256px;
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 480px) {
+    .responsive-container {
+        
+        .overlay {
+            bottom: 10%;
+            
+            h2 {
+                font-size: 24px;
+                margin-bottom: .5rem;
+            }        
+        }
+    }    
+        
+    // instagram
+    #instagram {
+        
+        ul li {
+            width: 240px / 480px * 100%;
+
+            img {
+               width: 240px;   
+            }
+        }
+    }    
+}

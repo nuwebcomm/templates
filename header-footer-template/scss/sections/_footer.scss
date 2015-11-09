@@ -1,0 +1,316 @@
+// footer
+
+footer {
+    background: $nu-purple;
+    color: $white;
+    font: 12px/2.1em $AkkuratProRegular;
+    padding: 3rem 0;
+    width: 100%;
+
+    ul {
+        list-style: none;
+    }    
+
+    a {
+        font-family: $AkkuratProRegular;
+        color: $white;
+        text-decoration: underline;          
+
+        &:hover {
+            text-decoration: none;
+        }
+    }    
+}
+
+.footer-content {
+    width: 210px / 970px * 100%;
+    display: inline-block;
+    margin-right: 53px / 970px * 100%;
+    position: relative;
+    vertical-align: top;
+
+    &:nth-of-type(1) { 
+        
+        img:not(.png) { // fixes NU logo spacing issue in IE
+            width: 100%;
+        }
+    }
+    
+    &:nth-of-type(2) {
+        width: 250px / 970px * 100%;
+    }
+    
+    &:nth-of-type(3) {
+    
+        p {
+            line-height: 1.6em;
+        }
+    }    
+    
+    &:nth-of-type(4) {
+        width: 100px / 970px * 100%; 
+        margin-right: 0;
+    }
+    
+    p {
+        margin-top: 0;
+    }
+    
+    strong {
+        font-family: $AkkuratProBold;
+        font-weight: normal;
+    }
+    
+    .footer-icon {
+        height: 29px;
+        width: 18px;
+        left: -25px;
+        margin-top: .5em;
+    }
+    
+    img {
+        margin-bottom: 1rem;
+        max-width: 170px;
+    }
+    
+    &.contact {
+        
+        ul {
+            margin: 1rem 0 1rem 2rem;
+            position: relative;
+
+            li {
+                line-height: 1.5em;
+                padding-bottom: .4rem;
+
+                &.footer-pin-icon {
+                    background: url("#{$path-images}/icons/pin-drop.svg") no-repeat;
+                    position: absolute;
+                    top: 2px;
+                    left: -2rem;
+                    height: 24px;
+                    width: 18px;  
+                }
+
+                &.footer-phone-icon {
+                    background: url("#{$path-images}/icons/mobile-phone.svg") no-repeat;
+                    position: absolute;
+                    top: 2px;
+                    left: -2rem;    
+                    height: 24px;
+                    width: 18px;
+                }
+                
+                &.footer-email-icon {
+                    background: url("#{$path-images}/icons/email.svg") no-repeat;
+                    position: absolute;
+                    top: 2px;
+                    left: -2.2rem;    
+                    height: 24px;
+                    width: 18px;
+                }     
+            }
+        } 
+    }
+} 
+
+// social media icons
+.social {
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+    margin: 4px;
+    width: 39px;
+    height: 39px;
+    font-size: 0;
+    text-indent: -9999px;   
+    background: url("#{$path-images}/icons/social-media-icons.svg");
+    background-color: #fff;
+    transition: background 0.3s;
+    border: 1px solid $white;
+    
+    &:hover {
+        background-color: $nu-purple-30;
+    }
+}
+
+.facebook {
+
+    background-position: 0 0;
+    
+    &:hover {
+        background-position: 0 -39px;   
+    }    
+}
+
+.twitter {
+    background-position: -39px 0;
+    
+    &:hover {
+        background-position: -39px -39px;   
+    }
+}
+
+.instagram {
+    background-position: -78px 0;
+  
+    &:hover {
+        background-position: -78px -39px;   
+    }      
+}
+
+.rss {
+    background-position: -117px 0;
+    
+    &:hover {
+        background-position: -117px -39px;   
+    }
+}
+
+.youtube {
+    background-position: -156px 0;
+    
+    &:hover {
+        background-position: -156px -39px;   
+    }
+}
+
+.tumblr {
+    background-position: -195px 0;
+    
+    &:hover {
+        background-position: -195px -39px;   
+    }
+}
+
+.wordpress {
+    background-position: -234px 0;
+    
+    &:hover {
+        background-position: -234px -39px;   
+    }
+}
+
+.futurity {
+    background-position: -273px 0;
+    
+    &:hover {
+        background-position: -273px -39px;   
+    }
+}
+
+.vimeo {
+    background-position: -312px 0;
+    
+    &:hover {
+        background-position: -312px -39px;   
+    }
+}
+
+.linkedin {
+    background-position: -351px 0;
+    
+    &:hover {
+        background-position: -351px -39px;   
+    }
+}
+
+.google-plus {
+    background-position: -390px 0;
+    
+    &:hover {
+        background-position: -390px -39px;   
+    }
+}
+
+.google-groups {
+    background-position: -429px 0;
+    
+    &:hover {
+        background-position: -429px -39px;   
+    }
+}
+.blog {
+    background-position: -468px 0;
+    
+    &:hover {
+        background-position: -468px -39px;   
+    }
+}
+
+.github {
+    background-position: -507px 0;
+    
+    &:hover {
+        background-position: -507px -39px;   
+    }
+}
+
+.flickr {
+    background-position: -546px 0;
+    
+    &:hover {
+        background-position: -546px -39px;   
+    }
+}
+
+.storify {
+    background-position: -585px 0;
+    
+    &:hover {
+        background-position: -585px -39px;   
+    }
+}
+
+.pinterest {
+    background-position: -624px 0;
+    
+    &:hover {
+        background-position: -624px -39px;   
+    }
+}
+
+// media queries
+@media screen and (max-width: 1140px) { 
+    
+    footer { 
+        padding: 3rem 1rem; // gives left/right padding to smaller screen widths
+    }
+}
+
+@media screen and (max-width: 820px) {
+    
+    .footer-content {
+        width: 40%;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+
+        &:nth-of-type(2), &:nth-of-type(4) {
+            margin-left: 2rem;
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    
+    footer {
+        font-size: 14px;
+        line-height: 1.8em;
+    }
+    
+    .footer-content{
+        width: 100%;
+        display: block;
+        margin-bottom: 2rem;
+
+        &:nth-of-type(2), &:nth-of-type(4) {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+    
+    .footer-pin-icon {
+        top: .5em;
+    }
+}

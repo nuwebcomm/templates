@@ -1,0 +1,33 @@
+// pullquotes
+
+.landing-page {
+    
+    .quote {
+        font: 24px/1.2em $CamptonBook;
+        color: $nu-purple;
+        margin-bottom: 1em;
+
+        span {
+            background: url("#{$path-images}/icons/quote.png") no-repeat;
+            width: 35px;
+            height: 24px;
+            display: inline-block;
+            margin-right: .5rem;
+        }          
+        
+        figcaption {
+            font: 16px/1.4em $AkkuratProRegular;
+            color: $rich-black-50;
+        
+            span {
+                font: 18px $AkkuratProBold;
+                background: none;
+                height: inherit;
+                width: inherit;
+                display: inherit;
+                margin-right: inherit;
+            }
+        }
+    } 
+
+} // end

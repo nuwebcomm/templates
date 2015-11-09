@@ -1,0 +1,152 @@
+// typography
+
+// headers
+h2 {
+    font: 46px/1.2em $CamptonExtraLight;
+    color: $nu-purple;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font: 34px $CamptonBold;
+    color: $nu-purple;
+    margin-bottom: .5rem;
+}
+
+h4 {
+    font: 26px $AkkuratProRegular;
+    color: $rich-black-50;
+    margin-bottom: 1rem; 
+}
+
+h5 {
+    font: 21px $AkkuratProRegular;
+    color: $nu-purple;
+    margin-bottom: 1rem; 
+}
+
+h6 {
+    font: 18px $CamptonBold;
+    color: $nu-purple;
+    margin-bottom: 1rem; 
+}
+
+#section-header h2 {
+    font: 18px $AkkuratProBold;
+    text-transform: none;
+    margin-bottom: 0;
+}
+
+#page { 
+    margin: 2rem auto 0 auto;
+    max-width: 1120px;    
+}
+
+.content-full {
+    width: 100%;
+    
+    a {  // default link based on parent class above
+        font-family: $AkkuratProBold;
+        color: $nu-purple;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    strong, b {
+        font-family: $AkkuratProBold;
+        font-weight: normal;
+    }
+    
+    em, i {
+        font-family: $AkkuratProItalic;
+        font-style: normal;
+    }
+    
+    strong em, em strong, strong i, i strong, b i, i b {
+        font-family: $AkkuratProBoldItalic;
+        font-style: normal;
+        font-weight: normal;
+    }
+}
+
+@media screen and (max-width: 1145px) { // from _standard-page.scss
+    
+    #page { // gives left/right margin for smaller screen widths
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+// web fonts
+@font-face {
+    font-family: "Akkurat Pro Light";
+    src: url("#{$path-fonts}/AkkuratProLight.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;    
+}
+    
+@font-face {
+    font-family: "Akkurat Pro Light Italic";
+    src: url("#{$path-fonts}/AkkuratProLightItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+    
+@font-face {
+    font-family: "Akkurat Pro Regular";
+    src: url("#{$path-fonts}/AkkuratProRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+    
+@font-face {
+    font-family: "Akkurat Pro Italic";
+    src: url("#{$path-fonts}/AkkuratProItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+    
+@font-face {
+    font-family: "Akkurat Pro Bold";
+    src: url("#{$path-fonts}/AkkuratProBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+    
+@font-face {
+    font-family: "Akkurat Pro Bold Italic";
+    src: url("#{$path-fonts}/AkkuratProBoldItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+    
+@font-face {
+    font-family: "Campton Book";
+    src: url("#{$path-fonts}/CamptonBook.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+    
+@font-face {
+    font-family: "Campton Bold";
+    src: url("#{$path-fonts}/CamptonBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+    
+@font-face {
+    font-family: "Campton Extra Bold";
+    src: url("#{$path-fonts}/CamptonExtraBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+    
+@font-face {
+    font-family: "Campton Extra Light";
+    src: url("#{$path-fonts}/CamptonExtraLight.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}

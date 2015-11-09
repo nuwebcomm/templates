@@ -1,0 +1,34 @@
+body {
+	background: #fff;
+	font-size: 10pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#top-bar #right, #search, nav, #breadcrumbs, #left-nav, #mobile-links, .hero-image, #left img, footer img, .screen-reader-shortcut {
+	display: none;
+}
+a img {
+	border: none;
+}
+table th, table thead {
+	border: 1px solid #000;	
+	padding: .5em;
+	text-align: left;
+}
+table {
+	border: 1px solid #000;
+	border-collapse: collapse;
+}
+table td {
+	padding: .5em;
+	border: 1px solid #000;
+}
+a:link, a:visited {
+	color: #520063;
+	background: transparent;
+	text-decoration: underline;
+}
+/*
+a:link:after, a:visited:after {
+    content: " (/" attr(href) ") ";
+}
+*/

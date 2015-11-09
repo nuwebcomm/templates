@@ -1,0 +1,62 @@
+// three column lists
+
+.landing-page {
+
+    .three-column-list {
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            font: 30px $AkkuratProRegular;
+            color: $rich-black-50;
+            border-bottom: 4px solid $medium-grey;
+            text-transform: none;
+            padding-bottom: .5rem;
+        } 
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            -moz-column-count: 3;
+            -webkit-column-count: 3;
+            column-count: 3;
+            -webkit-column-gap: 3em;
+            -moz-column-gap: 3em;
+            column-gap: 2em;
+            margin: 0;
+            padding: 0;  
+
+            li {
+                background: none;
+                padding: 0 0 .8em 0;
+                line-height: 1.5em;
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }    
+    }
+    
+    // media queries
+    @media screen and (max-width: 480px) {
+        
+        .three-column-list {
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            ul {
+                -moz-column-count: inherit;
+                -moz-column-gap: inherit;;
+                -webkit-column-count: inherit;
+                -webkit-column-gap: inherit;
+                column-count: inherit;
+            }
+        }  
+    }
+
+} // end

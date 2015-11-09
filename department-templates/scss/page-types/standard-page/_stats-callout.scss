@@ -1,0 +1,47 @@
+// stats callout
+
+.standard-page {
+
+    .stats-callout {
+        border-top: 4px solid $light-grey;
+        border-bottom: 4px solid $light-grey;
+        text-align: center;
+        color: $nu-purple;
+        padding: 2rem 0;
+    
+        p {
+            margin: 0 auto;
+            display: table;
+        }
+        
+        span {
+            display: table-cell;
+            vertical-align: middle;            
+
+            &.big {
+               font: 72px $CamptonBold; 
+            }
+
+            &.small {
+                font: 24px $CamptonExtraLight;
+                padding-left: 1rem;
+            }
+        }
+    }
+
+    // media queries       
+    @media screen and (max-width: 480px) {
+        
+        .stats-callout {
+            
+            span {
+                display: block;
+
+                &.big {
+                    font: 48px $CamptonBold;
+                }
+            }
+        } 
+    }
+     
+}  // end

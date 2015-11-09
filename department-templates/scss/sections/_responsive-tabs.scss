@@ -1,0 +1,144 @@
+// responsive tabs
+#tabs {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+    li {
+        background: none;
+        margin: 0 .3rem 0 0;
+        padding: 0;
+        display: inline;
+        vertical-align: middle;
+        
+        &:last-child {
+            margin: 0;
+        }
+        
+        a {
+            font: 21px $AkkuratProRegular;
+            color: $rich-black-50;
+            padding: .5rem .7rem;
+            display: inline-block;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;                 
+        
+            &:hover {
+                text-decoration: none;
+                background: $rich-black-50;
+                color: $white;
+            }
+            
+            &.active {
+                background: $rich-black-50;
+                color: $white;
+            }
+        }       
+    }
+}
+
+#tab-content {
+    border-top: 3px solid $rich-black-50;
+    margin: 0 0 3rem 0;
+    
+    // this nest mainly for admissions apply page
+    .row {
+        border-bottom: 3px solid $light-grey;
+        padding: 2rem 0;
+    }
+    
+    .headings {
+        display: table-cell;
+        width: 360px / 1120px * 100%;
+        padding-right: 1rem;
+
+        h4 {
+            font: 30px $CamptonBold;
+            color: $nu-purple;
+
+            span {
+                display: block;
+                color: $nu-purple-30;
+            }
+        }
+    }
+    
+    .contents {
+        display: table-cell;
+        width: 740px / 1120px * 100%;
+
+        .callout {
+            background: $nu-purple-60;
+            padding: .1rem 1rem;
+            margin: 0 0 1rem 2rem;
+            width: 266px;
+            font: 24px $CamptonBook;
+            color: $white;
+            float: right; 
+
+            a {
+                text-decoration: underline;
+                font-family: $CamptonBook;
+                color: $white;
+            }
+
+            h4 {
+                font: 16px $AkkuratProBold;
+                padding-top: 1rem;
+                margin-bottom: 0;
+                color: $white;
+
+                &+p {
+                    margin: .5rem 0;
+                }
+            } 
+        } 
+    }
+}
+
+// media queries
+@media screen and (max-width: 1150px) {
+    
+    .tabs li a {
+        font-size: 18px;   
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .tab-left-side .img {
+        float: none;
+    }
+}   
+
+@media screen and (max-width: 850px) {
+    
+    #tab-content {
+        .contents .callout {
+            float: none;
+            margin: 1em 0 1em 0;
+            width: 100%;
+        }
+    }
+}  
+
+@media screen and (max-width: 550px) {
+    
+    #tab-content {
+        
+        .headings, .contents {
+            width: 100%;
+            display: block;
+            
+            .callout {
+                font-size: 18px;
+            }
+            
+            h3 {
+                font-size: 26px;
+            }
+        }
+    }
+}

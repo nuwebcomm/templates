@@ -1,0 +1,270 @@
+// typography
+
+// headers
+h2 {
+    font: 46px/1.2em $CamptonBook;
+    color: $nu-purple;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font: 34px $CamptonBold;
+    color: $nu-purple;
+    margin-bottom: .5rem;
+}
+
+h4 {
+    font: 26px/1.2em $AkkuratProRegular;
+    color: $rich-black-50;
+    margin-bottom: 1rem; 
+}
+
+h5 {
+    font: 21px $AkkuratProRegular;
+    color: $nu-purple;
+    margin-bottom: 1rem; 
+}
+
+h6 {
+    font: 18px $CamptonBold;
+    color: $rich-black-50;
+    margin-bottom: 1rem; 
+}
+
+.content, .content-full {
+
+    // main link style
+    a {
+        font-family: $AkkuratProBold;
+        color: $nu-purple;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    strong, b {
+        font-family: $AkkuratProBold;
+        font-weight: normal;
+    }
+    
+    em, i {
+        font-family: $AkkuratProItalic;
+        font-style: normal;
+    }
+    
+    strong em, em strong, strong i, i strong, b i, i b {
+        font-family: $AkkuratProBoldItalic;
+        font-style: normal;
+        font-weight: normal;
+    }
+    
+    p:last-of-type {
+        margin-bottom: 1.5rem;
+    }
+    
+    // bullets
+    ul {
+        padding-left: 1em;
+
+        > li {
+            list-style: none;
+            background: url("#{$path-images}/icons/bullet.png") 0 .5em no-repeat;
+            padding: 0 0 .5em 1em;      
+        
+            > ul {
+                margin-top: .5em;
+
+                li {
+                    background: none;
+                    list-style: circle;
+                    padding-left: .5em;
+                
+                    &:last-child {
+                        padding-bottom: 0;
+                    }  
+                }
+            }
+            
+            > ol {
+                padding-left: 2em;
+                margin-top: .5em;    
+
+                > li {
+                    background: none;
+                    list-style-type: decimal;
+                    overflow: inherit;
+                    padding-left: 0;
+                    
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }                
+            }  
+        }  
+    }
+
+    ol {
+        padding-left: 2.2em;
+
+        > li {
+            list-style-type: decimal;
+            padding: 0 0 .5em .5em; 
+  
+            > ol {
+                margin-top: .5em; 
+                padding-left: 1.2em;
+
+                li {
+                    list-style: lower-alpha;
+              
+                    &:last-child {
+                        padding-bottom: 0;
+                    }                    
+                }
+            }            
+
+            > ul {
+                margin-top: .5em;
+                padding-left: 0;
+                
+                li {
+                
+                }
+                
+                > li:last-child {
+                    padding-bottom: 0;
+                }    
+            }            
+        }
+    }
+
+    // tables 
+    table {
+        width: 100%;
+        margin: 1em 0 0 0;
+        font-family: $AkkuratProRegular;
+        line-height: 1.5em;
+
+        th {
+            background: $nu-purple;
+            font: 21px $AkkuratProBold;
+            color: $white;
+            padding: .7rem 1rem .7rem 1rem;
+            text-align: left;
+            border: 2px solid $white;
+        }
+        
+        td {
+            padding: .7rem 1rem .7rem 1rem;
+            border: 2px solid $white;
+            vertical-align: top;
+        }
+        
+        tr.stripe td {
+            background: $light-grey;
+        }
+        
+        tr.hover td {
+            background: $nu-purple-60;
+            color: $white;
+        }
+        
+        ul {
+            margin-left: 0;
+            padding-top: .5rem;
+        }
+    }
+}
+ 
+// formatting of text/images 
+.align-text-center {
+	text-align: center;
+}
+
+.align-image-left {
+	float: left;
+	margin: .5rem 1.5rem .5rem 0;
+}
+
+.align-image-right {
+	float: right;
+	margin: .5rem 0 .5rem 1.5rem;
+}
+
+.align-image-center {
+	margin: 0 auto;
+	display: block;
+}
+
+// web fonts
+@font-face {
+    font-family: "Akkurat Pro Light";
+    src: url("#{$path-fonts}/AkkuratProLight.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;    
+}
+
+@font-face {
+    font-family: "Akkurat Pro Light Italic";
+    src: url("#{$path-fonts}/AkkuratProLightItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Akkurat Pro Regular";
+    src: url("#{$path-fonts}/AkkuratProRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Akkurat Pro Italic";
+    src: url("#{$path-fonts}/AkkuratProItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Akkurat Pro Bold";
+    src: url("#{$path-fonts}/AkkuratProBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Akkurat Pro Bold Italic";
+    src: url("#{$path-fonts}/AkkuratProBoldItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Campton Book";
+    src: url("#{$path-fonts}/CamptonBook.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Campton Bold";
+    src: url("#{$path-fonts}/CamptonBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Campton Extra Bold";
+    src: url("#{$path-fonts}/CamptonExtraBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Campton Extra Light";
+    src: url("#{$path-fonts}/CamptonExtraLight.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;        
+}

@@ -1,0 +1,95 @@
+// hero slideshow
+
+.landing-page {
+
+    // swiper arrows
+    .swiper-button-next, .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        -moz-background-size: 50px 50px;
+        -webkit-background-size: 50px 50px;
+        background-size: 50x 50px;
+        margin-top: 0; // override from swiper.css line 109)
+        top: 45%;
+    }  
+
+    .swiper-button-prev {
+        background: url("#{$path-images}/icons/arrow-right-purple-white.svg") no-repeat;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);   
+        left: 10px;
+        right: auto;
+    }
+
+    .swiper-button-next {
+        background: url("#{$path-images}/icons/arrow-right-purple-white.svg") no-repeat;
+        right: 10px;
+        left: auto;
+    }   
+
+    .caption { 
+        font: 20px/1.3em $AkkuratProRegular;  
+        position: absolute;
+        bottom: .4rem;
+        padding: 1rem;
+        background: rgba(0, 0, 0, .5);
+        color: $white;
+        width: 100%;
+        margin: 0;
+
+        strong {
+            font-family: $AkkuratProBold;
+        }
+        
+        a {
+            font-family: $AkkuratProBold;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $white;
+
+            &:after {
+                background: url("#{$path-images}/icons/arrow-right-white.svg") no-repeat 50% / 8px 12px;
+                padding-right: 1.5rem;
+                content: " ";
+            }            
+        }
+    }    
+
+    @media screen and (max-width: 768px) {
+
+        .caption {
+            font-size: 16px;
+        }        
+    }
+    
+    @media screen and (max-width: 600px) {
+
+        .caption {
+            position: relative;
+            background: $rich-black-80;
+            font-size: 14px;
+        }
+        
+        .swiper-button-next, .swiper-button-prev {
+            width: 30px;
+            height: 30px;
+            -moz-background-size: 30px 30px;
+            -webkit-background-size: 30px 30px;
+            background-size: 30px 30px;
+
+        }         
+        .swiper-button-next {
+            top: 0;
+            right: 0;
+        }
+
+        .swiper-button-prev {
+            top: 0;
+            left: 0;
+        }        
+    }  
+    
+} // end

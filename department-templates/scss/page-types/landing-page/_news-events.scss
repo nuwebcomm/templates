@@ -1,0 +1,299 @@
+// news and events
+
+.landing-page {
+    
+    .news-event {
+        display: -webkit-flex;
+        display: -ms-flexbox;        
+        display: flex; // equal height columns
+        @extend %clearfix;
+    
+        section {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .news, .events {
+        border-bottom: 4px solid $medium-grey;
+        position: relative;
+
+        h4 {
+            font: 30px $AkkuratProRegular;
+            color: $rich-black-50;
+            border-bottom: 4px solid $medium-grey;
+            padding-bottom: .5rem;
+            margin-bottom: 1.5rem;
+        }
+        h5 {
+            font: 18px $AkkuratProBold;
+            color: $rich-black-80;
+            margin-bottom: 1rem; 
+        }    
+
+        p.link {
+            font: 16px $AkkuratProBold;
+            position: absolute;
+            bottom: -2.5rem; // puts link below line (was -4rem for tl)
+            text-transform: uppercase;
+            margin-bottom: 0;
+
+            &:after {
+                background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat top 35% right 50% / 6px 10px;
+                padding-right: 1.5em;
+                content: " ";
+            }                     
+        } 
+    }
+
+    .news {
+        float: left;
+        width: 740px / 1120px * 100%;
+    }
+
+    .news-box {
+        float: left;
+        width: 360px / 740px * 100%;
+        margin-right: 20px / 740px * 100%;
+        margin-bottom: 1rem;
+        @extend %clearfix;
+
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+
+        .news-image {
+            width: 170px / 360px * 100%;
+            float: left;
+            margin-right: 10px / 360px * 100%;
+        }
+
+        .news-text {
+            float: left;
+            width: 180px / 360px * 100%;    
+        }
+
+        h5 {
+            font: 18px $AkkuratProBold;
+            color: $nu-purple;
+            margin-bottom: 1rem; 
+
+            &+p {
+                margin-top: -.5rem;
+            }
+        } 
+    }
+
+    // full-width news (6+ stories)
+    .news-full {
+        position: relative;
+        border-bottom: 4px solid #ccc;
+        margin-bottom: 6rem; // compensates for p.link
+        @extend %clearfix;
+
+        .news-box {
+
+            h4 {
+                font: 18px $AkkuratProBold;
+                color: $nu-purple;
+                margin-bottom: 1rem; 
+            } 
+        }
+
+        .news-box {
+            float: left;
+            width: 360px / 1120px * 100%;
+            margin-right: 20px / 1120px * 100%;
+            margin-bottom: 1rem;
+            @extend %clearfix;
+
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            } 
+
+            .news-image {
+                width: 170px / 360px * 100%;
+                float: left;
+                margin-right: 10px / 360px * 100%;
+            }
+            
+            .news-text {
+                float: left;
+                width: 180px / 360px * 100%;
+            }
+        }
+
+        p.link {
+            font: 16px $AkkuratProBold;
+            position: absolute;
+            bottom: -2.5rem; // puts link below line (was -4rem for tl)
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        
+    }
+
+    // for showcase on news & events with 2 calendars showcase
+    .showcase .news {
+        width: 360px / 1120px * 100%;
+        padding-bottom: 1rem;
+
+        img {
+            margin-bottom: .5rem;
+        }
+
+        h5 {
+            color: $rich-black-50;
+        }
+    }
+
+    .events {
+        float: left;
+        width: 360px / 1120px * 100%;
+        margin-left: 20px / 1120px * 100%;
+
+        h5 {
+            margin-bottom: .2rem;
+            color: $rich-black-50;
+        }
+        
+        p {
+            margin-top: 0;
+        }      
+    }
+
+    // media queries
+    @media screen and (max-width: 900px) {
+
+        .news {
+            width: 60%;
+
+            .news-box {
+                width: 100%;
+                float: none;
+
+                .news-image {
+                    width: 170px / 564px * 100%;
+                    margin-right: 10px / 564px * 100%;
+                }
+                .news-text {
+                    width: 384px / 564px * 100%;
+                }
+            }
+        }
+
+        .events {
+            width: 40%;
+            margin-left: 20px / 900px * 100%;
+        }    
+    }
+
+    @media screen and (max-width: 900px) {
+
+        .news-full {
+
+            .news-box {
+                width: 430px / 900px * 100%;
+                margin-right: 20px / 900px * 100%;
+
+                &:nth-of-type(3n) {
+                    margin-right: 20px / 900px * 100%;
+                } 
+
+                .news-image {
+                    width: 170px / 430px * 100%;
+                    margin-right: 10px / 430px * 100%;
+                }
+                .news-text {
+                    width: 250px / 430px * 100%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .news-event {
+
+            &.showcase {
+                display: inherit;
+                margin-bottom: 3rem;
+
+                p.link {
+                    position: relative;
+                    bottom: 0;
+                    margin-top: 2rem;
+                }        
+                .news, .events, .tl-events {
+                    width: 100%;
+                    float: none;
+                    margin-bottom: 3rem;
+                    margin-left: 0;
+                    border-bottom: none;
+
+                    &:nth-child(3) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        
+        .news-event {
+            display: inherit;
+            margin-bottom: 3rem;
+        }
+
+        .news, .events {
+            width: 100%;
+            float: none;
+            margin-bottom: 3rem;
+            margin-left: 0;
+            border-bottom: none;
+
+            p.link {
+                position: relative;
+                bottom: 0;
+                margin-top: 2rem;
+            }
+        }
+
+        .news-full {
+
+            .news-box {
+                width: 100%;
+                margin-right: 0;
+
+                .news-image {
+                    width: 170px / 550px * 100%;
+                    margin-right: 10px / 550px * 100%;
+                }
+                .news-text {
+                    width: 370px / 550px * 100%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+
+        .news, .events {
+
+            h5 {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .news, .events {
+
+            h4 {
+                font-size: 24px;
+            }
+        }
+    }
+    
+} // end

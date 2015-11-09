@@ -1,0 +1,84 @@
+// stats callout
+
+.landing-page {
+    
+    .stats-callout {
+        border-top: 4px solid $light-grey;
+        border-bottom: 4px solid $light-grey;
+        text-align: center;
+        padding: 2rem 0;
+        @extend %clearfix;
+    
+        div {
+            width: 33%;
+            float: left;
+            padding: 1rem;
+        }
+        
+        ul {
+            list-style: none;
+        
+            li {
+                text-align: left;
+                padding-bottom: 0;
+            }
+        }
+        
+        p {
+            margin: 0 auto;
+            display: table;
+        }
+        
+        span {
+            display: table-cell;
+            vertical-align: middle;            
+
+            &.big {
+                font: 72px/1.1em $CamptonBold;
+                color: $nu-purple;
+                display: block;
+            }
+
+            &.small {
+                font: 24px $CamptonExtraLight;
+                color: $nu-purple;
+                display: block;
+            }
+        }
+    }  
+
+    // media queries
+    @media screen and (max-width: 800px) {
+        
+        .stats-callout {
+            
+            span { 
+                &.big {
+                    font: 48px $CamptonBold;
+                }
+
+                &.small {
+                    font: 20px $CamptonExtraLight;
+                }
+            }  
+        }
+    }    
+
+    @media screen and (max-width: 550px) {    
+        
+        .stats-callout {
+            
+            span { 
+                
+                &.big {
+                    font: 24px $CamptonBold;
+                }
+
+                &.small {
+                    font: 15px $CamptonExtraLight;
+                }
+            }  
+        } 
+    }    
+    
+} // end

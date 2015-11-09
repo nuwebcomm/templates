@@ -1,0 +1,219 @@
+// showcase areas - can include mini slideshow (swiper)
+
+.standard-page {
+
+    .showcase {  
+    
+        .left-content .swiper-container { // forces max-width for smaller slideshow w/ right-content links
+            max-width: 550px;
+            margin: 0;
+        }
+        
+        .caption { // this is the caption for when the swiper gallery is included
+            font: 14px $AkkuratProItalic;  
+            margin-bottom: .5rem;
+            position: absolute;
+            bottom: 0;
+            padding: .5rem;
+            background: rgba(0, 0, 0, .5);
+            color: $white;
+            width: 100%;
+        
+            strong {
+                font-family: $AkkuratProBoldItalic;
+            }
+        }
+        
+        // swiper arrows
+        .swiper-button-next, .swiper-button-prev {
+            width: 30px;
+            height: 30px;
+            -moz-background-size: 30px 30px;
+            -webkit-background-size: 30px 30px;
+            background-size: 30px 30px;
+            margin-top: 0; // override from swiper.css line 109)
+            top: 45%;
+        }  
+        
+        .swiper-button-prev {
+            background: url("#{$path-images}/icons/arrow-right-purple-white.svg") no-repeat;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);   
+            left: 10px;
+            right: auto;
+        }
+        
+        .swiper-button-next {
+            background: url("#{$path-images}/icons/arrow-right-purple-white.svg") no-repeat;
+            right: 10px;
+            left: auto;
+        }  
+        
+        p+h4 {
+            margin: 1.5rem 0 .5rem 0;
+        }
+        
+        .left-content {
+            width: 550px / 836px * 100%;
+            float: left;
+        }
+        
+        .right-content {
+            width: 250px / 836px * 100%;
+            float: left;
+            margin-left: 35px / 836px * 100%;
+        }
+        
+        .quote {
+            float: left;
+            width: 265px;
+            margin: 0 2rem 1rem 0;
+            line-height: 1.4em;
+        }
+        
+        .stat-list {
+            font: 24px $CamptonExtraLight;
+            color: $nu-purple;  
+                        
+            strong {
+                font: 72px/1em $CamptonBold;
+                color: $nu-purple;
+                display: block;
+            }
+            
+            ul {
+                margin: 0 0 2rem 0;
+                padding: 1.5rem 0 0 0;
+                border-top: 4px solid $light-grey;
+                color: $rich-black-50;  
+                
+                &.no-border { // for library page
+                    border-top: none;
+                    padding-top: 0;
+                }
+
+                li {
+                    background: none;
+                    padding: 0;
+
+                    &:first-child {
+                        font: 30px/1.2em $CamptonBold;
+                        color: $nu-purple;
+                        margin-bottom: .5rem;
+                    }
+                }
+                
+                &.bullet { // for diversity page
+                    margin: 0 0 -2rem 0;
+                    padding: inherit;
+                
+                    li {
+                        background: url("#{$path-images}/icons/bullet.png") top left no-repeat;
+                        background-position: 0 .5rem;
+                        padding: 0 0 .5rem 1em;
+                        font-size: 20px;
+
+                        &:first-child {
+                            font: 26px/1.2em $CamptonBold;
+                            color: $nu-purple;
+                            margin-bottom: .5rem;
+                            background: none;
+                            padding: 1rem 0 1rem 0;
+                        }                                    
+                    }
+                }
+            }
+        }
+        
+        .links {
+            
+            p {
+                font: 18px $AkkuratProBold;
+                color: $rich-black-50;
+                border-bottom: 4px solid $light-grey;
+                padding-bottom: .5rem;
+            
+                &.no-line {
+                    border-bottom: none;
+                }
+            }
+            
+            ul {
+                padding: 0;
+                margin: 0;
+            
+                li {
+                    font: 16px $AkkuratProBold;
+                    background: none;
+                    padding: 0;
+                    margin-bottom: 1rem;
+
+                    &:after {
+                        background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 50% / 6px 10px;
+                        padding-right: 2rem;
+                        content: " ";
+                    }                     
+                }            
+            } 
+        }      
+    }
+        
+    // media queries    
+    @media screen and (max-width: 1145px) {    
+        
+        .showcase .stat-list strong {
+            font-size: 54px;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        .showcase {
+            
+            .left-content {
+                float: none;
+                width: 100%;
+            }  
+            
+            .quote {
+                display: none;
+            }
+            
+            .right-content {
+                float: none;
+                width: 100%;
+                margin: 1rem 0 2rem 0;
+            }  
+            
+            ul.three-columns {
+                display: none;            
+            }
+        }        
+    }    
+    
+    @media screen and (max-width: 520px) {    
+        
+        .showcase { // moves captions below image for mobile; arrows move to top
+            
+            .caption {
+                position: relative;
+                color: $rich-black-50;
+                background: none;
+            }
+            
+            .swiper-button-next {
+                top: 0;
+                right: 0;
+            }
+            
+            .swiper-button-prev {
+                top: 0;
+                left: 0;
+            }
+        }    
+    }    
+     
+}  // end

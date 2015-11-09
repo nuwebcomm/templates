@@ -1,0 +1,349 @@
+.tl-slideshow {
+    margin-bottom: -1rem; // removes strange space below slideshow
+}
+.swiper-container {
+    height: 600px;
+    width: 100%;
+    
+    .swiper-slide, .swiper-image {
+        height: 600px;
+    }
+    .swiper-pagination-bullet {
+        height: 12px;
+        width: 12px;
+    }    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: -12px;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        width: 24px;
+        height: 38px;
+        -moz-background-size: 27px 44px;
+        -webkit-background-size: 27px 44px;
+        background-size: 27px 44px;
+    }
+    .swiper-button-prev.swiper-button-white, .swiper-container-rtl .swiper-button-next.swiper-button-white {
+        background-image: url("#{$path-images}/icons/left-hero-arrow.svg");
+        background-size: inherit;
+        transform: inherit;
+    }
+    .swiper-button-next.swiper-button-white, .swiper-container-rtl .swiper-button-prev.swiper-button-white {
+        background-image: url("#{$path-images}/icons/right-hero-arrow.svg");
+        background-size: inherit;
+        transform: inherit;
+    }
+    .left, .right, .name {
+        font-weight: normal;
+        font: 48px/1em $CamptonBold;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+        color: $white;
+        margin-bottom: .5rem;
+    }
+    .left {
+        position: relative;
+        display: inline-block;
+        right: -500px;
+        font-family: $CamptonExtraBold;
+    }
+    .right {
+        position: relative;
+        display: inline-block;
+        right: 500px;
+        font-family: $CamptonBook;
+    }
+    .left-contain {
+        width: 400px;
+        -webkit-clip-path: polygon(0px 0px, 325px 0px, 400px 100px, 0px 100px);
+        // clip-path: polygon(0px 0px, 325px 0px, 400px 100px, 0px 100px);
+        overflow: hidden;
+        display: inline-block;
+        text-align: right;
+        position: relative;
+        top: 60px;
+    }
+    .right-contain {
+        width: 400px;
+        -webkit-clip-path: polygon(0px 0px, 400px 0px, 400px 100px, 77px 100px);
+        // clip-path: polygon(0px 0px, 400px 0px, 400px 100px, 77px 100px);
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        top: 60px;
+        right: 72px;
+    }
+
+    .opening-text {
+        top: 32%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        width: 900px;
+       
+        p {
+            color: $white;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+            text-align: center;
+            
+            &.intro1 {
+                font: 72px/1.1em $CamptonBold;
+                text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+                margin: 0 0 2rem 0;
+            }
+            &.intro2 {
+                font: 32px/1.2em $CamptonBook;
+                text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+                margin-bottom: 0;
+                // relies on @keyframes at bottom of page
+                -webkit-animation: fadein 4s;
+                -moz-animation: fadein 4s;
+                -ms-animation: fadein 4s;
+                -o-animation: fadein 4s;
+                animation: fadein 4s;
+            }        
+        }
+    }
+    .wrap {
+        position: absolute;
+        top: 15%;
+        right: 0;
+        width: 800px;
+    }
+    .question {
+        // width: 740px;
+        position: relative;
+        right: 5%;
+        
+        p {
+            font: 28px/1.2em $CamptonBook;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+            width: 500px;
+            color: $white;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+    .wordplay {
+        width: 1000px; // prevent wrapping from relative position nudges
+        margin-top: 2rem;
+    }    
+    .slash {
+        background: url("#{$path-images}/icons/white-slash.svg") no-repeat;
+        -webkit-transition: background-image 0.5s ease-in-out;
+        transition: background-image 0.5s ease-in-out;
+        width: 140px;
+        height: 175px;
+        z-index: 2000;
+        position: relative;
+        display: inline-block;
+        right: 582px;
+        opacity: 0;
+        float: right;
+    }
+    .thin-slash {
+        background: url("#{$path-images}/icons/white-slash-skinny.svg") no-repeat;
+        -webkit-transition: background-image 0.5s ease-in-out;
+        transition: background-image 0.5s ease-in-out;
+    }
+    .caption {
+        opacity: 0;
+        z-index: 3000;
+        display: inline-block;
+        width: 440px;
+        position: absolute;
+        right: 15%;
+        top: 15%;
+        text-align: center;
+        
+        p {
+            font: 18px/1.7em $AkkuratProRegular;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+            color: $white;
+        }
+        .subtitle {
+            font-weight: normal;
+            font: 24px $CamptonBook;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+            color: $white;
+        }   
+    }
+}  // end .swiper-container
+
+// media queries
+@media screen and (max-width: 1175px) {
+    .swiper-container {
+        .swiper-slide:before {
+            content: " ";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.45))); 
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);
+            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);
+            background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);
+        }  
+        .opening-text {
+            p { 
+                padding: 0 4rem;
+                
+                &.intro1 {
+                    font-size: 60px;
+                }
+                &.intro2 {
+                    font-size: 32px;
+                }
+            }
+        }
+        .question {
+            right: 0;
+        }
+        .wordplay {
+            margin-left: 5%;
+        }
+        .caption {
+            top: 30%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 600;
+        }
+        .wrap {
+            top: 30%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: inherit;
+            max-width: 800px;
+        }        
+    }  
+}
+@media screen and (max-width: 768px) {
+    .swiper-container {  
+        height: inherit;
+        background: $nu-purple;
+
+        .swiper-slide {
+            height: 700px;
+        }
+        .swiper-image {
+            height: 400px;
+        }            
+        .wordplay, .question, .swiper-pagination-bullet, .swiper-slide:before {
+            display: none;
+        }
+        .name {
+            font-size: 36px;
+        }
+        .caption {
+            display: table-cell;
+            vertical-align: middle;
+            right: inherit;
+            top: inherit;
+            width: 100%;
+            padding: 0 3rem;
+            position: relative;
+            background: $nu-purple;
+            height: 300px;
+
+            p {
+                text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+            }
+            .subtitle {
+                font-size: 18px;
+            }             
+        }
+        .swiper-button-next, .swiper-button-prev {
+            top: 190px;
+        }
+        .opening-text {
+            top: inherit;
+            bottom: inherit;
+            right: inherit;
+            left: inherit;
+            margin: inherit;
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            max-width: inherit;
+            padding: 0;
+            position: relative;
+            background: $nu-purple;
+            height: 300px;
+
+            p { 
+                padding: 0 2rem;
+                
+                &.intro1 {
+                    font-size: 36px;
+                }
+                &.intro2 {
+                    font-size: 24px;
+                }
+            }
+        }     
+    }
+}
+@media screen and (max-width: 480px) {
+    .swiper-container {
+        height: 650px;
+
+        .swiper-image {
+            height: 350px;
+        }        
+        .name {
+            font-size: 24px;
+        }
+        .caption {
+            padding: .5rem;
+        
+            .subtitle {
+                font-size: 16px;
+            } 
+            p {
+                font-size: 16px;
+            }
+        }
+        .opening-text {
+            padding: 0 1rem;
+            p { 
+                padding: 0 .5rem;
+            
+                &.intro1 {
+                    font-size: 26px;
+                }
+                &.intro2 {
+                    font-size: 20px;
+                }            
+            }
+        }         
+    }   
+}
+
+// for top-level home page fadein for p.intro2
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}    
