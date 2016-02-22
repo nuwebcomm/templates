@@ -50,6 +50,14 @@ footer {
     &:nth-of-type(4) {
         width: 100px / 970px * 100%; 
         margin-right: 0;
+    
+        li {
+        
+            a { // for links with wrapping text
+                display: inline-block;
+                line-height: 1.3em;
+            }
+        }    
     }
     
     p {
