@@ -5,61 +5,68 @@
 }
 
 #top-nav {
-	min-height: 50px;
-	background: $nu-purple;
-	color: #fff;
-	z-index: 9999;
+    //min-height: 50px;
+    background: $nu-purple;
     border-bottom: 5px solid $white;
- 
-    ul {
-        display: table;
-        width: 100%;
-        background: $white;
-        position: relative; 
 
-        li {
-            display: table-cell;
-            text-align: center;
-            font: 18px $AkkuratProBold;
-            width: 180px / 1120px * 100%;
+    .contain-1120 {
+        
+        > ul {
+            text-align: justify;
+            line-height: 0;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;    
+            min-height: 51px;
+            position: relative;
+            font-size: .1px; // for strange bug with IE nav not being spread horizontally evenly and Safari dropdown disappearing when moving mouse down
+            background: $white;
 
-            &:hover a {
-                background: $light-grey;
-            } 
-          
-            &:hover .dropdown, &:hover .dropdown-one-column, &:hover .dropdown-two-column {
-                position: absolute;
-                left: 0;          
-            } 
-            
-            a {
-                color: $nu-purple;
-                text-decoration: none;
-                display: block;
-                padding: 1rem .3rem;                   
-         
-                &:hover {
-                    background: $light-grey;
-                }
-     
-                li:hover {
-                    background: $light-grey;
-                }   
-            }
-            
-            &.active a {
-                background: $nu-purple-60;
-                color: $white;
-            }
-            
-            .dropdown-arrow { // adds arrow
-                background: url("#{$path-images}/icons/arrow-down-ltpurple.svg") no-repeat 50%;
-                width: 10px;
-                height: 10px;
+            &:after {
+                content: '';
                 display: inline-block;
-                margin-left: .5em;                
+                width: 100%;
             }
-        }
+
+            > li {
+                display: inline-block;
+                line-height: 100%;
+                font: 18px $AkkuratProBold;
+
+                &:hover a {
+                    background: $light-grey;
+                    transition: .3s;
+                } 
+                
+                &:hover a.button { // overrides style above
+                    background: $nu-purple;
+                }
+
+                &:hover .dropdown, &:hover .dropdown-one-column, &:hover .dropdown-two-column {
+                    left: 0;   
+                }             
+
+                a {
+                    color: $nu-purple;
+                    text-decoration: none;
+                    display: block;
+                    padding: 1rem 1.5rem;   
+                }
+
+                &.active a {
+                    background: $nu-purple-60;
+                    color: $white;
+                }
+
+                .dropdown-arrow { // adds arrow
+                    background: url("#{$path-images}/icons/arrow-down-ltpurple.svg") no-repeat 50%;
+                    width: 10px;
+                    height: 10px;
+                    display: inline-block;
+                    margin-left: .5em;                
+                }           
+            }
+        }  
         
         .dropdown, .dropdown-one-column, .dropdown-two-column {
             position: absolute;
@@ -67,9 +74,13 @@
             left: -9999em;
             z-index: 9998;
             width: 100%;
-            display: inherit;
+            //display: inherit;
             padding: 2em;
-            text-align: left;            
+            text-align: left;  
+            list-style: none;  
+            display: -webkit-flex;
+            display: -ms-flexbox;        
+            display: flex; // equal height columns                
         
             .nav-intro, .nav-links {
                 width: 50%;
@@ -111,22 +122,13 @@
                     }                                        
                 }
             }
-        }
-        
-        // single column dropdown without nav intro text/button
-        .dropdown-one-column {
-            
-            .nav-links {
-                border-left: none;
-                padding-left: 0;
-                width: 100%;
-            }
-        }        
+        }   
 
         // two column dropdown without nav intro text/button
         .dropdown-two-column {
             
             ul {
+                width: 100% !important;
                 -moz-column-count: 2;
                 -webkit-column-count: 2;
                 column-count: 2;
@@ -136,6 +138,8 @@
                 -webkit-column-rule: 2px solid $medium-grey;
                 -moz-column-rule: 2px solid $medium-grey;
                 column-rule: 2px solid $medium-grey;
+                margin: 0;
+                padding: 0;
 
                 li {
                     background: none;
@@ -161,7 +165,6 @@
 
             &:hover ul.nav-align-right li {
                text-align: right;
-
             }        
         }
         
@@ -173,6 +176,13 @@
 }
 
 // media queries 
+@media screen and (max-width: 1000px) {
+    
+    #top-nav .contain-1120 > ul > li { // keeps last li anchored to left
+        float: left;
+    }
+}
+
 @media screen and (max-width: 768px) {
     
     #top-nav {
