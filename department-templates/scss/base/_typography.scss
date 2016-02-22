@@ -60,6 +60,10 @@ h6 {
         font-weight: normal;
     }
     
+    a em { // for italic anchors
+        font-family: $AkkuratProBoldItalic;
+    }
+    
     p:last-of-type {
         margin-bottom: 1.5rem;
     }
