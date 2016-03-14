@@ -56,12 +56,10 @@
 		margin: 1.5rem 0 0;
 	}
 
-	input, input[type="text"] {
+	input[type="text"] {
 		border: 1px solid $medium-grey;
 		font: $form-font-size/#{$form-line-height} $AkkuratProBold;
 		color: $rich-black-80;
-		-webkit-appearance: none;
-		-moz-appearance: none;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		-webkit-border-radius: 0;
