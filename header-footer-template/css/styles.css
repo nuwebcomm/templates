@@ -182,18 +182,6 @@ img {
   .hide-mobile, a.screen-reader-shortcut {
     display: none;
   }
-
-  /* line 115, ../scss/base/_core.scss */
-  #page {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-  }
 }
 /* line 4, ../scss/base/_typography.scss */
 h2 {
@@ -239,7 +227,7 @@ h6 {
 
 /* line 40, ../scss/base/_typography.scss */
 #page {
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto;
   max-width: 1120px;
 }
 
@@ -839,18 +827,19 @@ header {
 }
 /* line 171, ../scss/sections/_top-nav.scss */
 #top-nav.narrow-dropdown .dropdown {
+  display: inherit;
   width: 320px;
   padding: 1em;
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 181, ../scss/sections/_top-nav.scss */
+  /* line 182, ../scss/sections/_top-nav.scss */
   #top-nav .contain-1120 > ul > li {
     float: left;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 188, ../scss/sections/_top-nav.scss */
+  /* line 189, ../scss/sections/_top-nav.scss */
   #top-nav {
     display: none;
   }
