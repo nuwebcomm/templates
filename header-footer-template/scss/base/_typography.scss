@@ -2,39 +2,33 @@
 
 // headers
 h2 {
-    font: 46px/1.2em $CamptonExtraLight;
+    font: 46px/1.2em $CamptonBook;
     color: $nu-purple;
     margin-bottom: 1rem;
 }
 
 h3 {
-    font: 34px $CamptonBold;
+    font: 34px/1.2em $CamptonBold;
     color: $nu-purple;
     margin-bottom: .5rem;
 }
 
 h4 {
-    font: 26px $AkkuratProRegular;
+    font: 26px/1.2em $AkkuratProRegular;
     color: $rich-black-50;
     margin-bottom: 1rem; 
 }
 
 h5 {
-    font: 21px $AkkuratProRegular;
+    font: 21px/1.3em $AkkuratProRegular;
     color: $nu-purple;
     margin-bottom: 1rem; 
 }
 
 h6 {
-    font: 18px $CamptonBold;
-    color: $nu-purple;
+    font: 18px/1.3em $CamptonBold;
+    color: $rich-black-50;
     margin-bottom: 1rem; 
-}
-
-#section-header h2 {
-    font: 18px $AkkuratProBold;
-    text-transform: none;
-    margin-bottom: 0;
 }
 
 #page { 

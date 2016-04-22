@@ -1,0 +1,29 @@
+body {
+	background: #fff;
+	font-size: 10pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#top-bar #right, #search, nav, #mobile-links, #left img, footer img, .screen-reader-shortcut, .footer-content:nth-of-type(1), .footer-content:nth-of-type(3), .footer-content:nth-of-type(4) {
+	display: none;
+}
+a img {
+	border: none;
+}
+table th, table thead {
+	border: 1px solid #000;	
+	padding: .5em;
+	text-align: left;
+}
+table {
+	border: 1px solid #000;
+	border-collapse: collapse;
+}
+table td {
+	padding: .5em;
+	border: 1px solid #000;
+}
+a:link, a:visited {
+	color: #4e2a84;
+	background: transparent;
+	text-decoration: underline;
+}
