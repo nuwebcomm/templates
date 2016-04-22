@@ -50,6 +50,10 @@ In addition to the major items listed below, there may have been comments and co
   1. New – may be used in responsive tabs (as shown)
 
 #### SASS
+
+* `/scss/styles.scss`
+  1. Added new modules
+
 * `/scss/base/_buttons.scss`
   1. `<p class="button"><a href="#">Link</a></p>` now behaves like `<p><a href="#" class="button">Link</a></p>`
 
