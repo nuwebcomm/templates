@@ -8,7 +8,7 @@
 	width: 265px / 1120px * 100%;
     display: table-cell;
     vertical-align: middle;
-    @extend %clearfix; // clearfix    
+    @extend %clearfix;   
 
     .search-form {
         width: 265px;

@@ -8,43 +8,46 @@
         max-width: 930px;    
     }
     
-    .quote {
-        width: 265px / 930px * 100%;
-        margin-right: 20px / 930px * 100%;
-        float: left;
-    }
-    
-    .narrow-content {
-        width: 645px / 930px * 100%;
-        float: right;
+    #news-story {
         
-        &.full { // append this class when there's no quote on left
-            width: 100%;
-            float: none;
+        h2 {
+            margin-bottom: 1.5rem;
         }
         
-        .intro {
-            font: 20px $CamptonExtraLight;
-        }
+        .wrap {
+            margin-bottom: 1.5rem;
+            @extend %clearfix;
         
-        .slashes {
-            font: 20px $CamptonExtraLight;
-            
-            ul {
-                padding: 0;
-                margin: 2rem 0 2rem 0;
-
-                li {
-                    background: url("#{$path-images}/icons/dkpurple-slash.svg") no-repeat 0 2px / 18px 18px;
-                    display: inline;
-                    padding: 0 .25rem 0 1.5rem;
-
-                    &:first-child {
-                        background: none;
-                        padding-left: 0;
-                    }
-                }
+            #credit {
+                font: 16px/1.4em $CamptonBold;
+                color: $rich-black-80;
+                width: 645px / 930px * 100%;
+                
             }
+
+            #share {
+                float: right;
+                width: 265px / 930px * 100%;
+            }
+        }
+        
+        #story-floater {
+            float: right;
+            width: 265px / 930px * 100%;
+            margin-left: 20px / 930px * 100%;
+            margin-bottom: 20px / 930px * 100%;
+            
+            figure + .news-tidbit {
+                margin-top: 2rem;
+            }
+
+            #story-callout {
+                border-top: 4px solid $light-grey;
+                border-bottom: 4px solid $light-grey;
+                padding: 1.5rem 0;
+                font: 20px $CamptonBook;
+                color: $nu-purple;
+            }              
         }
     }
     
@@ -58,30 +61,55 @@
     
     @media screen and (max-width: 768px) {
         
-        .narrow-wrap {
-            display: -webkit-flex;
-            display: -ms-flexbox;            
-            display: flex;
-            -webkit-flex-direction: column;
-            flex-direction: column;
-            -webkit-justify-content: flex-start;
-            justify-content: flex-start;          
+        #news-story {
+ 
+            #story-floater {
+                float: none;
+                width: 100%;
+                padding-top: 1.5rem;
+                margin-left: 0;
+                margin-bottom: 1.5rem;
+                border-top: 4px solid $light-grey;             
+
+                .quote {
+                    float: none;
+                    width: 100%;
+                    font-size: 18px;
+                    border-bottom: 4px solid $light-grey;   
+                }              
+                
+                #story-callout {
+                    display: none;
+                }                
+            }
         }
+    }
+    
+    @media screen and (max-width: 700px) {    
+    
+        #news-story {
+            
+            .wrap {
         
-        .quote {
-            float: none;
-            width: 100%;
-            font-size: 24px;
-        }
-        
-        .narrow-content {
-            float: none;
-            width: 100%;
-            -webkit-order: -1;
-            -ms-flex-order: -1;
-            order: -1; // flexbox moves content to top   
-            margin-bottom: 2rem;
-        }
-    } 
+                #share {
+                    float: none;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+
+                #credit {
+                    float: none;
+                    width: 100%;
+                }                 
+            }
+        }        
+    }    
+    
+    @media screen and (max-width: 500px) {    
+    
+        .hero {
+            display: none;
+        }        
+    }
     
 } // end

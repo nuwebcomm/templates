@@ -3,6 +3,11 @@
 .standard-page {
     
     // main content regions
+    #main-content { // gives content space before hitting footer
+        min-height: 300px;
+        margin-bottom: 5rem;
+    }
+    
     .content {
         width: 836px / 1120px * 100%;     
         float: right;
@@ -95,7 +100,40 @@
         }
     }    
     
+    // ordered list for steps (big numbers)
+    ol {
+        
+        &.steps {
+            counter-reset: li;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1em;
+        
+            li {
+                position: relative;
+                display: block;
+                padding: 0;
+                margin-bottom: 1em;
+                padding: 1em .5em 0 5em;
+                min-height: 90px;
 
+                &:before {
+                    content: counter(li);
+                    counter-increment: li;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    font: 72px $CamptonBold;
+                    color: $nu-purple;
+                    margin: 0;
+                    padding: 0 .15em 0 .15em;
+                    text-align: center;
+                } 
+            }
+        }
+    }
+    
     // media queries
     @media screen and (max-width: 1145px) {
         

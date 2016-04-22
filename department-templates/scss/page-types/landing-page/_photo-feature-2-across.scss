@@ -14,6 +14,12 @@
             img {
                 display: block;
             }
+            
+            .back {
+                display: none;
+                background-color: $nu-purple-60;
+                width: 100%;
+            }            
 
             .text-over-image {
                 color: $white;
@@ -29,21 +35,54 @@
                     margin-bottom: -.5rem;
                     text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
                 }
+            }
+            
+            p {
+                font: 16px/1.3em $AkkuratProRegular;
+                text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
+
+                &.link {
+                    font-family: $AkkuratProBold;
+                    text-transform: uppercase;
+
+                    &:after {
+                        background: url("#{$path-images}/icons/arrow-right-white.svg") no-repeat 50% / 6px 10px;
+                        padding-right: 2rem;
+                        content: " ";
+                    }                     
+                } 
+            } 
+            
+            .back-text {
+                color: $white;
+                padding: 0 2em;
+                position: absolute;
+                z-index: 31;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                // vertically center absolutely positioned text
+                transform: translate(-50%,-50%);
+                -o-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%); 
+                -webkit-transform: translate(-50%,-50%);
+                text-align: center;
+
+                h4 {
+                    font: 18px $AkkuratProBold;
+                    color: #fff;
+                    margin-bottom: 1.5em;
+                    text-shadow: none;
+                }
 
                 p {
-                    font: 16px $AkkuratProBold;
-                    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
+                    text-shadow: none;    
 
                     &.link {
-                        text-transform: uppercase;
-
-                        &:after {
-                            background: url("#{$path-images}/icons/arrow-right-white.svg") no-repeat 50% / 6px 10px;
-                            padding-right: 2rem;
-                            content: " ";
-                        }                     
-                    } 
-                } 
+                        margin-top: 1em;
+                    }
+                }              
             }   
         } 
     }
@@ -101,6 +140,7 @@
                             font-size: 30px;
                         }
                     }
+                    
                     p { 
                         display: none;
                     

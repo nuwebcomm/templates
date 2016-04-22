@@ -34,9 +34,16 @@
         .people-content {
             float: right;
             
-            h4 {
-                font: 30px/1.2em $CamptonBook;
+            h3, h4 {
+                font: 24px/1.2em $CamptonBold;
                 color: $rich-black-50;
+                margin-bottom: 0;
+            }
+            .title {
+                font: 18px/1.2em $AkkuratProBold;
+                margin-top: 0;
+                //color: $rich-black-50;
+            
             }
         }
     }

@@ -58,7 +58,7 @@
 
 	input[type="text"] {
 		border: 1px solid $medium-grey;
-		font: $form-font-size/#{$form-line-height} $AkkuratProBold;
+		font-family: $AkkuratProBold;
 		color: $rich-black-80;
 		-webkit-appearance: none;
 		-moz-appearance: none;
@@ -70,15 +70,15 @@
 	input[type=checkbox], input[type=radio] {
 		box-sizing: border-box;
 		padding: 0;
-		height: 13px;
-		width: 13px
+		height: 15px;
+		width: 15px;
 	}
 
 	input[type=search] {
 		-webkit-appearance: textfield;
 		-moz-box-sizing: content-box;
 		-webkit-box-sizing: content-box;
-		box-sizing: content-box
+		box-sizing: content-box;
 	}
 
 	input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
@@ -88,22 +88,25 @@
 	input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
 		display: inline-block;
 		border: 1px solid $medium-grey;
-		font-size: $form-font-size;
-		line-height: $form-line-height;
 		color: $rich-black-50;
 		border-radius: 0;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		-webkit-font-smoothing: antialiased;
-		height: 2.688rem;
 		min-width: 30rem;
 		background: $white;
+        padding: .5em;
 		@include borderFade();
 
 		&.required {
 			border: 1px solid $red;
 		}
+        
+        // for smaller input fields
+        &.narrow { 
+            min-width: 15rem;
+        }
 	}
 
 	input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=date]:focus, input[type=month]:focus, input[type=time]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=week]:focus, input[type=number]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=color]:focus, select:focus, textarea:focus {
@@ -113,7 +116,7 @@
     
 	input[type=text].required:focus, input[type=password].required:focus, input[type=email].required:focus, input[type=url].required:focus, input[type=date].required:focus, input[type=month].required:focus, input[type=time].required:focus, input[type=datetime].required:focus, input[type=datetime-local].required:focus, input[type=week].required:focus, input[type=number].required:focus, input[type=search].required:focus, input[type=tel].required:focus, input[type=color].required:focus, select.required:focus, textarea.required:focus {
 		border-color: $red;
-	};
+	}
 
 	input[type=file]:focus, input[type=radio]:focus, input[type=checkbox]:focus {
 		outline:thin dotted  $rich-black-80;
@@ -134,7 +137,6 @@
 
 	input[type=file] {
 		background-image: none;
-		font: normal $form-font-size $form-base-font;
 
 		&:hover {
 			background-image: none;
@@ -142,14 +144,13 @@
 	}
 
 	select {
-		background: $white url("#{$path-images}/icons/arrow-down-dkgrey.svg")  no-repeat top 50% right .5rem / 17px 10px;
+		background: $white url("#{$path-images}/icons/arrow-down-dkpurple.svg")  no-repeat top 50% right .5rem / 17px 10px;
 		color: $rich-black-50;
-		font: $form-font-size/#{$form-line-height} $AkkuratProBold;
+		font-family: $AkkuratProBold;
 		border: 1px solid $medium-grey;
 		display: inline-block;
-		height: 2.688rem;
+		padding: .5em;
 		margin: 0 .65rem 0 0;
-		padding: .25rem 1.5rem .25rem .5rem;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		-webkit-border-radius: 0;
@@ -161,7 +162,7 @@
 
 		&:-moz-focusring {
 			color: transparent;
-			text-shadow: 0 0 0 #000;
+			text-shadow: 0 0 0 $black;
 		}
 
 		option {
@@ -175,7 +176,6 @@
 
 	textarea {
 		border: 1px solid $medium-grey;
-		font: $form-font-size/#{$form-line-height} $AkkuratProBold;
 		padding: 0.3em 1.5em 0.3em .5em;
 		width: 100%;
         height: 8em;
@@ -185,20 +185,19 @@
 		-moz-appearance: none;
 		-webkit-border-radius: 0;
 		overflow: auto;
-		vertical-align: top
+		vertical-align: top;
 	}
 
 	.checkbox {
 		margin-right: .3em;
 
-	.right {
-		font-weight: bold;
-		font-style: normal;
-		font-size: 1em;
-	}
+        .right {
+            font-weight: bold;
+            font-style: normal;
+            font-size: 1em;
+        }
 
-    // required
-
+        // required
 		&.required {
 			display: inline;
 		}
@@ -219,7 +218,9 @@
 	}
 
 	label, .label {
+        
 		span {
+            
 			&.required {
 				display: inline;
 				margin-left: 0.5rem;
@@ -228,6 +229,7 @@
 	}
 
 	span {
+        
 		&.required {
 			display: inline;
 		}
@@ -257,7 +259,7 @@
 	button, input, select, textarea {
 		font-size: 100%;
 		vertical-align: baseline;
-		vertical-align: middle
+		vertical-align: middle;
 	}
 
 	button, input {
@@ -292,12 +294,18 @@
 		input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
 			width: 100%;
 			min-width: inherit;
-		}
+		
+            // for smaller input fields
+            &.narrow { 
+                width: 50%;
+            }        
+        
+        }
 
 		.form-help-inline, -message-inline, -message {
 			display: block;
 			font-size: 80%;
-			padding: .2em 0 .8em
+			padding: .2em 0 .8em;
 		}
 	}
 }

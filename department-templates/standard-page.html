@@ -5,641 +5,676 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/swiper.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-    <!--[if lt IE 9]><script src="http://html5shiv-printshiv.googlecode.com/svn/trunk/html5shiv-printshiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/swiper.css" type="text/css" media="screen" />    
+    <!--[if lt IE 9]><script src="//common.northwestern.edu/v8/js/html5shiv-printshiv.js"></script><![endif]-->
     <title>Northwestern University</title>
 </head> 
 
 <body>
-<a id="top"></a>
-<a href="#main-content" class="screen-reader-shortcut">Skip to main content</a>
-<!--[if lt IE 9]>
-<div id="ie">
-    <p><img src="https://common.northwestern.edu/v8/css/images/icons/ie8-warning.png" alt="Warning icon" /> Your browser is <strong>out-of-date</strong> and has known <strong>security flaws</strong>. We recommend you update your browser: <a href="http://www.google.com/chrome/" target="_blank">Chrome</a> - <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> - <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a> - <a href="https://www.apple.com/safari/" target="_blank">Safari</a>.</p>
-</div>
-<![endif]-->
-<header> 
-    <div id="top-bar">
-        <div class="contain-1120">
-            <div id="left">
-                <a href="http://www.northwestern.edu"><img src="https://common.northwestern.edu/v8/css/images/northwestern.svg" alt="Northwestern University" /><span class="hide-label">Northwestern University</span></a>
-            </div>
-            <div id="mobile-links">
-                <a href="#mobile-search" class="mobile-link mobile-search-link"><span class="hide-label">Search</span></a>
-                <div id="mobile-search">
-                    <div class="search-form">
-                        <form action="http://googlesearch.northwestern.edu/search">
-                            <label for="q-mobile" class="hide-label">Search this website</label>
-                            <input type="text" id="q-mobile" name="q" placeholder="Search this site" />
-                            <input type="hidden" value="default_collection" name="site" />
-                            <input type="hidden" value="default_oneboxes" name="client" />
-                            <input type="hidden" value="xml_no_dtd" name="output" />
-                            <input type="hidden" value="http://www.northwestern.edu/YOUR_SITE" name="sitesearch" />
-                            <input type="hidden" value="Undergraduate Admissions" name="sitetitle">
-                            <input type="hidden" value="default_oneboxes" name="proxystylesheet" />
-                            <button type="submit"><span class="hide-label">Search</span></button>
-                        </form>
-                    </div>
+    
+    <a id="top"></a>
+    <a href="#main-content" class="screen-reader-shortcut">Skip to main content</a>
+    <!--[if lt IE 9]>
+    <div id="ie">
+        <p><img src="https://common.northwestern.edu/v8/css/images/icons/ie8-warning.png" alt="Warning icon" /> Your browser is <strong>out-of-date</strong> and has known <strong>security flaws</strong>. We recommend you update your browser: <a href="http://www.google.com/chrome/" target="_blank">Chrome</a> - <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> - <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a> - <a href="https://www.apple.com/safari/" target="_blank">Safari</a>.</p>
+    </div>
+    <![endif]-->
+    <header> 
+        <div id="top-bar">
+            <div class="contain-1120">
+                <div id="left">
+                    <a href="http://www.northwestern.edu"><img src="https://common.northwestern.edu/v8/css/images/northwestern.svg" alt="Northwestern University" /><span class="hide-label">Northwestern University</span></a>
                 </div>
-                <a href="#mobile-nav" class="mobile-link mobile-nav-link"><span class="hide-label">Menu</span></a>
-                <nav id="mobile-nav">
-                    <ul aria-label="main menu">
-                        <li tabindex="0"><a href="#">About</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                            <ul aria-expanded="false" aria-hidden="true">
-                                <li><a href="#">Level 2, Link 1 </a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
-                                    <ul aria-expanded="false" aria-hidden="true">
-                                        <li><a href="#">Level 3, Link 2 the quick brown fox jumped over the lazy dog</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
-                                            <ul aria-expanded="false" aria-hidden="true">
-                                                <li><a href="#">Level 4, Link 1</a></li>
-                                                <li><a href="#">Level 4, Link 2</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
-                                                    <ul aria-expanded="false" aria-hidden="true">
-                                                        <li><a href="#">Level 5, Link 1</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
-                                                            <ul aria-expanded="false" aria-hidden="true">
-                                                                <li><a href="#">Level 6, Link 1</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a href="#">Level 5, Link 2</a></li>
-                                                        <li><a href="#" class="active">Level 5, Link 3</a></li>
-                                                        <li><a href="#">Level 5, Link 4</a></li>
-                                                        <li><a href="#">Level 5, Link 5</a></li>
-                                                    </ul>                                                
-                                                </li>
-                                                <li><a href="#">Level 4, Link 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Level 3, Link 2</a></li>
-                                        <li><a href="#">Level 3, Link 3</a></li>
-                                        <li><a href="#">Level 3, Link 4</a></li>
-                                        <li><a href="#">Level 3, Link 5</a></li>
-                                    </ul>
-                                </li>
+                <div id="mobile-links">
+                    <a href="#mobile-search" class="mobile-link mobile-search-link"><span class="hide-label">Search</span></a>
+                    <div id="mobile-search">
+                        <div class="search-form">
+                            <form action="http://googlesearch.northwestern.edu/search">
+                                <label for="q-mobile" class="hide-label">Search this website</label>
+                                <input type="text" id="q-mobile" name="q" placeholder="Search this site" />
+                                <input type="hidden" value="default_collection" name="site" />
+                                <input type="hidden" value="default_oneboxes" name="client" />
+                                <input type="hidden" value="xml_no_dtd" name="output" />
+                                <input type="hidden" value="http://www.northwestern.edu/YOUR_SITE" name="sitesearch" />
+                                <input type="hidden" value="Undergraduate Admissions" name="sitetitle">
+                                <input type="hidden" value="default_oneboxes" name="proxystylesheet" />
+                                <button type="submit"><span class="hide-label">Search</span></button>
+                            </form>
+                        </div>
+                    </div>
+                    <a href="#mobile-nav" class="mobile-link mobile-nav-link"><span class="hide-label">Menu</span></a>
+                    <nav id="mobile-nav">
+                        <ul aria-label="main menu">
+                            <li tabindex="0"><a href="#">About</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li><a href="#">Level 2, Link 1 </a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
+                                        <ul aria-expanded="false" aria-hidden="true">
+                                            <li><a href="#">Level 3, Link 2 the quick brown fox jumped over the lazy dog</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
+                                                <ul aria-expanded="false" aria-hidden="true">
+                                                    <li><a href="#">Level 4, Link 1</a></li>
+                                                    <li><a href="#">Level 4, Link 2</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
+                                                        <ul aria-expanded="false" aria-hidden="true">
+                                                            <li><a href="#">Level 5, Link 1</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
+                                                                <ul aria-expanded="false" aria-hidden="true">
+                                                                    <li><a href="#">Level 6, Link 1</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#">Level 5, Link 2</a></li>
+                                                            <li><a href="#" class="active">Level 5, Link 3</a></li>
+                                                            <li><a href="#">Level 5, Link 4</a></li>
+                                                            <li><a href="#">Level 5, Link 5</a></li>
+                                                        </ul>                                                
+                                                    </li>
+                                                    <li><a href="#">Level 4, Link 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Level 3, Link 2</a></li>
+                                            <li><a href="#">Level 3, Link 3</a></li>
+                                            <li><a href="#">Level 3, Link 4</a></li>
+                                            <li><a href="#">Level 3, Link 5</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li> 
+                            <li><a href="#">Academics</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li><a href="#">Level 2, Link 1</a></li>
+                                </ul>
+                            </li>                        
+                            <li><a href="#">Admissions</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li><a href="#">Level 2, Link 1</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Campus Life</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li><a href="#">Level 2, Link 1</a></li>
+                                </ul>
+                            </li> 
+                            <li><a href="#">Research</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li><a href="#">Level 2, Link 1</a></li>
+                                </ul>
+                            </li> 
+                            <li><a href="#">Giving</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li><a href="#">Level 2, Link 1</a></li>
+                                </ul>
+                            </li>                         
+                        </ul>
+                        <div id="mobile-nav-bottom">
+                            <!-- links from #top-bar #right --> 
+                            <ul id="mobile-nav-bottom-left">
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
                             </ul>
-                        </li> 
-                        <li><a href="#">Academics</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                            <ul aria-expanded="false" aria-hidden="true">
-                                <li><a href="#">Level 2, Link 1</a></li>
+                            <!-- links under "resources" from #top-bar #right .dropdown -->
+                            <ul id="mobile-nav-bottom-right">
+                                <li><a href="#">Drop Link 1</a></li>
+                                <li><a href="#">Drop Link 2</a></li>
+                                <li><a href="#">Drop Link 3</a></li>
+                                <li><a href="#">Drop Link 4</a></li>
                             </ul>
-                        </li>                        
-                        <li><a href="#">Admissions</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                            <ul aria-expanded="false" aria-hidden="true">
-                                <li><a href="#">Level 2, Link 1</a></li>
+                        </div>
+                    </nav>              
+                </div>            
+                <div id="right">
+                    <ul>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                        <li>Resources <span class="dropdown-arrow"></span>
+                            <ul>
+                                <li><a href="#">Drop Link 1</a></li>
+                                <li><a href="#">Drop Link 2</a></li>
+                                <li><a href="#">Drop Link 3</a></li>
+                                <li><a href="#">Drop Link 4</a></li>
+                            </ul>    
+                        </li>
+                    </ul>
+                </div>
+            </div>     
+        </div>
+        <div class="bottom-bar contain-1120">
+            <div id="department">
+                <h1><a href="#">DEPARTMENT NAME</a></h1>
+            </div>
+            <div id="search" class="hide-mobile">
+                <div class="search-form">
+                    <form action="http://googlesearch.northwestern.edu/search">
+                        <label for="q-desktop" class="hide-label">Search this website</label>
+                        <input type="text" id="q-desktop" name="q" placeholder="Search this site" />
+                        <input type="hidden" value="default_collection" name="site" />
+                        <input type="hidden" value="default_oneboxes" name="client" />
+                        <input type="hidden" value="xml_no_dtd" name="output" />
+                        <input type="hidden" value="http://www.northwestern.edu/YOUR_SITE" name="sitesearch" />
+                        <input type="hidden" value="Undergraduate Admissions" name="sitetitle">
+                        <input type="hidden" value="default_oneboxes" name="proxystylesheet" />
+                        <button type="submit"><span class="hide-label">Search</span></button>
+                    </form>
+                </div>					
+            </div>
+        </div>            
+    </header>
+    <nav id="top-nav" aria-label="main navigation menu">
+        <div class="contain-1120">
+            <ul>
+                <li><a href="#">About <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown">
+                        <li class="nav-intro">
+                            <p class="intro">Header</p>
+                            <a href="#" class="button">Button</a>
+                        </li>
+                        <li class="nav-links">
+                            <ul>
+                                <li><a href="#">Standard Marketing Navigation</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Campus Life</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                            <ul aria-expanded="false" aria-hidden="true">
-                                <li><a href="#">Level 2, Link 1</a></li>
-                            </ul>
-                        </li> 
-                        <li><a href="#">Research</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                            <ul aria-expanded="false" aria-hidden="true">
-                                <li><a href="#">Level 2, Link 1</a></li>
-                            </ul>
-                        </li> 
-                        <li><a href="#">Giving</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                            <ul aria-expanded="false" aria-hidden="true">
-                                <li><a href="#">Level 2, Link 1</a></li>
-                            </ul>
-                        </li>                         
                     </ul>
-                    <div id="mobile-nav-bottom">
-                        <!-- links from #top-bar #right --> 
-                        <ul id="mobile-nav-bottom-left">
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
+                </li>			
+                <li><a href="#">Academics <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-one-column">
+                        <li>
+                            <ul>
+                                <li><a href="#">One Column Navigation</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>    
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>                       
+                            </ul>
+                        </li>
+                    </ul>
+                </li>				
+                <li><a href="#">Admissions <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-two-column">
+                        <li>
+                            <ul>
+                                <li><a href="#">Two Column Navigation</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
+                                <li><a href="#">Link 6</a></li>
+                                <li><a href="#">Link 7</a></li>
+                                <li><a href="#">Link 8</a></li>    
+                                <li><a href="#">Link 9</a></li>                                     
+                            </ul>
+                        </li>
+                    </ul>
+                </li>						
+                <li><a href="#">Campus Life <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown">
+                        <li class="nav-intro">
+                            <p class="intro">Header</p>
+                            <a href="#" class="button">Button</a>
+                        </li>
+                        <li class="nav-links">
+                            <ul>
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Research <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown">
+                        <li class="nav-intro">
+                            <p class="intro">Header</p>
+                            <a href="#" class="button">Button</a>
+                        </li>
+                        <li class="nav-links">
+                            <ul>
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Giving <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown">
+                        <li class="nav-intro">
+                            <p class="intro">Header</p>
+                            <a href="#" class="button">Button</a>
+                        </li>
+                        <li class="nav-links">
+                            <ul>
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero contain-1440">
+        <div class="hero-image" style="background: url('images/1440x420.gif') no-repeat center / cover">
+            <div class="contain-780">
+                <h2>Page Header</h2>
+                <p>Optional Large Text</p>
+            </div>    
+        </div>
+    </section>
+    <div id="page">    
+        <nav id="left-nav" aria-label="section navigation menu" tabindex="0">
+            <h2><a href="#">Section Header</a></h2>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#" class="active">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+        <main id="main-content" class="content" tabindex="0">
+            <ul id="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li class="active">Page 2</li>
+            </ul>
+            <h2>Standard Page with Modules</h2>
+            <p>Ea augue legimus intellegat pri, vel congue democritum ei. Errem tibique vivendum at nec, cu accusam menandri dissentias vel, in mei facilisi expetendis. Ut sed accusata definitiones, dicat inciderint at per. Ad quot persecuti quo. In eos errem eirmod apeirian, nam et etiam aliquid. Inani theophrastus per ex, diceret gloriatur has at.</p>
+
+            <!-- photo feature (2 across) -->
+            <section>
+                <h3>Photo Feature (2 Across)</h3>
+                <div class="photo-feature-2-across group">
+                    <article class="photo-feature">
+                        <a href="#">
+                            <img src="images/418x235.gif" alt="">   
+                            <div class="text-over-image">
+                                <h4>Title</h4>
+                                <p class="link">Learn more</p>
+                            </div>
+                        </a>     
+                    </article>
+                     <article class="photo-feature">
+                        <a href="#">
+                            <img src="images/418x235.gif" alt="">   
+                            <div class="text-over-image">
+                                <h4>Title</h4>
+                                <p class="link">Learn more</p>
+                            </div>
+                        </a>
+                    </article>       
+                </div>
+            </section>      
+            
+            <!-- photo feature (2 across) with Hover-->
+            <section>
+                <h3>Photo Feature (2 Across) with Hover</h3>
+                <div class="photo-feature-2-across group">
+                    <article class="photo-feature">
+                        <a href="#">
+                            <div class="front">
+                                <img src="images/418x235.gif" alt="">   
+                                <div class="text-over-image">
+                                    <h4>Title</h4>
+                                    <p class="link">Learn more</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="back-text">
+                                    <h4>Title</h4>
+                                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>
+                                    <p class="link">Go to Site</p>
+                                </div>
+                            </div>                       
+                        </a>     
+                    </article>
+                     <article class="photo-feature">
+                        <a href="#">
+                            <div class="front">
+                                <img src="images/418x235.gif" alt="">   
+                                <div class="text-over-image">
+                                    <h4>Title</h4>
+                                    <p class="link">Learn more</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="back-text">
+                                    <h4>Title</h4>
+                                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>
+                                    <p class="link">Go to Site</p>
+                                </div>
+                            </div> 
+                        </a>
+                    </article>       
+                </div>
+            </section>               
+
+            <!-- background image select -->
+            <section class="background-select">
+                <div class="background-select-image" style="background: url('http://common.northwestern.edu/v8/css/images/purple-slashes-standard.jpg') no-repeat center / cover">
+                    <div class="contain-780">
+                        <h3>Background Select</h3>
+                        <p class="select-date">Date/Time goes here</p>
+                        <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei. An has possit iracundia, ipsum discere diceret ea mei.</p>
+                        <a href="#" class="button">Optional Link</a>
+                    </div>
+                </div>
+            </section>          
+
+            <!-- feature boxes (2 columns) -->
+            <section>
+                <h3>Feature Boxes (Two Columns)</h3>
+                <div class="feature-two-col">
+                    <article class="feature-box">
+                        <img src="images/407x235.png" alt="" />
+                        <div class="feature-copy">
+                            <h4>Title</h4>
+                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. </p>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="button">Optional Link</a>
+                    </article>
+                    <article class="feature-box">
+                        <img src="images/407x235.png" alt="" />
+                        <div class="feature-copy">
+                            <h4>Title</h4>
+                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>   
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="button">Optional Link</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- two column links -->
+            <section>
+                <h3>Two Column Links</h3>
+                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                <div class="two-column-links">
+                    <article>
+                        <h4>Title</h4>
+                        <img src="images/400x210.png" alt="" />
+                        <ul>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
                         </ul>
-                        <!-- links under "resources" from #top-bar #right .dropdown -->
-                        <ul id="mobile-nav-bottom-right">
-                            <li><a href="#">Drop Link 1</a></li>
-                            <li><a href="#">Drop Link 2</a></li>
-                            <li><a href="#">Drop Link 3</a></li>
-                            <li><a href="#">Drop Link 4</a></li>
+                    </article>     
+                    <article>
+                        <h4>Title</h4>
+                        <img src="images/400x210.png" alt="" />
+                        <ul>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>         
+
+            <!-- three variations of showcase (in-page image galleries) -->
+            <!-- 1. large gallery or image -->
+            <section class="showcase">
+                <h3>Large Gallery or Image</h3>
+                <h4>Optional Subhead</h4>
+                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/836x400.png" alt="alt tag for the first image">
+                            <div class="caption">This is a caption for the first image</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/836x400-2.png" alt="alt tag for the second image">
+                            <div class="caption">This is a caption for the second image</div>
+                        </div>
+                    </div>        
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>     
+                </div> 
+                <div class="below-content">
+                    <figure class="quote">
+                        <p><span></span>Lorem ipsum dolor sit amet.&ldquo;</p>
+                        <figcaption>Credit</figcaption>
+                    </figure>
+                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                </div>
+            </section>        
+
+            <!-- 2. useful links, small gallery or image -->
+            <section class="showcase">
+                <h3>Useful Links, Small Gallery or Image</h3>
+                <h4>Optional Subhead</h4>
+                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                <div class="group">
+                    <div class="left-content">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/550x310.png" alt="This is an alt tag for the first image">
+                                    <div class="caption">This is a caption for the first image</div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/550x310-2.png" alt="This is an alt tag for the second image">
+                                    <div class="caption">This is a caption for the second image</div>
+                                </div>
+                            </div>        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>     
+                        </div> 
+                    </div>
+                    <div class="right-content links">
+                        <p>Title</p>
+                        <ul>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
                         </ul>
                     </div>
-                </nav>              
-            </div>            
-            <div id="right">
+                </div>
+                <div class="below-content">
+                    <figure class="quote">
+                        <p><span></span>Lorem ipsum dolor sit amet.&ldquo;</p>
+                        <figcaption>Credit</figcaption>
+                    </figure>
+                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                </div>
+            </section>
+
+            <!-- 3. gallery or image with large text -->
+            <section class="showcase">
+                <h3>Gallery or Image with Large Text</h3>
+                <h4>Optional Subhead</h4>
+                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                <div class="group">
+                    <div class="left-content">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/550x310.png" alt="alt tag for the first image" />
+                                    <div class="caption">This is a caption for the first image</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/550x310-2.png" alt="alt tag for the second image" />
+                                    <div class="caption">This is a caption for the second image</div>
+                                </div>
+                            </div>        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>     
+                        </div> 
+                        <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                        <p><a href="#" class="button">Optional Button</a></p>
+                    </div>
+                    <div class="right-content stat-list">
+                        <p><strong>0%</strong> label</p>
+                        <ul>
+                            <li>Title</li>
+                            <li>List item 1</li>
+                            <li>List item 2</li>
+                            <li>List item 3</li>
+                            <li>List item 4</li>
+                            <li>List item 5</li>                        
+                        </ul>
+                    </div>
+                </div>
+            </section>        
+
+            <!-- alternate photo float -->
+            <section>
+                <h3>Alternate Photo Float</h3>
+                <div class="wrapper">
+                    <div class="alternate-photo-float">
+                        <div class="image-left">
+                            <img src="images/360x360.gif" alt="" />
+                        </div>
+                        <div class="text">
+                            <figure class="quote">
+                                <p><span></span>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.&rdquo; </p>     
+                                <figcaption>
+                                    <p><strong>Credit</strong><br />
+                                    <a href="#">School Link</a><br />
+                                    Title or Program</p>
+                                </figcaption>
+                            </figure>
+                        </div>  
+                    </div>   
+                    <div class="alternate-photo-float">
+                        <div class="text">
+                            <h4>Title</h4>
+                            <ul>
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
+                                <li><a href="#">Link 6</a></li>
+                            </ul> 
+                        </div>  
+                        <div class="image-right">
+                            <img src="images/360x360.gif" alt="" />
+                        </div>
+                    </div>   
+                </div>  
+            </section>
+
+            <!-- twitter feed (plus section) -->     
+            <section class="plus-section">
+                <p class="hide-label"><a href="https://twitter.com/NorthwesternU">NorthwesternU Twitter Feed</a></p>
+                <div class="left-side">
+                    <h3>Twitter Feed (Plus Section)</h3>
+                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                    <p><a href="#" class="button">Optional Button</a></p>
+                    <h4>Lorem ipsum dolor sit amet</h4>
+                    <img src="images/418x235.gif" alt=""> 
+                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                    <p><a href="#" class="button">Optional Button</a></p>
+                </div>
+                <div class="right-side">
+                    <a class="twitter-timeline" href="https://twitter.com/NorthwesternU" data-widget-id="308623742127456257">Tweets by @NorthwesternU</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+            </section>           
+
+            <!-- statistics callout -->
+            <h3>Statistics Callout</h3> <!-- header not used here -->
+            <section>
+                <div class="stats-callout">
+                    <p><span class="big">0%</span><span class="small">label</span></p>
+                </div>   
+            </section>         
+
+            <a href="#top" id="back-to-top">Back to top</a>
+        </main>
+    </div>
+    <footer>
+        <div class="contain-970">
+            <div class="footer-content">
+                <a href="http://www.northwestern.edu"><img src="https://common.northwestern.edu/v8/css/images/northwestern-university.svg" alt="Northwestern University" /></a>
+                <ul>
+                    <li>&copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> Northwestern University</li>
+                    <li><a href="http://www.northwestern.edu/contact.html">Contact Northwestern University</a></li>
+                    <li><a href="http://www.northwestern.edu/hr/careers/">Careers</a></li>
+                    <li><a href="http://www.northwestern.edu/disclaimer.html">Disclaimer</a></li>
+                    <li><a href="http://www.northwestern.edu/emergency/index.html">Campus Emergency Information</a></li>
+                    <li><a href="http://policies.northwestern.edu/">University Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-content contact">
+                <ul>
+                    <li class="footer-pin-icon"><span class="hide-label">Address</span></li>
+                    <li><strong>Your Department Name</strong></li>
+                    <li>633 Clark Street</li>
+                    <li>Evanston, IL 60208</li>
+                </ul>
+                <ul>
+                    <li class="footer-phone-icon"><span class="hide-label">Phone number</span></li>
+                    <li>(123) 456-7890</li>                
+                </ul>
+                <ul>
+                    <li class="footer-email-icon"><span class="hide-label">Email address</span></li>
+                    <li><a href="mailto:info@northwestern.edu">your-department@northwestern.edu</a></li>
+                </ul>
+            </div>			
+            <div class="footer-content">
+                <!-- change (department name) to your dept. -->
+                <p><strong>(Department Name) Social Media</strong></p>
+                <a href="#" class="social facebook">Facebook</a>
+                <a href="#" class="social twitter">Twitter</a>
+                <a href="#" class="social social instagram">Instagram</a>
+                <a href="#" class="social rss">RSS</a>
+                <a href="#" class="social youtube">YouTube</a>
+                <a href="#" class="social tumblr">Tumblr</a>
+                <a href="#" class="social wordpress">WordPress</a>
+                <a href="#" class="social futurity">Futurity</a>
+                <a href="#" class="social vimeo">Vimeo</a>
+                <a href="#" class="social linkedin">Linkedin</a>
+                <a href="#" class="social google-plus">Google Plus</a>
+                <a href="#" class="social google-groups">Google Groups</a>
+                <a href="#" class="social blog">Blog</a>
+                <a href="#" class="social github">Github</a>
+                <a href="#" class="social flickr">Flickr</a>    
+                <a href="#" class="social storify">Storify</a>
+                <a href="#" class="social pinterest">Pinterest</a>
+                <a href="#" class="social we-will">We Will</a>
+            </div>				
+            <div class="footer-content">
                 <ul>
                     <li><a href="#">Link 1</a></li>
                     <li><a href="#">Link 2</a></li>
                     <li><a href="#">Link 3</a></li>
                     <li><a href="#">Link 4</a></li>
-                    <li>Resources <span class="dropdown-arrow"></span>
-                        <ul>
-                            <li><a href="#">Drop Link 1</a></li>
-                            <li><a href="#">Drop Link 2</a></li>
-                            <li><a href="#">Drop Link 3</a></li>
-                            <li><a href="#">Drop Link 4</a></li>
-                        </ul>    
-                    </li>
+                    <li><a href="#">Link 5</a></li>
+                    <li><a href="#">Link 6</a></li>
                 </ul>
             </div>
-        </div>     
-    </div>
-	<div class="bottom-bar contain-1120">
-		<div id="department">
-            <h1><a href="#">WEINBERG<span>COLLEGE OF <strong>ARTS AND SCIENCES</strong></span></a></h1>
-		</div>
-        <div id="search" class="hide-mobile">
-            <div class="search-form">
-                <form action="http://googlesearch.northwestern.edu/search">
-                    <label for="q-desktop" class="hide-label">Search this website</label>
-                    <input type="text" id="q-desktop" name="q" placeholder="Search this site" />
-                    <input type="hidden" value="default_collection" name="site" />
-                    <input type="hidden" value="default_oneboxes" name="client" />
-                    <input type="hidden" value="xml_no_dtd" name="output" />
-                    <input type="hidden" value="http://www.northwestern.edu/YOUR_SITE" name="sitesearch" />
-                    <input type="hidden" value="Undergraduate Admissions" name="sitetitle">
-                    <input type="hidden" value="default_oneboxes" name="proxystylesheet" />
-                    <button type="submit"><span class="hide-label">Search</span></button>
-                </form>
-            </div>					
         </div>
-    </div>            
-</header>
-<nav id="top-nav" aria-label="main navigation menu">
-	<div class="contain-1120">
-		<ul>
-			<li><a href="#">About <span class="dropdown-arrow"></span></a>
-				<ul class="dropdown">
-					<li class="nav-intro">
-                        <p class="intro">Header</p>
-                        <a href="#" class="button">Button</a>
-                    </li>
-                    <li class="nav-links">
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </li>
-				</ul>
-			</li>			
-			<li><a href="#">Academics <span class="dropdown-arrow"></span></a>
-				<ul class="dropdown">
-					<li class="nav-intro">
-                        <p class="intro">Header</p>
-                        <a href="#" class="button">Button</a>
-                    </li>
-                    <li class="nav-links">
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </li>
-				</ul>
-			</li>			
-			<li><a href="#">Admissions <span class="dropdown-arrow"></span></a>
-				<ul class="dropdown">
-					<li class="nav-intro">
-                        <p class="intro">Header</p>
-                        <a href="#" class="button">Button</a>
-                    </li>
-                    <li class="nav-links">
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </li>
-				</ul>
-			</li>					
-			<li><a href="#">Campus Life <span class="dropdown-arrow"></span></a>
-				<ul class="dropdown">
-					<li class="nav-intro">
-                        <p class="intro">Header</p>
-                        <a href="#" class="button">Button</a>
-                    </li>
-                    <li class="nav-links">
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </li>
-				</ul>
-			</li>
-			<li><a href="#">Research <span class="dropdown-arrow"></span></a>
-				<ul class="dropdown">
-					<li class="nav-intro">
-                        <p class="intro">Header</p>
-                        <a href="#" class="button">Button</a>
-                    </li>
-                    <li class="nav-links">
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </li>
-				</ul>
-			</li>
-			<li><a href="#">Giving <span class="dropdown-arrow"></span></a>
-				<ul class="dropdown">
-					<li class="nav-intro">
-                        <p class="intro">Header</p>
-                        <a href="#" class="button">Button</a>
-                    </li>
-                    <li class="nav-links">
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</nav>
-<section class="hero contain-1440">
-    <div class="hero-image" style="background: url('images/1440x420.gif') no-repeat center / cover">
-        <div class="contain-780">
-            <h2>Page Header</h2>
-            <p>Optional Large Text</p>
-        </div>    
-    </div>
-</section>
-<div id="page">    
-    <nav id="left-nav" aria-label="section navigation menu" tabindex="0">
-        <h2><a href="#">Student Life</a></h2>
-        <ul>
-            <li><a href="#">Activities and Recreation</a></li>
-            <li><a href="#">Housing and Dining</a></li>
-            <li><a href="#" class="active">Evanston and Chicago</a></li>
-            <li><a href="#">Alumni Spotlight</a></li>
-        </ul>
-    </nav>
-    <main id="main-content" class="content" tabindex="0">
-        <ul id="breadcrumbs">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Student Life</a></li>
-            <li class="active">Evanston and Chicago</li>
-        </ul>
-        <h2>Standard Page with Modules</h2>
-        <p>Ea augue legimus intellegat pri, vel congue democritum ei. Errem tibique vivendum at nec, cu accusam menandri dissentias vel, in mei facilisi expetendis. Ut sed accusata definitiones, dicat inciderint at per. Ad quot persecuti quo. In eos errem eirmod apeirian, nam et etiam aliquid. Inani theophrastus per ex, diceret gloriatur has at.</p>
-         
-        <!-- photo feature 2 across -->
-        <section>
-            <h3>Photo Feature (2 Across)</h3>
-            <div class="photo-feature-2-across group">
-                <article class="photo-feature">
-                    <a href="#">
-                        <div class="front">
-                            <img src="images/418x235.gif" alt="">   
-                            <div class="text-over-image">
-                                <h4>Title</h4>
-                                <p class="link">Learn more</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="back-text">
-                                <h4>Title</h4>
-                                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>
-                                <p class="link">Go to Site</p>
-                            </div>
-                        </div>                       
-                    </a>     
-                </article>
-                 <article class="photo-feature">
-                    <a href="#">
-                        <div class="front">
-                            <img src="images/418x235.gif" alt="">   
-                            <div class="text-over-image">
-                                <h4>Title</h4>
-                                <p class="link">Learn more</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="back-text">
-                                <h4>Title</h4>
-                                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>
-                                <p class="link">Go to Site</p>
-                            </div>
-                        </div> 
-                    </a>
-                </article>       
-            </div>
-        </section>        
-        
-        <!-- feature boxes (2 columns) -->
-        <section>
-            <h3>Feature Boxes (Two Columns)</h3>
-            <div class="feature-two-col">
-                <article class="feature-box">
-                    <img src="images/407x235.png" alt="" />
-                    <div class="feature-copy">
-                        <h4>Title</h4>
-                        <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. </p>
-                        <ul>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                        </ul>
-                    </div>
-                    <a href="#" class="button">Optional Link</a>
-                </article>
-                <article class="feature-box">
-                    <img src="images/407x235.png" alt="" />
-                    <div class="feature-copy">
-                        <h4>Title</h4>
-                        <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>   
-                        <ul>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                        </ul>
-                    </div>
-                    <a href="#" class="button">Optional Link</a>
-                </article>
-            </div>
-        </section>
+    </footer>
 
-        <!-- two column links -->
-        <section>
-            <h3>Two Column Links</h3>
-            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
-            <div class="two-column-links">
-                <article>
-                    <h4>Title</h4>
-                    <img src="images/400x210.png" alt="" />
-                    <ul>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                    </ul>
-                </article>     
-                <article>
-                    <h4>Title</h4>
-                    <img src="images/400x210.png" alt="" />
-                    <ul>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                    </ul>
-                </article>
-            </div>
-        </section>         
-        
-    <!-- three variations of showcase (in-page image galleries) -->
-        
-        <!-- 1. large gallery or image -->
-        <section class="showcase">
-            <h3>Large Gallery or Image</h3>
-            <h4>Optional Subhead</h4>
-            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="images/836x400.png" alt="alt tag for the first image">
-                        <div class="caption">This is a caption for the first image</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/836x400-2.png" alt="alt tag for the second image">
-                        <div class="caption">This is a caption for the second image</div>
-                    </div>
-                </div>        
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>     
-            </div> 
-            <div class="below-content">
-                <figure class="quote">
-                    <p><span></span>Lorem ipsum dolor sit amet.&ldquo;</p>
-                    <figcaption>Credit</figcaption>
-                </figure>
-                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
-            </div>
-        </section>        
-        
-        <!-- 2. useful links, small gallery or image -->
-        <section class="showcase">
-            <h3>Useful Links, Small Gallery or Image</h3>
-            <h4>Optional Subhead</h4>
-            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
-            <div class="group">
-                <div class="left-content">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="images/550x310.png" alt="This is an alt tag for the first image">
-                                <div class="caption">This is a caption for the first image</div>
-
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/550x310-2.png" alt="This is an alt tag for the second image">
-                                <div class="caption">This is a caption for the second image</div>
-                            </div>
-                        </div>        
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>     
-                    </div> 
-                </div>
-                <div class="right-content links">
-                    <p>Title</p>
-                    <ul>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="below-content">
-                <figure class="quote">
-                    <p><span></span>Lorem ipsum dolor sit amet.&ldquo;</p>
-                    <figcaption>Credit</figcaption>
-                </figure>
-                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
-            </div>
-        </section>
-
-        <!-- 3. gallery or image with large text -->
-        <section class="showcase">
-            <h3>Gallery or Image with Large Text</h3>
-            <h4>Optional Subhead</h4>
-            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
-            <div class="group">
-                <div class="left-content">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="images/550x310.png" alt="alt tag for the first image" />
-                                <div class="caption">This is a caption for the first image</div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/550x310-2.png" alt="alt tag for the second image" />
-                                <div class="caption">This is a caption for the second image</div>
-                            </div>
-                        </div>        
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>     
-                    </div> 
-                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
-                    <p><a href="#" class="button">Optional Button</a></p>
-                </div>
-                <div class="right-content stat-list">
-                    <p><strong>0%</strong> label</p>
-                    <ul>
-                        <li>Title</li>
-                        <li>List item 1</li>
-                        <li>List item 2</li>
-                        <li>List item 3</li>
-                        <li>List item 4</li>
-                        <li>List item 5</li>                        
-                    </ul>
-                </div>
-            </div>
-        </section>        
-        
-        <!-- alternate photo float -->
-        <section>
-            <h3>Alternate Photo Float</h3>
-            <div class="wrapper">
-                <div class="alternate-photo-float">
-                    <div class="image-left">
-                        <img src="images/360x360.gif" alt="" />
-                    </div>
-                    <div class="text">
-                        <figure class="quote">
-                            <p><span></span>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.&rdquo; </p>     
-                            <figcaption>
-                                <p><strong>Credit</strong><br />
-                                <a href="#">School Link</a><br />
-                                Title or Program</p>
-                            </figcaption>
-                        </figure>
-                    </div>  
-                </div>   
-                <div class="alternate-photo-float">
-                    <div class="text">
-                        <h4>Title</h4>
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                            <li><a href="#">Link 6</a></li>
-                        </ul> 
-                    </div>  
-                    <div class="image-right">
-                        <img src="images/360x360.gif" alt="" />
-                    </div>
-                </div>   
-            </div>  
-        </section>
-
-        <!-- twitter feed (plus section) -->     
-        <section class="plus-section">
-            <p class="hide-label"><a href="https://twitter.com/NorthwesternU">NorthwesternU Twitter Feed</a></p>
-            <div class="left-side">
-                <h3>Twitter Feed (Plus Section)</h3>
-                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
-                <p><a href="#" class="button">Optional Button</a></p>
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <img src="images/418x235.gif" alt=""> 
-                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
-                <p><a href="#" class="button">Optional Button</a></p>
-            </div>
-            <div class="right-side">
-                <a class="twitter-timeline" href="https://twitter.com/NorthwesternU" data-widget-id="308623742127456257">Tweets by @NorthwesternU</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div>
-        </section>           
-        
-        <!-- statistics callout -->
-        <h3>Statistics Callout</h3> <!-- header not used here -->
-        <section>
-            <div class="stats-callout">
-                <p><span class="big">0%</span><span class="small">label</span></p>
-            </div>   
-        </section>         
-        
-        <a href="#top" id="back-to-top">Back to top</a>
-    </main>
-</div>
-<footer>
-	<div class="contain-970">
-		<div class="footer-content">
-			<a href="http://www.northwestern.edu"><img src="https://common.northwestern.edu/v8/css/images/northwestern-university.svg" alt="Northwestern University" /></a>
-			<ul>
-				<li>&copy; 2015 Northwestern University</li>
-				<li><a href="http://www.northwesterne.edu/contact.html">Contact Northwestern University</a></li>
-				<li><a href="http://www.northwestern.edu/hr/careers/">Careers</a></li>
-				<li><a href="http://www.northwestern.edu/disclaimer.html">Disclaimer</a></li>
-				<li><a href="http://www.northwestern.edu/emergency/index.html">Campus Emergency Information</a></li>
-				<li><a href="http://policies.northwestern.edu/">University Policies</a></li>
-			</ul>
-		</div>
-        <div class="footer-content contact">
-            <ul>
-                <li class="footer-pin-icon"><span class="hide-label">Address</span></li>
-                <li><strong>Your Department Name</strong></li>
-                <li>633 Clark Street</li>
-                <li>Evanston, IL 60208</li>
-            </ul>
-            <ul>
-                <li class="footer-phone-icon"><span class="hide-label">Phone number</span></li>
-                <li>(123) 456-7890</li>                
-            </ul>
-            <ul>
-                <li class="footer-email-icon"><span class="hide-label">Email address</span></li>
-                <li><a href="mailto:info@northwestern.edu">your-department@northwestern.edu</a></li>
-            </ul>
-		</div>			
-		<div class="footer-content">
-			<p><strong>Your Department Social Media</strong></p>
-			<a href="#" class="social facebook">Facebook</a>
-			<a href="#" class="social twitter">Twitter</a>
-			<a href="#" class="social social instagram">Instagram</a>
-            <a href="#" class="social rss">RSS</a>
-			<a href="#" class="social youtube">YouTube</a>
-            <a href="#" class="social tumblr">Tumblr<</a>
-            <a href="#" class="social wordpress">WordPress</a>
-            <a href="#" class="social futurity">Futurity</a>
-            <a href="#" class="social vimeo">Vimeo</a>
-            <a href="#" class="social linkedin">Linkedin</a>
-            <a href="#" class="social google-plus">Google Plus</a>
-            <a href="#" class="social google-groups">Google Groups</a>
-            <a href="#" class="social blog">Blog</a>
-            <a href="#" class="social github">Github</a>
-            <a href="#" class="social flickr">Flickr</a>    
-            <a href="#" class="social storify">Storify</a>
-            <a href="#" class="social pinterest">Pinterest</a>    
-		</div>				
-		<div class="footer-content">
-			<ul>
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
-				<li><a href="#">Link 4</a></li>
-				<li><a href="#">Link 5</a></li>
-				<li><a href="#">Link 6</a></li>
-			</ul>
-		</div>
-	</div>
-</footer>
-    
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-<script type="text/javascript" src="js/scripts.js"></script>    
-<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="js/content-slider.js"></script>
-<script type="text/javascript">document.getElementsByTagName('body')[0].setAttribute('class','standard-page');</script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/swiper.jquery.min.js"></script>       
+    <script type="text/javascript" src="js/content-slider.js"></script>  
+    <script type="text/javascript">document.getElementsByTagName('body')[0].setAttribute('class','standard-page');</script>
     
 </body>
 </html>

@@ -142,6 +142,10 @@
     // for bottom part of navigation (links from #top-bar)
 	#mobile-nav-bottom {
 		background: $nu-purple-120;
+        
+		&:after {
+			@include clearfix();
+		}        
 
 		ul {
 			margin: 0;
@@ -168,35 +172,16 @@
                 border: none;
                 padding: inherit;
 
-
                 &.white-link {
                     color: $white;
                 }
             }
         }
         
-		#mobile-nav-bottom-left {
+		#mobile-nav-bottom-left, #mobile-nav-bottom-right {
 			width: 50%;
 			display: inline-block;
 			float: left;
-			
-            li {
-				margin-left: 20px;
-			}
-		}
-
-		#mobile-nav-bottom-right {
-			width: 50%;
-			display: inline-block;
-			float: left;
-			
-            li {
-				margin-left: 10px;
-			}
-		}
-
-		&:after {
-			@include clearfix();
 		}
 	}
 }

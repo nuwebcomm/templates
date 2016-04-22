@@ -1,0 +1,83 @@
+// feature boxes (4 columns)
+
+.landing-page {
+    
+    .feature-four-col {
+        display: -webkit-flex;
+        display: -ms-flexbox;        
+        display: flex; // equal height columns
+        @extend %clearfix;
+
+        .feature-box {
+            width: 345px / 1440px * 100%;   
+            float: left;
+            background: $light-grey;
+            margin-right: 20px / 1440px * 100%;
+            position: relative;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .feature-copy {
+                padding: 1rem 1.5rem 4rem 1.5rem;
+            
+                h4 { 
+                    font: 21px $AkkuratProRegular;
+                    text-transform: uppercase;
+                    color: $rich-black-80;
+                }
+                
+                ul {
+                    margin-left: 0;
+                    padding-left: .5em;
+                }             
+            }  
+        }        
+    } 
+    
+    // media queries
+    @media screen and (max-width: 920px) {  
+      
+        .feature-four-col {
+            flex-wrap: wrap;
+            max-width: 920px;
+
+            .feature-box {
+                max-width: inherit;
+                width: 450px / 920px * 100%;
+                margin-bottom: 20px; 
+                margin-right: 20px / 920px * 100%; 
+                
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }   
+                
+                img {
+                    width: 100%;
+                
+                }
+            }    
+        } 
+    }
+    
+    @media screen and (max-width: 590px) {    
+        
+        .feature-four-col {
+            display: inherit;
+            width: 100%;
+
+            .feature-box {
+                width: inherit;
+                //max-width: 345px; 
+                float: none;
+               
+                
+                &:first-child, &:nth-child(3) {
+                    //margin-left: auto;
+                }
+            }
+        }   
+    }
+
+} // end

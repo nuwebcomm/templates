@@ -1,0 +1,137 @@
+// photo grid
+
+.standard-page {  
+    
+    .photo-grid {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; // equal height columns        
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; // wrap child items 
+        margin-top: 1.5rem;
+        @extend %clearfix;      
+        
+        h4, h3 {
+            font: 16px/1.5em $AkkuratProBold;
+            color: $rich-black-80;
+            margin: 1rem 0 0 0;
+        }
+
+        h4+p, h3+p {
+            margin-top: .5rem;
+        }
+
+        p.link {
+            font-family: $AkkuratProBold;
+            text-transform: uppercase;
+
+            &:after {
+                background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat .8em 3px / 5px 8px;
+                padding-right: 3rem;
+                content: " ";
+            }
+        }        
+
+        &.two-grid { // for left-navigation pages (2 across)
+            
+            article, div {
+                width: 408px / 836px * 100%;
+                margin-right: 20px / 836px * 100%;
+                margin-bottom: 20px;
+                float: left;
+                line-height: 1.5rem;
+
+                &:nth-of-type(2n+2) { // every 3rd item
+                    margin-right: 0;
+                }    
+            }
+        }        
+    
+        &.three-grid { // for left-navigation pages (3 across)
+            
+            article, div {
+                width: 265px / 836px * 100%;
+                margin-right: 20px / 836px * 100%;
+                margin-bottom: 20px;
+                float: left;
+                line-height: 1.5rem;
+
+                &:nth-of-type(3n+3) { // every 3rd item
+                    margin-right: 0;
+                }    
+            }
+        }
+        
+        &.four-grid { // for full-width standard page types with no left navigation (4 across)
+            
+            article {
+                width: 265px / 1120px * 100%;
+                margin-right: 20px / 1120px * 100%;
+                margin-bottom: 20px;
+                float: left;
+                line-height: 1.5rem;
+                
+                &:nth-of-type(4n+4) { // every 4th item
+                    margin-right: 0;
+                }   
+            }
+        }    
+    }
+    
+    //  media queries
+    @media screen and (max-width: 900px) { 
+
+        .photo-grid {
+        
+            &.three-grid {
+        
+                article, div {
+                    width: 372.48px / 768px * 100%;
+                    max-width: 265px;
+                    margin-right: 23.04px / 768px * 100%;      
+
+                    &:nth-of-type(3n+3) { // every 3rd item
+                        margin-right: 23.04px / 768px * 100%;
+                    }             
+
+                    &:nth-of-type(2n+2) { // every 2nd item
+                        margin-right: 0;
+                    }  
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 768px) {        
+        
+        .photo-grid {
+        
+            &.four-grid, .two-grid {
+
+                article, div {
+                    width: 372.48px / 768px * 100%;
+                    margin-right: 23.04px / 768px * 100%;      
+
+                    &:nth-of-type(2n+2) { // every 2nd item
+                        margin-right: 0;
+                    }           
+                }   
+            }
+        }
+    }        
+
+    @media screen and (max-width: 475px) { 
+        
+        .photo-grid {
+            
+            &.two-grid, &.three-grid, &.four-grid {
+         
+                article, div {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+} // end

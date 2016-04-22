@@ -31,7 +31,7 @@
             }
         }        
 
-        ul {
+        > ul { // original setup for links on right side
             width: 240px / 1120px * 100%;
             float: left;
             padding-left: 0;
@@ -52,10 +52,77 @@
                     font-family: $AkkuratProBold;
                 }
             }
-        }    
+        }
+        
+        .right-side { // new setup for links/other content on right side
+            width: 240px / 1120px * 100%;
+            float: left;
+            padding-left: 1.5rem;
+            
+            h4 {
+                font: 24px $AkkuratProRegular;
+                padding-bottom: .5rem;
+                margin-bottom: 1.5rem;
+                border-bottom: 4px solid $medium-grey;
+                color: $rich-black-50;
+            }
+            
+            ul {
+                padding-left: 0;
+                margin-left: 0;
+                
+                li {
+                    background: none;
+                    line-height: 1.2rem;
+                    margin: 0 0 1rem 0;
+                    padding-left: 0;
+                
+                    &:after {
+                        background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 50% / 6px;
+                        padding-right: 2rem;
+                        content: " ";            
+                    }
+
+                    a {
+                        font-family: $AkkuratProBold;
+                    }                     
+                }
+            }
+        }
     }
 
     // media queries 
+    @media screen and (max-width: 1100px) {
+        
+        .large-feature-inner {
+            
+            .content-side, > ul, .right-side {
+                float: none;
+                width: 100%;
+                border: none;
+                border-right: 0;
+                
+                li {
+                    padding-left: 0;           
+                }
+            } 
+            
+            .content-side {
+                padding-right: 0;
+                
+                &:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }                   
+            }
+            
+            .right-side {
+                padding-left: 0;
+            }
+        }     
+    }    
+    
     @media screen and (max-width: 850px) {
         
         .large-feature-wrap {
@@ -79,22 +146,6 @@
         }
     }
     
-    @media screen and (max-width: 768px) {
-        
-        .large-feature {
-            
-            .content-side, ul {
-                float: none;
-                width: 100%;
-                border: none;
-                
-                li {
-                    padding-left: 0;           
-                }
-            }             
-        }     
-    }
-
     @media screen and (max-width: 480px) {
         
         .large-feature-wrap {

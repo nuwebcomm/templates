@@ -11,7 +11,7 @@
 </head> 
 
 <body>
-
+    
     <a id="top"></a>
     <a href="#main-content" class="screen-reader-shortcut">Skip to main content</a>
     <!--[if lt IE 9]>
@@ -118,7 +118,7 @@
                                 <li><a href="#">Drop Link 4</a></li>
                             </ul>
                         </div>
-                    </nav>                  
+                    </nav>              
                 </div>            
                 <div id="right">
                     <ul>
@@ -267,6 +267,14 @@
             </ul>
         </div>
     </nav>
+    <section class="hero contain-1440">
+        <div class="hero-image" style="background: url('images/1440x420.gif') no-repeat center / cover">
+            <div class="contain-780">
+                <h2>Page Header</h2>
+                <p>Optional Large Text</p>
+            </div>    
+        </div>
+    </section>
     <div id="page">    
         <nav id="left-nav" aria-label="section navigation menu" tabindex="0">
             <h2><a href="#">Section Header</a></h2>
@@ -282,73 +290,179 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li class="active">Page 2</li>
-            </ul>    
-            <h2>Expand/Collapse Page</h2>
+            </ul>
+            <h2>Standard Page Photo Grid</h2>
+            <p>Ea augue legimus intellegat pri, vel congue democritum ei. Errem tibique vivendum at nec, cu accusam menandri dissentias vel, in mei facilisi expetendis. Ut sed accusata definitiones, dicat inciderint at per. Ad quot persecuti quo. In eos errem eirmod apeirian, nam et etiam aliquid. Inani theophrastus per ex, diceret gloriatur has at.</p>
 
-            <h3>Version 1</h3>
-            <div class="expander expander1" data-collapse="data-collapse">
-                <h3>Tuition</h3>
-                <div>
-                    <h4>Header 4 - used when expander above is an H3</h4>
-                    <h5>Header 5</h5>                
-                    <p>This is some information</p>
+            <section class="contain-1120">
+                <div class="section-top">
+                    <h3>Responsive Tabs</h3>
+                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
                 </div>
-                <h3>Tuition Deposit</h3>
-                <div>
-                    <p>This is some information</p>
-                </div>
-                <h3>Activity Fee</h3>
-                <div>
-                    <p>This is some information</p>
-                </div>            
-                <h3>Athletics Events Fee</h3>
-                <div>
-                    <p>This is some information</p>
-                </div>            
-            </div>        
-
-            <h3>Version 2</h3>
-            <div class="expander expander2" data-collapse="data-collapse">
-                <h4>Tuition<span>$46,836</span></h4>
-                <div>
-                    <h5>Header 5 - used when expander above is an h4</h5>
-                    <p>This is some information</p>
-                </div>
-                <h4>Tuition Deposit<span>$200</span></h4>
-                <div>
-                    <p>This is some information</p>
-                </div>
-                <h4>Activity Fee<span>$58</span></h4>
-                <div>
-                    <p>This is some information</p>
-                </div>            
-                <h4>Athletics Events Fee <span>$49</span></h4>
-                <div>
-                    <p>This is some information</p>
-                </div>            
-            </div>
-
-            <h3>Version 3</h3>
-            <div class="expander expander3" data-collapse="data-collapse">
-                <h4>Fall</h4>
-                <div>
-                    <h5>Header 5 used when expander above is an h4</h5>
-                    <p>Withdrawl between:</p>
-                    <ul>
-                        <li>09/21/15 and 09/28/15 - 100% refund</li>
-                        <li>09/29/15 and 10/12/15 - 75% refund</li>
-                        <li>10/13/15 and 11/03/15 - 50% refund</li>
-                        <li>11/04/15 and 12/18/15 - 0% refund</li>
+                <div id="tab-container">
+                    <ul id="tabs" role="tablist">
+                        <li role="presentation"><a href="#tab-panel1" role="tab" id="tab1" aria-controls="tab-panel1" aria-selected="false">Tab Title 1</a></li>
+                        <li role="presentation"><a href="#tab-panel2" role="tab" id="tab2" aria-controls="tab-panel2" aria-selected="false">Tab Title 2</a></li>
+                        <li role="presentation"><a href="#tab-panel3" role="tab" id="tab3" aria-controls="tab-panel3" aria-selected="false">Tab Title 3</a></li>
                     </ul>
+                    <div id="tab-content">
+                        <div id="tab-panel1" role="tabpanel" aria-labelledby="tab1">
+                            <div class="photo-grid three-grid">
+                                <article class="photo-box">
+                                    <a href="#"><img src="images/265x265.png" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>
+                                <article class="photo-box">
+                                    <a href="#"><img src="images/265x265.png" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>            
+                                <article class="photo-box">
+                                    <a href="#"><img src="images/265x265.png" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>
+                                <article class="photo-box">
+                                    <a href="#"><img src="http://gabara.ur.northwestern.edu/test/images/male-no-image.jpg" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>
+                                <article class="photo-box">
+                                    <a href="#"><img src="images/265x265.png" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>
+                                <article class="photo-box">
+                                    <a href="#"><img src="images/265x265.png" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>
+                                <article class="photo-box">
+                                    <a href="#"><img src="images/265x265.png" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>   
+                                <article class="photo-box">
+                                    <a href="#"><img src="images/265x265.png" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>
+                                <article class="photo-box">
+                                    <a href="#"><img src="http://gabara.ur.northwestern.edu/test/images/female-no-image.jpg" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>
+                                <article class="photo-box">
+                                    <a href="#"><img src="images/265x265.png" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>
+                                <article class="photo-box">
+                                    <a href="#"><img src="images/265x265.png" alt="" /></a>
+                                    <h4>Lorem ipsum dolor sit amet</h4>
+                                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                                    <p class="link"><a href="#">Read more</a></p>
+                                </article>            
+                            </div>                            
+                        </div>
+                        <div id="tab-panel2" role="tabpanel" aria-labelledby="tab2">
+                            <p>Tab 2</p>                      
+                        </div>
+                        <div id="tab-panel3" role="tabpanel" aria-labelledby="tab3">
+                            <p>Tab 3</p>
+                        </div>
+                    </div>
                 </div>
-                <h4>Winter</h4>
-                <div>This is some information</div>
-                <h4>Spring</h4>
-                <div>This is some information</div>            
-            </div>        
+            </section>         
+
+    <!--     
+            <section>
+                <h3>Photo Grid</h3>
+                <p>Ut sed accusata definitiones, dicat inciderint at per. Ad quot persecuti quo. In eos errem eirmod apeirian, nam et etiam aliquid. Inani theophrastus per ex, diceret gloriatur has at.</p>
+                <div class="photo-grid">
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>            
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>   
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>
+                    <article>
+                        <a href="#"><img src="images/265x265.png" alt="" /></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
+                        <p class="link"><a href="#">Read more</a></p>
+                    </article>            
+                </div>        
+            </section>        
+    -->     
 
             <a href="#top" id="back-to-top">Back to top</a>
-        </main>    
+        </main>
     </div>
     <footer>
         <div class="contain-970">
@@ -400,7 +514,7 @@
                 <a href="#" class="social storify">Storify</a>
                 <a href="#" class="social pinterest">Pinterest</a>
                 <a href="#" class="social we-will">We Will</a>
-            </div>			
+            </div>				
             <div class="footer-content">
                 <ul>
                     <li><a href="#">Link 1</a></li>
@@ -415,8 +529,8 @@
     </footer>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-    <script type="text/javascript" src="js/scripts.js"></script>   
+    <script type="text/javascript" src="js/scripts.js"></script>    
     <script type="text/javascript">document.getElementsByTagName('body')[0].setAttribute('class','standard-page');</script>
-
+    
 </body>
 </html>

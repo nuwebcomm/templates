@@ -8,7 +8,7 @@ h2 {
 }
 
 h3 {
-    font: 34px $CamptonBold;
+    font: 34px/1.2em $CamptonBold;
     color: $nu-purple;
     margin-bottom: .5rem;
 }
@@ -20,28 +20,27 @@ h4 {
 }
 
 h5 {
-    font: 21px $AkkuratProRegular;
+    font: 21px/1.3em $AkkuratProRegular;
     color: $nu-purple;
     margin-bottom: 1rem; 
 }
 
 h6 {
-    font: 18px $CamptonBold;
+    font: 18px/1.3em $CamptonBold;
     color: $rich-black-50;
     margin-bottom: 1rem; 
 }
 
 .content, .content-full {
-
-    // main link style
-    a {
+ 
+    a { // main link style
         font-family: $AkkuratProBold;
         color: $nu-purple;
         text-decoration: none;
-    }
     
-    a:hover {
-        text-decoration: underline;
+            &:hover {
+            text-decoration: underline;
+        }
     }
     
     strong, b {
@@ -171,8 +170,22 @@ h6 {
         }
         
         tr.hover td {
-            background: $nu-purple-60;
-            color: $white;
+            background: $nu-purple-10;
+            color: $rich-black-80;
+        }
+        
+        &.table-no-hover { // removes hover state on rows
+        
+            tr {
+                &.hover td {
+                    background: none;
+                    color: inherit;
+                }
+                
+                &.hover.stripe td {
+                    background: $light-grey;
+                }
+            }
         }
         
         ul {
@@ -200,6 +213,15 @@ h6 {
 .align-image-center {
 	margin: 0 auto;
 	display: block;
+}
+
+@media screen and (max-width: 480px) {    
+
+    .align-image-left, .align-image-right, .align-image-center { // remove format for mobile
+        float: none;
+        margin: 0;
+        display: inline-block;
+    }    
 }
 
 // web fonts

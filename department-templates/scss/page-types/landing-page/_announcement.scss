@@ -1,0 +1,62 @@
+// news-callout module (for important news above hero image)
+ 
+.landing-page {
+
+    #announcement {
+        background: $nu-purple-10;
+        font-size: 18px;
+        line-height: 1.3em;
+        padding: 1.5rem;
+        max-width: 1440px;
+    
+        h2 {
+            font: 34px $CamptonBold;
+        }
+        
+        h3 {
+            font: 26px $CamptonBold;
+            background: none;
+            text-align: left;
+            
+            &::before, &::after {
+                background: none;
+                padding: 0;
+            }
+        }  
+        
+        h4 {
+            font: 21px $CamptonBold;
+        } 
+        
+        h5 {
+            font: 18px $CamptonBold;
+        } 
+        
+        a {
+            color: $nu-purple;
+            font-weight: bold;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    
+        @media screen and (max-width: 768px) {
+        
+            h2 {
+                font-size: 26px;
+                line-height: 1.2em;
+            }
+            
+            h3 {
+                font-size: 21px;
+            }
+            
+            h4 {
+                font-size: 18px;
+            }
+        }
+    }
+
+} // end

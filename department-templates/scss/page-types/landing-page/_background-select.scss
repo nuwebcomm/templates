@@ -28,9 +28,27 @@
             margin-bottom: 2rem;
         }
         
+        // for purple background with faint slashes
+        &.purple-slashes {
+            
+            p {
+                color: $white;
+            }
+
+            h3 {
+                color: $white;
+            }
+        }      
     }  
     
-   // media queries
+    // media queries
+    @media screen and (max-width: 960px) {
+         
+        .purple-slashes .purple-half {
+            padding: 2rem;
+        }   
+    }    
+    
     @media screen and (max-width: 875px) {    
         
         .background-select p.subhead {

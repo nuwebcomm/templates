@@ -129,7 +129,6 @@
             text-transform: uppercase;
             margin-bottom: 0;
         }
-        
     }
 
     // for showcase on news & events with 2 calendars showcase
@@ -175,6 +174,7 @@
                     width: 170px / 564px * 100%;
                     margin-right: 10px / 564px * 100%;
                 }
+                
                 .news-text {
                     width: 384px / 564px * 100%;
                 }
@@ -203,6 +203,7 @@
                     width: 170px / 430px * 100%;
                     margin-right: 10px / 430px * 100%;
                 }
+                
                 .news-text {
                     width: 250px / 430px * 100%;
                 }
@@ -222,7 +223,8 @@
                     position: relative;
                     bottom: 0;
                     margin-top: 2rem;
-                }        
+                }  
+                
                 .news, .events, .tl-events {
                     width: 100%;
                     float: none;

@@ -1,56 +1,95 @@
 // expand/collapse (i.e. for faq's)
 
-ul.expander {
-    margin-bottom:	2em;
-    padding: 0;
-    list-style: none;
-    margin: 0 0 3rem 0;
+// standard FAQ style
+.expander1 { 
+    border-top: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    margin: 2rem 0;
+    
+    h3, h4 {
 
-    > li {
+        > a {
+            background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat .5rem center / 8px 16px;
+            padding: .5em 0 .5rem 2rem;
+        }
+        
+        &.open a {
+            background: url("#{$path-images}/icons/arrow-down-dkpurple.svg") no-repeat .3rem center / 16px 8px;
+        }       
+    }        
+}
+
+// standard FAQ style with contained dropdown and optional data field on right side
+.expander2 { 
+    border: 1px solid $light-grey;
+    margin: 2rem 0;
+    
+    h3, h4 {
+
+        > a {
+            background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat .5rem center / 8px 16px;
+            padding: .5em 0 .5rem 2rem;
+            
+        }
+        
+        &.open a {
+            background: url("#{$path-images}/icons/arrow-down-dkpurple.svg") no-repeat .3rem center / 16px 8px;
+        }
+        
+        span {
+            float: right;
+            border-right: 1px solid $light-grey;
+            padding-right: .5rem;
+        }    
+    }        
+} 
+
+// purple background with arrow on right side
+.expander3 { 
+    margin: 2rem 0;
+    
+    h3, h4 {
+        background: $nu-purple;
+
+        > a {
+            background: url("#{$path-images}/icons/arrow-right-white.svg") no-repeat right 1rem center / 12px 18px;
+            padding: .5em 3rem .5rem 1rem;
+            color: $white;
+        }
+        
+        &.open a {
+            background: url("#{$path-images}/icons/arrow-down-white.svg") no-repeat right 1rem center / 18px 12px;
+        }
+    }        
+}
+
+// basics
+.expander {
+
+    h3, h4 {
         margin: 0;
-        padding: .5em 0;
+        font-size: 18px;
+        line-height: inherit;        
         border-top: 1px solid $light-grey;
-        background: none;
 
-        &:last-child {
-            border-bottom: 1px solid $light-grey;
-        }
-
-        span.plus, span.minus {
-            padding-left: 2.5rem;
-            color: $nu-purple;
-            font-weight: normal;
-            cursor: pointer;
-            display: inline-block;
-            font-family: $AkkuratProBold;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
-        span.plus {
-             background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 8px 4px / 8px 16px;
-        }
-
-        span.minus {
-             background: url("#{$path-images}/icons/arrow-down-dkpurple.svg") no-repeat 4px 6px / 16px 8px;
-        }
-
-        div {
-            margin: 0 2.5rem;
-
-            &.showme {
-                max-height: 2000px;
-                overflow: hidden;
-            }
-            &.hideme {
-                max-height: 0;
-                overflow: hidden;
-                border: none;
-                margin: 0;
-            }             
-        }             
+        &:first-of-type {
+            border-top: none;
+        }        
+    
+        > a {
+            display: block;
+            margin: 0; 
+        }    
     }
-
-} // end
+    
+    > div {
+        margin: 1rem 2rem;
+        
+        h4 {
+            color: $rich-black-50;
+            font: 26px/1.2em "Akkurat Pro Regular",Arial,sans-serif;
+            margin-bottom: 1rem;
+            background: none;
+        } 
+    }
+}

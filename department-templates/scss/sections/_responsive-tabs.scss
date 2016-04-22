@@ -39,6 +39,11 @@
     }
 }
 
+// left align tabs for standard-page
+.standard-page #tabs { 
+    text-align: left;
+}
+
 #tab-content {
     border-top: 3px solid $rich-black-50;
     margin: 0 0 3rem 0;

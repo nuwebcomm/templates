@@ -5,7 +5,6 @@
 }
 
 #top-nav {
-    //min-height: 50px;
     background: $nu-purple;
     border-bottom: 5px solid $white;
 
@@ -122,7 +121,7 @@
                     }                                        
                 }
             }
-        }   
+        }
 
         // two column dropdown without nav intro text/button
         .dropdown-two-column {
@@ -169,6 +168,7 @@
         }
         
         .dropdown {
+            display: inherit; 
             width: 320px;
             padding: 1em;
         }

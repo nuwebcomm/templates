@@ -1,0 +1,47 @@
+// background select (selects a background image behind a large text area)
+
+.standard-page {
+    
+    .background-select {
+        width: 100%;
+        display: table;
+        min-height: 300px;
+        margin-bottom: 3rem;
+        color: $white;
+    
+        .background-select-image {
+            text-align: center;
+            display: table-cell;
+            width: 100%;
+            vertical-align: middle;
+            position: relative;   
+            padding: 2rem 1em; 
+        }
+        
+        h3 {
+            font: 42px $CamptonBook;
+            color: $white;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 18px;
+            margin-bottom: 3rem;
+        }  
+        
+        .select-date {
+            font: 18px $CamptonBold;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }        
+    }   
+    
+    // media queries
+    @media screen and (max-width: 480px) {
+
+        .background-select h3 {
+            font-size: 28px;    
+        }     
+    }    
+    
+} // end

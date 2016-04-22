@@ -4,13 +4,11 @@
 
     // swiper arrows
     .swiper-button-next, .swiper-button-prev {
-        width: 50px;
-        height: 50px;
-        -moz-background-size: 50px 50px;
-        -webkit-background-size: 50px 50px;
-        background-size: 50x 50px;
-        margin-top: 0; // override from swiper.css line 109)
-        top: 45%;
+        width: 35px;
+        height: 35px;
+        -moz-background-size: 35px 35px;
+        -webkit-background-size: 35px 35px;
+        background-size: 35px 35px;
     }  
 
     .swiper-button-prev {
@@ -35,7 +33,7 @@
         position: absolute;
         bottom: .4rem;
         padding: 1rem;
-        background: rgba(0, 0, 0, .5);
+        background: rgba(0, 0, 0, .3);
         color: $white;
         width: 100%;
         margin: 0;
@@ -54,7 +52,11 @@
                 background: url("#{$path-images}/icons/arrow-right-white.svg") no-repeat 50% / 8px 12px;
                 padding-right: 1.5rem;
                 content: " ";
-            }            
+            }
+            
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }    
 
@@ -69,27 +71,18 @@
 
         .caption {
             position: relative;
-            background: $rich-black-80;
+            background: $nu-purple-60;
             font-size: 14px;
         }
-        
+
         .swiper-button-next, .swiper-button-prev {
-            width: 30px;
-            height: 30px;
-            -moz-background-size: 30px 30px;
-            -webkit-background-size: 30px 30px;
-            background-size: 30px 30px;
-
-        }         
-        .swiper-button-next {
-            top: 0;
-            right: 0;
-        }
-
-        .swiper-button-prev {
-            top: 0;
-            left: 0;
-        }        
+            width: 25px;
+            height: 25px;
+            -moz-background-size: 25px 25px;
+            -webkit-background-size: 25px 25px;
+            background-size: 25px 25px;
+            margin-top: -3rem;
+        }            
     }  
     
 } // end

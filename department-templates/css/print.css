@@ -3,7 +3,7 @@ body {
 	font-size: 10pt;
 	font-family: Arial, Helvetica, sans-serif;
 }
-#top-bar #right, #search, nav, #breadcrumbs, #left-nav, #mobile-links, .hero-image, #left img, footer img, .screen-reader-shortcut {
+#top-bar #right, #search, nav, #breadcrumbs, #left-nav, #mobile-links, .hero-image, #left img, footer img, .screen-reader-shortcut, .footer-content:nth-of-type(1), .footer-content:nth-of-type(3), .footer-content:nth-of-type(4) {
 	display: none;
 }
 a img {
@@ -23,12 +23,7 @@ table td {
 	border: 1px solid #000;
 }
 a:link, a:visited {
-	color: #520063;
+	color: #4e2a84;
 	background: transparent;
 	text-decoration: underline;
 }
-/*
-a:link:after, a:visited:after {
-    content: " (/" attr(href) ") ";
-}
-*/

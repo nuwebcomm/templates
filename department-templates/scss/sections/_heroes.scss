@@ -4,6 +4,13 @@
     width: 100%;
     display: table;
     
+    &.mobile-hero { // add class for mobile hero text treatment
+        
+        .mobile-hero-text {
+            display: none;
+        }
+    }
+    
     .hero-image {
         text-align: center;
         display: table-cell;
@@ -52,12 +59,12 @@
         font: 60px/1.2em $CamptonBold;
         color: $white;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
-        margin-bottom: 1rem;
+        margin: 0 0 1rem 0;
         position: relative;
     }    
 }
 
-// landing page's in-page hero 
+// landing page in-page hero 
 .landing-page {
     
     .hero {
@@ -152,21 +159,58 @@
 
 @media screen and (max-width: 768px) {
     
-    .standard-page {
+    .standard-page, .landing-page {
         
         .hero {
-            
-            .hero-image {
+
+            &.mobile-hero { // append this class to .hero to move the overlapping hero text below the image
                 
+                .hero-image {
+                    display: block;
+                    height: 300px;
+                
+                    div {
+                        display: none;
+                    }    
+                }
+                
+                .mobile-hero-text {
+                    display: block;
+                    text-align: center;
+                    background: $rich-black-80;
+                    padding: 2rem 1em;                    
+
+                    h2 {
+                        font-size: 24px;
+                        text-shadow: none;  
+                        margin-bottom: 0;
+    
+                        &+p, &+.button {
+                            margin-top: 1rem;
+                        }
+                    }
+
+                    p {
+                        text-shadow: none;
+                        font-size: 48px;
+                    }    
+                }
+            }             
+        }
+        
+        .standard-page {
+
+            .hero-image {
+
                 &.big-hero-image {
                     height: 350px;
                 }
             }
-            
+
             &.m-hide-hero {
                 display: none;
             }
-        }
+        }        
     }
 }
 
@@ -175,7 +219,7 @@
     .landing-page, .standard-page {
         
         .hero {
-            
+  
             .hero-image {
                 height: 400px;
 
@@ -202,7 +246,7 @@
                     }
                 }
             }
-
+            
             h2 {
                 font-size: 20px;
                 margin-bottom: 1rem;
@@ -219,8 +263,23 @@
             } 
 
             p {
-                font-size: 32px;
-            }           
+                font-size: 28px;
+            }  
+
+            &.mobile-hero { // append this class to .hero to move the overlapping hero text below the image
+                
+                .hero-image {
+                    height: 200px;  
+                }
+                
+                .mobile-hero-text { 
+                    padding: 1em 0;
+
+                    h2 {
+                        font-size: 20px; 
+                    } 
+                }
+            }            
         }
     }
 
