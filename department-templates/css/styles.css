@@ -1,5 +1,5 @@
 /* line 5, ../scss/base/_reset.scss */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, center, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button,
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, tt, var, u, center, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button,
 #top-nav ul, #top-nav li, #global-links ul, #global-links li, #mobile-nav ul, #mobile-nav li, #left-nav ul, #left-nav li, ul#breadcrumbs, ul#breadcrumbs li, footer ul, footer li {
   margin: 0;
   padding: 0;
@@ -2523,8 +2523,12 @@ footer a:hover {
   .landing-page .hero.mobile-hero .mobile-hero-text h2, .standard-page .hero.mobile-hero .mobile-hero-text h2 {
     font-size: 20px;
   }
+  /* line 282, ../scss/sections/_heroes.scss */
+  .landing-page .hero.mobile-hero .mobile-hero-text p, .standard-page .hero.mobile-hero .mobile-hero-text p {
+    font-size: 28px;
+  }
 
-  /* line 293, ../scss/sections/_heroes.scss */
+  /* line 297, ../scss/sections/_heroes.scss */
   .standard-page .hero.smaller-hero .hero-image {
     height: 190px;
   }
@@ -2576,34 +2580,34 @@ footer a:hover {
   font: 18px/1.2em "Campton Bold", Impact, sans-serif;
   color: #342f2e;
 }
-/* line 52, ../scss/page-types/standard-page/_main.scss */
+/* line 53, ../scss/page-types/standard-page/_main.scss */
 .standard-page #sidebar .box h4 {
   font: 16px/1.2em "Akkurat Pro Bold", "Arial Black", sans-serif;
   color: #342f2e;
 }
-/* line 57, ../scss/page-types/standard-page/_main.scss */
+/* line 58, ../scss/page-types/standard-page/_main.scss */
 .standard-page #sidebar .box p {
   margin: .5em 0;
 }
-/* line 61, ../scss/page-types/standard-page/_main.scss */
+/* line 62, ../scss/page-types/standard-page/_main.scss */
 .standard-page #sidebar .box ul {
   margin: 1em 0 .5em 0;
 }
-/* line 64, ../scss/page-types/standard-page/_main.scss */
+/* line 65, ../scss/page-types/standard-page/_main.scss */
 .standard-page #sidebar .box ul li {
   background-position: 0 0.3em;
 }
-/* line 72, ../scss/page-types/standard-page/_main.scss */
+/* line 73, ../scss/page-types/standard-page/_main.scss */
 .standard-page .pagination {
   margin: 2.5em 0 2em;
   padding-left: 0;
 }
-/* line 76, ../scss/page-types/standard-page/_main.scss */
+/* line 77, ../scss/page-types/standard-page/_main.scss */
 .standard-page .pagination li {
   display: inline;
   padding: 0;
 }
-/* line 81, ../scss/page-types/standard-page/_main.scss */
+/* line 82, ../scss/page-types/standard-page/_main.scss */
 .standard-page .pagination a {
   background: white;
   border: 1px solid #cccccc;
@@ -2614,24 +2618,24 @@ footer a:hover {
   padding: .5rem .8rem;
   text-decoration: none;
 }
-/* line 91, ../scss/page-types/standard-page/_main.scss */
+/* line 92, ../scss/page-types/standard-page/_main.scss */
 .standard-page .pagination a:hover {
   background: #4e2a84;
   color: white;
 }
-/* line 97, ../scss/page-types/standard-page/_main.scss */
+/* line 98, ../scss/page-types/standard-page/_main.scss */
 .standard-page .pagination .current-page a {
   background: #616161 none repeat scroll 0 0;
   color: white;
 }
-/* line 106, ../scss/page-types/standard-page/_main.scss */
+/* line 107, ../scss/page-types/standard-page/_main.scss */
 .standard-page ol.steps {
   counter-reset: li;
   list-style: none;
   padding: 0;
   margin-bottom: 1em;
 }
-/* line 112, ../scss/page-types/standard-page/_main.scss */
+/* line 113, ../scss/page-types/standard-page/_main.scss */
 .standard-page ol.steps li {
   position: relative;
   display: block;
@@ -2640,7 +2644,7 @@ footer a:hover {
   padding: 1em .5em 0 5em;
   min-height: 90px;
 }
-/* line 120, ../scss/page-types/standard-page/_main.scss */
+/* line 121, ../scss/page-types/standard-page/_main.scss */
 .standard-page ol.steps li:before {
   content: counter(li);
   counter-increment: li;
@@ -2655,50 +2659,50 @@ footer a:hover {
   text-align: center;
 }
 @media screen and (max-width: 1145px) {
-  /* line 140, ../scss/page-types/standard-page/_main.scss */
+  /* line 141, ../scss/page-types/standard-page/_main.scss */
   .standard-page #page {
     margin-left: 1rem;
     margin-right: 1rem;
   }
 }
 @media screen and (max-width: 970px) {
-  /* line 148, ../scss/page-types/standard-page/_main.scss */
+  /* line 149, ../scss/page-types/standard-page/_main.scss */
   .standard-page #page-narrow {
     margin-left: 1rem;
     margin-right: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 156, ../scss/page-types/standard-page/_main.scss */
+  /* line 157, ../scss/page-types/standard-page/_main.scss */
   .standard-page .content, .standard-page .content-full {
     float: none;
     width: 100%;
   }
-  /* line 162, ../scss/page-types/standard-page/_main.scss */
+  /* line 161, ../scss/page-types/standard-page/_main.scss */
+  .standard-page .content h2, .standard-page .content-full h2 {
+    font-size: 36px;
+  }
+  /* line 166, ../scss/page-types/standard-page/_main.scss */
   .standard-page #sidebar {
     width: 39.0625%;
   }
-  /* line 167, ../scss/page-types/standard-page/_main.scss */
-  .standard-page h2 {
-    font-size: 36px;
-  }
 }
 @media screen and (max-width: 480px) {
-  /* line 174, ../scss/page-types/standard-page/_main.scss */
-  .standard-page h2 {
+  /* line 175, ../scss/page-types/standard-page/_main.scss */
+  .standard-page .content h2, .standard-page .content-full h2 {
     font-size: 32px;
   }
-  /* line 178, ../scss/page-types/standard-page/_main.scss */
-  .standard-page h3 {
+  /* line 179, ../scss/page-types/standard-page/_main.scss */
+  .standard-page .content h3, .standard-page .content-full h3 {
     font-size: 24px;
   }
-  /* line 182, ../scss/page-types/standard-page/_main.scss */
+  /* line 184, ../scss/page-types/standard-page/_main.scss */
   .standard-page #sidebar {
     margin-left: 0;
     width: 100%;
     float: none;
   }
-  /* line 187, ../scss/page-types/standard-page/_main.scss */
+  /* line 189, ../scss/page-types/standard-page/_main.scss */
   .standard-page #sidebar .box {
     margin-bottom: 1rem;
   }
@@ -3706,12 +3710,6 @@ footer a:hover {
   .narrow-page #news-story .wrap #credit {
     float: none;
     width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  /* line 110, ../scss/page-types/standard-page/_narrow-page.scss */
-  .narrow-page .hero {
-    display: none;
   }
 }
 

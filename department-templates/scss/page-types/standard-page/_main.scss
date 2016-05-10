@@ -49,6 +49,7 @@
                 font: 18px/1.2em $CamptonBold;
                 color: $rich-black-80;
             }
+            
             h4 {
                 font: 16px/1.2em $AkkuratProBold;
                 color: $rich-black-80;
@@ -157,27 +158,28 @@
             float: none;
             width: 100%;
          
+            h2 {
+                font-size: 36px;
+            }        
         }
 
         #sidebar {
             width: 300px / 768px * 100%;
         }
-        
-        
-        h2 {
-            font-size: 36px;
-        }
     }
     
     @media screen and (max-width: 480px) {
-        
-        h2 {
-            font-size: 32px;
+
+        .content, .content-full {        
+            
+            h2 {
+                font-size: 32px;
+            }
+
+            h3 {
+                font-size: 24px;
+            } 
         }
-        
-        h3 {
-            font-size: 24px;
-        }  
         
         #sidebar {
             margin-left: 0;
@@ -188,7 +190,6 @@
                 margin-bottom: 1rem;
             }
         }
-        
     }
 
 } // end
