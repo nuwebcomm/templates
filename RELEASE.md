@@ -2,6 +2,35 @@
 
 ## Department Templates 
 
+New changes:
+
+### Version 1.5.1 - May 10, 2016
+
+#### HTML
+* `standard-page.html`
+  1. Removed clearfix ("group") from **photo feature (2 across)**
+
+#### SASS
+
+* `/scss/styles.scss`
+  1. New version number
+
+* `/scss/base/_reset.scss`
+  1. Removed `<sup>` and `<sub>`
+
+* `/scss/standard-page/_main.scss`
+  1. Made `h2` and `h3` more specific to not conflict with hero font size
+
+* `/scss/standard-page/_narrow-page.scss`
+  1. Deleted media query at 500px that hides hero
+
+* `/sections/_heroes.scss`
+  1. Changed `<p>` font size at 480px
+
+#### CSS
+* `/css/styles.css`
+  1. Compiled css (expanded for dev use)
+
 ### Version 1.5 - April 22, 2016
 
 In addition to the major items listed below, there may have been comments and code formatting updates to the files.
@@ -137,6 +166,19 @@ Initial Commit
 
 ## Header/Footer Templates
 
+### Version 1.5.1 - May 10, 2016
+
+#### SASS
+* `/scss/styles.scss`
+  1. New version number
+
+* `/scss/base/_reset.scss`
+  1. Removed `<sup>` and `<sub>`
+  
+#### CSS
+* `/css/styles.css`
+  1. Compiled css (expanded for dev use)  
+
 ### Version 1.5 - April 22, 2016
 
 In addition to the major items listed below, there may have been comments and code formatting updates to the files.
@@ -149,7 +191,6 @@ In addition to the major items listed below, there may have been comments and co
   5. Updated top-nav
   
 #### SASS
-
 * `/scss/base/_typography.scss`
   1. Added line heights for header tags  
  
