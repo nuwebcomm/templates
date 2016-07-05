@@ -4,6 +4,56 @@
 
 New changes:
 
+### Version 1.5.2 - July 5, 2016
+
+#### HTML
+
+* `/index.html`
+  1. Updated
+  
+* `/boilerplate.html`
+  1. Updated left-nav treatment
+  2. `ul.open` added to active child list only
+
+#### SASS
+* `/scss/styles.scss`
+  1. New version number
+
+* `/scss/base/_typography.scss`
+  1. Allow italic anchors in content region
+  2. Added `.table-center-header` class for `<table>`
+
+* `/scss/page-types/standard-page/_main.scss`
+  1. Changed `.box` line-height
+  2. Removed `<p>` margins
+  3. Increased margin-top on all content `<h3>`, `<h4>`, `<h5>`, and `<h6`> if following `<p>`, `<ul>`, and `<ol>`
+
+* `/scss/page-types/landing-page/_news-events.scss`
+  1. Added 1.3em line-height to `<h4>` and `<h5>`
+  2. Removed unnecessary styles
+
+* `/scss/page-types/standard-page/_news-event.scss`
+  1. Changed `h4` line-height to 1.3em
+  2. Added bottom-margin to `.event`
+
+* `/scss/sections/_footer.scss`
+  1. Added background-size to `.contact` icons for MS Edge fix
+  
+* `/scss/sections/_left-nav.scss`
+  1. Vertical grouping line only appears for open active folder by applying `ul.open`
+  2. See `/boilerplate.html` for usage
+ 
+* `/sections/_responsive-tabs.scss` 
+  1. added clearfix to clear floats within tabs
+  
+* `/sections/_top-nav.scss` 
+  1. Added underline text-decoration to first-level a:hover  
+
+#### CSS
+* `/css/styles.css`
+  1. Compiled css (expanded for dev use)
+  
+
 ### Version 1.5.1 - May 10, 2016
 
 #### HTML
@@ -164,7 +214,24 @@ In addition to the major items listed below, there may have been comments and co
 
 Initial Commit
 
+
 ## Header/Footer Templates
+
+### Version 1.5.2 - July 5, 2016
+
+#### SASS
+* `/scss/sections/_footer.scss`
+  1. Added background-size to `.contact` icons for MS Edge fix.
+  
+* `/sections/_top-nav.scss` 
+  1. Added underline text-decoration to first-level a:hover   
+  
+* `/scss/base/_typography.scss`
+  1. Allow italic anchors in content region  
+  
+#### CSS
+* `/css/styles.css`
+  1. Compiled css (expanded for dev use)  
 
 ### Version 1.5.1 - May 10, 2016
 
