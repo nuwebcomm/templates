@@ -239,16 +239,20 @@ h6 {
   text-decoration: underline;
 }
 /* line 52, ../scss/base/_typography.scss */
+.content-full a em, .content-full em a, .content-full a i, .content-full i a {
+  font-family: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
+}
+/* line 56, ../scss/base/_typography.scss */
 .content-full strong, .content-full b {
   font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
   font-weight: normal;
 }
-/* line 57, ../scss/base/_typography.scss */
+/* line 61, ../scss/base/_typography.scss */
 .content-full em, .content-full i {
   font-family: "Akkurat Pro Italic", Arial, sans-serif;
   font-style: normal;
 }
-/* line 62, ../scss/base/_typography.scss */
+/* line 66, ../scss/base/_typography.scss */
 .content-full strong em, .content-full em strong, .content-full strong i, .content-full i strong, .content-full b i, .content-full i b {
   font-family: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
   font-style: normal;
@@ -256,7 +260,7 @@ h6 {
 }
 
 @media screen and (max-width: 1145px) {
-  /* line 71, ../scss/base/_typography.scss */
+  /* line 75, ../scss/base/_typography.scss */
   #page {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -715,12 +719,16 @@ header {
   display: block;
   padding: 1rem 1.5rem;
 }
-/* line 55, ../scss/sections/_top-nav.scss */
+/* line 54, ../scss/sections/_top-nav.scss */
+#top-nav .contain-1120 > ul > li a:hover {
+  text-decoration: underline;
+}
+/* line 59, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 > ul > li.active a {
   background: #836eaa;
   color: white;
 }
-/* line 60, ../scss/sections/_top-nav.scss */
+/* line 64, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 > ul > li .dropdown-arrow {
   background: url("https://common.northwestern.edu/v8/css/images/icons/arrow-down-ltpurple.svg") no-repeat 50%;
   width: 10px;
@@ -728,7 +736,7 @@ header {
   display: inline-block;
   margin-left: .5em;
 }
-/* line 70, ../scss/sections/_top-nav.scss */
+/* line 74, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown, #top-nav .contain-1120 .dropdown-one-column, #top-nav .contain-1120 .dropdown-two-column {
   position: absolute;
   background: #f0f0f0;
@@ -742,48 +750,48 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
-/* line 84, ../scss/sections/_top-nav.scss */
+/* line 88, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown .nav-intro, #top-nav .contain-1120 .dropdown .nav-links, #top-nav .contain-1120 .dropdown-one-column .nav-intro, #top-nav .contain-1120 .dropdown-one-column .nav-links, #top-nav .contain-1120 .dropdown-two-column .nav-intro, #top-nav .contain-1120 .dropdown-two-column .nav-links {
   width: 50%;
   float: left;
   text-align: left;
 }
-/* line 90, ../scss/sections/_top-nav.scss */
+/* line 94, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown p.intro, #top-nav .contain-1120 .dropdown-one-column p.intro, #top-nav .contain-1120 .dropdown-two-column p.intro {
   font: 30px "Campton Bold", Impact, sans-serif;
   color: #4e2a84;
   margin: 0 0 1rem 0;
   padding-right: 2rem;
 }
-/* line 97, ../scss/sections/_top-nav.scss */
+/* line 101, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown .nav-links, #top-nav .contain-1120 .dropdown-one-column .nav-links, #top-nav .contain-1120 .dropdown-two-column .nav-links {
   border-left: 2px solid #cccccc;
   padding-left: 1rem;
 }
-/* line 102, ../scss/sections/_top-nav.scss */
+/* line 106, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown ul, #top-nav .contain-1120 .dropdown-one-column ul, #top-nav .contain-1120 .dropdown-two-column ul {
   display: block;
   background: inherit;
 }
-/* line 106, ../scss/sections/_top-nav.scss */
+/* line 110, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown ul li, #top-nav .contain-1120 .dropdown-one-column ul li, #top-nav .contain-1120 .dropdown-two-column ul li {
   display: block;
   text-align: left;
   width: inherit;
   line-height: 1.4em;
 }
-/* line 112, ../scss/sections/_top-nav.scss */
+/* line 116, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown ul li a, #top-nav .contain-1120 .dropdown-one-column ul li a, #top-nav .contain-1120 .dropdown-two-column ul li a {
   padding: .3em 0;
   display: inline-block;
   background: inherit;
   color: #4e2a84;
 }
-/* line 118, ../scss/sections/_top-nav.scss */
+/* line 122, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown ul li a:hover, #top-nav .contain-1120 .dropdown-one-column ul li a:hover, #top-nav .contain-1120 .dropdown-two-column ul li a:hover {
   text-decoration: underline;
 }
-/* line 129, ../scss/sections/_top-nav.scss */
+/* line 133, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown-two-column ul {
   width: 100% !important;
   -moz-column-count: 2;
@@ -798,7 +806,7 @@ header {
   margin: 0;
   padding: 0;
 }
-/* line 143, ../scss/sections/_top-nav.scss */
+/* line 147, ../scss/sections/_top-nav.scss */
 #top-nav .contain-1120 .dropdown-two-column ul li {
   background: none;
   -webkit-column-break-inside: avoid;
@@ -806,20 +814,20 @@ header {
   break-inside: avoid;
   display: inline-block;
 }
-/* line 157, ../scss/sections/_top-nav.scss */
+/* line 161, ../scss/sections/_top-nav.scss */
 #top-nav.narrow-dropdown ul li {
   position: relative;
 }
-/* line 160, ../scss/sections/_top-nav.scss */
+/* line 164, ../scss/sections/_top-nav.scss */
 #top-nav.narrow-dropdown ul li:hover ul.nav-align-right {
   right: 0;
   left: inherit;
 }
-/* line 165, ../scss/sections/_top-nav.scss */
+/* line 169, ../scss/sections/_top-nav.scss */
 #top-nav.narrow-dropdown ul li:hover ul.nav-align-right li {
   text-align: right;
 }
-/* line 170, ../scss/sections/_top-nav.scss */
+/* line 174, ../scss/sections/_top-nav.scss */
 #top-nav.narrow-dropdown .dropdown {
   display: inherit;
   width: 320px;
@@ -827,13 +835,13 @@ header {
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 181, ../scss/sections/_top-nav.scss */
+  /* line 185, ../scss/sections/_top-nav.scss */
   #top-nav .contain-1120 > ul > li {
     float: left;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 188, ../scss/sections/_top-nav.scss */
+  /* line 192, ../scss/sections/_top-nav.scss */
   #top-nav {
     display: none;
   }
@@ -1112,24 +1120,27 @@ footer a:hover {
 /* line 94, ../scss/sections/_footer.scss */
 .footer-content.contact ul li.footer-pin-icon {
   background: url("https://common.northwestern.edu/v8/css/images/icons/pin-drop.svg") no-repeat;
+  background-size: 18px 24px;
   position: absolute;
   top: 2px;
   left: -2rem;
   height: 24px;
   width: 18px;
 }
-/* line 103, ../scss/sections/_footer.scss */
+/* line 104, ../scss/sections/_footer.scss */
 .footer-content.contact ul li.footer-phone-icon {
   background: url("https://common.northwestern.edu/v8/css/images/icons/mobile-phone.svg") no-repeat;
+  background-size: 18px 24px;
   position: absolute;
   top: 2px;
   left: -2rem;
   height: 24px;
   width: 18px;
 }
-/* line 112, ../scss/sections/_footer.scss */
+/* line 114, ../scss/sections/_footer.scss */
 .footer-content.contact ul li.footer-email-icon {
   background: url("https://common.northwestern.edu/v8/css/images/icons/email.svg") no-repeat;
+  background-size: 18px 24px;
   position: absolute;
   top: 2px;
   left: -2.2rem;
@@ -1137,7 +1148,7 @@ footer a:hover {
   width: 18px;
 }
 
-/* line 126, ../scss/sections/_footer.scss */
+/* line 129, ../scss/sections/_footer.scss */
 .social {
   display: inline-block;
   vertical-align: bottom;
@@ -1152,212 +1163,212 @@ footer a:hover {
   transition: background 0.3s;
   border: 1px solid white;
 }
-/* line 140, ../scss/sections/_footer.scss */
+/* line 143, ../scss/sections/_footer.scss */
 .social:hover {
   background-color: #b6acd1;
 }
 
-/* line 145, ../scss/sections/_footer.scss */
+/* line 148, ../scss/sections/_footer.scss */
 .facebook {
   background-position: 0 0;
 }
-/* line 148, ../scss/sections/_footer.scss */
+/* line 151, ../scss/sections/_footer.scss */
 .facebook:hover {
   background-position: 0 -39px;
 }
 
-/* line 153, ../scss/sections/_footer.scss */
+/* line 156, ../scss/sections/_footer.scss */
 .twitter {
   background-position: -39px 0;
 }
-/* line 156, ../scss/sections/_footer.scss */
+/* line 159, ../scss/sections/_footer.scss */
 .twitter:hover {
   background-position: -39px -39px;
 }
 
-/* line 161, ../scss/sections/_footer.scss */
+/* line 164, ../scss/sections/_footer.scss */
 .instagram {
   background-position: -78px 0;
 }
-/* line 164, ../scss/sections/_footer.scss */
+/* line 167, ../scss/sections/_footer.scss */
 .instagram:hover {
   background-position: -78px -39px;
 }
 
-/* line 169, ../scss/sections/_footer.scss */
+/* line 172, ../scss/sections/_footer.scss */
 .rss {
   background-position: -117px 0;
 }
-/* line 172, ../scss/sections/_footer.scss */
+/* line 175, ../scss/sections/_footer.scss */
 .rss:hover {
   background-position: -117px -39px;
 }
 
-/* line 177, ../scss/sections/_footer.scss */
+/* line 180, ../scss/sections/_footer.scss */
 .youtube {
   background-position: -156px 0;
 }
-/* line 180, ../scss/sections/_footer.scss */
+/* line 183, ../scss/sections/_footer.scss */
 .youtube:hover {
   background-position: -156px -39px;
 }
 
-/* line 185, ../scss/sections/_footer.scss */
+/* line 188, ../scss/sections/_footer.scss */
 .tumblr {
   background-position: -195px 0;
 }
-/* line 188, ../scss/sections/_footer.scss */
+/* line 191, ../scss/sections/_footer.scss */
 .tumblr:hover {
   background-position: -195px -39px;
 }
 
-/* line 193, ../scss/sections/_footer.scss */
+/* line 196, ../scss/sections/_footer.scss */
 .wordpress {
   background-position: -234px 0;
 }
-/* line 196, ../scss/sections/_footer.scss */
+/* line 199, ../scss/sections/_footer.scss */
 .wordpress:hover {
   background-position: -234px -39px;
 }
 
-/* line 201, ../scss/sections/_footer.scss */
+/* line 204, ../scss/sections/_footer.scss */
 .futurity {
   background-position: -273px 0;
 }
-/* line 204, ../scss/sections/_footer.scss */
+/* line 207, ../scss/sections/_footer.scss */
 .futurity:hover {
   background-position: -273px -39px;
 }
 
-/* line 209, ../scss/sections/_footer.scss */
+/* line 212, ../scss/sections/_footer.scss */
 .vimeo {
   background-position: -312px 0;
 }
-/* line 212, ../scss/sections/_footer.scss */
+/* line 215, ../scss/sections/_footer.scss */
 .vimeo:hover {
   background-position: -312px -39px;
 }
 
-/* line 217, ../scss/sections/_footer.scss */
+/* line 220, ../scss/sections/_footer.scss */
 .linkedin {
   background-position: -351px 0;
 }
-/* line 220, ../scss/sections/_footer.scss */
+/* line 223, ../scss/sections/_footer.scss */
 .linkedin:hover {
   background-position: -351px -39px;
 }
 
-/* line 225, ../scss/sections/_footer.scss */
+/* line 228, ../scss/sections/_footer.scss */
 .google-plus {
   background-position: -390px 0;
 }
-/* line 228, ../scss/sections/_footer.scss */
+/* line 231, ../scss/sections/_footer.scss */
 .google-plus:hover {
   background-position: -390px -39px;
 }
 
-/* line 233, ../scss/sections/_footer.scss */
+/* line 236, ../scss/sections/_footer.scss */
 .google-groups {
   background-position: -429px 0;
 }
-/* line 236, ../scss/sections/_footer.scss */
+/* line 239, ../scss/sections/_footer.scss */
 .google-groups:hover {
   background-position: -429px -39px;
 }
 
-/* line 240, ../scss/sections/_footer.scss */
+/* line 243, ../scss/sections/_footer.scss */
 .blog {
   background-position: -468px 0;
 }
-/* line 243, ../scss/sections/_footer.scss */
+/* line 246, ../scss/sections/_footer.scss */
 .blog:hover {
   background-position: -468px -39px;
 }
 
-/* line 248, ../scss/sections/_footer.scss */
+/* line 251, ../scss/sections/_footer.scss */
 .github {
   background-position: -507px 0;
 }
-/* line 251, ../scss/sections/_footer.scss */
+/* line 254, ../scss/sections/_footer.scss */
 .github:hover {
   background-position: -507px -39px;
 }
 
-/* line 256, ../scss/sections/_footer.scss */
+/* line 259, ../scss/sections/_footer.scss */
 .flickr {
   background-position: -546px 0;
 }
-/* line 259, ../scss/sections/_footer.scss */
+/* line 262, ../scss/sections/_footer.scss */
 .flickr:hover {
   background-position: -546px -39px;
 }
 
-/* line 264, ../scss/sections/_footer.scss */
+/* line 267, ../scss/sections/_footer.scss */
 .storify {
   background-position: -585px 0;
 }
-/* line 267, ../scss/sections/_footer.scss */
+/* line 270, ../scss/sections/_footer.scss */
 .storify:hover {
   background-position: -585px -39px;
 }
 
-/* line 272, ../scss/sections/_footer.scss */
+/* line 275, ../scss/sections/_footer.scss */
 .pinterest {
   background-position: -624px 0;
 }
-/* line 275, ../scss/sections/_footer.scss */
+/* line 278, ../scss/sections/_footer.scss */
 .pinterest:hover {
   background-position: -624px -39px;
 }
 
-/* line 280, ../scss/sections/_footer.scss */
+/* line 283, ../scss/sections/_footer.scss */
 .we-will {
   background-position: -663px 0;
 }
-/* line 283, ../scss/sections/_footer.scss */
+/* line 286, ../scss/sections/_footer.scss */
 .we-will:hover {
   background-position: -663px -39px;
 }
 
 @media screen and (max-width: 1140px) {
-  /* line 291, ../scss/sections/_footer.scss */
+  /* line 294, ../scss/sections/_footer.scss */
   footer {
     padding: 3rem 1rem;
   }
 }
 @media screen and (max-width: 820px) {
-  /* line 298, ../scss/sections/_footer.scss */
+  /* line 301, ../scss/sections/_footer.scss */
   .footer-content {
     width: 40%;
     margin-bottom: 1rem;
     margin-right: 1rem;
   }
-  /* line 303, ../scss/sections/_footer.scss */
+  /* line 306, ../scss/sections/_footer.scss */
   .footer-content:nth-of-type(2), .footer-content:nth-of-type(4) {
     margin-left: 2rem;
     width: 40%;
   }
 }
 @media screen and (max-width: 550px) {
-  /* line 312, ../scss/sections/_footer.scss */
+  /* line 315, ../scss/sections/_footer.scss */
   footer {
     font-size: 14px;
     line-height: 1.8em;
   }
 
-  /* line 317, ../scss/sections/_footer.scss */
+  /* line 320, ../scss/sections/_footer.scss */
   .footer-content {
     width: 100%;
     display: block;
     margin-bottom: 2rem;
   }
-  /* line 322, ../scss/sections/_footer.scss */
+  /* line 325, ../scss/sections/_footer.scss */
   .footer-content:nth-of-type(2), .footer-content:nth-of-type(4) {
     margin-left: 0;
     width: 100%;
   }
 
-  /* line 328, ../scss/sections/_footer.scss */
+  /* line 331, ../scss/sections/_footer.scss */
   .footer-pin-icon {
     top: .5em;
   }

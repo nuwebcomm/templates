@@ -93,15 +93,17 @@ footer {
 
                 &.footer-pin-icon {
                     background: url("#{$path-images}/icons/pin-drop.svg") no-repeat;
+                    background-size: 18px 24px;
                     position: absolute;
                     top: 2px;
                     left: -2rem;
                     height: 24px;
-                    width: 18px;  
+                    width: 18px; 
                 }
 
                 &.footer-phone-icon {
                     background: url("#{$path-images}/icons/mobile-phone.svg") no-repeat;
+                    background-size: 18px 24px;
                     position: absolute;
                     top: 2px;
                     left: -2rem;    
@@ -111,6 +113,7 @@ footer {
                 
                 &.footer-email-icon {
                     background: url("#{$path-images}/icons/email.svg") no-repeat;
+                    background-size: 18px 24px;
                     position: absolute;
                     top: 2px;
                     left: -2.2rem;    

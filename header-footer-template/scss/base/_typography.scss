@@ -49,6 +49,10 @@ h6 {
         }
     }
     
+    a em, em a, a i, i a {
+        font-family: $AkkuratProBoldItalic;
+    }      
+    
     strong, b {
         font-family: $AkkuratProBold;
         font-weight: normal;
