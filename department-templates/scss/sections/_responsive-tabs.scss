@@ -48,6 +48,10 @@
     border-top: 3px solid $rich-black-50;
     margin: 0 0 3rem 0;
     
+    > div {
+        @extend %clearfix;
+    }
+    
     // this nest mainly for admissions apply page
     .row {
         border-bottom: 3px solid $light-grey;

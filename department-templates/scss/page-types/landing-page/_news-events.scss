@@ -24,8 +24,9 @@
             padding-bottom: .5rem;
             margin-bottom: 1.5rem;
         }
+        
         h5 {
-            font: 18px $AkkuratProBold;
+            font: 18px/1.3em $AkkuratProBold;
             color: $rich-black-80;
             margin-bottom: 1rem; 
         }    
@@ -71,16 +72,6 @@
             float: left;
             width: 180px / 360px * 100%;    
         }
-
-        h5 {
-            font: 18px $AkkuratProBold;
-            color: $nu-purple;
-            margin-bottom: 1rem; 
-
-            &+p {
-                margin-top: -.5rem;
-            }
-        } 
     }
 
     // full-width news (6+ stories)
@@ -93,7 +84,7 @@
         .news-box {
 
             h4 {
-                font: 18px $AkkuratProBold;
+                font: 18px/1.3em $AkkuratProBold;
                 color: $nu-purple;
                 margin-bottom: 1rem; 
             } 

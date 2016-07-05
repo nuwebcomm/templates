@@ -21,6 +21,7 @@
     
         a {
             color: $nu-purple;
+            text-decoration: none;
         }
     }
     
@@ -30,11 +31,15 @@
         ul {
             margin-top: 1.5rem;
             padding-left: .3rem;
-            border-left: 4px solid $nu-purple-10;
             
             ul {
                 margin-top: 1rem;
                 padding-left: 0;
+            }
+            
+            &.open { // new
+                border-left: 4px solid $light-grey;
+                margin-left: -4px;
             }
         }
     }
@@ -43,6 +48,21 @@
         padding-bottom: 1rem;
         font-size: 18px;
         line-height: 1.4em;
+        font-family: $AkkuratProBold;
+
+        a {
+            color: $rich-black-50;
+            text-decoration: none;
+            display: block;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.active {
+                color: $nu-purple;
+            }
+        }
         
         li {
             margin-left: .5rem;
@@ -53,25 +73,19 @@
                 margin-left: 1rem;
                 font-family: $AkkuratProBoldItalic;
                 color: #636262;
+            
+                a.active {
+                    font-family: $AkkuratProBoldItalic;
+                }
             }
         }
         
         &:last-child {
             padding-bottom: .3rem;    
         }
-    }
-    
-    a {
-        color: $rich-black-50;
-        text-decoration: none;
-        display: block;
-        
-        &:hover {
-            text-decoration: underline;
-        }
-        
-        &.active {
-            color: $nu-purple;
+
+        ul.open li:last-child {
+            padding-bottom: 0;    
         }
     }
 }

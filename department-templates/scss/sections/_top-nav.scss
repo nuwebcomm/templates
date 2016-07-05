@@ -50,6 +50,10 @@
                     text-decoration: none;
                     display: block;
                     padding: 1rem 1.5rem;   
+                
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
 
                 &.active a {

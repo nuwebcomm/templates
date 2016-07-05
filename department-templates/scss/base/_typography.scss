@@ -36,13 +36,17 @@ h6 {
     a { // main link style
         font-family: $AkkuratProBold;
         color: $nu-purple;
-        text-decoration: none;
+        text-decoration: none;      
     
             &:hover {
             text-decoration: underline;
-        }
+        }         
     }
     
+    a em, em a, a i, i a {
+        font-family: $AkkuratProBoldItalic;
+    }     
+
     strong, b {
         font-family: $AkkuratProBold;
         font-weight: normal;
@@ -57,10 +61,6 @@ h6 {
         font-family: $AkkuratProBoldItalic;
         font-style: normal;
         font-weight: normal;
-    }
-    
-    a em { // for italic anchors
-        font-family: $AkkuratProBoldItalic;
     }
     
     p:last-of-type {
@@ -177,6 +177,7 @@ h6 {
         &.table-no-hover { // removes hover state on rows
         
             tr {
+                
                 &.hover td {
                     background: none;
                     color: inherit;
@@ -185,6 +186,13 @@ h6 {
                 &.hover.stripe td {
                     background: $light-grey;
                 }
+            }
+        }
+        
+        &.table-center-header {
+            
+            th {
+                text-align: center;
             }
         }
         

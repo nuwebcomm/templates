@@ -13,7 +13,7 @@
         }
 
         h4.news-title {
-            font: 18px/1.2em $AkkuratProBold;
+            font: 18px/1.3em $AkkuratProBold;
             margin-bottom: .5rem;
         }
 
@@ -31,6 +31,7 @@
     .event {
         position: relative;
         min-height: 100px;
+        margin-bottom: 1rem;
         
         .event-date {
             position: absolute;
@@ -62,7 +63,7 @@
             margin-left: 105px;
             
             h4 {
-                font: 18px/1.2em $AkkuratProBold;
+                font: 18px/1.3em $AkkuratProBold;
                 margin-bottom: 0          
             }
             
