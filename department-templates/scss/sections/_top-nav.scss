@@ -11,24 +11,15 @@
     .contain-1120 {
         
         > ul {
-            text-align: justify;
+            display: table;
+            width: 100%; 
             line-height: 0;
-            margin: 0 auto;
-            padding: 0;
-            width: 100%;    
-            min-height: 51px;
             position: relative;
-            font-size: .1px; // for strange bug with IE nav not being spread horizontally evenly and Safari dropdown disappearing when moving mouse down
             background: $white;
 
-            &:after {
-                content: '';
-                display: inline-block;
-                width: 100%;
-            }
-
             > li {
-                display: inline-block;
+                display: table-cell;
+                text-align: center;
                 line-height: 100%;
                 font: 18px $AkkuratProBold;
 
@@ -180,13 +171,6 @@
 }
 
 // media queries 
-@media screen and (max-width: 1000px) {
-    
-    #top-nav .contain-1120 > ul > li { // keeps last li anchored to left
-        float: left;
-    }
-}
-
 @media screen and (max-width: 768px) {
     
     #top-nav {

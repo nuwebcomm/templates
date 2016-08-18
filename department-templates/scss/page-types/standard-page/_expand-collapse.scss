@@ -93,3 +93,14 @@
         } 
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    // overrides h3 font-size change to 24px from /scss/standard-page/_main.scss    
+    .content .expander h3,
+    .content .expander1 h3,
+    .content .expander2 h3,
+    .content .expander3 h3 {
+        font-size: 18px;
+    }
+}
