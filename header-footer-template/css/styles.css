@@ -1,4 +1,3 @@
-/* line 5, ../scss/base/_reset.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, tt, var, u, center, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button,
 #top-nav ul, #top-nav li, #global-links ul, #global-links li, #mobile-nav ul, #mobile-nav li, #left-nav ul, #left-nav li, ul#breadcrumbs, ul#breadcrumbs li, footer ul, footer li {
   margin: 0;
@@ -9,70 +8,58 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquot
   vertical-align: baseline;
 }
 
-/* line 15, ../scss/base/_reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, main, section {
   display: block;
 }
 
-/* line 19, ../scss/base/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 23, ../scss/base/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 27, ../scss/base/_reset.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 32, ../scss/base/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 3, ../scss/base/_ie.scss */
 #ie {
   background: #fcf3c5;
-  font: 0.8em/1em Arial, sans-serif;
+  font: .8em/1em Arial, sans-serif;
   text-align: center;
   padding: .5em;
   border-bottom: 1px solid #000;
 }
 
-/* line 11, ../scss/base/_ie.scss */
 #ie a {
   font-weight: bold;
 }
 
-/* line 15, ../scss/base/_ie.scss */
 #ie p {
   margin: 0;
 }
 
-/* line 12, ../scss/base/_mixins-extends.scss */
 #top-bar:after, .bottom-bar:after, #search:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 3, ../scss/base/_core.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 7, ../scss/base/_core.scss */
 html {
   overflow-y: scroll;
 }
 
-/* line 11, ../scss/base/_core.scss */
 body {
   font: 62.5%/1.7em "Akkurat Pro Regular", Arial, sans-serif;
   text-rendering: optimizeLegibility;
@@ -82,21 +69,20 @@ body {
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   color: #342f2e;
-  background: white;
+  background: #fff;
   min-width: 98%;
   height: 100%;
   overflow-x: hidden;
 }
 
-/* line 26, ../scss/base/_core.scss */
 a.screen-reader-shortcut {
   left: .5em;
   position: absolute;
   top: -99px;
 }
-/* line 31, ../scss/base/_core.scss */
+
 a.screen-reader-shortcut:focus {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 0 0.3rem 0.3rem rgba(0, 0, 0, 0.6);
   color: #401f68;
   font: bold 1.5em sans-serif;
@@ -105,55 +91,47 @@ a.screen-reader-shortcut:focus {
   z-index: 5;
 }
 
-/* line 42, ../scss/base/_core.scss */
 #main-content {
   font-size: 16px;
   line-height: 1.7em;
   outline: none !important;
 }
 
-/* line 49, ../scss/base/_core.scss */
 .contain-780 {
   margin: 0 auto;
   max-width: 780px;
   box-sizing: content-box;
 }
 
-/* line 55, ../scss/base/_core.scss */
 .contain-850 {
   margin: 0 auto;
   max-width: 850px;
   box-sizing: content-box;
 }
 
-/* line 61, ../scss/base/_core.scss */
 .contain-970 {
   margin: 0 auto;
   max-width: 970px;
   box-sizing: content-box;
 }
 
-/* line 67, ../scss/base/_core.scss */
 .contain-1120 {
   margin: 0 auto;
   max-width: 1120px;
   box-sizing: content-box;
 }
 
-/* line 73, ../scss/base/_core.scss */
 .contain-1440 {
   margin: 0 auto;
   max-width: 1440px;
 }
 
-/* line 79, ../scss/base/_core.scss */
 img {
   display: inline-block;
   max-width: 100%;
   height: auto;
 }
 
-/* line 85, ../scss/base/_core.scss */
 .hide-label {
   position: absolute;
   left: -10000px;
@@ -163,7 +141,6 @@ img {
   overflow: hidden;
 }
 
-/* line 94, ../scss/base/_core.scss */
 .group:after {
   content: "";
   display: table;
@@ -171,88 +148,81 @@ img {
 }
 
 @media screen and (max-width: 1140px) {
-  /* line 103, ../scss/base/_core.scss */
   #main-content .contain-1120 {
     margin-left: 1rem;
     margin-right: 1rem;
   }
 }
+
 @media screen and (max-width: 768px) {
-  /* line 111, ../scss/base/_core.scss */
   .hide-mobile, a.screen-reader-shortcut {
     display: none;
   }
 }
-/* line 4, ../scss/base/_typography.scss */
+
 h2 {
   font: 46px/1.2em "Campton Book", Tahoma, sans-serif;
   color: #4e2a84;
   margin-bottom: 1rem;
 }
 
-/* line 10, ../scss/base/_typography.scss */
 h3 {
   font: 34px/1.2em "Campton Bold", Impact, sans-serif;
   color: #4e2a84;
   margin-bottom: .5rem;
 }
 
-/* line 16, ../scss/base/_typography.scss */
 h4 {
   font: 26px/1.2em "Akkurat Pro Regular", Arial, sans-serif;
   color: #716c6b;
   margin-bottom: 1rem;
 }
 
-/* line 22, ../scss/base/_typography.scss */
 h5 {
   font: 21px/1.3em "Akkurat Pro Regular", Arial, sans-serif;
   color: #4e2a84;
   margin-bottom: 1rem;
 }
 
-/* line 28, ../scss/base/_typography.scss */
 h6 {
   font: 18px/1.3em "Campton Bold", Impact, sans-serif;
   color: #716c6b;
   margin-bottom: 1rem;
 }
 
-/* line 34, ../scss/base/_typography.scss */
 #page {
   margin: 2rem auto;
   max-width: 1120px;
 }
 
-/* line 39, ../scss/base/_typography.scss */
 .content-full {
   width: 100%;
 }
-/* line 42, ../scss/base/_typography.scss */
+
 .content-full a {
   font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
   color: #4e2a84;
   text-decoration: none;
 }
-/* line 47, ../scss/base/_typography.scss */
+
 .content-full a:hover {
   text-decoration: underline;
 }
-/* line 52, ../scss/base/_typography.scss */
+
 .content-full a em, .content-full em a, .content-full a i, .content-full i a {
   font-family: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
 }
-/* line 56, ../scss/base/_typography.scss */
+
 .content-full strong, .content-full b {
   font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
   font-weight: normal;
 }
-/* line 61, ../scss/base/_typography.scss */
+
 .content-full em, .content-full i {
   font-family: "Akkurat Pro Italic", Arial, sans-serif;
   font-style: normal;
 }
-/* line 66, ../scss/base/_typography.scss */
+
 .content-full strong em, .content-full em strong, .content-full strong i, .content-full i strong, .content-full b i, .content-full i b {
   font-family: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
   font-style: normal;
@@ -260,12 +230,12 @@ h6 {
 }
 
 @media screen and (max-width: 1145px) {
-  /* line 75, ../scss/base/_typography.scss */
   #page {
     margin-left: 1rem;
     margin-right: 1rem;
   }
 }
+
 @font-face {
   font-family: "Akkurat Pro Light";
   src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProLight.woff") format("woff");
@@ -336,61 +306,59 @@ h6 {
   font-style: normal;
 }
 
-/* line 3, ../scss/sections/_header.scss */
 header {
   background: #4e2a84;
 }
 
-/* line 7, ../scss/sections/_header.scss */
 #top-bar {
   background: #401f68;
   font: 12px/1.4em "Akkurat Pro Bold", "Arial Black", sans-serif;
   min-height: 60px;
 }
-/* line 13, ../scss/sections/_header.scss */
+
 #top-bar #left {
   display: block;
   float: left;
   padding-left: 0;
 }
-/* line 18, ../scss/sections/_header.scss */
+
 #top-bar #left img {
   width: 170px;
   margin: 1.1rem 0 1rem 0;
 }
-/* line 25, ../scss/sections/_header.scss */
+
 #top-bar #right {
   display: inline;
   position: relative;
   float: right;
   padding-right: 1rem;
   margin-top: 1.4rem;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
 }
-/* line 34, ../scss/sections/_header.scss */
+
 #top-bar #right ul {
   margin: 0;
 }
-/* line 37, ../scss/sections/_header.scss */
+
 #top-bar #right ul li {
   display: inline-block;
   position: relative;
   margin-left: 1rem;
 }
-/* line 42, ../scss/sections/_header.scss */
+
 #top-bar #right ul li:hover, #top-bar #right ul li.hover {
   z-index: 100;
 }
-/* line 46, ../scss/sections/_header.scss */
+
 #top-bar #right ul li:hover ul, #top-bar #right ul li.hover ul {
   right: -1rem;
 }
-/* line 50, ../scss/sections/_header.scss */
+
 #top-bar #right ul li:last-child {
   cursor: pointer;
 }
-/* line 54, ../scss/sections/_header.scss */
+
 #top-bar #right ul li .dropdown-arrow {
   background: url("https://common.northwestern.edu/v8/css/images/icons/arrow-down-white.svg") no-repeat 0 0.1rem;
   width: 10px;
@@ -400,18 +368,18 @@ header {
   top: 2px;
   margin-left: .3em;
 }
-/* line 65, ../scss/sections/_header.scss */
+
 #top-bar #right ul a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   display: block;
   position: relative;
 }
-/* line 72, ../scss/sections/_header.scss */
+
 #top-bar #right ul a:hover, #top-bar #right ul a:focus, #top-bar #right ul a:active {
   text-decoration: underline;
 }
-/* line 76, ../scss/sections/_header.scss */
+
 #top-bar #right ul ul {
   position: absolute;
   top: 100%;
@@ -422,25 +390,23 @@ header {
   text-align: right;
   z-index: -100;
 }
-/* line 86, ../scss/sections/_header.scss */
+
 #top-bar #right ul ul li {
   float: none;
   padding: 0 0 .5rem 0;
   width: 100%;
   margin: 0;
 }
-/* line 92, ../scss/sections/_header.scss */
+
 #top-bar #right ul ul li:hover ul, #top-bar #right ul ul li.hover ul {
   left: 0;
 }
 
-/* line 101, ../scss/sections/_header.scss */
 .bottom-bar {
   display: table;
   width: 100%;
 }
 
-/* line 107, ../scss/sections/_header.scss */
 #department {
   display: table-cell;
   vertical-align: middle;
@@ -448,106 +414,98 @@ header {
   height: 112px;
   padding: 1rem 0;
 }
-/* line 114, ../scss/sections/_header.scss */
+
 #department h1 {
   font: 32px "Akkurat Pro Regular", Arial, sans-serif;
   line-height: 1em;
 }
-/* line 118, ../scss/sections/_header.scss */
+
 #department h1.small {
   font-size: 16px;
 }
-/* line 122, ../scss/sections/_header.scss */
+
 #department h1 span {
   font-size: 14px;
   line-height: 1em;
   display: block;
 }
-/* line 129, ../scss/sections/_header.scss */
+
 #department h2 {
   font: 24px "Akkurat Pro Regular", Arial, sans-serif;
   line-height: 1em;
-  color: white;
+  color: #fff;
   margin: 1rem 0 0 0;
 }
-/* line 136, ../scss/sections/_header.scss */
+
 #department a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
-/* line 140, ../scss/sections/_header.scss */
+
 #department a:hover {
   text-decoration: none;
 }
 
 @media screen and (max-width: 1445px) {
-  /* line 149, ../scss/sections/_header.scss */
   #top-bar {
     padding: 0 .5rem;
   }
 }
+
 @media screen and (max-width: 1145px) {
-  /* line 156, ../scss/sections/_header.scss */
   #department {
     padding-left: .5rem;
   }
 }
+
 @media screen and (max-width: 768px) {
-  /* line 163, ../scss/sections/_header.scss */
   #top-bar {
     display: block;
     padding: 0;
   }
-  /* line 167, ../scss/sections/_header.scss */
   #top-bar #left {
     display: inline-block;
     float: none;
     margin-left: .5rem;
   }
-  /* line 173, ../scss/sections/_header.scss */
   #top-bar #right {
     display: none;
   }
-
-  /* line 178, ../scss/sections/_header.scss */
   #department {
     width: 100%;
     padding: .5rem;
     height: auto;
   }
-  /* line 183, ../scss/sections/_header.scss */
   #department h1 {
     margin: .5rem 0;
     font-size: 24px;
   }
-  /* line 188, ../scss/sections/_header.scss */
   #department h2 {
     margin: .2rem .2rem .2rem 0;
   }
 }
+
 @media screen and (max-width: 480px) {
-  /* line 198, ../scss/sections/_header.scss */
   #department h1, #department h2 {
     font-size: 22px;
   }
 }
-/* line 3, ../scss/sections/_search.scss */
+
 #mobile-search {
   display: none;
 }
 
-/* line 7, ../scss/sections/_search.scss */
 #search {
   width: 23.66071%;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 13, ../scss/sections/_search.scss */
+
 #search .search-form {
   width: 265px;
   float: right;
 }
-/* line 17, ../scss/sections/_search.scss */
+
 #search .search-form input {
   width: 230px;
   height: 35px;
@@ -555,28 +513,28 @@ header {
   float: left;
   font: 18px "Akkurat Pro Bold", "Arial Black", sans-serif;
   background: none;
-  color: white;
+  color: #fff;
   border: none;
   border-bottom: 1px solid #b6acd1;
   -webkit-appearance: none;
 }
-/* line 29, ../scss/sections/_search.scss */
+
 #search .search-form input::-webkit-input-placeholder {
   color: #b6acd1;
 }
-/* line 33, ../scss/sections/_search.scss */
+
 #search .search-form input::-moz-placeholder {
   color: #b6acd1;
 }
-/* line 37, ../scss/sections/_search.scss */
+
 #search .search-form input:-moz-placeholder {
   color: #b6acd1;
 }
-/* line 41, ../scss/sections/_search.scss */
+
 #search .search-form input:-ms-input-placeholder {
   color: #b6acd1;
 }
-/* line 46, ../scss/sections/_search.scss */
+
 #search .search-form button {
   float: left;
   cursor: pointer;
@@ -588,29 +546,24 @@ header {
   border-bottom: 1px solid #b6acd1;
   -webkit-appearance: none;
 }
-/* line 58, ../scss/sections/_search.scss */
+
 #search .search-form input:focus {
   outline: 0;
 }
 
 @media screen and (max-width: 1145px) {
-  /* line 67, ../scss/sections/_search.scss */
   #search {
     padding-right: 1rem;
   }
 }
+
 @media screen and (max-width: 768px) {
-  /* line 74, ../scss/sections/_search.scss */
   header {
     position: relative;
   }
-
-  /* line 78, ../scss/sections/_search.scss */
   #search {
     display: none;
   }
-
-  /* line 82, ../scss/sections/_search.scss */
   #mobile-search {
     position: absolute;
     margin-top: -6px;
@@ -618,8 +571,6 @@ header {
     right: 0;
     z-index: 9998;
   }
-
-  /* line 91, ../scss/sections/_search.scss */
   .search-form {
     width: 100%;
     height: auto;
@@ -627,25 +578,22 @@ header {
     float: none;
     position: relative;
   }
-  /* line 98, ../scss/sections/_search.scss */
   .search-form form {
     margin: 0 20px;
     height: 63px;
     position: relative;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA/CAYAAAAhZaJUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OThCRkYyRUZFQUM5MTFFNDg4MkNDNUM0RUJBRUJDM0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OThCRkYyRjBFQUM5MTFFNDg4MkNDNUM0RUJBRUJDM0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5OEJGRjJFREVBQzkxMUU0ODgyQ0M1QzRFQkFFQkMzRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5OEJGRjJFRUVBQzkxMUU0ODgyQ0M1QzRFQkFFQkMzRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr4qas0AAAAeSURBVHjaYvj//z8DEwMQDHuCmf+n3n8G6vkXIMAAeQ0Iq8diMWYAAAAASUVORK5CYII=");
   }
-  /* line 105, ../scss/sections/_search.scss */
   .search-form input {
     width: 80%;
     height: 32px;
     margin: 15px 0;
     float: left;
     font: 18px "Akkurat Pro Bold", "Arial Black", sans-serif;
-    color: white;
+    color: #fff;
     background: none;
     border: none;
   }
-  /* line 116, ../scss/sections/_search.scss */
   .search-form button {
     float: left;
     cursor: pointer;
@@ -659,76 +607,65 @@ header {
     right: 0;
     bottom: 18px;
   }
-  /* line 130, ../scss/sections/_search.scss */
   .search-form .hide-label, .search-form input[type="hidden"] {
     visibility: hidden;
     display: none;
   }
 }
-/* line 3, ../scss/sections/_top-nav.scss */
+
 #mobile-links {
   display: none;
 }
 
-/* line 7, ../scss/sections/_top-nav.scss */
 #top-nav {
   background: #4e2a84;
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid #fff;
 }
-/* line 13, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 > ul {
-  text-align: justify;
+  display: table;
+  width: 100%;
   line-height: 0;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  min-height: 51px;
   position: relative;
-  font-size: .1px;
-  background: white;
+  background: #fff;
 }
-/* line 24, ../scss/sections/_top-nav.scss */
-#top-nav .contain-1120 > ul:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-}
-/* line 30, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 > ul > li {
-  display: inline-block;
+  display: table-cell;
+  text-align: center;
   line-height: 100%;
   font: 18px "Akkurat Pro Bold", "Arial Black", sans-serif;
 }
-/* line 35, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 > ul > li:hover a {
   background: #f0f0f0;
   transition: .3s;
 }
-/* line 40, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 > ul > li:hover a.button {
   background: #4e2a84;
 }
-/* line 44, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 > ul > li:hover .dropdown, #top-nav .contain-1120 > ul > li:hover .dropdown-one-column, #top-nav .contain-1120 > ul > li:hover .dropdown-two-column {
   left: 0;
 }
-/* line 48, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 > ul > li a {
   color: #4e2a84;
   text-decoration: none;
   display: block;
   padding: 1rem 1.5rem;
 }
-/* line 54, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 > ul > li a:hover {
   text-decoration: underline;
 }
-/* line 59, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 > ul > li.active a {
   background: #836eaa;
-  color: white;
+  color: #fff;
 }
-/* line 64, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 > ul > li .dropdown-arrow {
   background: url("https://common.northwestern.edu/v8/css/images/icons/arrow-down-ltpurple.svg") no-repeat 50%;
   width: 10px;
@@ -736,7 +673,7 @@ header {
   display: inline-block;
   margin-left: .5em;
 }
-/* line 74, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown, #top-nav .contain-1120 .dropdown-one-column, #top-nav .contain-1120 .dropdown-two-column {
   position: absolute;
   background: #f0f0f0;
@@ -750,48 +687,48 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
-/* line 88, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown .nav-intro, #top-nav .contain-1120 .dropdown .nav-links, #top-nav .contain-1120 .dropdown-one-column .nav-intro, #top-nav .contain-1120 .dropdown-one-column .nav-links, #top-nav .contain-1120 .dropdown-two-column .nav-intro, #top-nav .contain-1120 .dropdown-two-column .nav-links {
   width: 50%;
   float: left;
   text-align: left;
 }
-/* line 94, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown p.intro, #top-nav .contain-1120 .dropdown-one-column p.intro, #top-nav .contain-1120 .dropdown-two-column p.intro {
   font: 30px "Campton Bold", Impact, sans-serif;
   color: #4e2a84;
   margin: 0 0 1rem 0;
   padding-right: 2rem;
 }
-/* line 101, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown .nav-links, #top-nav .contain-1120 .dropdown-one-column .nav-links, #top-nav .contain-1120 .dropdown-two-column .nav-links {
-  border-left: 2px solid #cccccc;
+  border-left: 2px solid #ccc;
   padding-left: 1rem;
 }
-/* line 106, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown ul, #top-nav .contain-1120 .dropdown-one-column ul, #top-nav .contain-1120 .dropdown-two-column ul {
   display: block;
   background: inherit;
 }
-/* line 110, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown ul li, #top-nav .contain-1120 .dropdown-one-column ul li, #top-nav .contain-1120 .dropdown-two-column ul li {
   display: block;
   text-align: left;
   width: inherit;
   line-height: 1.4em;
 }
-/* line 116, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown ul li a, #top-nav .contain-1120 .dropdown-one-column ul li a, #top-nav .contain-1120 .dropdown-two-column ul li a {
   padding: .3em 0;
   display: inline-block;
   background: inherit;
   color: #4e2a84;
 }
-/* line 122, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown ul li a:hover, #top-nav .contain-1120 .dropdown-one-column ul li a:hover, #top-nav .contain-1120 .dropdown-two-column ul li a:hover {
   text-decoration: underline;
 }
-/* line 133, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown-two-column ul {
   width: 100% !important;
   -moz-column-count: 2;
@@ -800,13 +737,13 @@ header {
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
-  -webkit-column-rule: 2px solid #cccccc;
-  -moz-column-rule: 2px solid #cccccc;
-  column-rule: 2px solid #cccccc;
+  -webkit-column-rule: 2px solid #ccc;
+  -moz-column-rule: 2px solid #ccc;
+  column-rule: 2px solid #ccc;
   margin: 0;
   padding: 0;
 }
-/* line 147, ../scss/sections/_top-nav.scss */
+
 #top-nav .contain-1120 .dropdown-two-column ul li {
   background: none;
   -webkit-column-break-inside: avoid;
@@ -814,52 +751,42 @@ header {
   break-inside: avoid;
   display: inline-block;
 }
-/* line 161, ../scss/sections/_top-nav.scss */
+
 #top-nav.narrow-dropdown ul li {
   position: relative;
 }
-/* line 164, ../scss/sections/_top-nav.scss */
+
 #top-nav.narrow-dropdown ul li:hover ul.nav-align-right {
   right: 0;
   left: inherit;
 }
-/* line 169, ../scss/sections/_top-nav.scss */
+
 #top-nav.narrow-dropdown ul li:hover ul.nav-align-right li {
   text-align: right;
 }
-/* line 174, ../scss/sections/_top-nav.scss */
+
 #top-nav.narrow-dropdown .dropdown {
   display: inherit;
   width: 320px;
   padding: 1em;
 }
 
-@media screen and (max-width: 1000px) {
-  /* line 185, ../scss/sections/_top-nav.scss */
-  #top-nav .contain-1120 > ul > li {
-    float: left;
-  }
-}
 @media screen and (max-width: 768px) {
-  /* line 192, ../scss/sections/_top-nav.scss */
   #top-nav {
     display: none;
   }
 }
-/* line 3, ../scss/sections/_mobile-nav.scss */
+
 #mobile-links, #mobile-nav {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 10, ../scss/sections/_mobile-nav.scss */
   #mobile-links {
     display: block;
     float: right;
     height: 55px;
   }
-
-  /* line 15, ../scss/sections/_mobile-nav.scss */
   .mobile-link {
     display: inline-block;
     padding: 1em;
@@ -868,64 +795,50 @@ header {
     cursor: pointer;
     position: relative;
   }
-  /* line 23, ../scss/sections/_mobile-nav.scss */
   .mobile-link.mobile-search-link {
     background: url("https://common.northwestern.edu/v8/css/images/icons/search.svg") no-repeat center/20px 20px;
   }
-  /* line 26, ../scss/sections/_mobile-nav.scss */
   .mobile-link.mobile-search-link.open {
     background: #4e2a84 url("https://common.northwestern.edu/v8/css/images/icons/alert-x-white-home.svg") no-repeat center/20px 20px;
   }
-  /* line 31, ../scss/sections/_mobile-nav.scss */
   .mobile-link.mobile-nav-link {
     background: url("https://common.northwestern.edu/v8/css/images/icons/hamburger.svg") no-repeat center/20px 20px;
   }
-  /* line 34, ../scss/sections/_mobile-nav.scss */
   .mobile-link.mobile-nav-link.open {
-    background: white url("https://common.northwestern.edu/v8/css/images/icons/close-button-dkpurple.svg") no-repeat center/20px 20px;
+    background: #fff url("https://common.northwestern.edu/v8/css/images/icons/close-button-dkpurple.svg") no-repeat center/20px 20px;
   }
-
-  /* line 40, ../scss/sections/_mobile-nav.scss */
   #mobile-nav {
     display: none;
-    background: white;
+    background: #fff;
     position: absolute;
     top: 55px;
     left: 0;
     right: 0;
     z-index: 9998;
   }
-  /* line 49, ../scss/sections/_mobile-nav.scss */
   #mobile-nav ul {
-    background: white;
+    background: #fff;
   }
-  /* line 52, ../scss/sections/_mobile-nav.scss */
   #mobile-nav ul ul {
     display: none;
     background: #f0f0f0;
   }
-  /* line 56, ../scss/sections/_mobile-nav.scss */
   #mobile-nav ul ul ul {
     background-color: #e6e6e6;
   }
-  /* line 59, ../scss/sections/_mobile-nav.scss */
   #mobile-nav ul ul ul ul {
     background-color: gainsboro;
   }
-  /* line 62, ../scss/sections/_mobile-nav.scss */
   #mobile-nav ul ul ul ul ul {
     background-color: #d1d1d1;
   }
-  /* line 65, ../scss/sections/_mobile-nav.scss */
   #mobile-nav ul ul ul ul ul ul {
     background-color: #c7c7c7;
   }
-  /* line 74, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li {
     position: relative;
     font: 18px "Akkurat Pro Bold", "Arial Black", sans-serif;
   }
-  /* line 79, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li a {
     text-decoration: none;
     color: #4e2a84;
@@ -934,19 +847,16 @@ header {
     position: relative;
     padding: .9em 3em .9em .8em;
   }
-  /* line 87, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li a.active {
-    color: black;
+    color: #000;
     font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
   }
-  /* line 95, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li .arrow.open a {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     border: none;
   }
-  /* line 102, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li .arrow a {
     width: 50px;
     height: 48px;
@@ -960,48 +870,37 @@ header {
     border: none;
     padding: 0;
   }
-  /* line 117, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li li {
     font: 16px/1.2em "Akkurat Pro Regular", Arial, sans-serif;
   }
-  /* line 120, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li li a {
     padding-left: 1.5em;
   }
-  /* line 124, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li li li a {
     padding-left: 2em;
   }
-  /* line 127, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li li li li a {
     padding-left: 2.5em;
   }
-  /* line 131, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li li li li li a {
     padding-left: 3em;
   }
-  /* line 135, ../scss/sections/_mobile-nav.scss */
   #mobile-nav li li li li li li a {
     padding-left: 3.5em;
   }
-
-  /* line 143, ../scss/sections/_mobile-nav.scss */
   #mobile-nav-bottom {
     background: #401f68;
   }
-  /* line 146, ../scss/sections/_mobile-nav.scss */
   #mobile-nav-bottom:after {
     content: "";
     display: table;
     clear: both;
   }
-  /* line 150, ../scss/sections/_mobile-nav.scss */
   #mobile-nav-bottom ul {
     margin: 0;
     padding: 1rem;
     background: none;
   }
-  /* line 156, ../scss/sections/_mobile-nav.scss */
   #mobile-nav-bottom li {
     background: transparent;
     padding: 0;
@@ -1010,53 +909,48 @@ header {
     margin: 0;
     list-style: none;
   }
-  /* line 164, ../scss/sections/_mobile-nav.scss */
   #mobile-nav-bottom li:last-child {
     border: none;
   }
-  /* line 168, ../scss/sections/_mobile-nav.scss */
   #mobile-nav-bottom li a {
     text-transform: uppercase;
-    color: white;
+    color: #fff;
     font: 12px/2em "Akkurat Pro Bold", "Arial Black", sans-serif;
     border: none;
     padding: inherit;
   }
-  /* line 175, ../scss/sections/_mobile-nav.scss */
   #mobile-nav-bottom li a.white-link {
-    color: white;
+    color: #fff;
   }
-  /* line 181, ../scss/sections/_mobile-nav.scss */
   #mobile-nav-bottom #mobile-nav-bottom-left, #mobile-nav-bottom #mobile-nav-bottom-right {
     width: 50%;
     display: inline-block;
     float: left;
   }
 }
-/* line 3, ../scss/sections/_footer.scss */
+
 footer {
   background: #4e2a84;
-  color: white;
+  color: #fff;
   font: 12px/2.1em "Akkurat Pro Regular", Arial, sans-serif;
   padding: 3rem 0;
   width: 100%;
 }
-/* line 10, ../scss/sections/_footer.scss */
+
 footer ul {
   list-style: none;
 }
-/* line 14, ../scss/sections/_footer.scss */
+
 footer a {
   font-family: "Akkurat Pro Regular", Arial, sans-serif;
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
-/* line 19, ../scss/sections/_footer.scss */
+
 footer a:hover {
   text-decoration: none;
 }
 
-/* line 25, ../scss/sections/_footer.scss */
 .footer-content {
   width: 21.64948%;
   display: inline-block;
@@ -1064,60 +958,60 @@ footer a:hover {
   position: relative;
   vertical-align: top;
 }
-/* line 34, ../scss/sections/_footer.scss */
+
 .footer-content:nth-of-type(1) img:not(.png) {
   width: 100%;
 }
-/* line 39, ../scss/sections/_footer.scss */
+
 .footer-content:nth-of-type(2) {
   width: 25.7732%;
 }
-/* line 45, ../scss/sections/_footer.scss */
+
 .footer-content:nth-of-type(3) p {
   line-height: 1.6em;
 }
-/* line 50, ../scss/sections/_footer.scss */
+
 .footer-content:nth-of-type(4) {
   width: 10.30928%;
   margin-right: 0;
 }
-/* line 56, ../scss/sections/_footer.scss */
+
 .footer-content:nth-of-type(4) li a {
   display: inline-block;
   line-height: 1.3em;
 }
-/* line 63, ../scss/sections/_footer.scss */
+
 .footer-content p {
   margin-top: 0;
 }
-/* line 67, ../scss/sections/_footer.scss */
+
 .footer-content strong {
   font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
   font-weight: normal;
 }
-/* line 72, ../scss/sections/_footer.scss */
+
 .footer-content .footer-icon {
   height: 29px;
   width: 18px;
   left: -25px;
   margin-top: .5em;
 }
-/* line 79, ../scss/sections/_footer.scss */
+
 .footer-content img {
   margin-bottom: 1rem;
   max-width: 170px;
 }
-/* line 86, ../scss/sections/_footer.scss */
+
 .footer-content.contact ul {
   margin: 1rem 0 1rem 2rem;
   position: relative;
 }
-/* line 90, ../scss/sections/_footer.scss */
+
 .footer-content.contact ul li {
   line-height: 1.5em;
   padding-bottom: .4rem;
 }
-/* line 94, ../scss/sections/_footer.scss */
+
 .footer-content.contact ul li.footer-pin-icon {
   background: url("https://common.northwestern.edu/v8/css/images/icons/pin-drop.svg") no-repeat;
   background-size: 18px 24px;
@@ -1127,7 +1021,7 @@ footer a:hover {
   height: 24px;
   width: 18px;
 }
-/* line 104, ../scss/sections/_footer.scss */
+
 .footer-content.contact ul li.footer-phone-icon {
   background: url("https://common.northwestern.edu/v8/css/images/icons/mobile-phone.svg") no-repeat;
   background-size: 18px 24px;
@@ -1137,7 +1031,7 @@ footer a:hover {
   height: 24px;
   width: 18px;
 }
-/* line 114, ../scss/sections/_footer.scss */
+
 .footer-content.contact ul li.footer-email-icon {
   background: url("https://common.northwestern.edu/v8/css/images/icons/email.svg") no-repeat;
   background-size: 18px 24px;
@@ -1148,7 +1042,6 @@ footer a:hover {
   width: 18px;
 }
 
-/* line 129, ../scss/sections/_footer.scss */
 .social {
   display: inline-block;
   vertical-align: bottom;
@@ -1161,222 +1054,197 @@ footer a:hover {
   background: url("https://common.northwestern.edu/v8/css/images/icons/social-media-icons.svg");
   background-color: #fff;
   transition: background 0.3s;
-  border: 1px solid white;
+  border: 1px solid #fff;
 }
-/* line 143, ../scss/sections/_footer.scss */
+
 .social:hover {
   background-color: #b6acd1;
 }
 
-/* line 148, ../scss/sections/_footer.scss */
 .facebook {
   background-position: 0 0;
 }
-/* line 151, ../scss/sections/_footer.scss */
+
 .facebook:hover {
   background-position: 0 -39px;
 }
 
-/* line 156, ../scss/sections/_footer.scss */
 .twitter {
   background-position: -39px 0;
 }
-/* line 159, ../scss/sections/_footer.scss */
+
 .twitter:hover {
   background-position: -39px -39px;
 }
 
-/* line 164, ../scss/sections/_footer.scss */
 .instagram {
   background-position: -78px 0;
 }
-/* line 167, ../scss/sections/_footer.scss */
+
 .instagram:hover {
   background-position: -78px -39px;
 }
 
-/* line 172, ../scss/sections/_footer.scss */
 .rss {
   background-position: -117px 0;
 }
-/* line 175, ../scss/sections/_footer.scss */
+
 .rss:hover {
   background-position: -117px -39px;
 }
 
-/* line 180, ../scss/sections/_footer.scss */
 .youtube {
   background-position: -156px 0;
 }
-/* line 183, ../scss/sections/_footer.scss */
+
 .youtube:hover {
   background-position: -156px -39px;
 }
 
-/* line 188, ../scss/sections/_footer.scss */
 .tumblr {
   background-position: -195px 0;
 }
-/* line 191, ../scss/sections/_footer.scss */
+
 .tumblr:hover {
   background-position: -195px -39px;
 }
 
-/* line 196, ../scss/sections/_footer.scss */
 .wordpress {
   background-position: -234px 0;
 }
-/* line 199, ../scss/sections/_footer.scss */
+
 .wordpress:hover {
   background-position: -234px -39px;
 }
 
-/* line 204, ../scss/sections/_footer.scss */
 .futurity {
   background-position: -273px 0;
 }
-/* line 207, ../scss/sections/_footer.scss */
+
 .futurity:hover {
   background-position: -273px -39px;
 }
 
-/* line 212, ../scss/sections/_footer.scss */
 .vimeo {
   background-position: -312px 0;
 }
-/* line 215, ../scss/sections/_footer.scss */
+
 .vimeo:hover {
   background-position: -312px -39px;
 }
 
-/* line 220, ../scss/sections/_footer.scss */
 .linkedin {
   background-position: -351px 0;
 }
-/* line 223, ../scss/sections/_footer.scss */
+
 .linkedin:hover {
   background-position: -351px -39px;
 }
 
-/* line 228, ../scss/sections/_footer.scss */
 .google-plus {
   background-position: -390px 0;
 }
-/* line 231, ../scss/sections/_footer.scss */
+
 .google-plus:hover {
   background-position: -390px -39px;
 }
 
-/* line 236, ../scss/sections/_footer.scss */
 .google-groups {
   background-position: -429px 0;
 }
-/* line 239, ../scss/sections/_footer.scss */
+
 .google-groups:hover {
   background-position: -429px -39px;
 }
 
-/* line 243, ../scss/sections/_footer.scss */
 .blog {
   background-position: -468px 0;
 }
-/* line 246, ../scss/sections/_footer.scss */
+
 .blog:hover {
   background-position: -468px -39px;
 }
 
-/* line 251, ../scss/sections/_footer.scss */
 .github {
   background-position: -507px 0;
 }
-/* line 254, ../scss/sections/_footer.scss */
+
 .github:hover {
   background-position: -507px -39px;
 }
 
-/* line 259, ../scss/sections/_footer.scss */
 .flickr {
   background-position: -546px 0;
 }
-/* line 262, ../scss/sections/_footer.scss */
+
 .flickr:hover {
   background-position: -546px -39px;
 }
 
-/* line 267, ../scss/sections/_footer.scss */
 .storify {
   background-position: -585px 0;
 }
-/* line 270, ../scss/sections/_footer.scss */
+
 .storify:hover {
   background-position: -585px -39px;
 }
 
-/* line 275, ../scss/sections/_footer.scss */
 .pinterest {
   background-position: -624px 0;
 }
-/* line 278, ../scss/sections/_footer.scss */
+
 .pinterest:hover {
   background-position: -624px -39px;
 }
 
-/* line 283, ../scss/sections/_footer.scss */
 .we-will {
   background-position: -663px 0;
 }
-/* line 286, ../scss/sections/_footer.scss */
+
 .we-will:hover {
   background-position: -663px -39px;
 }
 
 @media screen and (max-width: 1140px) {
-  /* line 294, ../scss/sections/_footer.scss */
   footer {
     padding: 3rem 1rem;
   }
 }
+
 @media screen and (max-width: 820px) {
-  /* line 301, ../scss/sections/_footer.scss */
   .footer-content {
     width: 40%;
     margin-bottom: 1rem;
     margin-right: 1rem;
   }
-  /* line 306, ../scss/sections/_footer.scss */
   .footer-content:nth-of-type(2), .footer-content:nth-of-type(4) {
     margin-left: 2rem;
     width: 40%;
   }
 }
+
 @media screen and (max-width: 550px) {
-  /* line 315, ../scss/sections/_footer.scss */
   footer {
     font-size: 14px;
     line-height: 1.8em;
   }
-
-  /* line 320, ../scss/sections/_footer.scss */
   .footer-content {
     width: 100%;
     display: block;
     margin-bottom: 2rem;
   }
-  /* line 325, ../scss/sections/_footer.scss */
   .footer-content:nth-of-type(2), .footer-content:nth-of-type(4) {
     margin-left: 0;
     width: 100%;
   }
-
-  /* line 331, ../scss/sections/_footer.scss */
   .footer-pin-icon {
     top: .5em;
   }
 }
-/* line 3, ../scss/base/_buttons.scss */
+
 .content a.button, #top-nav ul li a.button {
   font: 16px "Akkurat Pro Bold", "Arial Black", sans-serif;
-  color: white;
+  color: #fff;
   background: #4e2a84;
   text-align: center;
   text-decoration: none;
@@ -1385,12 +1253,12 @@ footer a:hover {
   margin: 0 .5em .5em 0;
   padding: .8em 1em .7em 1em;
   cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px transparent;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
@@ -1402,7 +1270,7 @@ footer a:hover {
   min-width: 165px;
   border: none;
 }
-/* line 31, ../scss/base/_buttons.scss */
+
 .content a.button:before, #top-nav ul li a.button:before {
   content: "";
   position: absolute;
@@ -1423,12 +1291,12 @@ footer a:hover {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-/* line 52, ../scss/base/_buttons.scss */
+
 .content a.button:hover, .content a.button:focus, .content a.button:active, #top-nav ul li a.button:hover, #top-nav ul li a.button:focus, #top-nav ul li a.button:active {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
-/* line 57, ../scss/base/_buttons.scss */
+
 .content a.button:hover:before, .content a.button:focus:before, .content a.button:active:before, #top-nav ul li a.button:hover:before, #top-nav ul li a.button:focus:before, #top-nav ul li a.button:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
