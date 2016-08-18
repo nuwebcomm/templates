@@ -4,10 +4,28 @@
 
 New changes:
 
+### Version 1.5.3 - August 18, 2016
+
+#### SASS
+* `/scss/styles.scss`
+  1. New version number
+  
+* `/scss/base/_forms.scss`
+  1. Removed min-width; changed to percentage  
+
+* `/scss/page-types/standard-page/_expand-collapse.scss`
+  1. Override h3 font-size change at 480px
+
+* `/scss/sections/_top-nav.scss`
+  1. changed first level nav li to table cells for smoother handling of menu items
+
+#### CSS
+* `/css/styles.css`
+  1. Compiled css (for dev use) 
+
 ### Version 1.5.2 - July 5, 2016
 
 #### HTML
-
 * `/index.html`
   1. Updated
   
@@ -217,9 +235,25 @@ Initial Commit
 
 ## Header/Footer Templates
 
+### Version 1.5.3 - August 18, 2016
+
+#### SASS
+* `/scss/styles.scss`
+  1. New version number
+  
+* `/scss/sections/_top-nav.scss`
+  1. changed first level nav li to table cells for smoother handling of menu items  
+
+#### CSS
+* `/css/styles.css`
+  1. Compiled css (for dev use)  
+
 ### Version 1.5.2 - July 5, 2016
 
 #### SASS
+* `/scss/styles.scss`
+  1. New version number
+
 * `/scss/sections/_footer.scss`
   1. Added background-size to `.contact` icons for MS Edge fix.
   
