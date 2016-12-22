@@ -50,6 +50,10 @@
     
     > div {
         @extend %clearfix;
+    
+        h3 {
+            margin-top: 1rem; // more breathing room
+        }
     }
     
     // this nest mainly for admissions apply page

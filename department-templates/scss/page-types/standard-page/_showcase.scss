@@ -65,6 +65,10 @@
             margin-left: 35px / 836px * 100%;
         }
         
+        .below-content {
+            @extend %clearfix;
+        }
+        
         .quote {
             float: left;
             width: 265px;

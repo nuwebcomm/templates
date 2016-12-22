@@ -152,7 +152,7 @@ h6 {
 
         th {
             background: $nu-purple;
-            font: 21px $AkkuratProBold;
+            font: 18px $AkkuratProBold;
             color: $white;
             padding: .7rem 1rem .7rem 1rem;
             text-align: left;
@@ -165,7 +165,7 @@ h6 {
             vertical-align: top;
         }
         
-        tr.stripe td {
+        tr.stripe {
             background: $light-grey;
         }
         
@@ -183,17 +183,24 @@ h6 {
                     color: inherit;
                 }
                 
-                &.hover.stripe td {
+                &.hover.stripe {
                     background: $light-grey;
                 }
             }
         }
         
-        &.table-center-header {
+        &.table-center-header { // centers headers
             
             th {
                 text-align: center;
             }
+        }
+        
+        &.table-no-stripe { // removes auto striping
+        
+            tr.stripe {
+                background: transparent;
+            }    
         }
         
         ul {
@@ -223,12 +230,12 @@ h6 {
 	display: block;
 }
 
-@media screen and (max-width: 480px) {    
+@media screen and (max-width: 768px) {    
 
     .align-image-left, .align-image-right, .align-image-center { // remove format for mobile
         float: none;
-        margin: 0;
-        display: inline-block;
+        margin: 0 0 1rem 0;
+        display: block;
     }    
 }
 

@@ -21,47 +21,17 @@ header {
         }    
     }
     
-    // quick links on right side with optional resources dropdown
+    // quick links on right side with optional resources dropdown            
     #right {
-        display: inline;
         position: relative;
         float: right;
-        padding-right: 1rem;
-        margin-top: 1.4rem;
         color: $white;
         text-transform: uppercase;
         
-        ul {
+        > ul {
             margin: 0;
-            
-            li {
-                display: inline-block;
-                position: relative;
-                margin-left: 1rem;
- 
-                &:hover, &.hover {
-                    z-index: 100;
-                } 
-                
-                &:hover ul, &.hover ul {
-                    right: -1rem;
-                }  
-                
-                &:last-child { // for "resources" dropdown (must be last child)
-                    cursor: pointer;
-                }
-                
-                .dropdown-arrow {
-                    background: url("#{$path-images}/icons/arrow-down-white.svg") no-repeat 0 .1rem;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    right: -1rem;
-                    top: 2px;
-                    margin-left: .3em;
-                }             
-            }     
-            
+            display: table;
+
             a {	
                 color: $white;
                 text-decoration: none; 
@@ -71,27 +41,69 @@ header {
 
             a:hover, a:focus, a:active { 
                 text-decoration: underline;  
-            }
+            }            
+            
+            li {
+                display: table-cell;
+                vertical-align: middle;
+                position: relative;
+                line-height: 100%;
+                padding-left: 1rem;
+                height: 60px;
+ 
+                &:hover, &.hover {
+                    z-index: 100;
+                } 
+                
+                &:hover ul, &.hover ul {
+                    right: 0;
+                    top: 60px;
+                    z-index: 1000; // show dropdown
+                }  
+                
+                &.resources { // for "resources" dropdown
+                    cursor: pointer;
+                
+                    > a {
+                        display: inline;
+                    }
+                }    
+    
+                .dropdown-arrow {
+                    background: url("#{$path-images}/icons/arrow-down-white.svg") no-repeat 50% center;
+                    width: 10px;
+                    height: 10px;
+                    display: inline-block;
+                    margin-left: .5em;
+                }             
+            }     
 
+            // dropdown
             ul {
                 position: absolute;
                 top: 100%;
-                right: -9999em;
                 width: 150px;
-                background: $nu-purple-120;
+                background: $nu-purple-70;
                 padding: .5rem;
                 text-align: right;
-                z-index: -100;
+                z-index: -1000; // hide dropdown
                 
                 li {
                     float: none;
                     padding: 0 0 .5rem 0;
                     width: 100%;
                     margin: 0;
+                    display: inline-block;
+                    line-height: 1.2em;
+                    height: inherit;
             
                     &:hover ul, &.hover ul {
                         left: 0;
-                    }        
+                    }  
+                    
+                    &:last-child {
+                        padding-bottom: 0;
+                    }                    
                 }
             }
         }
@@ -127,7 +139,7 @@ header {
     }
 
     h2 {
-        font: 24px $AkkuratProRegular;
+        font: 32px $AkkuratProRegular;
         line-height: 1em;
         color: $white;
         margin: 1rem 0 0 0;
@@ -149,9 +161,6 @@ header {
     #top-bar {
         padding: 0 .5rem;
     }
-}
-
-@media screen and (max-width: 1145px) {
     
     #department {
         padding-left: .5rem;

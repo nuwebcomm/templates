@@ -92,7 +92,7 @@ ul#breadcrumbs {
 
     li { 
         display: inline;
-        background: url("#{$path-images}/icons/arrow-right-ltpurple.svg") no-repeat .5rem .1rem / 5px 8px;
+        background: url("#{$path-images}/icons/arrow-right-ltpurple.svg") no-repeat center left 8px / 8px 8px;
         padding-left: 2em;    
 
         &:first-child {
@@ -191,7 +191,7 @@ img {
 
         h2 {
             color: white;
-            font: 60px/1.2em "Campton Bold",Impact,sans-serif;
+            font: 60px/1.2em $CamptonBold;
             margin-bottom: 1rem;
             position: relative;
             text-shadow: 2px 2px 0 black;
@@ -220,17 +220,17 @@ a.photo-hover:hover { // adds hover to large images with this class on the ancho
 
 // adds icons to matched file type
 a[href$=".pdf"], a[href$=".PDF"], a.pdf {
-    padding-right: 1rem;
+    padding-right: 1.25rem;
     background: url("#{$path-images}/icons/pdf.png") no-repeat right center;
 }
 
 a[href$=".docx"], a[href$=".DOCX"], a.docx, a[href$=".doc"], a[href$=".DOC"], a.doc {
-    padding-right: 1rem;
+    padding-right: 1.25rem;
     background: url("#{$path-images}/icons/word.png") no-repeat right center;
 }
 
 a[href$=".xlsx"], a[href$=".XLSX"], a.xlsx, a[href$=".xls"], a[href$=".XLS"], a.xls {
-    padding-right: 1rem;
+    padding-right: 1.25rem;
     background: url("#{$path-images}/icons/excel.png") no-repeat right center;
 }
 
@@ -255,7 +255,7 @@ a[href$=".xlsx"], a[href$=".XLSX"], a.xlsx, a[href$=".xls"], a[href$=".XLS"], a.
 
 @media screen and (max-width: 768px) {
     
-    .hide-mobile, a.screen-reader-shortcut {
+    .hide-mobile {
         display: none;
     }
     

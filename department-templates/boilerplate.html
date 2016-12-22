@@ -23,7 +23,7 @@
         <div id="top-bar">
             <div class="contain-1120">
                 <div id="left">
-                    <a href="http://www.northwestern.edu"><img src="https://common.northwestern.edu/v8/css/images/northwestern.svg" alt="Northwestern University" /><span class="hide-label">Northwestern University</span></a>
+                    <a href="http://www.northwestern.edu"><img src="https://common.northwestern.edu/v8/css/images/northwestern.svg" alt="Northwestern University" /></a>
                 </div>
                 <div id="mobile-links">
                     <a href="#mobile-search" class="mobile-link mobile-search-link"><span class="hide-label">Search</span></a>
@@ -126,7 +126,7 @@
                         <li><a href="#">Link 2</a></li>
                         <li><a href="#">Link 3</a></li>
                         <li><a href="#">Link 4</a></li>
-                        <li>Resources <span class="dropdown-arrow"></span>
+                        <li class="resources">Resources <span class="dropdown-arrow"></span>
                             <ul>
                                 <li><a href="#">Drop Link 1</a></li>
                                 <li><a href="#">Drop Link 2</a></li>
@@ -368,18 +368,15 @@
                 </li>
                 <li>List Item 4</li>
             </ol> 
-            <h4>Steps</h4>
+            <h3>[Steps]</h3>
             <ol class="steps">
                 <li><strong>Apply</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</li>
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</li>
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</li>   
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</li>  
-
             </ol>
-
             <p>Duis fringilla luctus mi, ultrices facilisis ipsum ultricies sit amet. Nam eu quam tincidunt sapien eleifend sodales. Nulla viverra placerat turpis eget euismod. Nullam erat ipsum, consectetur eget congue vel, congue ac enim. Morbi non massa tellus.</p>
-
             <h3>[TABLES]</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris. Vestibulum <a href="#">dignissim mauris</a> nec dolor semper commodo. Sed nibh sapien, mollis eget congue non, congue accumsan diam. Maecenas blandit neque nisl, id egestas velit. Aliquam convallis dictum enim, gravida scelerisque odio sollicitudin at.</p>
             <h4>Standard Table</h4>
@@ -392,7 +389,7 @@
                     </tr>
                     <tr>
                         <td>Table row 1</td>
-                        <td><a href="#">Table cell</a></td>
+                        <td>Table cell</td>
                         <td>Table cell</td>
                     </tr>
                     <tr>
@@ -402,16 +399,6 @@
                     </tr>
                     <tr>
                         <td>Table row 3</td>
-                        <td>Table cell</td>
-                        <td>Table cell</td>
-                    </tr>
-                    <tr>
-                        <td>Table row 4</td>
-                        <td>Table cell</td>
-                        <td>Table cell</td>
-                    </tr>
-                    <tr>
-                        <td>Table row 5</td>
                         <td>Table cell</td>
                         <td>Table cell</td>
                     </tr>
@@ -436,22 +423,38 @@
                         <td>Table cell</td>
                     </tr>
                     <tr>
-                        <td>Table row 3</td>
-                        <td>Table cell</td>
-                        <td>Table cell</td>
-                    </tr>
-                    <tr>
-                        <td>Table row 4</td>
-                        <td>Table cell</td>
-                        <td>Table cell</td>
-                    </tr>
-                    <tr>
-                        <td>Table row 5</td>
+                        <td>Table row 2</td>
                         <td>Table cell</td>
                         <td>Table cell</td>
                     </tr>
                 </tbody>
             </table>
+            <h4>Table (no stripe)</h4>
+            <table class="table-no-stripe">
+                <tbody>
+                    <tr>
+                        <th>Table column 1</th>
+                        <th>Table column 2</th>
+                        <th>Table column 3</th>
+                    </tr>
+                    <tr>
+                        <td>Table row 1</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>Table row 2</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>Table row 3</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                </tbody>
+            </table>            
+            
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris. Vestibulum <a href="#">dignissim mauris</a> nec dolor semper commodo. Sed nibh sapien, mollis eget congue non, congue accumsan diam. Maecenas blandit neque nisl, id egestas velit. Aliquam convallis dictum enim, gravida scelerisque odio sollicitudin at.</p>
             
             <h3>[HEADINGS]</h3>
@@ -537,6 +540,10 @@
                     <li class="footer-phone-icon"><span class="hide-label">Phone number</span></li>
                     <li>(123) 456-7890</li>                
                 </ul>
+                <ul>
+                    <li class="footer-fax-icon"><span class="hide-label">Fax number</span></li>
+                    <li>(123) 456-7890</li>                
+                </ul>                     
                 <ul>
                     <li class="footer-email-icon"><span class="hide-label">Email address</span></li>
                     <li><a href="mailto:info@northwestern.edu">your-department@northwestern.edu</a></li>

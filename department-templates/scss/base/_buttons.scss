@@ -58,6 +58,10 @@
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
+
+    &.normal-case { // for normal case buttons anchors
+        text-transform: none;
+    }    
 }
 
 // special overrides

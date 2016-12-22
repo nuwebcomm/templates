@@ -1,12 +1,100 @@
-# Release Notes
+# Department Templates 
 
-## Department Templates 
+## Version 1.5.4 - December 22, 2016
 
-New changes:
+* `/RELEASE.md`
+  1. Separated out release notes
 
-### Version 1.5.3 - August 18, 2016
+### HTML
+* All HTML Pages:
+  1. Removed `<span class="hide-label">` from Northwestern logo
+  2. Updated resources dropdown to use a class instead of relying on last-child
+  3. Added fax option in footer
 
-#### SASS
+* `boilerplate.html`
+  1. Example of `table.table-no-stripe` looks like
+
+* `landing-page.html`
+  1. Example of "News and Events" without photos
+
+### SASS
+* `/scss/styles.scss`
+  1. New version number
+  
+* `/scss/base/_buttons.scss`
+  1. New `normal-case` class can be appended to a button class
+  
+* `/scss/base/_core.scss`
+  1. Misc. fixes.
+
+* `/scss/base/_forms.scss`
+  1. Wrong display type.
+  
+* `/scss/base/_ie.scss` 
+  1. Added line breaks
+  
+* `/scss/base/_reset.scss`  
+  1. Added line breaks
+      
+* `/scss/base/_typography.scss`
+  1. Fixed broken `.table-no-hover`
+  2. Added `.table-no-stripe` and `.table-center-header`
+  3. Updated floating image media query
+  
+* `/scss/base/_variables.scss`
+  1. Added `$nu-purple-70` variable
+  
+* `/scss/page-types/landing-page/_news-events.scss`
+  1. Misc. fixes.
+  
+* `/scss/page-types/standard-page/_alternate-photo-float.scss`
+  1. Added `h3` option depending on preceding header order
+
+* `/scss/page-types/standard-page/_feature-boxes-2-columnns.scss`
+  1. Added `h3` option depending on preceding header order
+
+* `/scss/page-types/standard-page/_people-list.scss`  
+  1. Misc. fixes.  
+
+* `/scss/page-types/standard-page/_photo-feature-2-across.scss`
+  1. Misc. fixes.  
+  
+* `/scss/page-types/standard-page/_showcase.scss`  
+  1. Added `.below-content` clearfix  
+  
+* `/scss/page-types/standard-page/_two-column-links.scss`
+  1. Added `h3` option depending on preceding header order
+  
+* `/scss/page-types/sections/_emergency.scss`
+  1. Added `#breaking-news`
+  
+* `/scss/page-types/sections/_footer.scss`
+  1. Increased font size for readability
+  2. Adjusted `.footer-content` widths for better formatting
+  3. New fax option
+  
+* `/scss/page-types/sections/_header.scss`
+  1. Updated resources dropdown to use a class instead of relying on last-child
+
+* `/scss/page-types/sections/_responsive-tabs.scss`
+  1. Misc fixes
+
+### JS
+* `/scripts/scripts.js`
+  1. Table stripe starts on first odd row in each table
+
+### CSS
+* `/css/styles.css`
+  1. Compiled css (for dev use) 
+  
+* `/css/print.css`
+  1. Added header font sizes
+  2. Changed link color; added file name to `link:after`
+  3. Updated footer
+
+## Version 1.5.3 - August 18, 2016
+
+### SASS
 * `/scss/styles.scss`
   1. New version number
   
@@ -19,13 +107,13 @@ New changes:
 * `/scss/sections/_top-nav.scss`
   1. changed first level nav li to table cells for smoother handling of menu items
 
-#### CSS
+### CSS
 * `/css/styles.css`
   1. Compiled css (for dev use) 
 
-### Version 1.5.2 - July 5, 2016
+## Version 1.5.2 - July 5, 2016
 
-#### HTML
+### HTML
 * `/index.html`
   1. Updated
   
@@ -33,7 +121,7 @@ New changes:
   1. Updated left-nav treatment
   2. `ul.open` added to active child list only
 
-#### SASS
+### SASS
 * `/scss/styles.scss`
   1. New version number
 
@@ -67,18 +155,18 @@ New changes:
 * `/sections/_top-nav.scss` 
   1. Added underline text-decoration to first-level a:hover  
 
-#### CSS
+### CSS
 * `/css/styles.css`
   1. Compiled css (expanded for dev use)
   
 
-### Version 1.5.1 - May 10, 2016
+## Version 1.5.1 - May 10, 2016
 
-#### HTML
+### HTML
 * `standard-page.html`
   1. Removed clearfix ("group") from **photo feature (2 across)**
 
-#### SASS
+### SASS
 
 * `/scss/styles.scss`
   1. New version number
@@ -95,15 +183,15 @@ New changes:
 * `/sections/_heroes.scss`
   1. Changed `<p>` font size at 480px
 
-#### CSS
+### CSS
 * `/css/styles.css`
   1. Compiled css (expanded for dev use)
 
-### Version 1.5 - April 22, 2016
+## Version 1.5 - April 22, 2016
 
 In addition to the major items listed below, there may have been comments and code formatting updates to the files.
 
-#### HTML
+### HTML
 * All html pages:
   1. Updated top-nav
   2. Added copyright year js in footer
@@ -146,7 +234,7 @@ In addition to the major items listed below, there may have been comments and co
 * `/standard-photo-grid.html`
   1. New – may be used in responsive tabs (as shown)
 
-#### SASS
+### SASS
 
 * `/scss/styles.scss`
   1. Added new modules
@@ -216,99 +304,18 @@ In addition to the major items listed below, there may have been comments and co
 * `/scss/sections/_top-nav.scss`
   1. Better spacing of links
 
-#### CSS
+### CSS
 * `/css/print.css`
   1. Updated 
 
 * `/css/styles.css`
   1. Compiled css (expanded for dev use)
 
-#### JS
+### JS
 * `/scripts/scripts.js`
   1. Removed old expander, added accessible minified jquery.expander to top
   2. **photo feature** no longer flips when there's no `.back`
 
-### Version 1.0
+## Version 1.0
 
 Initial Commit
-
-
-## Header/Footer Templates
-
-### Version 1.5.3 - August 18, 2016
-
-#### SASS
-* `/scss/styles.scss`
-  1. New version number
-  
-* `/scss/sections/_top-nav.scss`
-  1. changed first level nav li to table cells for smoother handling of menu items  
-
-#### CSS
-* `/css/styles.css`
-  1. Compiled css (for dev use)  
-
-### Version 1.5.2 - July 5, 2016
-
-#### SASS
-* `/scss/styles.scss`
-  1. New version number
-
-* `/scss/sections/_footer.scss`
-  1. Added background-size to `.contact` icons for MS Edge fix.
-  
-* `/sections/_top-nav.scss` 
-  1. Added underline text-decoration to first-level a:hover   
-  
-* `/scss/base/_typography.scss`
-  1. Allow italic anchors in content region  
-  
-#### CSS
-* `/css/styles.css`
-  1. Compiled css (expanded for dev use)  
-
-### Version 1.5.1 - May 10, 2016
-
-#### SASS
-* `/scss/styles.scss`
-  1. New version number
-
-* `/scss/base/_reset.scss`
-  1. Removed `<sup>` and `<sub>`
-  
-#### CSS
-* `/css/styles.css`
-  1. Compiled css (expanded for dev use)  
-
-### Version 1.5 - April 22, 2016
-
-In addition to the major items listed below, there may have been comments and code formatting updates to the files.
-
-#### HTML
-* `/index.html`
-  1. Added copyright year js in footer
-  2. Added "We Will" icon in footer
-  3. New `html5shiv-printshiv.js` - links to common.northwestern.edu
-  5. Updated top-nav
-  
-#### SASS
-* `/scss/base/_typography.scss`
-  1. Added line heights for header tags  
- 
-* `/scss/sections/_footer.scss`
-  1. Added "We Will" icon 
-
-* `/scss/sections/_mobile-nav.scss`
-  1. Added `#mobile-nav-bottom-right` style
- 
-#### CSS
-* `/css/print.css`
-  1. New  
-
-* `/css/styles.css`
-  1. Compiled css (expanded for dev use)
-  
-### Version 1.0
-  
-Initial Commit
-

@@ -1,5 +1,5 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, tt, var, u, center, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button,
-#top-nav ul, #top-nav li, #global-links ul, #global-links li, #mobile-nav ul, #mobile-nav li, #left-nav ul, #left-nav li, ul#breadcrumbs, ul#breadcrumbs li, footer ul, footer li {
+#top-nav ul, #top-nav li, #global-links ul, #global-links li, #mobile-nav ul, #mobile-nav li, footer ul, footer li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -328,78 +328,89 @@ header {
 }
 
 #top-bar #right {
-  display: inline;
   position: relative;
   float: right;
-  padding-right: 1rem;
-  margin-top: 1.4rem;
   color: #fff;
   text-transform: uppercase;
 }
 
-#top-bar #right ul {
+#top-bar #right > ul {
   margin: 0;
+  display: table;
 }
 
-#top-bar #right ul li {
-  display: inline-block;
-  position: relative;
-  margin-left: 1rem;
-}
-
-#top-bar #right ul li:hover, #top-bar #right ul li.hover {
-  z-index: 100;
-}
-
-#top-bar #right ul li:hover ul, #top-bar #right ul li.hover ul {
-  right: -1rem;
-}
-
-#top-bar #right ul li:last-child {
-  cursor: pointer;
-}
-
-#top-bar #right ul li .dropdown-arrow {
-  background: url("https://common.northwestern.edu/v8/css/images/icons/arrow-down-white.svg") no-repeat 0 0.1rem;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  right: -1rem;
-  top: 2px;
-  margin-left: .3em;
-}
-
-#top-bar #right ul a {
+#top-bar #right > ul a {
   color: #fff;
   text-decoration: none;
   display: block;
   position: relative;
 }
 
-#top-bar #right ul a:hover, #top-bar #right ul a:focus, #top-bar #right ul a:active {
+#top-bar #right > ul a:hover, #top-bar #right > ul a:focus, #top-bar #right > ul a:active {
   text-decoration: underline;
 }
 
-#top-bar #right ul ul {
-  position: absolute;
-  top: 100%;
-  right: -9999em;
-  width: 150px;
-  background: #401f68;
-  padding: .5rem;
-  text-align: right;
-  z-index: -100;
+#top-bar #right > ul li {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  line-height: 100%;
+  padding-left: 1rem;
+  height: 60px;
 }
 
-#top-bar #right ul ul li {
+#top-bar #right > ul li:hover, #top-bar #right > ul li.hover {
+  z-index: 100;
+}
+
+#top-bar #right > ul li:hover ul, #top-bar #right > ul li.hover ul {
+  right: 0;
+  top: 60px;
+  z-index: 1000;
+}
+
+#top-bar #right > ul li.resources {
+  cursor: pointer;
+}
+
+#top-bar #right > ul li.resources > a {
+  display: inline;
+}
+
+#top-bar #right > ul li .dropdown-arrow {
+  background: url("https://common.northwestern.edu/v8/css/images/icons/arrow-down-white.svg") no-repeat 50% center;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: .5em;
+}
+
+#top-bar #right > ul ul {
+  position: absolute;
+  top: 100%;
+  width: 150px;
+  background: #765da0;
+  padding: .5rem;
+  text-align: right;
+  z-index: -1000;
+}
+
+#top-bar #right > ul ul li {
   float: none;
   padding: 0 0 .5rem 0;
   width: 100%;
   margin: 0;
+  display: inline-block;
+  line-height: 1.2em;
+  height: inherit;
 }
 
-#top-bar #right ul ul li:hover ul, #top-bar #right ul ul li.hover ul {
+#top-bar #right > ul ul li:hover ul, #top-bar #right > ul ul li.hover ul {
   left: 0;
+}
+
+#top-bar #right > ul ul li:last-child {
+  padding-bottom: 0;
 }
 
 .bottom-bar {
@@ -431,7 +442,7 @@ header {
 }
 
 #department h2 {
-  font: 24px "Akkurat Pro Regular", Arial, sans-serif;
+  font: 32px "Akkurat Pro Regular", Arial, sans-serif;
   line-height: 1em;
   color: #fff;
   margin: 1rem 0 0 0;
@@ -450,9 +461,6 @@ header {
   #top-bar {
     padding: 0 .5rem;
   }
-}
-
-@media screen and (max-width: 1145px) {
   #department {
     padding-left: .5rem;
   }
@@ -932,13 +940,9 @@ header {
 footer {
   background: #4e2a84;
   color: #fff;
-  font: 12px/2.1em "Akkurat Pro Regular", Arial, sans-serif;
+  font: 14px/1.3em "Akkurat Pro Regular", Arial, sans-serif;
   padding: 3rem 0;
   width: 100%;
-}
-
-footer ul {
-  list-style: none;
 }
 
 footer a {
@@ -952,11 +956,22 @@ footer a:hover {
 }
 
 .footer-content {
-  width: 21.64948%;
+  margin-right: 5.15464%;
   display: inline-block;
-  margin-right: 5.46392%;
   position: relative;
   vertical-align: top;
+}
+
+.footer-content ul {
+  list-style-type: none;
+}
+
+.footer-content ul li {
+  padding-bottom: .8rem;
+}
+
+.footer-content:nth-of-type(1) {
+  width: 23.71134%;
 }
 
 .footer-content:nth-of-type(1) img:not(.png) {
@@ -967,18 +982,13 @@ footer a:hover {
   width: 25.7732%;
 }
 
-.footer-content:nth-of-type(3) p {
-  line-height: 1.6em;
+.footer-content:nth-of-type(3) {
+  width: 18.04124%;
 }
 
 .footer-content:nth-of-type(4) {
-  width: 10.30928%;
+  width: 14.43299%;
   margin-right: 0;
-}
-
-.footer-content:nth-of-type(4) li a {
-  display: inline-block;
-  line-height: 1.3em;
 }
 
 .footer-content p {
@@ -1003,13 +1013,12 @@ footer a:hover {
 }
 
 .footer-content.contact ul {
-  margin: 1rem 0 1rem 2rem;
+  margin: 0 0 1rem 2rem;
   position: relative;
 }
 
-.footer-content.contact ul li {
-  line-height: 1.5em;
-  padding-bottom: .4rem;
+.footer-content.contact ul:nth-of-type(3) {
+  margin-bottom: 0;
 }
 
 .footer-content.contact ul li.footer-pin-icon {
@@ -1032,6 +1041,15 @@ footer a:hover {
   width: 18px;
 }
 
+.footer-content.contact ul li.footer-fax-icon {
+  background: url("https://common.northwestern.edu/v8/css/images/icons/fax.svg") no-repeat;
+  background-size: 18px 24px;
+  position: absolute;
+  left: -2rem;
+  height: 20px;
+  width: 18px;
+}
+
 .footer-content.contact ul li.footer-email-icon {
   background: url("https://common.northwestern.edu/v8/css/images/icons/email.svg") no-repeat;
   background-size: 18px 24px;
@@ -1040,6 +1058,10 @@ footer a:hover {
   left: -2.2rem;
   height: 24px;
   width: 18px;
+}
+
+.footer-content.contact ul li.footer-email-icon + li {
+  font-size: 12px;
 }
 
 .social {
@@ -1211,34 +1233,24 @@ footer a:hover {
   }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 870px) {
   .footer-content {
-    width: 40%;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-content:nth-of-type(1), .footer-content:nth-of-type(3) {
+    width: 45%;
+    margin-right: 5%;
   }
   .footer-content:nth-of-type(2), .footer-content:nth-of-type(4) {
-    margin-left: 2rem;
-    width: 40%;
+    width: 46%;
+    margin-right: 0;
   }
 }
 
 @media screen and (max-width: 550px) {
-  footer {
-    font-size: 14px;
-    line-height: 1.8em;
-  }
-  .footer-content {
+  .footer-content:nth-of-type(1), .footer-content:nth-of-type(2), .footer-content:nth-of-type(3), .footer-content:nth-of-type(4) {
     width: 100%;
-    display: block;
-    margin-bottom: 2rem;
-  }
-  .footer-content:nth-of-type(2), .footer-content:nth-of-type(4) {
-    margin-left: 0;
-    width: 100%;
-  }
-  .footer-pin-icon {
-    top: .5em;
+    margin-right: 0;
   }
 }
 
@@ -1300,4 +1312,8 @@ footer a:hover {
 .content a.button:hover:before, .content a.button:focus:before, .content a.button:active:before, #top-nav ul li a.button:hover:before, #top-nav ul li a.button:focus:before, #top-nav ul li a.button:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.content a.button.normal-case, #top-nav ul li a.button.normal-case {
+  text-transform: none;
 }
