@@ -56,7 +56,7 @@ table {
 }
 
 /* line 20, /Library/WebServer/Documents/GIT/department-templates/scss/base/_mixins-extends.scss */
-#top-bar:after, .bottom-bar:after, #search:after, #tab-content > div:after, .standard-page #page:after, .standard-page .photo-feature-2-across:after, .standard-page .feature-two-col:after, .standard-page .alternate-photo-float:after, .standard-page .showcase .below-content:after, .standard-page .people-big .people-wrap:after, .standard-page .people-medium .people-wrap:after, .standard-page .people-small .people-wrap:after, .standard-page .news:after, .standard-page .plus-section:after, .narrow-page #news-story .wrap:after, .standard-page .photo-grid:after, .landing-page #page:after, .landing-page .photo-feature-2-across:after, .landing-page .photo-feature-3-across:after, .landing-page .feature-two-col:after, .landing-page .feature-three-col:after, .landing-page .feature-four-col:after, .landing-page .three-column-links:after, .landing-page .large-feature-inner:after, .landing-page .stats-callout:after, .landing-page .alternate-photo-float:after, .landing-page .news-event:after, .landing-page .news-box:after, .landing-page .news-full:after, .landing-page .news-full .news-box:after, .landing-page .photo-grid:after {
+#top-bar:after, .bottom-bar:after, #search:after, #tab-content > div:after, .tab-content > div:after, .standard-page #page:after, .standard-page .photo-feature-2-across:after, .standard-page .feature-two-col:after, .standard-page .alternate-photo-float:after, .standard-page .showcase .below-content:after, .standard-page .people-big .people-wrap:after, .standard-page .people-medium .people-wrap:after, .standard-page .people-small .people-wrap:after, .standard-page .news:after, .standard-page .plus-section:after, .narrow-page #news-story .wrap:after, .standard-page .photo-grid:after, .landing-page #page:after, .landing-page .photo-feature-2-across:after, .landing-page .photo-feature-3-across:after, .landing-page .feature-two-col:after, .landing-page .feature-three-col:after, .landing-page .feature-four-col:after, .landing-page .three-column-links:after, .landing-page .large-feature-inner:after, .landing-page .stats-callout:after, .landing-page .alternate-photo-float:after, .landing-page .news-event:after, .landing-page .news-box:after, .landing-page .news-full:after, .landing-page .news-full .news-box:after, .landing-page .photo-grid:after {
   content: "";
   display: table;
   clear: both;
@@ -461,83 +461,94 @@ h6 {
   margin-bottom: 1rem;
 }
 
-/* line 36, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 35, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+.center-list {
+  list-style: none;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 41, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+.center-list li {
+  background: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 51, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content a, .content-full a {
   font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
   color: #4e2a84;
   text-decoration: none;
 }
 
-/* line 41, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 56, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content a:hover, .content-full a:hover {
   text-decoration: underline;
 }
 
-/* line 46, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 61, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content a em, .content em a, .content a i, .content i a, .content-full a em, .content-full em a, .content-full a i, .content-full i a {
   font-family: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
 }
 
-/* line 50, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 65, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content strong, .content b, .content-full strong, .content-full b {
   font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
   font-weight: normal;
 }
 
-/* line 55, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 70, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content em, .content i, .content-full em, .content-full i {
   font-family: "Akkurat Pro Italic", Arial, sans-serif;
   font-style: normal;
 }
 
-/* line 60, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 75, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content strong em, .content em strong, .content strong i, .content i strong, .content b i, .content i b, .content-full strong em, .content-full em strong, .content-full strong i, .content-full i strong, .content-full b i, .content-full i b {
   font-family: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 
-/* line 66, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
-.content p:last-of-type, .content-full p:last-of-type {
-  margin-bottom: 1.5rem;
-}
-
-/* line 71, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 86, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ul, .content-full ul {
   padding-left: 1em;
 }
 
-/* line 74, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 89, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ul > li, .content-full ul > li {
   list-style: none;
   background: url("https://common.northwestern.edu/v8/css/images/icons/bullet.png") 0 0.5em no-repeat;
   padding: 0 0 .5em 1em;
 }
 
-/* line 79, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 94, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ul > li > ul, .content-full ul > li > ul {
   margin-top: .5em;
 }
 
-/* line 82, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 97, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ul > li > ul li, .content-full ul > li > ul li {
   background: none;
   list-style: circle;
   padding-left: .5em;
 }
 
-/* line 87, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 102, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ul > li > ul li:last-child, .content-full ul > li > ul li:last-child {
   padding-bottom: 0;
 }
 
-/* line 93, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 108, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ul > li > ol, .content-full ul > li > ol {
   padding-left: 2em;
   margin-top: .5em;
 }
 
-/* line 97, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 112, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ul > li > ol > li, .content-full ul > li > ol > li {
   background: none;
   list-style-type: decimal;
@@ -545,50 +556,56 @@ h6 {
   padding-left: 0;
 }
 
-/* line 103, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 118, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ul > li > ol > li:last-child, .content-full ul > li > ol > li:last-child {
   padding-bottom: 0;
 }
 
-/* line 111, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 125, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+.content ul.center-list > li, .content-full ul.center-list > li {
+  background: none;
+  padding: 0;
+}
+
+/* line 131, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ol, .content-full ol {
   padding-left: 2.2em;
 }
 
-/* line 114, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 134, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ol > li, .content-full ol > li {
   list-style-type: decimal;
   padding: 0 0 .5em .5em;
 }
 
-/* line 118, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 138, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ol > li > ol, .content-full ol > li > ol {
   margin-top: .5em;
   padding-left: 1.2em;
 }
 
-/* line 122, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 142, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ol > li > ol li, .content-full ol > li > ol li {
   list-style: lower-alpha;
 }
 
-/* line 125, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 145, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ol > li > ol li:last-child, .content-full ol > li > ol li:last-child {
   padding-bottom: 0;
 }
 
-/* line 131, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 151, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ol > li > ul, .content-full ol > li > ul {
   margin-top: .5em;
   padding-left: 0;
 }
 
-/* line 139, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 159, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content ol > li > ul > li:last-child, .content-full ol > li > ul > li:last-child {
   padding-bottom: 0;
 }
 
-/* line 147, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 167, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table, .content-full table {
   width: 100%;
   margin: 1em 0 0 0;
@@ -596,7 +613,7 @@ h6 {
   line-height: 1.5em;
 }
 
-/* line 153, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 173, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table th, .content-full table th {
   background: #4e2a84;
   font: 18px "Akkurat Pro Bold", "Arial Black", sans-serif;
@@ -606,76 +623,76 @@ h6 {
   border: 2px solid #fff;
 }
 
-/* line 162, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 182, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table td, .content-full table td {
   padding: .7rem 1rem .7rem 1rem;
   border: 2px solid #fff;
   vertical-align: top;
 }
 
-/* line 168, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 188, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table tr.stripe, .content-full table tr.stripe {
   background: #f0f0f0;
 }
 
-/* line 172, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 192, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table tr.hover td, .content-full table tr.hover td {
   background: #e4e0ee;
   color: #342f2e;
 }
 
-/* line 181, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 201, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table.table-no-hover tr.hover td, .content-full table.table-no-hover tr.hover td {
   background: none;
   color: inherit;
 }
 
-/* line 186, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 206, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table.table-no-hover tr.hover.stripe, .content-full table.table-no-hover tr.hover.stripe {
   background: #f0f0f0;
 }
 
-/* line 194, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 214, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table.table-center-header th, .content-full table.table-center-header th {
   text-align: center;
 }
 
-/* line 201, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 221, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table.table-no-stripe tr.stripe, .content-full table.table-no-stripe tr.stripe {
   background: transparent;
 }
 
-/* line 206, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 226, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .content table ul, .content-full table ul {
   margin-left: 0;
   padding-top: .5rem;
 }
 
-/* line 214, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 234, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .align-text-center {
   text-align: center;
 }
 
-/* line 218, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 238, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .align-image-left {
   float: left;
   margin: .5rem 1.5rem .5rem 0;
 }
 
-/* line 223, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 243, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .align-image-right {
   float: right;
   margin: .5rem 0 .5rem 1.5rem;
 }
 
-/* line 228, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+/* line 248, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
 .align-image-center {
   margin: 0 auto;
   display: block;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 235, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
+  /* line 255, /Library/WebServer/Documents/GIT/department-templates/scss/base/_typography.scss */
   .align-image-left, .align-image-right, .align-image-center {
     float: none;
     margin: 0 0 1rem 0;
@@ -2380,7 +2397,7 @@ footer a:hover {
 }
 
 /* line 2, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tabs {
+#tabs, .tabs {
   list-style: none;
   width: 100%;
   margin: 0;
@@ -2389,7 +2406,7 @@ footer a:hover {
 }
 
 /* line 9, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tabs li {
+#tabs li, .tabs li {
   background: none;
   margin: 0 .3rem 0 0;
   padding: 0;
@@ -2398,82 +2415,100 @@ footer a:hover {
 }
 
 /* line 16, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tabs li:last-child {
+#tabs li:last-child, .tabs li:last-child {
   margin: 0;
 }
 
 /* line 20, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tabs li a {
-  font: 21px "Akkurat Pro Regular", Arial, sans-serif;
-  color: #716c6b;
-  padding: .5rem .7rem;
+#tabs li a, .tabs li a {
+  font: 18px "Akkurat Pro Bold", "Arial Black", sans-serif;
+  color: #836eaa;
+  background: #e4e0ee;
+  padding: .75rem 1.2rem .5rem 1.2rem;
   display: inline-block;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
 
-/* line 28, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tabs li a:hover {
+/* line 29, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tabs li a:hover, .tabs li a:hover {
   text-decoration: none;
-  background: #716c6b;
+  background: #4e2a84;
   color: #fff;
 }
 
-/* line 34, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tabs li a.active {
-  background: #716c6b;
+/* line 35, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tabs li a.active, .tabs li a.active {
+  background: #4e2a84;
   color: #fff;
 }
 
-/* line 43, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-.standard-page #tabs {
-  text-align: left;
+/* line 44, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+.content ul.tabs, .content-full ul.tabs {
+  padding-left: 0;
 }
 
-/* line 47, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content {
-  border-top: 3px solid #716c6b;
-  margin: 0 0 3rem 0;
+/* line 48, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+.content ul.tabs > li, .content-full ul.tabs > li {
+  background: none;
+  padding: 0;
 }
 
 /* line 54, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content > div h3 {
+.standard-page #tabs, #standard-page .tabs {
+  text-align: left;
+}
+
+/* line 58, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content, .tab-content {
+  border-top: 3px solid #4e2a84;
+  margin: 0 0 3rem 0;
+  padding: 1rem 0 0 0;
+}
+
+/* line 66, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content > div h3, .tab-content > div h3 {
   margin-top: 1rem;
 }
 
-/* line 60, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content .row {
+/* line 72, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .row, .tab-content .row {
   border-bottom: 3px solid #f0f0f0;
-  padding: 2rem 0;
+  padding: 0 0 2rem 0;
 }
 
-/* line 65, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content .headings {
+/* line 77, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .responsive-table, .tab-content .responsive-table {
+  margin-top: 0;
+}
+
+/* line 81, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .headings, .tab-content .headings {
   display: table-cell;
   width: 32.14286%;
   padding-right: 1rem;
 }
 
-/* line 70, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content .headings h4 {
+/* line 86, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .headings h4, .tab-content .headings h4 {
   font: 30px "Campton Bold", Impact, sans-serif;
   color: #4e2a84;
 }
 
-/* line 74, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content .headings h4 span {
+/* line 90, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .headings h4 span, .tab-content .headings h4 span {
   display: block;
   color: #b6acd1;
 }
 
-/* line 81, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content .contents {
+/* line 97, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .contents, .tab-content .contents {
   display: table-cell;
   width: 66.07143%;
 }
 
-/* line 85, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content .contents .callout {
+/* line 101, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .contents .callout, .tab-content .contents .callout {
   background: #836eaa;
   padding: .1rem 1rem;
   margin: 0 0 1rem 2rem;
@@ -2483,43 +2518,44 @@ footer a:hover {
   float: right;
 }
 
-/* line 94, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content .contents .callout a {
+/* line 110, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .contents .callout a, .tab-content .contents .callout a {
   text-decoration: underline;
   font-family: "Campton Book", Tahoma, sans-serif;
   color: #fff;
 }
 
-/* line 100, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content .contents .callout h4 {
+/* line 116, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .contents .callout h4, .tab-content .contents .callout h4 {
   font: 16px "Akkurat Pro Bold", "Arial Black", sans-serif;
   padding-top: 1rem;
   margin-bottom: 0;
   color: #fff;
 }
 
-/* line 106, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-#tab-content .contents .callout h4 + p {
+/* line 122, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+#tab-content .contents .callout h4 + p, .tab-content .contents .callout h4 + p {
   margin: .5rem 0;
 }
 
 @media screen and (max-width: 1150px) {
-  /* line 117, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-  .tabs li a {
-    font-size: 18px;
+  /* line 133, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+  #tabs li a, .tabs li a {
+    font-size: 16px;
+    margin-top: 5px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 124, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+  /* line 141, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
   .tab-left-side .img {
     float: none;
   }
 }
 
 @media screen and (max-width: 850px) {
-  /* line 132, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-  #tab-content .contents .callout {
+  /* line 150, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+  #tab-content .contents .callout, .tab-content .contents .callout {
     float: none;
     margin: 1em 0 1em 0;
     width: 100%;
@@ -2527,17 +2563,22 @@ footer a:hover {
 }
 
 @media screen and (max-width: 550px) {
-  /* line 144, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-  #tab-content .headings, #tab-content .contents {
+  /* line 162, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+  #tabs li a {
+    width: 100%;
+    font-size: 18px;
+  }
+  /* line 170, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+  #tab-content .headings, #tab-content .contents, .tab-content .headings, .tab-content .contents {
     width: 100%;
     display: block;
   }
-  /* line 148, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-  #tab-content .headings .callout, #tab-content .contents .callout {
+  /* line 174, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+  #tab-content .headings .callout, #tab-content .contents .callout, .tab-content .headings .callout, .tab-content .contents .callout {
     font-size: 18px;
   }
-  /* line 152, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
-  #tab-content .headings h3, #tab-content .contents h3 {
+  /* line 178, /Library/WebServer/Documents/GIT/department-templates/scss/sections/_responsive-tabs.scss */
+  #tab-content .headings h3, #tab-content .contents h3, .tab-content .headings h3, .tab-content .contents h3 {
     font-size: 26px;
   }
 }
@@ -2847,7 +2888,7 @@ footer a:hover {
 
 /* line 41, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_main.scss */
 .standard-page #page section {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 /* line 47, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_main.scss */
@@ -3121,51 +3162,50 @@ footer a:hover {
     width: inherit;
     max-width: 418px;
     float: none;
-    margin: 0 auto;
   }
-  /* line 112, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
+  /* line 111, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
   .standard-page .showcase .left-content {
     float: none;
     width: 100%;
   }
-  /* line 117, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
+  /* line 116, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
   .standard-page .showcase .quote {
     display: none;
   }
-  /* line 121, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
+  /* line 120, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
   .standard-page .showcase .right-content {
     float: none;
     width: 100%;
     margin: 1rem 0 2rem 0;
   }
-  /* line 127, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
+  /* line 126, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
   .standard-page .showcase ul.three-columns {
     display: none;
   }
 }
 
 @media screen and (max-width: 480px) {
-  /* line 139, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
+  /* line 138, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
   .standard-page .photo-feature-2-across .photo-feature .back-text {
     padding: 0 .5rem;
   }
-  /* line 142, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
+  /* line 141, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
   .standard-page .photo-feature-2-across .photo-feature .back-text h4 {
     margin-bottom: .5rem;
   }
-  /* line 146, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
+  /* line 145, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
   .standard-page .photo-feature-2-across .photo-feature .back-text p {
     font-size: 14px;
   }
 }
 
 @media screen and (max-width: 420px) {
-  /* line 160, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
+  /* line 159, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
   .standard-page .photo-feature-2-across .photo-feature .text-over-image {
     padding: 0 1em;
     bottom: 0;
   }
-  /* line 165, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
+  /* line 164, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_photo-feature-2-across.scss */
   .standard-page .photo-feature-2-across .photo-feature h4 {
     font-size: 20px;
   }
@@ -3243,7 +3283,7 @@ footer a:hover {
 }
 
 /* line 12, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_stats-callout.scss */
-.standard-page .stats-callout p {
+.standard-page .stats-callout div {
   margin: 0 auto;
   display: table;
 }
@@ -3336,7 +3376,7 @@ footer a:hover {
     margin-bottom: 2rem;
   }
   /* line 59, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_alternate-photo-float.scss */
-  .standard-page .alternate-photo-float h4 {
+  .standard-page .alternate-photo-float h3, .standard-page .alternate-photo-float h4 {
     margin-top: 1rem;
   }
   /* line 63, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_alternate-photo-float.scss */
@@ -3413,14 +3453,14 @@ footer a:hover {
 /* line 27, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_background-select.scss */
 .standard-page .background-select p {
   font-size: 18px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 /* line 32, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_background-select.scss */
 .standard-page .background-select .select-date {
   font: 18px "Campton Bold", Impact, sans-serif;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -3912,7 +3952,7 @@ footer a:hover {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
 }
 
 /* line 15, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_two-column-links.scss */
@@ -4115,8 +4155,13 @@ footer a:hover {
   color: #4e2a84;
 }
 
+/* line 57, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
+.narrow-page main section {
+  max-width: 836px;
+}
+
 @media screen and (max-width: 970px) {
-  /* line 56, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
+  /* line 64, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
   .narrow-page #page {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -4124,7 +4169,7 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  /* line 66, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
+  /* line 74, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
   .narrow-page #news-story #story-floater {
     float: none;
     width: 100%;
@@ -4133,27 +4178,27 @@ footer a:hover {
     margin-bottom: 1.5rem;
     border-top: 4px solid #f0f0f0;
   }
-  /* line 74, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
+  /* line 82, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
   .narrow-page #news-story #story-floater .quote {
     float: none;
     width: 100%;
     font-size: 18px;
     border-bottom: 4px solid #f0f0f0;
   }
-  /* line 81, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
+  /* line 89, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
   .narrow-page #news-story #story-floater #story-callout {
     display: none;
   }
 }
 
 @media screen and (max-width: 700px) {
-  /* line 94, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
+  /* line 102, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
   .narrow-page #news-story .wrap #share {
     float: none;
     width: 100%;
     margin-bottom: 1rem;
   }
-  /* line 100, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
+  /* line 108, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/standard-page/_narrow-page.scss */
   .narrow-page #news-story .wrap #credit {
     float: none;
     width: 100%;
@@ -4334,59 +4379,44 @@ footer a:hover {
 .landing-page .content .section-top {
   margin-bottom: 3rem;
   text-align: center;
+  padding: 0 1rem;
 }
 
-/* line 59, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
+/* line 60, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
 .landing-page .content .section-top h3 {
   margin-bottom: 4rem;
 }
 
-/* line 62, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
+/* line 63, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
 .landing-page .content .section-top h3 + p {
   margin-top: -2rem;
 }
 
-/* line 69, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
-.landing-page .center-list {
-  list-style: none;
-  margin: 2rem 0 0 0;
-  padding: 0;
-  text-align: center;
-}
-
-/* line 75, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
-.landing-page .center-list li {
-  background: none;
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-
 @media screen and (max-width: 480px) {
-  /* line 85, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
+  /* line 72, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
   .landing-page section {
     margin-bottom: 2.5rem;
   }
-  /* line 94, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
+  /* line 81, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
   .landing-page .content .section-top h3, .landing-page .content .background-select h3, .landing-page .content .large-feature-wrap h3, .landing-page .content .in-page h3 {
     font: 20px "Campton Extra Bold", Impact, sans-serif;
     margin-bottom: 1rem;
   }
-  /* line 98, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
+  /* line 85, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
   .landing-page .content .section-top h3 + p, .landing-page .content .background-select h3 + p, .landing-page .content .large-feature-wrap h3 + p, .landing-page .content .in-page h3 + p {
     margin-top: 0;
   }
-  /* line 102, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
+  /* line 89, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
   .landing-page .content .section-top h3:before, .landing-page .content .background-select h3:before, .landing-page .content .large-feature-wrap h3:before, .landing-page .content .in-page h3:before {
     background: none;
     padding: 0;
   }
-  /* line 107, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
+  /* line 94, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
   .landing-page .content .section-top h3:after, .landing-page .content .background-select h3:after, .landing-page .content .large-feature-wrap h3:after, .landing-page .content .in-page h3:after {
     background: none;
     padding: 0;
   }
-  /* line 113, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
+  /* line 100, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_main.scss */
   .landing-page .content .section-top p.subhead, .landing-page .content .background-select p.subhead, .landing-page .content .large-feature-wrap p.subhead, .landing-page .content .in-page p.subhead {
     font-size: 28px;
   }
@@ -4952,17 +4982,17 @@ footer a:hover {
   padding-left: .5em;
 }
 
-/* line 41, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_feature-boxes-2-columns.scss */
+/* line 42, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_feature-boxes-2-columns.scss */
 .landing-page .feature-two-col .feature-box.no-button .feature-copy {
   padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 51, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_feature-boxes-2-columns.scss */
+  /* line 52, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_feature-boxes-2-columns.scss */
   .landing-page .feature-two-col {
     display: inherit;
   }
-  /* line 54, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_feature-boxes-2-columns.scss */
+  /* line 55, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_feature-boxes-2-columns.scss */
   .landing-page .feature-two-col .feature-box {
     width: inherit;
     max-width: 550px;
@@ -4971,7 +5001,7 @@ footer a:hover {
     margin: 0 auto 1rem auto;
     margin-bottom: 1rem;
   }
-  /* line 62, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_feature-boxes-2-columns.scss */
+  /* line 63, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_feature-boxes-2-columns.scss */
   .landing-page .feature-two-col .feature-box:first-child {
     margin-left: auto;
   }
@@ -5403,87 +5433,85 @@ footer a:hover {
   border-bottom: 4px solid #f0f0f0;
   text-align: center;
   padding: 2rem 0;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-/* line 12, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+/* line 15, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
 .landing-page .stats-callout div {
   width: 33%;
   float: left;
   padding: 1rem;
-}
-
-/* line 18, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
-.landing-page .stats-callout ul {
-  list-style: none;
-}
-
-/* line 21, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
-.landing-page .stats-callout ul li {
-  text-align: left;
-  padding-bottom: 0;
-}
-
-/* line 27, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
-.landing-page .stats-callout p {
   margin: 0 auto;
-  display: table;
 }
 
-/* line 32, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+/* line 22, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
 .landing-page .stats-callout span {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 36, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+/* line 26, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
 .landing-page .stats-callout span.big {
   font: 72px/1.1em "Campton Bold", Impact, sans-serif;
   color: #4e2a84;
   display: block;
 }
 
-/* line 42, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+/* line 32, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
 .landing-page .stats-callout span.small {
   font: 24px "Campton Extra Light", "Courier New", sans-serif;
   color: #4e2a84;
   display: block;
 }
 
-/* line 53, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+/* line 40, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+.landing-page .stats-callout.one-callout {
+  display: block;
+}
+
+/* line 43, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+.landing-page .stats-callout.one-callout div {
+  width: 100%;
+  float: none;
+}
+
+/* line 50, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
 .landing-page .stats-callout.one-callout span.big {
   display: inline;
 }
 
-/* line 57, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+/* line 54, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
 .landing-page .stats-callout.one-callout span.small {
   display: inline;
   padding-left: 1rem;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 71, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+  /* line 68, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
   .landing-page .stats-callout span.big {
     font: 48px "Campton Bold", Impact, sans-serif;
   }
-  /* line 75, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+  /* line 72, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
   .landing-page .stats-callout span.small {
     font: 20px "Campton Extra Light", "Courier New", sans-serif;
   }
 }
 
 @media screen and (max-width: 550px) {
-  /* line 88, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+  /* line 85, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
   .landing-page .stats-callout span.big {
     font: 24px "Campton Bold", Impact, sans-serif;
   }
-  /* line 92, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+  /* line 89, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
   .landing-page .stats-callout span.small {
     font: 15px "Campton Extra Light", "Courier New", sans-serif;
   }
 }
 
 @media screen and (max-width: 480px) {
-  /* line 107, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
+  /* line 104, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_stats-callout.scss */
   .landing-page .stats-callout.one-callout span.big, .landing-page .stats-callout.one-callout span.small {
     display: block;
   }
@@ -5647,63 +5675,67 @@ footer a:hover {
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
     margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 550px;
   }
-  /* line 156, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 159, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float h4 {
     font-size: 24px;
     margin-top: 1rem;
   }
-  /* line 161, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 164, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .image-left, .landing-page .alternate-photo-float .image-right, .landing-page .alternate-photo-float .text {
     width: 100%;
     float: none;
     position: relative;
+    margin-right: 0;
   }
-  /* line 166, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 170, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .image-left:last-child, .landing-page .alternate-photo-float .image-right:last-child, .landing-page .alternate-photo-float .text:last-child {
     margin-right: auto;
   }
-  /* line 171, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 175, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .image-right {
     -webkit-order: -1;
     -ms-flex-order: -1;
     order: -1;
   }
-  /* line 177, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 181, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .text-over-image {
     top: 20%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* line 185, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 189, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .text.tl-text {
     font-size: 22px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  /* line 194, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 198, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .text.tl-text {
     font-size: 18px;
   }
-  /* line 198, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 202, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .text-over-image {
     top: 1em;
     font-size: 20px;
   }
-  /* line 202, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 206, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .text-over-image .big {
     font-size: 42px;
   }
-  /* line 208, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 212, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .text .column {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 420px) {
-  /* line 221, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 225, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .text ul {
     -moz-column-count: inherit;
     -moz-column-gap: inherit;
@@ -5715,12 +5747,12 @@ footer a:hover {
 }
 
 @media screen and (max-width: 380px) {
-  /* line 237, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 241, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .text-over-image {
     font-size: 18px;
     line-height: 1em;
   }
-  /* line 241, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
+  /* line 245, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_alternate-photo-float.scss */
   .landing-page .alternate-photo-float .text-over-image .big {
     font-size: 36px;
   }
@@ -5816,7 +5848,7 @@ footer a:hover {
 
 /* line 5, /Library/WebServer/Documents/GIT/department-templates/scss/page-types/landing-page/_number-boxes.scss */
 .landing-page .number-boxes {
-  background: #4e2a84 url("https://common.northwestern.edu/v8/css/images/purple-slashes-bg.gif") repeat;
+  background: #4e2a84 url("https://common.northwestern.edu/v8/css/images/slashes.purple-bg.gif") repeat;
   padding: 2em 1em;
   text-align: center;
 }
@@ -6458,11 +6490,16 @@ footer a:hover {
 }
 
 /* line 62, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
+.content a.button:last-of-type, .content-full a.button:last-of-type, .content p.button a:last-of-type, .content-full p.button a:last-of-type, .hero a.button:last-of-type, #top-nav ul li a.button:last-of-type, .tl-slideshow a.button:last-of-type, input[type="submit"]:last-of-type {
+  margin-right: 0;
+}
+
+/* line 66, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
 .content a.button.normal-case, .content-full a.button.normal-case, .content p.button a.normal-case, .content-full p.button a.normal-case, .hero a.button.normal-case, #top-nav ul li a.button.normal-case, .tl-slideshow a.button.normal-case, input[type="submit"].normal-case {
   text-transform: none;
 }
 
-/* line 68, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
+/* line 72, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
 .feature-box a.button {
   width: 100%;
   text-align: center;
@@ -6471,18 +6508,18 @@ footer a:hover {
   bottom: 0;
 }
 
-/* line 75, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
+/* line 79, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
 .purple-slashes a.button, #map-feature a.button, .standard-page .background-select a.button {
   background: #836eaa;
 }
 
-/* line 78, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
+/* line 82, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
 .standard-plus a.button {
   margin: 1.5rem 0;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 84, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
+  /* line 88, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
   .caption a.button {
     background: #b6acd1;
     margin: 0;

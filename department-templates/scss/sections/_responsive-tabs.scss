@@ -1,5 +1,5 @@
 // responsive tabs
-#tabs {
+#tabs, .tabs {
     list-style: none;
     width: 100%;
     margin: 0;
@@ -18,35 +18,47 @@
         }
         
         a {
-            font: 21px $AkkuratProRegular;
-            color: $rich-black-50;
-            padding: .5rem .7rem;
+            font: 18px $AkkuratProBold;
+            color: $nu-purple-60;
+            background: $nu-purple-10;
+            padding: .75rem 1.2rem .5rem 1.2rem;
             display: inline-block;
             -webkit-transition: all .2s ease;
             transition: all .2s ease;                 
         
             &:hover {
                 text-decoration: none;
-                background: $rich-black-50;
+                background: $nu-purple;
                 color: $white;
             }
             
             &.active {
-                background: $rich-black-50;
+                background: $nu-purple;
                 color: $white;
             }
         }       
     }
 }
 
+// multiple tab modules override
+.content ul.tabs, .content-full ul.tabs  {
+    padding-left: 0;
+}
+
+.content ul.tabs > li, .content-full ul.tabs > li {
+    background: none;
+    padding: 0;
+}
+
 // left align tabs for standard-page
-.standard-page #tabs { 
+.standard-page #tabs, #standard-page .tabs { 
     text-align: left;
 }
 
-#tab-content {
-    border-top: 3px solid $rich-black-50;
+#tab-content, .tab-content {
+    border-top: 3px solid $nu-purple;
     margin: 0 0 3rem 0;
+    padding: 1rem 0 0 0;
     
     > div {
         @extend %clearfix;
@@ -59,7 +71,11 @@
     // this nest mainly for admissions apply page
     .row {
         border-bottom: 3px solid $light-grey;
-        padding: 2rem 0;
+        padding: 0 0 2rem 0;
+    }
+    
+    .responsive-table { // overrides margin-top in core.scss
+        margin-top: 0;
     }
     
     .headings {
@@ -114,8 +130,9 @@
 // media queries
 @media screen and (max-width: 1150px) {
     
-    .tabs li a {
-        font-size: 18px;   
+    #tabs li a, .tabs li a {
+        font-size: 16px;
+        margin-top: 5px;
     }
 }
 
@@ -128,7 +145,8 @@
 
 @media screen and (max-width: 850px) {
     
-    #tab-content {
+    #tab-content, .tab-content {
+        
         .contents .callout {
             float: none;
             margin: 1em 0 1em 0;
@@ -139,7 +157,15 @@
 
 @media screen and (max-width: 550px) {
     
-    #tab-content {
+    #tabs {
+        
+        li a {
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+    
+    #tab-content, .tab-content {
         
         .headings, .contents {
             width: 100%;

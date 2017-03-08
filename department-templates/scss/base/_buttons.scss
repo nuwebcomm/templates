@@ -58,6 +58,10 @@
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
+    
+    &:last-of-type {
+        margin-right: 0;
+    }
 
     &.normal-case { // for normal case buttons anchors
         text-transform: none;

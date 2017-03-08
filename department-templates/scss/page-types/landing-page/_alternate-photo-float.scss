@@ -152,6 +152,9 @@
             -webkit-justify-content: flex-start;
             justify-content: flex-start;  
             margin-bottom: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 550px;
 
             h4 {
                 font-size: 24px;
@@ -162,6 +165,7 @@
                 width: 100%; 
                 float: none;
                 position: relative;
+                margin-right: 0;
 
                 &:last-child {
                     margin-right: auto;

@@ -7,28 +7,18 @@
         border-bottom: 4px solid $light-grey;
         text-align: center;
         padding: 2rem 0;
+        display: flex; // equal height
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap; // break into multiple lines        
         @extend %clearfix;
     
         div {
             width: 33%;
             float: left;
             padding: 1rem;
-        }
-        
-        ul {
-            list-style: none;
-        
-            li {
-                text-align: left;
-                padding-bottom: 0;
-            }
-        }
-        
-        p {
             margin: 0 auto;
-            display: table;
         }
-        
+                
         span {
             display: table-cell;
             vertical-align: middle;            
@@ -46,7 +36,14 @@
             }
         }
         
-        &.one-callout {
+        // for single callout
+        &.one-callout { // append class for full-width single callout item
+            display: block;
+            
+            div {
+                width: 100%;
+                float: none;
+            }
             
             span {
             

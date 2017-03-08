@@ -16,6 +16,7 @@ $(document).ready(function () {
     });
     $('tr:nth-child(odd)').addClass('stripe');
     
+    // tabs (single instance)
     function switchTab(target) {
         $('#tab-content>div').hide();
         $('#tabs a').removeClass('active').attr('aria-selected', 'false');
@@ -23,16 +24,35 @@ $(document).ready(function () {
         target.addClass('active').attr('aria-selected', 'true');
     }
 
-    // tab clicks
     $('#tabs a[aria-controls]').click(function (e) {
-    	switchTab($(this));
+    	// handle clicks
+        switchTab($(this));
         e.preventDefault();
     });
     
-    // select first tab when page loads
     if ($('#tabs a[aria-controls]').length) {
+    	// select first on page load
     	switchTab($('#tab1'));
     }
+    
+    // multiple sets of tabs (classes instead of IDs)
+    function switchTab2(target) {
+    	target.parents('div.tab-container').find('div[role="tabpanel"]').hide();
+    	target.parents('ul').find('a').removeClass('active').attr('aria-selected', 'false');
+        $(target.attr('href')).show();
+        target.addClass('active').attr('aria-selected', 'true');
+    }
+
+    $('.tabs a[aria-controls]').click(function (e) {
+    	// handle clicks
+        switchTab2($(this));
+        e.preventDefault();
+    });
+    
+    $('.tabs li:first-child a[aria-controls]').each(function() {
+	    // select first in each set when page loads
+    	switchTab2($(this));
+    });
 
     // flip image on hover
     $('.photo-feature').has('.back').hover(

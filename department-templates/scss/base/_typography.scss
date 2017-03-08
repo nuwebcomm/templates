@@ -31,6 +31,21 @@ h6 {
     margin-bottom: 1rem; 
 }
 
+// center buttons within a ul
+.center-list {
+    list-style: none;
+    margin: 2rem 0 0 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+        background: none;
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 .content, .content-full {
  
     a { // main link style
@@ -63,9 +78,9 @@ h6 {
         font-weight: normal;
     }
     
-    p:last-of-type {
-        margin-bottom: 1.5rem;
-    }
+//    p:last-of-type {
+//        margin-bottom: 1.5rem;
+//    }
     
     // bullets
     ul {
@@ -106,6 +121,11 @@ h6 {
                 }                
             }  
         }  
+        
+        &.center-list > li { // removing centered button styles in content regions
+            background: none;
+            padding: 0;
+        }
     }
 
     ol {

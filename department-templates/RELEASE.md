@@ -1,5 +1,89 @@
 # Department Templates 
 
+## Version 1.5.5 - March 8, 2017
+
+### HTML
+
+* All HTML Pages:
+  1. Moved body class js higher up to fix chrome "back to top" issue
+
+* `landing-page.html`
+  1. Added descriptions for modules
+  2. Removed old version of `large-feature` 
+  3. Removed `full-width-news`
+  4. Revised `stats-callout` markup
+  
+* `narrow-page-modules.html`
+  2. New page - standard modules page with no left navigation 
+  
+* `standard-page-modules.html`
+  1. Renamed from `standard-page.html`
+  2. Added descriptions for modules
+  3. Revised `stats-callout` markup  
+  
+### SASS
+* `/scss/styles.scss`
+  1. New version number  
+
+* `/scss/base/_buttons.scss`
+  1. Removed right margin for single buttons  
+  
+* `/scss/base/_typography.scss`
+  1. Moved `ul.center-list` from `scss/page-types/landing-page/_main.scss`  
+
+* `/scss/page-types/landing-page/_alternate-photo-float.scss`
+  1. Centered content horizontally on mobile
+
+* `scss/page-types/landing-page/_main.scss`
+  1. Moved `ul.center-list` to `/scss/base/typography.scss`
+  2. Added padding inside `section-top`
+
+* `/scss/page-types/landing-page/_news-event.scss`
+  1. Added "deprecated" comment to `full-width-news`
+
+* `/scss/page-types/landing-page/_number-boxes.scss`
+  1. Changed image name.
+
+* `/scss/page-types/landing-page/_stats-callout.scss`
+  1. Centered content horizontally; allows for odd number of callouts
+  2. Changed `p` to `div` for single callout to match multiple callout version
+
+* `/scss/page-types/standard-page/_alternate-photo-float.scss`
+  1. Added missing `h3` in media query based on v1.5.4 addition
+  2. Centered content horizontally on mobile
+
+* `/scss/page-types/standard-page/_background-select.scss`
+  1. updated margins for `p` and `.select-date`
+
+* `scss/page-types/landing-page/_main.scss`
+  1. Updated bottom margin for `<section>`tags
+
+* `/scss/page-types/standard-page/_narrow-page.scss`
+  1. Restrict width of `standard-page` modules on page
+
+* `/scss/page-types/standard-page/_photo-feature-2-across.scss`
+  1. removed auto margins  
+  
+* `/scss/page-types/standard-page/_stats-callout.scss`
+  1. Changed `p` to `div` for single callout to match landing page
+  
+* `/scss/page-types/standard-page/_two-column-links.scss`
+  1. removed bottom margin
+  
+* `/scss/sections/_responsive-tabs.scss`
+  1. Restyled tabs
+  2. Added classes for multiple tab module scenarios
+  3. Added padding inside tab content
+  
+### JS
+* `/scripts/scripts.js`
+  1. Added logic to handle multiple tab modules 
+  
+### CSS
+* `/css/styles.css`
+  1. Compiled css (for dev use) 
+  
+
 ## Version 1.5.4 - December 22, 2016
 
 * `/RELEASE.md`
