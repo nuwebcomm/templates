@@ -6490,16 +6490,11 @@ footer a:hover {
 }
 
 /* line 62, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
-.content a.button:last-of-type, .content-full a.button:last-of-type, .content p.button a:last-of-type, .content-full p.button a:last-of-type, .hero a.button:last-of-type, #top-nav ul li a.button:last-of-type, .tl-slideshow a.button:last-of-type, input[type="submit"]:last-of-type {
-  margin-right: 0;
-}
-
-/* line 66, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
 .content a.button.normal-case, .content-full a.button.normal-case, .content p.button a.normal-case, .content-full p.button a.normal-case, .hero a.button.normal-case, #top-nav ul li a.button.normal-case, .tl-slideshow a.button.normal-case, input[type="submit"].normal-case {
   text-transform: none;
 }
 
-/* line 72, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
+/* line 68, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
 .feature-box a.button {
   width: 100%;
   text-align: center;
@@ -6508,18 +6503,18 @@ footer a:hover {
   bottom: 0;
 }
 
-/* line 79, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
+/* line 75, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
 .purple-slashes a.button, #map-feature a.button, .standard-page .background-select a.button {
   background: #836eaa;
 }
 
-/* line 82, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
+/* line 78, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
 .standard-plus a.button {
   margin: 1.5rem 0;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 88, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
+  /* line 84, /Library/WebServer/Documents/GIT/department-templates/scss/base/_buttons.scss */
   .caption a.button {
     background: #b6acd1;
     margin: 0;

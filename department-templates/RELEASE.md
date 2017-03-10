@@ -25,9 +25,6 @@
 * `/scss/styles.scss`
   1. New version number  
 
-* `/scss/base/_buttons.scss`
-  1. Removed right margin for single buttons  
-  
 * `/scss/base/_typography.scss`
   1. Moved `ul.center-list` from `scss/page-types/landing-page/_main.scss`  
 
