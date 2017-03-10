@@ -1,5 +1,18 @@
 # Department Templates 
 
+## Version 1.5.6 - March 10, 2017
+
+### SASS
+* `/scss/styles.scss`
+  1. New version number  
+
+* `/scss/base/_buttons.scss`
+  1. removed last-of-type
+
+### CSS
+* `/css/styles.css`
+  1. Compiled css (for dev use)
+
 ## Version 1.5.5 - March 8, 2017
 
 ### HTML
@@ -24,7 +37,7 @@
 ### SASS
 * `/scss/styles.scss`
   1. New version number  
-
+  
 * `/scss/base/_typography.scss`
   1. Moved `ul.center-list` from `scss/page-types/landing-page/_main.scss`  
 
