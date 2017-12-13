@@ -14,7 +14,7 @@
             margin: 0;
             position: absolute;
             bottom: .5rem;
-            padding: .5rem;
+            padding: .75rem;
             background: rgba(0, 0, 0, .5);
             color: $white;
             width: 100%;
@@ -148,12 +148,7 @@
                     background: none;
                     padding: 0;
                     margin-bottom: 1rem;
-
-                    &:after {
-                        background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 50% / 6px 10px;
-                        padding-right: 2rem;
-                        content: " ";
-                    }                     
+                    @extend %purple-right-arrow;
                 }            
             } 
         }      

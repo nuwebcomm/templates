@@ -2,6 +2,28 @@
 
 .standard-page {
     
+    .section {
+        margin-bottom: 3rem;
+    
+        &:first-of-type { // gives extra space to first module
+            margin-top: 3rem;
+        }
+        
+        &.hero:first-of-type { // removes from hero
+            margin-top: 0;
+        }
+    }     
+    
+    #page {
+        margin: 2rem auto 0 auto;
+        max-width: 1120px;
+        @extend %clearfix;
+    }
+    
+    .hero + #page { 
+        margin-top: -1em;
+    }      
+    
     // main content regions
     #main-content { // gives content space before hitting footer
         min-height: 300px;
@@ -14,34 +36,29 @@
         margin-bottom: 3rem;
     } 
     
-    .content-full {
-        width: 100%;
-    }  
-    
-    p + h3, 
-    ul + h3, ol + h3 {
-        margin-top: 2.5rem;
-    }
-    
-    ul + h4, ol + h4, 
-    ul + h5, ol + h5, 
-    ul + h6, ol + h6 {
+    ul + h4,
+    ul + h5,  
+    ul + h6,
+    ol + h4, 
+    ol + h5, 
+    ol + h6 {
         margin-top: 2rem;
     }
     
-    p + h4, p + h6 {
-        margin-top: 2.5rem;
+    p + h3, 
+    p + h4, 
+    p + h5, 
+    p + h6, 
+    ul + h3, 
+    ul + h4,
+    ul + h5,
+    ul + h6,
+    ol + h3,    
+    ol + h4,     
+    ol + h5 ,    
+    ol + h6 {
+        margin-top: 3rem;
     }        
-    
-    #page {
-        margin: 2rem auto 0 auto;
-        max-width: 1120px;
-        @extend %clearfix;
-    
-        section {
-            margin-bottom: 3rem;
-        } 
-    }
     
     // right sidebar option
     #sidebar {
@@ -68,7 +85,7 @@
             }
             
             ul {
-                margin: 1em 0 .5em 0;
+                padding-left: .5rem; 
                 
                 li { 
                     background-position: 0 .3em
@@ -80,32 +97,38 @@
     // pagination 
     .pagination {
         margin: 2.5em 0 2em;
-        padding-left: 0;
+        padding: 1rem 0 0 0;
+        border-top: 1px solid $medium-grey;
+        list-style-type: none;
 
         li {
-            display: inline;
+            display: inline-block;
             padding: 0;
+            background-image: none;
+            font: 16px $AkkuratProBold;
+            color: $rich-black-20;
+          
+            &.disabled {
+                padding: .8rem 1rem;
+            }            
         }
 
         a {
-            background: $white;
-            border: 1px solid $medium-grey;
-            color: $rich-black-50;
-            font: 16px $AkkuratProBold;
+            border: none;
             display: inline-block;
-            margin: 0 .4em .3em 0;
-            padding: .5rem .8rem;
+            padding: .8rem 1rem;
             text-decoration: none;
+            color: $rich-black-80;
 
             &:hover {
+                background: $nu-purple-30;
+                color: $white;
+            }
+
+            &.current {
                 background: $nu-purple;
                 color: $white;
             }
-        }
-
-        .current-page a {
-            background: #616161 none repeat scroll 0 0;
-            color: $white;
         }
     }    
     
@@ -158,11 +181,15 @@
             margin-left: 1rem;
             margin-right: 1rem;
         }    
+    
+        #sidebar {
+            width: 300px / 768px * 100%;
+        }
     }
     
     @media screen and (max-width: 768px) {
         
-        .content, .content-full {
+        .content {
             float: none;
             width: 100%;
          
@@ -175,19 +202,8 @@
             width: 300px / 768px * 100%;
         }
     }
-    
-    @media screen and (max-width: 480px) {
 
-        .content, .content-full {        
-            
-            h2 {
-                font-size: 32px;
-            }
-
-            h3 {
-                font-size: 24px;
-            } 
-        }
+    @media screen and (max-width: 700px) {
         
         #sidebar {
             margin-left: 0;
@@ -197,6 +213,20 @@
             .box {
                 margin-bottom: 1rem;
             }
+        }
+    }    
+    
+    @media screen and (max-width: 480px) {
+
+        .content {        
+            
+            h2 {
+                font-size: 32px;
+            }
+
+            h3 {
+                font-size: 24px;
+            } 
         }
     }
 

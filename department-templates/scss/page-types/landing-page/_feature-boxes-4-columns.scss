@@ -31,10 +31,17 @@
                 ul {
                     margin-left: 0;
                     padding-left: .5em;
-                }             
-            }  
-        }        
-    } 
+                }
+            }
+
+            &.no-button { // tightens things up when there's no button
+                
+                .feature-copy {
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
     
     // media queries
     @media screen and (max-width: 920px) {  
@@ -51,14 +58,13 @@
                 
                 &:nth-child(2n) {
                     margin-right: 0;
-                }   
+                }
                 
                 img {
                     width: 100%;
-                
                 }
-            }    
-        } 
+            }
+        }
     }
     
     @media screen and (max-width: 590px) {    
@@ -71,8 +77,7 @@
                 width: inherit;
                 //max-width: 345px; 
                 float: none;
-               
-                
+            
                 &:first-child, &:nth-child(3) {
                     //margin-left: auto;
                 }

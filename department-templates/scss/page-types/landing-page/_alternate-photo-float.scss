@@ -12,9 +12,12 @@
             border-bottom: 4px solid $medium-grey;
             text-transform: none;
             padding-bottom: .5rem;
+            margin-bottom: 1.5rem;
         }
         
-        .image-left, .image-right, .text {
+        .image-left,
+        .image-right,
+        .text {
             width: 550px / 1120px * 100%; 
             max-width: 550px;
             margin-right: 40px / 1120px * 100%; 
@@ -51,7 +54,7 @@
                 -webkit-column-count: 2;
                 column-count: 2;
                 -webkit-column-gap: 2em;
-                -moz-column-gap: 3em;
+                -moz-column-gap: 2em;
                 column-gap: 2em;
                 margin: 0;
                 padding: 0;  
@@ -161,7 +164,9 @@
                 margin-top: 1rem;
             }
 
-            .image-left, .image-right, .text  {
+            .image-left,
+            .image-right,
+            .text  {
                 width: 100%; 
                 float: none;
                 position: relative;

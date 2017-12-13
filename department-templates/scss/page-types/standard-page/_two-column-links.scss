@@ -14,10 +14,13 @@
         
         article {
             width: 400px / 836px * 100%;
-            margin-bottom: 2rem;
 
             &:nth-child(even) {
                 margin-left: 36px / 836px * 100%; 
+            }
+            
+            &:nth-child(n+3) { // adds margin when more than 2
+                margin-top: 2rem;
             }
             
             img {
@@ -47,10 +50,19 @@
             article {
                 float: none;
                 width: 100%;
+                margin-bottom: 2rem;
              
                 &:nth-child(even) {
                     margin-left: 0; 
-                }   
+                } 
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                
+                &:nth-child(n+2) {
+                    margin-top: 0;
+                }
             }
         } 
     }

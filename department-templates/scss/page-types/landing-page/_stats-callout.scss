@@ -20,19 +20,16 @@
         }
                 
         span {
-            display: table-cell;
-            vertical-align: middle;            
+            display: block;        
 
             &.big {
                 font: 72px/1.1em $CamptonBold;
                 color: $nu-purple;
-                display: block;
             }
 
             &.small {
                 font: 24px $CamptonExtraLight;
                 color: $nu-purple;
-                display: block;
             }
         }
         
@@ -46,15 +43,7 @@
             }
             
             span {
-            
-                &.big {
-                    display: inline;
-                }
-                
-                &.small {
-                    display: inline;
-                    padding-left: 1rem;
-                }
+                display: block;
             }
         } 
     }  
@@ -65,6 +54,7 @@
         .stats-callout {
             
             span { 
+                
                 &.big {
                     font: 48px $CamptonBold;
                 }
@@ -91,22 +81,6 @@
                 }
             }  
         } 
-    } 
-
-    @media screen and (max-width: 480px) {
-        
-        .stats-callout { // for one callout
-            
-            &.one-callout {
-                
-                span {
-
-                    &.big, &.small  {
-                        display: block;
-                    }
-                }
-            }
-        } 
-    }    
+    }  
     
 } // end

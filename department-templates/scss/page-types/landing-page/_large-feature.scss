@@ -29,29 +29,10 @@
                 margin-bottom: 3rem;
                 color: $nu-purple;
             }
-        }        
-
-        > ul { // original setup for links on right side
-            width: 240px / 1120px * 100%;
-            float: left;
-            padding-left: 0;
-            margin-left: 0;
-
-            li {
-                background: none;
-                line-height: 1.2rem;
-                margin-bottom: 1rem;
-
-                &:after {
-                    background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 50% / 6px;
-                    padding-right: 2rem;
-                    content: " ";            
-                }
-                
-                a {
-                    font-family: $AkkuratProBold;
-                }
-            }
+           
+           .text ul {
+               overflow: hidden;
+           }
         }
         
         .right-side { // new setup for links/other content on right side
@@ -76,12 +57,7 @@
                     line-height: 1.2rem;
                     margin: 0 0 1rem 0;
                     padding-left: 0;
-                
-                    &:after {
-                        background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 50% / 6px;
-                        padding-right: 2rem;
-                        content: " ";            
-                    }
+                    @extend %purple-right-arrow;
 
                     a {
                         font-family: $AkkuratProBold;
@@ -96,7 +72,9 @@
         
         .large-feature-inner {
             
-            .content-side, > ul, .right-side {
+            .content-side, 
+            > ul, 
+            .right-side {
                 float: none;
                 width: 100%;
                 border: none;

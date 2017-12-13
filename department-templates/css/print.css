@@ -1,31 +1,35 @@
 body {
 	background: #fff;
-	font-size: 12pt;
+	font-size: 12px;
 	font-family: Arial, Helvetica, sans-serif;
 }
-#top-bar #right, #search, nav, #breadcrumbs, #left-nav, #mobile-links, .hero-image, #left img, footer img, .screen-reader-shortcut, .footer-content:nth-of-type(1), .footer-content:nth-of-type(3), .footer-content:nth-of-type(4) {
+
+#top-bar #global-links, #top-bar #left, #quick-links, #search, nav, #breadcrumbs, #left-nav, #mobile-links, .hero-image, #left img, footer img, #back-to-top, .screen-reader-shortcut, .footer-content:nth-of-type(1), .footer-content:nth-of-type(3), .footer-content:nth-of-type(4) {
 	display: none;
+}
+#site-name a:link:after, #site-name a:visited:after {
+    content: "";
 }
 a img {
 	border: none;
 }
 h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
 }
 h2 {
-    font-size: 2.25em;
-}
-h3 {
     font-size: 2em;
 }
+h3 {
+    font-size: 1.8em;
+}
 h4 {
-    font-size: 1.75em;
+    font-size: 1.6em;
 }
 h5 {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 h6 {
-    font-size: 1.25em;
+    font-size: 1.2em;
 }
 .footer-content {
     margin-top: 2rem;
@@ -55,10 +59,5 @@ a:link, a:visited {
 }
 a:link:after, a:visited:after {
     content: " (/" attr(href) ") ";
-    font-size: 90%;
-}
-
-/* library */
-.background-boxes .box img {
-    display: none;
+    font-size: 80%;
 }

@@ -1,11 +1,17 @@
-// for narrow page width without left navigation (930px wide)
-// body class should have .narrow-page *and* .standard-page
+// narrow page
+// no left navigation and 930px wide
+// <body> must include: <body class="standard-page narrow-page">
 
 .narrow-page {
 
     #page {
         margin: 2rem auto 0 auto;
         max-width: 930px;    
+    
+        .content { // override _main.scss
+            width: 100%;
+            float: none;
+        }
     }
     
     #news-story {
@@ -22,7 +28,6 @@
                 font: 16px/1.4em $CamptonBold;
                 color: $rich-black-80;
                 width: 645px / 930px * 100%;
-                
             }
 
             #share {
@@ -54,7 +59,7 @@
     // center modules
     main {
     
-        section {
+        .section {
             max-width: 836px;
         }
     }

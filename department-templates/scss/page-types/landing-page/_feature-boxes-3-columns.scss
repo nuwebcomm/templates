@@ -31,10 +31,17 @@
                 ul {
                     margin-left: 0;
                     padding-left: .5em;
-                }             
-            }  
-        }        
-    } 
+                }
+            }
+            
+            &.no-button { // tightens things up when there's no button
+                
+                .feature-copy {
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
     
    // media queries
     @media screen and (max-width: 875px) {    
@@ -53,7 +60,7 @@
                     margin-left: auto;
                 }
             }
-        }   
+        } 
     }
 
 } // end

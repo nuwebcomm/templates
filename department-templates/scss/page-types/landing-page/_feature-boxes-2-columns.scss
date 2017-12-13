@@ -8,24 +8,32 @@
         display: flex; // equal height columns
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-        flex-wrap: wrap; // wrap child items   
-        @extend %clearfix;
+        flex-wrap: wrap; // wrap child items
 
         .feature-box {
             width: 550px / 1120px * 100%;   
-            float: left;
             background: $light-grey;
-            margin-left: 20px / 1120px * 100%;
             position: relative;
 
-            &:first-child {
-                margin-left: 0;
+            &:nth-child(even) {
+                margin-left: 20px / 1120px * 100%; 
+            }
+            
+            &:nth-child(n+3) { // adds margin when more than 2
+                margin-top: 1.25rem;
             }
 
+            &.no-button { // tightens things up when there's no button
+                
+                .feature-copy {
+                    padding-bottom: 1rem;
+                }
+            }
+            
             .feature-copy {
                 padding: 1rem 1.5rem 4rem 1.5rem;
             
-                h4 { 
+                h4 {
                     font: 21px $AkkuratProRegular;
                     text-transform: uppercase;
                     color: $rich-black-80;
@@ -36,35 +44,33 @@
                     padding-left: .5em;
                 }
             }
-
-            &.no-button { // tightens things up when there's no button
-                
-                .feature-copy {
-                    padding-bottom: 1rem;
-                }
-            }            
-        }     
-    }    
+        }
+    }
     
     // media queries
     @media screen and (max-width: 768px) {   
         
         .feature-two-col {
-            display: inherit;    
+            display: inherit;
             
             .feature-box {
                 width: inherit;
                 max-width: 550px; 
-                float: none;
-                background: $light-grey;
-                margin: 0 auto 1rem auto;
-                margin-bottom: 1rem;
-
-                &:first-child {
+                margin: 0 auto 1.5rem auto;
+                
+                &:nth-child(even) {
                     margin-left: auto;
-                }                   
-            }             
-        }     
+                }
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                
+                &:nth-child(n+2) {
+                    margin-top: 0;
+                }
+            }
+        }
     }
 
 } // end

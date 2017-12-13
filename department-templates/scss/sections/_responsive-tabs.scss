@@ -1,5 +1,6 @@
 // responsive tabs
-#tabs, .tabs {
+#tabs,
+.tabs {
     list-style: none;
     width: 100%;
     margin: 0;
@@ -19,15 +20,17 @@
         
         a {
             font: 18px $AkkuratProBold;
-            color: $nu-purple-60;
+            color: $nu-purple;
             background: $nu-purple-10;
             padding: .75rem 1.2rem .5rem 1.2rem;
             display: inline-block;
             -webkit-transition: all .2s ease;
             transition: all .2s ease;                 
-        
+            border: none; // removes default border
+            
             &:hover {
-                text-decoration: none;
+                border: none;
+                text-decoration: underline;
                 background: $nu-purple;
                 color: $white;
             }
@@ -36,26 +39,32 @@
                 background: $nu-purple;
                 color: $white;
             }
+            
+            &:focus {
+                text-decoration: underline;
+            }
         }       
     }
 }
 
 // multiple tab modules override
-.content ul.tabs, .content-full ul.tabs  {
+.content ul.tabs {
     padding-left: 0;
 }
 
-.content ul.tabs > li, .content-full ul.tabs > li {
+.content ul.tabs > li {
     background: none;
     padding: 0;
 }
 
 // left align tabs for standard-page
-.standard-page #tabs, #standard-page .tabs { 
+.standard-page #tabs, 
+#standard-page .tabs { 
     text-align: left;
 }
 
-#tab-content, .tab-content {
+#tab-content,
+.tab-content {
     border-top: 3px solid $nu-purple;
     margin: 0 0 3rem 0;
     padding: 1rem 0 0 0;
@@ -89,7 +98,7 @@
 
             span {
                 display: block;
-                color: $nu-purple-30;
+                color: $nu-purple-60;
             }
         }
     }
@@ -130,7 +139,8 @@
 // media queries
 @media screen and (max-width: 1150px) {
     
-    #tabs li a, .tabs li a {
+    #tabs li a,
+    .tabs li a {
         font-size: 16px;
         margin-top: 5px;
     }
@@ -145,7 +155,8 @@
 
 @media screen and (max-width: 850px) {
     
-    #tab-content, .tab-content {
+    #tab-content,
+    .tab-content {
         
         .contents .callout {
             float: none;
@@ -165,9 +176,11 @@
         }
     }
     
-    #tab-content, .tab-content {
+    #tab-content,
+    .tab-content {
         
-        .headings, .contents {
+        .headings,
+        .contents {
             width: 100%;
             display: block;
             

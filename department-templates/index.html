@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,40 +21,65 @@
             a:hover {
                 text-decoration: underline;
             }
+            a.screen-reader-shortcut {
+                left: .5em;
+                position: absolute;
+                top: -99px;
+            }
+
+            a.screen-reader-shortcut:focus {
+                background-color: #fff;
+                box-shadow: 0 0 .3rem .3rem rgba(0, 0, 0, 0.6);
+                color: #401f68;
+                font: bold 1.5em sans-serif;
+                padding: 1rem;
+                top: .5rem;
+                z-index: 5;
+            }            
+            
         </style>
-    <title>NU Department Templates</title>
+    <title>NU Department Templates v2.x</title>
 </head>
 
 <body>
-
-    <h1>NU Department Templates</h1>
-    <ol>
+    <a href="#main-content" class="screen-reader-shortcut">Skip to main content</a>
+    <h1>NU Department Templates v2.x</h1>
+    <ol id="main-content">
         <li><a href="landing-page.html">Landing Page w/ modules</a>
             <ol>
+                <li><a href="landing-news-event-modules.html">Landing News/Events Modules</a></li>
                 <li><a href="landing-page-slideshow.html">Landing Page w/ Slideshow</a></li>
-                <li><a href="photo-grid.html">Photo Grid</a></li>
+                <li><a href="photo-grid.html">Landing Page Photo Grid</a></li>
             </ol>
         </li>
         <li><a href="standard-page-modules.html">Standard Page w/ modules</a>
             <ol>
                 <li><a href="boilerplate.html">Boilerplate (Content Page w/ optional Sidebar)</a></li>
+                <li><a href="datatable.html">DataTables Example</a></li>
                 <li><a href="expand-collapse.html">Expand/Collapse Page</a></li>
-                <li><a href="people-page.html">People Listing Page</a></li>
+                <li><a href="people-page.html">People Page</a></li>
+                <li><a href="people-two-column-page.html">People Two Column Page</a></li>
                 <li><a href="event-listing-page.html">Event Listing Page</a></li>
                 <li><a href="news-listing-page.html">News Listing Page</a></li>
                 <li><a href="news-story-page.html">News Story Page</a></li>
                 <li><a href="form.html">Form Example</a></li>
-                <li><a href="standard-photo-grid.html">Photo Grid (within tabs)</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="standard-photo-grid.html">Standard Page Photo Grid</a></li>
+                
             </ol>   
         </li>
         <li><a href="narrow-page-modules.html">Narrow Page w/ modules (using Standard left nav modules)</a></li>
-        
         <li><strong>Top Navagation Options</strong>
             <ol>
-                <li><a href="full-width-nav.html">Navigation with 3 Full-width Dropdown Options</a></li>
+                <li><a href="full-width-nav.html">Navigation with 4 Full-width Dropdown Options</a></li>
                 <li><a href="normal-nav.html">Normal (Traditional) Navigation Dropdown</a></li>
             </ol>  
-        </li>    
+        </li>  
+        <li><strong>Alternate Header Option</strong>
+            <ol>
+                <li><a href="parent-header.html">Parent Header</a></li>
+            </ol>
+        </li>
     </ol>    
       
 </body>

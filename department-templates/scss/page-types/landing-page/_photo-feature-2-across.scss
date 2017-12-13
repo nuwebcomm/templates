@@ -11,6 +11,11 @@
             position: relative;
             max-height: 350px;
 
+            // for hover state when no back text
+            a:hover {
+                opacity: .8;
+            }                  
+            
             img {
                 display: block;
             }
@@ -44,12 +49,7 @@
                 &.link {
                     font-family: $AkkuratProBold;
                     text-transform: uppercase;
-
-                    &:after {
-                        background: url("#{$path-images}/icons/arrow-right-white.svg") no-repeat 50% / 6px 10px;
-                        padding-right: 2rem;
-                        content: " ";
-                    }                     
+                    @extend %white-right-arrow;
                 } 
             } 
             

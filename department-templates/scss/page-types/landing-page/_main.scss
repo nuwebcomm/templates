@@ -2,7 +2,7 @@
 
 .landing-page {
     
-    section {
+    .section {
         margin-bottom: 5rem;
 
         &.no-bottom-margin { // this is for heroes when you don't want bottom margin
@@ -40,14 +40,14 @@
 
             &:after {
                 background: url("#{$path-images}/icons/grey-slash.svg") no-repeat 50% / 17px 21px;
-                padding: 0 25px;
+                padding: 0 20px;
                 content: " ";
             }
         }
 
         p.subhead {
             color: #4e2a84;
-            font: 46px/1.2em $CamptonBook;
+            font: 46px/1.2em $CamptonExtraLight;
             margin-bottom: 1rem;
         }        
         
@@ -69,14 +69,17 @@
 
     @media screen and (max-width: 480px) {
         
-        section {
+        .section {
             margin-bottom: 2.5rem;
         }
         
         .content {
             
             // consistent headers across elements
-            .section-top, .background-select, .large-feature-wrap, .in-page {
+            .section-top,
+            .background-select,
+            .large-feature-wrap,
+            .in-page {
                 
                 h3 {
                     font: 20px $CamptonExtraBold;
@@ -104,4 +107,4 @@
         }
     }
 
-} // end of .landing-page
+} // end

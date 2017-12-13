@@ -1,8 +1,19 @@
 // variables
 
-// path to files - the default is common.northwestern.edu and can be http or https
+// path to image and font files - the default is common.northwestern.edu and can be http or https
 $path-fonts: 'https://common.northwestern.edu/v8/css/fonts';
 $path-images: 'https://common.northwestern.edu/v8/css/images';
+
+// comment in/out as necessary for custom projects
+    // path to Cascade files:
+
+//        $open: '[system-asset]/css/';
+//        $close: '[/system-asset]';
+
+    // path to local files:
+
+//        $open: '';
+//        $close: '';
 
 // colors
 
@@ -11,10 +22,11 @@ $path-images: 'https://common.northwestern.edu/v8/css/images';
     $black: #000;
     $medium-grey: #ccc;
     $light-grey: #f0f0f0;
+    $light-grey2: #e3e3e3;
     $red: #b2292e;
 
     // northwestern purples
-    $nu-purple: #4e2a84; // official NU Purple
+    $nu-purple: #4e2a84; // official NU Purple (default link color)
     $nu-purple-120: #401f68; // NU Purple 120
     $nu-purple-70: #765da0; // NU Purple 70
     $nu-purple-60: #836eaa; // NU Purple 60

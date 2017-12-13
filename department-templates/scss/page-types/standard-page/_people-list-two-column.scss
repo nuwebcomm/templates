@@ -1,0 +1,100 @@
+// people list two columns
+
+.people-columns {
+    margin-top: 2rem;
+    display: flex; // equal height
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; // break into multiple lines
+    @extend %clearfix;
+
+    .people {
+        float: left;
+        width: 406px / 836px * 100%;
+        margin: 0 0 2rem 0;
+        margin-right: 24px / 836px * 100%;
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+        
+        // append to div.people-small if there's no image 
+        &.no-image {
+
+            .people-image {
+                display: none;
+            }
+
+            .people-content {
+                width: 100%;
+            }
+        } 
+    
+        .people-image {
+            width: 120px / 406px * 100%;
+            margin-right: 15px / 406px * 100%;
+            float: left;
+        
+            &.no-image {
+                display: none;
+            }
+        }
+    
+        .people-content {
+            width: 271px / 406px * 100%;
+            float: left;
+            font-size: 15px;
+            line-height: 1.2em;
+        }
+        
+        h3, h4 {
+            margin-bottom: 0;
+            font: 22px/1.2em $CamptonBook;
+            color: $rich-black-80;
+            text-align: inherit;
+
+            &:before, &:after { 
+                background: none;
+                padding: 0;
+            }        
+        }       
+        
+        p.title {
+            margin-top: 0;
+            font: 18px/1.2em $AkkuratProRegular;
+        }
+    }
+    
+    // media queries   
+    @media screen and (max-width: 1120px) {    
+    
+        .people {
+            float: none;
+            width: 100%;
+            margin: 0 0 1rem 0;
+        
+            .people-image {
+                width: 120px;
+                margin-right: 15px / 900px * 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 480px) {   
+        
+        .people {
+            
+            .people-image {
+                width: 100%;
+                margin: 0 0 .5rem 0;
+                float: none;
+            }
+            
+            .people-content {
+                float: none;
+                width: 100%
+            }
+        } 
+    }
+    
+} // end

@@ -1,11 +1,19 @@
-// faq expand/collapse
+// jquery collapse - http://github.com/danielstocks/jQuery-Collapse/
 !function(e,t){function n(t,n){n=n||{};var i=this,o=n.query||"> :even";e.extend(i,{$el:t,options:n,sections:[],isAccordion:n.accordion||!1,db:n.persist?jQueryCollapseStorage(t.get(0).id):!1}),i.states=i.db?i.db.read():[],i.$el.find(o).each(function(){new jQueryCollapseSection(e(this),i)}),function(t){i.$el.on("click","[data-collapse-summary] "+(t.options.clickQuery||""),e.proxy(i.handleClick,t)),i.$el.bind("toggle close open",e.proxy(i.handleEvent,t))}(i)}function i(t,n){n.options.clickQuery||t.wrapInner('<a href="#"/>'),e.extend(this,{isOpen:!1,$summary:t.attr("data-collapse-summary",""),$details:t.next(),options:n.options,parent:n}),n.sections.push(this);var i=n.states[this._index()];0===i?this.close(!0):this.$summary.is(".open")||1===i?this.open(!0):this.close(!0)}n.prototype={handleClick:function(t,n){t.preventDefault(),n=n||"toggle";for(var i=this.sections,o=i.length;o--;)if(e.contains(i[o].$summary[0],t.target)){i[o][n]();break}},handleEvent:function(e){return e.target==this.$el.get(0)?this[e.type]():void this.handleClick(e,e.type)},open:function(e){this._change("open",e)},close:function(e){this._change("close",e)},toggle:function(e){this._change("toggle",e)},_change:function(t,n){return isFinite(n)?this.sections[n][t]():void e.each(this.sections,function(e,n){n[t]()})}},i.prototype={toggle:function(){this.isOpen?this.close():this.open()},close:function(e){this._changeState("close",e)},open:function(t){var n=this;n.options.accordion&&!t&&e.each(n.parent.sections,function(e,t){t.close()}),n._changeState("open",t)},_index:function(){return e.inArray(this,this.parent.sections)},_changeState:function(t,n){var i=this;i.isOpen="open"==t,e.isFunction(i.options[t])&&!n?i.options[t].apply(i.$details):i.$details[i.isOpen?"show":"hide"](),i.$summary.toggleClass("open","close"!==t),i.$details.attr("aria-hidden","close"===t),i.$summary.attr("aria-expanded","open"===t),i.$summary.trigger("open"===t?"opened":"closed",i),i.parent.db&&i.parent.db.write(i._index(),i.isOpen)}},e.fn.extend({collapse:function(t,i){var o=i?e("body").find("[data-collapse]"):e(this);return o.each(function(){var o=i?{}:t,s=e(this).attr("data-collapse")||"";e.each(s.split(" "),function(e,t){t&&(o[t]=!0)}),new n(e(this),o)})}}),t.jQueryCollapse=n,t.jQueryCollapseSection=i,e(function(){e.fn.collapse(!1,!0)})}(window.jQuery,window);
+
+// skip to main content - https://gist.github.com/Zegnat/1900563
+(function(a,b,c,d){for(c in a)(d=a[c].hash)&&a[c].href==b+d&&a[c].addEventListener&&a[c].addEventListener("click",function(a,b,c,d){if(a=(b=document).getElementById(c=this.hash.slice(1))||b.getElementsByName(c)[0])(d=!a.getAttribute(b="tabindex"))&&a.setAttribute(b,-1),a.focus(),d&&a.removeAttribute(b)})})(document.links,location.href.split("#")[0]);
 
 $(document).ready(function () {
 
     // adds .responsive-table wrapper to table classes
     $('table').each(function () {
         $(this).wrap('<div class="responsive-table"></div>');
+    });
+    
+    // adds .responsive-container wrapper to iframes
+    $('iframe').each(function () {
+        $(this).wrap('<div class="responsive-container"></div>');
     });
     
     // zebra striping for tables
@@ -35,7 +43,7 @@ $(document).ready(function () {
     	switchTab($('#tab1'));
     }
     
-    // multiple sets of tabs (classes instead of IDs)
+    // multiple sets of tabs (classes instead of id's)
     function switchTab2(target) {
     	target.parents('div.tab-container').find('div[role="tabpanel"]').hide();
     	target.parents('ul').find('a').removeClass('active').attr('aria-selected', 'false');
@@ -54,7 +62,7 @@ $(document).ready(function () {
     	switchTab2($(this));
     });
 
-    // flip image on hover
+    // photo feature flip image on hover
     $('.photo-feature').has('.back').hover(
         function () {
             flipCard($(this));
@@ -84,6 +92,9 @@ $(document).ready(function () {
         cardObj.find('.back').hide();
     }
 	
+    // remove border on image anchors
+    $('a img').parent().css('border','none');
+
     // expandable mobile elements
 	var _time = 100; // transition time
 
@@ -120,7 +131,7 @@ $(document).ready(function () {
     $('#mobile-nav').attr({
 		'aria-expanded': 'false',
 		'aria-hidden': 'true'
-	});    
+	});  
     
 	// open menu
 	$(".mobile-nav-link").click(function (e) {
@@ -200,14 +211,67 @@ $(document).ready(function () {
 			clicked.find('span').html('Expand');
 		}
 	});	    
+    
+    // scroll to top arrow
+    $('main').append('<a href="#top-bar" id="scrollup" aria-label="Return to the top of the page">Back to Top</a>');
+    var amountScrolled = 200; // pixels scrolled before button appears
+    $(window).scroll(function() {
+        if ( $(window).scrollTop() > amountScrolled ) {
+            $('a#scrollup').fadeIn('slow');
+        } else {
+            $('a#scrollup').fadeOut('slow');
+        }
+    });
+    $('a#scrollup').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 400); // speed
+        return false;
+    });    
+    
+    // remove broken breadcrumb links ending in index with no file extension
+    $('#breadcrumbs li a[href$="index"]').each(function () {
+        $(this).parent().remove();
+    });
+    
+    // accessible #top-nav dropdown
+    $("#top-nav").accessibleTopNavDropDown();
+    
+    // accessible #global-links dropdown
+    $("#global-links").accessibleGlobalLinksDropDown();
+    
+    // SearchBlox form prep
+    $(".searchblox input").each(function(i) {
+        // Undo any previous encoding
+        $(this).val(decodeURIComponent($(this).val()));
+    });
 
-});
+    $(".searchblox form").submit(function(e) {
+        // Encode filter field on submit
+        var filterField = $(this).find("input[name='filter']");
+        if (!filterField.val().startsWith('url')) {
+            // If filter doesn't have url: prefix, add it and wrap in quotes
+            filterField.val('url:"' + filterField.val() + '*"');
+        }
+        filterField.val(encodeURIComponent(filterField.val()));
+        return true;
+    });
 
-// accessible quick links dropdown in #top-bar #right
-$(document).ready(function() {	
-    $("#right").accessibleDropDown();
-});
-$.fn.accessibleDropDown = function ()
+}); // end ready event
+
+// accessible #top-nav dropdown
+$.fn.accessibleTopNavDropDown = function ()
+{
+    var el = $(this);
+    $("a", el).focus(function() {
+        $(this).parents("li").addClass("hover");
+    }).blur(function() {
+        $(this).parents("li").removeClass("hover");
+    });
+}
+
+// accessible #global-links dropdown
+$.fn.accessibleGlobalLinksDropDown = function ()
 {
     var el = $(this);
     $("a", el).focus(function() {

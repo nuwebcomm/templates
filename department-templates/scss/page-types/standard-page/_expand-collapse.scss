@@ -11,6 +11,12 @@
         > a {
             background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat .5rem center / 8px 16px;
             padding: .5em 0 .5rem 2rem;
+            border: none; // removes default border
+        
+            &:hover {
+                border: none;
+                text-decoration: underline;
+            }
         }
         
         &.open a {
@@ -29,6 +35,12 @@
         > a {
             background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat .5rem center / 8px 16px;
             padding: .5em 0 .5rem 2rem;
+            border: none; // removes default border
+        
+            &:hover {
+                border: none;
+                text-decoration: underline;
+            }
             
         }
         
@@ -55,6 +67,12 @@
             background: url("#{$path-images}/icons/arrow-right-white.svg") no-repeat right 1rem center / 12px 18px;
             padding: .5em 3rem .5rem 1rem;
             color: $white;
+            border: none; // removes default border
+        
+            &:hover {
+                border: none;
+                text-decoration: underline;
+            }
         }
         
         &.open a {

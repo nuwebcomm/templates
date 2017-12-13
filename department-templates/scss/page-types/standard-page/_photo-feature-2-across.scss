@@ -12,13 +12,18 @@
             position: relative;
             max-height: 235px;
 
+            // for hover state when no back text
+            a:hover {
+                opacity: .8;
+            }                  
+            
             img {
                 display: block;    
             }
             
             .back {
                 display: none;
-                background-color: #75619e;
+                background-color: $nu-purple-60;
                 width: 100%;
             }  
             
@@ -45,14 +50,9 @@
                 &.link {
                     font-family: $AkkuratProBold;
                     text-transform: uppercase;
-
-                    &:after {
-                        background: url("#{$path-images}/icons/arrow-right-white.svg") no-repeat 50% / 6px 10px;
-                        padding-right: 2rem;
-                        content: " ";
-                    }                     
-                } 
-            } 
+                    @extend %white-right-arrow;
+                }
+            }
 
             .back-text {
                 color: $white;
@@ -104,29 +104,7 @@
                 max-width: 418px;
                 float: none;
             }   
-        }
-        
-        .showcase {
-            
-            .left-content {
-                float: none;
-                width: 100%;
-            }  
-            
-            .quote {
-                display: none;
-            }
-            
-            .right-content {
-                float: none;
-                width: 100%;
-                margin: 1rem 0 2rem 0;
-            }            
-            
-            ul.three-columns {
-                display: none;            
-            }
-        }        
+        }     
     }    
     
     @media screen and (max-width: 480px) {    

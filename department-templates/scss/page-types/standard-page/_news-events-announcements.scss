@@ -1,0 +1,130 @@
+// news / events / announcement module
+
+.standard-page {
+
+    .news-events-announcements {
+        @extend %clearfix;
+
+        h4 {
+            font: 30px/1.2em $AkkuratProRegular;
+            margin-bottom: 1.5rem;
+            padding-bottom: .5rem;
+            color: $rich-black-50;
+            border-bottom: 4px solid $light-grey;
+        }
+
+        h5 {
+            font: 18px/1.3em $AkkuratProBold;
+            margin-bottom: .5rem;
+            padding-bottom: 0;
+            border: none;           
+        }
+        
+        p.button {
+            margin-bottom: 0;
+        }        
+        
+        .column-narrow, .column-wide {
+            float: left;
+            position: relative;                 
+        }        
+
+        .column-narrow {
+            width: 275px / 836px * 100%;
+            margin-right: 30px / 836px * 100%;    
+        }
+        
+        .column-wide {
+            width: 531px / 836px * 100%;
+        }        
+        
+        // news section
+        .news-section {
+            
+            img {
+                margin-bottom: .5rem;
+            }
+
+            p {
+                line-height: 1.2em;
+            }
+        }   
+        
+        // events section
+        .events-section {
+        
+            .event-wrap {
+                position: relative;
+                min-height: 100px;
+                margin-bottom: 1rem;
+                
+                &:last-child {
+                    margin-bottom: 1rem;
+                }
+
+                .event-date {
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    width: 90px;
+                    padding: .25rem;
+                    background: $nu-purple;
+                    font-family: $CamptonBold;
+                    color: $white;
+                    float: left;
+
+                    .month, year {
+                        font-size: 14px;
+                    }
+
+                    .day {
+                        font-size: 36px;
+                    }        
+                }
+
+                .event-description {
+                    margin-left: 105px;
+
+                    > p {
+                        margin-top: 0;  
+                        line-height: 1.2em;
+                    }            
+                }
+
+                .event-time-location {
+                    font: 14px/1.4em $AkkuratProBold;
+                    color: $rich-black-80;
+                    margin-bottom: .5rem;
+                    margin-top: .5rem;
+                }        
+            }
+        }
+
+        // button
+        p.button {
+
+            a {
+                margin: 0;
+            }
+        } 
+    }
+
+    // media queries 
+    @media screen and (max-width: 1000px) { 
+        
+        .news-events-announcements {
+            display: block;
+
+            .column-narrow, .column-wide {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+            }  
+            
+            .news-section {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    
+} // end

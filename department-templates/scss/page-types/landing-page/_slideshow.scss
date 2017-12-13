@@ -45,7 +45,7 @@
         a {
             font-family: $AkkuratProBold;
             text-transform: uppercase;
-            text-decoration: none;
+            text-decoration: underline;
             color: $white;
 
             &:after {
@@ -55,7 +55,7 @@
             }
             
             &:hover {
-                text-decoration: underline;
+                text-decoration: none;
             }
         }
     }    
@@ -75,7 +75,8 @@
             font-size: 14px;
         }
 
-        .swiper-button-next, .swiper-button-prev {
+        .swiper-button-next,
+        .swiper-button-prev {
             width: 25px;
             height: 25px;
             -moz-background-size: 25px 25px;

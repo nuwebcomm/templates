@@ -6,182 +6,192 @@
 
 @media screen and (max-width: 768px) {
 
+    #mobile-nav a[href^="http://"]::after, 
+    #mobile-nav a[href^="https://"]::after {
+        content: url("#{$path-images}/icons/external-link-top-nav.png");
+        margin-left: 0.5em;
+    }    
+    
     // adds mobile menu and search links
     #mobile-links {
         display: block;
-        float: right;
-        height: 55px;
+        background: $light-grey;
+        height: 45px;
     }
     .mobile-link {
         display: inline-block;
         padding: 1em;
-        height: 55px;
-        width: 55px;
+        height: 45px;
+        width: 45px;
         cursor: pointer;  
         position: relative;
 
         &.mobile-search-link {
-            background: url("#{$path-images}/icons/search.svg") no-repeat center / 20px 20px;
+            background: url("#{$path-images}/icons/search-purple.svg") no-repeat center / 20px 20px;
 
 			&.open {
-				background: $nu-purple url("#{$path-images}/icons/alert-x-white-home.svg") no-repeat center / 20px 20px;
+                background: $nu-purple-120 url("#{$path-images}/icons/alert-x-white-home.svg") no-repeat center / 20px 20px;
 			}
         }
 
         &.mobile-nav-link {
-            background: url("#{$path-images}/icons/hamburger.svg") no-repeat center / 20px 20px;
+            background: url("#{$path-images}/icons/hamburger-purple.svg") no-repeat center / 20px 20px;
 
-			&.open {
-				background: $white url("#{$path-images}/icons/close-button-dkpurple.svg") no-repeat center / 20px 20px;
-			}
+            &.open {
+                background: $nu-purple-120 url("#{$path-images}/icons/alert-x-white-home.svg") no-repeat center / 20px 20px;
+            }
         }
     }
 
 	#mobile-nav {
-		display: none;
-		background: $white;
-		position: absolute;
-		top: 55px;
-		left: 0;
-		right: 0;
-		z-index: 9998;
+        display: none;
+        background: $white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: -6px;
+        z-index: 9998;
 
         ul { // first level
-            background: $white;
+            background: $nu-purple-120;
 
+            li {
+                position: relative;
+                font-size: 18px;
+                line-height: 1.2em;
+
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    display: block;
+                    border-bottom: 1px solid $light-grey;
+                    position: relative;
+                    padding: .75em 3em .75em .75em;
+
+                    &.active {
+                        font-family: $AkkuratProBold;
+                    }              
+                }   
+                
+                .arrow {
+
+                    &.open a {
+                        -webkit-transform: rotate(180deg);
+                        -ms-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                        border: none;
+                    }                  
+
+                    a {
+                        width: 50px;
+                        height: 48px;
+                        background: url("#{$path-images}/icons/arrow-down-white.svg") no-repeat center / 20px 20px;
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        text-indent: -9999px;
+                        overflow: hidden;
+                        border: none;
+                        padding: 0;
+                    }
+                }
+            }
+            
             ul { // second level
                 display: none;
-                background: $light-grey;
-
+                background: $nu-purple-30;
+                
+                li {
+                    
+                    a {
+                        padding-left: 1.5em;
+                        color: $black;
+                    }
+                }
+                
                 ul { // third level
-                    background-color: darken($light-grey, 4%);
+                    background-color: $rich-black-20;
+                    
+                    li a {
+                        padding-left: 2em;
+                    }
 
                     ul { // fourth level
-                        background-color: darken($light-grey, 8%);
+                        background-color: $rich-black-10;
+                        
+                        li {
+                            a {
+                                padding-left: 2.5em;
+                            }
+                        }                        
 
                         ul { // fifth level
-                            background-color: darken($light-grey, 12%);                    
+                            background-color: $nu-purple-10;      
+                            
+                            li a{
+                                padding-left: 3em;
+                            }
 
                             ul { // sixth level
-                                background-color: darken($light-grey, 16%);           
+                                background-color: white;   
+                                
+                                li a {
+                                    padding-left: 3.5em;
+                                }
+                                
+                                .arrow a {
+                                    background: url("#{$path-images}/icons/mobile-down-arrow-ltpurple.svg") no-repeat center / 20px 20px;
+                                }  
                             }
                         }
                     }
                 }
             }   
         }        
-        
-        li { // first level
-            position: relative;
-            font: 18px $AkkuratProBold;
-            // padding: 1em 0;
-        
-            a {
-                text-decoration: none;
-                color: $nu-purple;
-                display: block;
-                border-bottom: 1px solid $light-grey;
-                position: relative;
-                padding: .9em 3em .9em .8em;
-
-                &.active {
-                    color: $black;
-                    font-family: $AkkuratProBold;
-                }              
-            }
-
-            .arrow {
-                
-                &.open a {
-                    -webkit-transform: rotate(180deg);
-                    -ms-transform: rotate(180deg);
-                    transform: rotate(180deg);
-                    border: none;
-                }                  
-                
-                a {
-                    width: 50px;
-                    height: 48px;
-                    background: url("#{$path-images}/icons/mobile-down-arrow-ltpurple.svg") no-repeat center / 20px 20px;
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    text-indent: -9999px;
-                    overflow: hidden;
-                    border: none;
-                    padding: 0;
-                }
-            }
-            
-            li { // second level
-                font: 16px/1.2em $AkkuratProRegular;  
-            
-                a { 
-                    padding-left: 1.5em;
-                }                
-
-                li a { // third level
-                    padding-left: 2em;
-                }
-                li li a { // fourth level
-                    padding-left: 2.5em;
-                }
-
-                li li li a { // fifth level
-                    padding-left: 3em;
-                }
-
-                li li li li a { // sixth level
-                    padding-left: 3.5em;
-                }    
-            }            
-        }
     }
 
     // for bottom part of navigation (links from #top-bar)
 	#mobile-nav-bottom {
 		background: $nu-purple-120;
-        
+
 		&:after {
 			@include clearfix();
-		}        
+		}            
 
-		ul {
-			margin: 0;
+        #mobile-nav-bottom-left, #mobile-nav-bottom-right {
+            width: 50%;
+            display: inline-block;
+            float: left;
+            margin: 0;
             padding: 1rem;
             background: none;
-		}
-        
-		li {
-			background: transparent;
-			padding: 0;
-			font-size: 12px;
-			line-height: 24px;
-            margin: 0;
-            list-style: none;
-            
-            &:last-child {
-                border: none;
-            }            
 
-            a {
-                text-transform: uppercase;
-                color: $white;
-                font: 12px/2em $AkkuratProBold;
-                border: none;
-                padding: inherit;
+            li {
+                background: transparent;
+                list-style: none;
 
-                &.white-link {
+                &:last-child {
+                    border: none;
+                }            
+
+                a {
+                    text-transform: uppercase;
                     color: $white;
+                    font: 12px/2em $AkkuratProBold;
+                    border: none;
+                    padding: inherit;
+
+                    &.white-link {
+                        color: $white;
+                    }
                 }
             }
+
+            ul {
+                display: block;
+                background: none;
+            }                
         }
-        
-		#mobile-nav-bottom-left, #mobile-nav-bottom-right {
-			width: 50%;
-			display: inline-block;
-			float: left;
-		}
-	}
+    }
 }

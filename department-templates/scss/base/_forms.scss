@@ -8,21 +8,14 @@
 
 	fieldset {
 		border: 1px solid $light-grey;
-		padding: .35em .625em .75em;
-		margin: 0;
+//		padding: .35em .625em .75em;
+		margin-bottom: 1em;
 		border: 0;
-	}
-
-	legend {
-		white-space: normal;
-		margin-left: -7px;
-		display: block;
-		width: 100%;
-		padding: .3em 0;
-		margin-bottom: .3em;
-		color: $rich-black-80;
-		border-bottom: 1px solid $medium-grey;
-	}
+	
+        p {
+            margin: 0;
+        }
+    }
 
 	.field {
 		margin-bottom: 1em;
@@ -32,7 +25,9 @@
         }
     }    
     
-	label, .label {
+	label,
+    .label,
+    legend {
 		margin: .5em 0 .2em;
 		display: block;
 
@@ -46,49 +41,25 @@
 			font-weight: normal;
 			font-size: .9em;
 		}
-
-		.required {
-			display: inline;
-		}
 	}
 
-	input+label, select+label, .label-secondary+label, .required+label {
+	input+label,
+    select+label,
+    .label-secondary+label,
+    .required+label {
 		margin: 1.5rem 0 0;
 	}
 
-	input[type="text"] {
-		border: 1px solid $medium-grey;
-		font-family: $AkkuratProBold;
-		color: $rich-black-80;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		-webkit-border-radius: 0;
-		padding: .25rem .5rem;
-		margin: 0 .65rem 0 0;
-	}
-
-	input[type=checkbox], input[type=radio] {
-		box-sizing: border-box;
-		padding: 0;
-		height: 15px;
-		width: 15px;
-	}
-
-	input[type=search] {
-		-webkit-appearance: textfield;
-		-moz-box-sizing: content-box;
-		-webkit-box-sizing: content-box;
-		box-sizing: content-box;
-	}
-
-	input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+	input[type=search]::-webkit-search-cancel-button, 
+    input[type=search]::-webkit-search-decoration {
 		-webkit-appearance: none;
 	}
 
-	input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
+	input, select, textarea {
 		display: inline-block;
 		border: 1px solid $medium-grey;
-		color: $rich-black-50;
+        font: inherit;
+		color: $rich-black-80;
 		border-radius: 0;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -108,28 +79,54 @@
             width: 25%; // previously: min-width: 15rem;
         }
 	}
+    
+	input[type=checkbox], 
+    input[type=radio] {
+		box-sizing: border-box;
+		padding: 0;
+		height: 15px;
+		width: 15px;
+	}
 
-	input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=date]:focus, input[type=month]:focus, input[type=time]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=week]:focus, input[type=number]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=color]:focus, select:focus, textarea:focus {
-		outline: 0 none;
+	input[type=search] {
+		-webkit-appearance: textfield;
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+	}    
+
+	input:focus, 
+    select:focus, 
+    textarea:focus {
+//		outline: thin dashed;
 		border-color: $nu-purple;
 	}
     
-	input[type=text].required:focus, input[type=password].required:focus, input[type=email].required:focus, input[type=url].required:focus, input[type=date].required:focus, input[type=month].required:focus, input[type=time].required:focus, input[type=datetime].required:focus, input[type=datetime-local].required:focus, input[type=week].required:focus, input[type=number].required:focus, input[type=search].required:focus, input[type=tel].required:focus, input[type=color].required:focus, select.required:focus, textarea.required:focus {
+	input.required:focus,
+    select.required:focus,
+    textarea.required:focus {
 		border-color: $red;
 	}
 
-	input[type=file]:focus, input[type=radio]:focus, input[type=checkbox]:focus {
-		outline:thin dotted  $rich-black-80;
+	input:focus {
+//		outline: thin dotted $rich-black-80;
 		outline: 1px auto $nu-purple;
 	}
 
-	input[type=text][disabled], input[type=password][disabled], input[type=email][disabled], input[type=url][disabled], input[type=date][disabled], input[type=month][disabled], input[type=time][disabled], input[type=datetime][disabled], input[type=datetime-local][disabled], input[type=week][disabled], input[type=number][disabled], input[type=search][disabled], input[type=tel][disabled], input[type=color][disabled], select[disabled], textarea[disabled] {
+	input[disabled],
+    select[disabled],
+    textarea[disabled] {
 		cursor: not-allowed;
 		background-color: $light-grey;
 		color: $medium-grey;
 	}
 
-	input[readonly], select[readonly], textarea[readonly], input[readonly]:focus, select[readonly]:focus, textarea[readonly]:focus {
+	input[readonly],
+    select[readonly],
+    textarea[readonly],
+    input[readonly]:focus,
+    select[readonly]:focus,
+    textarea[readonly]:focus {
 		background: $light-grey;
 		color:  $rich-black-50;
 		border-color: $medium-grey;
@@ -146,15 +143,13 @@
 	select {
 		background: $white url("#{$path-images}/icons/arrow-down-dkpurple.svg")  no-repeat top 50% right .5rem / 17px 10px;
 		color: $rich-black-50;
-		font-family: $AkkuratProBold;
-		border: 1px solid $medium-grey;
-		display: inline-block;
-		padding: .5em;
+        width: inherit;
+        padding-right: 2rem;
 		margin: 0 .65rem 0 0;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		-webkit-border-radius: 0;
-		@include borderFade();
+        height: 45px;
 
 		&::-ms-expand {
 			display: none;
@@ -168,7 +163,7 @@
 		option {
 			font-family: $AkkuratProRegular;
 		}
-	}
+    }
 
 	select[multiple] {
 		height: auto
@@ -188,33 +183,9 @@
 		vertical-align: top;
 	}
 
-	.checkbox {
-		margin-right: .3em;
-
-        .right {
-            font-weight: bold;
-            font-style: normal;
-            font-size: 1em;
-        }
-
-        // required
-		&.required {
-			display: inline;
-		}
-	}
-
-	.radio {
-		margin-right: .3em;
-
-		&.required {
-			display: inline;
-		}
-	}
-
 	.required {
 		color: $red;
 		font-weight: normal;
-		display: block;
 	}
 
 	label, .label {
@@ -222,7 +193,6 @@
 		span {
             
 			&.required {
-				display: inline;
 				margin-left: 0.5rem;
 			}
 		}
@@ -235,7 +205,8 @@
 		}
 	}
 
-	.form-help-inline, .form-message-inline {
+	.form-help-inline,
+    .form-message-inline {
 		display: inline-block;
 		padding-left: .3em;
 		color: $rich-black-50;
@@ -246,66 +217,71 @@
 		display: block;
 	}
 
-	.label-secondary, .suggestion {
-
-	}
-
     // buttons
-	button::-moz-focus-inner, input::-moz-focus-inner {
+	button::-moz-focus-inner,
+    input::-moz-focus-inner {
 		border: 0;
 		padding: 0
 	}
 
-	button, input, select, textarea {
+	button,
+    input,
+    select,
+    textarea {
 		font-size: 100%;
 		vertical-align: baseline;
 		vertical-align: middle;
 	}
 
-	button, input {
+	button,
+    input {
 		line-height: normal;
 	}
 
-	button, input[type=button], input[type=reset], input[type=submit] {
+	button,
+    input[type=button],
+    input[type=reset],
+    input[type=submit] {
 		-webkit-appearance: button;
 		cursor: pointer;
 		overflow: visible;
 	}
 
-	button[disabled], input[disabled] {
+	button[disabled],
+    input[disabled] {
 		cursor: default;
 	}
-}
 
-// media queries
-@media only screen and (max-width: 480px) {
+    // media queries
+    @media only screen and (max-width: 480px) {
 
-	.web-form {
-        
-		button[type=submit] {
-			margin: .7em 0 0
-		}
+        button[type=submit] {
+            margin: .7em 0 0
+        }
 
-		input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month],  input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search],  input[type=tel], input[type=color],  label {
-			margin-bottom: .3em;
-			display: block;
-		}
+        input,
+        label {
+            margin-bottom: .3em;
+            display: block;
+        }
 
-		input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
-			width: 100%;
-			//min-width: inherit;
-		
+        input,
+        select,
+        textarea {
+            width: 100%;
+
             // for smaller input fields
             &.narrow { 
                 width: 50%;
             }        
-        
         }
 
-		.form-help-inline, -message-inline, -message {
-			display: block;
-			font-size: 80%;
-			padding: .2em 0 .8em;
-		}
-	}
+        .form-help-inline, 
+        -message-inline,
+        -message {
+            display: block;
+            font-size: 80%;
+            padding: .2em 0 .8em;
+        }
+    }
 }

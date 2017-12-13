@@ -21,21 +21,23 @@
         h4+p, h3+p {
             margin-top: .5rem;
         }
-
-        p.link {
-            font-family: $AkkuratProBold;
-            text-transform: uppercase;
-
-            &:after {
-                background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat .8em 3px / 5px 8px;
-                padding-right: 3rem;
-                content: " ";
-            }
-        }        
+        
+        a h4, a h3 {
+            color: $nu-purple;
+        }
+        
+        a img { // 
+            opacity: 1;
+            transition: opacity .3s ease-in-out;
+        
+            &:hover {
+                opacity: .5;
+            }    
+        }   
 
         &.two-grid { // for left-navigation pages (2 across)
             
-            article, div {
+            article {
                 width: 408px / 836px * 100%;
                 margin-right: 20px / 836px * 100%;
                 margin-bottom: 20px;
@@ -50,7 +52,7 @@
     
         &.three-grid { // for left-navigation pages (3 across)
             
-            article, div {
+            article {
                 width: 265px / 836px * 100%;
                 margin-right: 20px / 836px * 100%;
                 margin-bottom: 20px;
@@ -86,7 +88,7 @@
         
             &.three-grid {
         
-                article, div {
+                article {
                     width: 372.48px / 768px * 100%;
                     max-width: 265px;
                     margin-right: 23.04px / 768px * 100%;      
@@ -109,7 +111,7 @@
         
             &.four-grid, .two-grid {
 
-                article, div {
+                article {
                     width: 372.48px / 768px * 100%;
                     margin-right: 23.04px / 768px * 100%;      
 
@@ -127,7 +129,7 @@
             
             &.two-grid, &.three-grid, &.four-grid {
          
-                article, div {
+                article {
                     width: 100%;
                 }
             }

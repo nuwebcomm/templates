@@ -23,6 +23,14 @@ body {
     overflow-x: hidden;
 }
 
+a:focus {  // for accessible links
+   outline: 1px dashed;
+}
+
+a:active { // remove outline from mouse clicks
+    outline: none;
+}
+
 a.screen-reader-shortcut {
     left: .5em;
     position: absolute;
@@ -39,6 +47,11 @@ a.screen-reader-shortcut {
     }
 }
 
+#container { 
+    position: relative;
+    background: $white;
+}
+
 #main-content {
     font-size: 16px;
     line-height: 1.7em;
@@ -46,25 +59,25 @@ a.screen-reader-shortcut {
 }
     
 // centered containers
-.contain-780 {
+.contain-780 { // small text regions for section-top
     margin: 0 auto;
     max-width: 780px;
     box-sizing: content-box;
 }
 
-.contain-850 {
+.contain-850 { // medium text regions for section-top
     margin: 0 auto;
     max-width: 850px;
     box-sizing: content-box;
 }
 
-.contain-970 {
+.contain-970 { // big text regions for section-top
     margin: 0 auto;
     max-width: 970px;
     box-sizing: content-box;
 }
 
-.contain-1120 {
+.contain-1120 { 
     margin: 0 auto;
     max-width: 1120px;
     box-sizing: content-box;    
@@ -73,11 +86,6 @@ a.screen-reader-shortcut {
 .contain-1440 {
     margin: 0 auto;
     max-width: 1440px;
-}
-
-// hide from desktop {
-#back-to-top {
-    display: none;
 }
 
 // breadcrumbs
@@ -90,59 +98,29 @@ ul#breadcrumbs {
     border-bottom: 4px solid $light-grey;
     min-height: 30px;
 
-    li { 
+    li {
         display: inline;
         background: url("#{$path-images}/icons/arrow-right-ltpurple.svg") no-repeat center left 8px / 8px 8px;
-        padding-left: 2em;    
-
+        padding-left: 2em;  
+        
         &:first-child {
             background: none;
             padding-left: 0;
-        }
+        }        
 
         &.active {
             color: $nu-purple-120;
-        }         
-    }
-
-    a {
-        color: $rich-black-50;
-    } 
-}
-
-// instagram box
-#instagram {
-
-    ul {
-        display: block;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        
-        li {
-            background: none;
-            margin: 0;
-            padding: 0;
-            float: left;
-            width: 240px / 1440px * 100%;
         }
         
-        img {
-            display: block;  
-        }
-    }
-    
-    p {
-        font: 16px $AkkuratProBold;
-        padding: 1rem .5rem;
-        margin: 0;
-        text-transform: uppercase;
-        color: $white;
-        background: $nu-purple;
-        text-align: center;
-    
         a {
-            color: $nu-purple-30;
+            color: $rich-black-50;
+            border: none;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+                border: none;
+            }
         }
     }
 }
@@ -158,22 +136,49 @@ img {
     }
 }
 
-.responsive-table { // added by jquery (scripts.js) to enable mobile scrolling on large tables
+// scroll to top
+a#scrollup {
+	display: none;
+    opacity: .9;
+	width: 50px;
+	height: 50px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 2rem;
+	bottom: 2rem;
+	background: $nu-purple-120 url("#{$path-images}/icons/arrow-right-white.svg") no-repeat 50% / 14px 18px;
+    border: 1px solid $white;
+    transform: rotate(270deg);
+}
+
+a:hover#scrollup {
+    background-color: $nu-purple-60;
+    transition: .3s
+}
+
+a:focus#scrollup {
+    border: 2px dashed $white;
+    outline: none;
+}
+
+.responsive-table { // enables horizontal scrolling on large tables for small screens
     overflow-x: auto;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch; // adds scrollbar when swiping table for ios
+    -webkit-overflow-scrolling: touch;
     width: 100%;
     margin: 1em 0 2em 0;
 }
 
-// for video embeds
-.responsive-container { 
+.responsive-container { // makes iframes, objects and embeds responsive
     position: relative;
     height: 0;
     overflow: hidden;
     padding-bottom: 56.25%;
 
-    iframe, object, embed {
+    iframe,
+    object,
+    embed {
         position: absolute;
         top: 0;
         left: 0; 
@@ -199,10 +204,6 @@ img {
     }
 }
 
-a.photo-hover:hover { // adds hover to large images with this class on the anchor
-    opacity: .8;
-}
-
 .hide-label {
     position: absolute;
     left: -10000px;
@@ -219,17 +220,24 @@ a.photo-hover:hover { // adds hover to large images with this class on the ancho
 }
 
 // adds icons to matched file type
-a[href$=".pdf"], a[href$=".PDF"], a.pdf {
+a[href$=".pdf"],
+a[href$=".PDF"] {
     padding-right: 1.25rem;
     background: url("#{$path-images}/icons/pdf.png") no-repeat right center;
 }
 
-a[href$=".docx"], a[href$=".DOCX"], a.docx, a[href$=".doc"], a[href$=".DOC"], a.doc {
+a[href$=".docx"],
+a[href$=".DOCX"],
+a[href$=".doc"],
+a[href$=".DOC"] {
     padding-right: 1.25rem;
     background: url("#{$path-images}/icons/word.png") no-repeat right center;
 }
 
-a[href$=".xlsx"], a[href$=".XLSX"], a.xlsx, a[href$=".xls"], a[href$=".XLS"], a.xls {
+a[href$=".xlsx"],
+a[href$=".XLSX"],
+a[href$=".xls"],
+a[href$=".XLS"] {
     padding-right: 1.25rem;
     background: url("#{$path-images}/icons/excel.png") no-repeat right center;
 }
@@ -243,6 +251,7 @@ a[href$=".xlsx"], a[href$=".XLSX"], a.xlsx, a[href$=".xls"], a[href$=".XLS"], a.
     }
     
     .responsive-container {
+        
         .overlay {
             bottom: 20%;
             
@@ -254,6 +263,11 @@ a[href$=".xlsx"], a[href$=".XLSX"], a.xlsx, a[href$=".xls"], a[href$=".XLS"], a.
 }
 
 @media screen and (max-width: 768px) {
+    
+    a#scrollup {
+        right: 1rem;
+        bottom: 1rem;        
+    }
     
     .hide-mobile {
         display: none;
@@ -271,6 +285,7 @@ a[href$=".xlsx"], a[href$=".XLSX"], a.xlsx, a[href$=".xls"], a[href$=".XLS"], a.
     }   
     
     .responsive-container {
+        
         .overlay {
             bottom: 15%;
             
@@ -314,22 +329,10 @@ a[href$=".xlsx"], a[href$=".XLSX"], a.xlsx, a[href$=".xls"], a[href$=".XLS"], a.
             background: url("#{$path-images}/icons/arrow-up-ltpurple.svg") no-repeat 50% / 15px 19px;
         }
     }
-        
-    // instagram feed
-    #instagram {
-        
-        ul li {
-            
-            width: 256px / 768px * 100%;
-
-            img {
-               width: 256px;
-            }
-        }
-    }   
 }
 
 @media screen and (max-width: 480px) {
+    
     .responsive-container {
         
         .overlay {
@@ -340,17 +343,5 @@ a[href$=".xlsx"], a[href$=".XLSX"], a.xlsx, a[href$=".xls"], a[href$=".XLS"], a.
                 margin-bottom: .5rem;
             }        
         }
-    }    
-        
-    // instagram
-    #instagram {
-        
-        ul li {
-            width: 240px / 480px * 100%;
-
-            img {
-               width: 240px;   
-            }
-        }
-    }    
+    }     
 }

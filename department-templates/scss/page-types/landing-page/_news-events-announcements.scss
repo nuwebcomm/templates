@@ -1,0 +1,167 @@
+// news / events / announcement module
+
+.landing-page {
+
+    .news-events-announcements {
+        @extend %clearfix;
+
+        h4 {
+            font: 30px/1.2em $AkkuratProRegular;
+            margin-bottom: 1.5rem;
+            padding-bottom: .5rem;
+            color: $rich-black-50;
+            border-bottom: 4px solid $light-grey;
+        }
+
+        h5 {
+            font: 18px/1.3em $AkkuratProBold;
+            margin-bottom: .5rem;
+            padding-bottom: 0;
+            border: none;           
+        }
+        
+        p.button {
+            margin-bottom: 0;
+        }
+        
+        .column-narrow, 
+        .column-wide {
+            float: left;
+            position: relative;                 
+        }       
+        
+        .column-narrow {
+            width: 360px / 1120px * 100%;
+            margin-right: 30px / 1120px * 100%;
+            margin-bottom: 0;
+        }
+        
+        .column-wide {
+            width: 730px / 1120px * 100%;
+            margin-bottom: 0;
+            @extend %clearfix;
+        }
+        
+        .column-inner {
+            width: 350px / 730px * 100%;
+            margin-right: 28px / 730px * 100%;
+            float: left;
+            margin-bottom: 0;
+        
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        
+        // news section
+        .news-section { 
+        
+            .event-wrap {
+                
+                img {
+                    margin-bottom: .5rem;
+                }
+                
+                p {
+                    line-height: 1.2em;
+                }
+            }
+        }   
+
+        // event section
+        .events-section {
+        
+            .event-wrap {
+                position: relative;
+                min-height: 100px;
+                margin-bottom: 2rem;
+                
+                &:last-of-type {
+                    margin-bottom: 1rem;
+                }                
+
+                .event-date {
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    width: 90px;
+                    padding: .25rem;
+                    background: $nu-purple;
+                    font-family: $CamptonBold;
+                    color: $white;
+                    float: left;
+    
+                    .month, .year {
+                        font-size: 14px;
+                    }
+    
+                    .day {
+                        font-size: 36px;
+                    }        
+                }
+
+                .event-date + .event-description {
+                    margin-left: 105px;
+
+           
+                }
+                
+                .event-description {
+                    margin-left: 0;
+                
+                    > p {
+                        margin-top: 0;  
+                        font-size: 14px;
+                        line-height: 1.2em;
+                    }                 
+                }
+
+                .event-time-location {
+                    font-family: $AkkuratProBold;
+                    color: $rich-black-80;
+                    margin-bottom: .5rem;
+                    margin-top: .5rem;
+                }        
+            } 
+        }
+
+        // button
+        p.button {
+            
+            a {
+                margin: 0;
+            }
+        } 
+    }
+    
+    // media queries 
+    @media screen and (max-width: 1000px) { 
+        
+        .news-events-announcements {
+            display: block;
+            
+            .column-narrow, .column-wide {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+            }       
+            
+            .column-narrow, .column-wide, .column-inner {
+                margin: 0 0 2.5rem 0;
+            }               
+        }
+    }
+    
+    @media screen and (max-width: 768px) { 
+        
+        .news-events-announcements {
+        
+            .column-inner {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+            }
+        }
+    }
+    
+} // end

@@ -63,6 +63,13 @@
                 color: $nu-purple;
             }
         }
+             
+        // external link icon
+        a[href^="http://"]::after, 
+        a[href^="https://"]::after {
+            content: url("#{$path-images}/icons/external-link-top-nav.png");
+            margin-left: 0.5em;
+        }        
         
         li {
             margin-left: .5rem;

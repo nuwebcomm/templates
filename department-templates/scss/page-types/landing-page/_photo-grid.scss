@@ -11,6 +11,15 @@
         flex-wrap: wrap; // wrap child items 
         margin-top: 1.5rem;
         @extend %clearfix;
+        
+        a img { // 
+            opacity: 1;
+            transition: opacity .3s ease-in-out;
+        
+            &:hover {
+                opacity: .5;
+            }    
+        }
 
         article {
             width: 265px / 1120px * 100%;
@@ -31,18 +40,7 @@
 
             h4+p {
                 margin-top: .5rem;
-            }
-
-            p.link {
-                font-family: $AkkuratProBold;
-                text-transform: uppercase;
-
-                &:after {
-                    background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat .8em 3px / 5px 8px;
-                    padding-right: 3rem;
-                    content: " ";
-                }
-            }        
+            }       
         }
     }
 

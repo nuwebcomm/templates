@@ -12,9 +12,7 @@
 
 <body>
     
-    <a id="top"></a>
-    <script type="text/javascript">document.getElementsByTagName('body')[0].setAttribute('class','landing-page');</script>
-    <a href="#main-content" class="screen-reader-shortcut">Skip to main content</a>
+    <script>document.getElementsByTagName('body')[0].setAttribute('class','landing-page');</script>
     <!--[if lt IE 9]>
     <div id="ie">
         <p><img src="https://common.northwestern.edu/v8/css/images/icons/ie8-warning.png" alt="Warning icon" /> Your browser is <strong>out-of-date</strong> and has known <strong>security flaws</strong>. We recommend you update your browser: <a href="http://www.google.com/chrome/" target="_blank">Chrome</a> - <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> - <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a> - <a href="https://www.apple.com/safari/" target="_blank">Safari</a>.</p>
@@ -30,154 +28,159 @@
         </div>
     </div>    
     -->
-    <header> 
+    <header>
+        <a href="#main-content" class="screen-reader-shortcut">Skip to main content</a>
         <div id="top-bar">
             <div class="contain-1120">
                 <div id="left">
-                    <a href="http://www.northwestern.edu"><img src="https://common.northwestern.edu/v8/css/images/northwestern.svg" alt="Northwestern University" /></a>
-                </div>
-                <div id="mobile-links">
-                    <a href="#mobile-search" class="mobile-link mobile-search-link"><span class="hide-label">Search</span></a>
-                    <div id="mobile-search">
-                        <div class="search-form">
-                            <form action="http://googlesearch.northwestern.edu/search">
-                                <label for="q-mobile" class="hide-label">Search this website</label>
-                                <input type="text" id="q-mobile" name="q" placeholder="Search this site" />
-                                <input type="hidden" value="default_collection" name="site" />
-                                <input type="hidden" value="default_oneboxes" name="client" />
-                                <input type="hidden" value="xml_no_dtd" name="output" />
-                                <input type="hidden" value="http://www.northwestern.edu/YOUR_SITE" name="sitesearch" />
-                                <input type="hidden" value="Undergraduate Admissions" name="sitetitle">
-                                <input type="hidden" value="default_oneboxes" name="proxystylesheet" />
-                                <button type="submit"><span class="hide-label">Search</span></button>
-                            </form>
-                        </div>
+                    <div id="northwestern">
+                        <a href="http://www.northwestern.edu/" title="Northwestern University Home"><span class="hide-label">Northwestern University</span></a>
                     </div>
-                    <a href="#mobile-nav" class="mobile-link mobile-nav-link"><span class="hide-label">Menu</span></a>
-                    <nav id="mobile-nav">
-                        <ul aria-label="main menu">
-                            <li tabindex="0"><a href="#">About</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                                <ul aria-expanded="false" aria-hidden="true">
-                                    <li><a href="#">Level 2, Link 1 </a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
-                                        <ul aria-expanded="false" aria-hidden="true">
-                                            <li><a href="#">Level 3, Link 2 the quick brown fox jumped over the lazy dog</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
-                                                <ul aria-expanded="false" aria-hidden="true">
-                                                    <li><a href="#">Level 4, Link 1</a></li>
-                                                    <li><a href="#">Level 4, Link 2</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
-                                                        <ul aria-expanded="false" aria-hidden="true">
-                                                            <li><a href="#">Level 5, Link 1</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
-                                                                <ul aria-expanded="false" aria-hidden="true">
-                                                                    <li><a href="#">Level 6, Link 1</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li><a href="#">Level 5, Link 2</a></li>
-                                                            <li><a href="#" class="active">Level 5, Link 3</a></li>
-                                                            <li><a href="#">Level 5, Link 4</a></li>
-                                                            <li><a href="#">Level 5, Link 5</a></li>
-                                                        </ul>                                                
-                                                    </li>
-                                                    <li><a href="#">Level 4, Link 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Level 3, Link 2</a></li>
-                                            <li><a href="#">Level 3, Link 3</a></li>
-                                            <li><a href="#">Level 3, Link 4</a></li>
-                                            <li><a href="#">Level 3, Link 5</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li> 
-                            <li><a href="#">Academics</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                                <ul aria-expanded="false" aria-hidden="true">
-                                    <li><a href="#">Level 2, Link 1</a></li>
-                                </ul>
-                            </li>                        
-                            <li><a href="#">Admissions</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                                <ul aria-expanded="false" aria-hidden="true">
-                                    <li><a href="#">Level 2, Link 1</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Campus Life</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                                <ul aria-expanded="false" aria-hidden="true">
-                                    <li><a href="#">Level 2, Link 1</a></li>
-                                </ul>
-                            </li> 
-                            <li><a href="#">Research</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                                <ul aria-expanded="false" aria-hidden="true">
-                                    <li><a href="#">Level 2, Link 1</a></li>
-                                </ul>
-                            </li> 
-                            <li><a href="#">Giving</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
-                                <ul aria-expanded="false" aria-hidden="true">
-                                    <li><a href="#">Level 2, Link 1</a></li>
-                                </ul>
-                            </li>                         
-                        </ul>
-                        <div id="mobile-nav-bottom">
-                            <!-- links from #top-bar #right --> 
-                            <ul id="mobile-nav-bottom-left">
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                                <li><a href="#">Link 4</a></li>
-                            </ul>
-                            <!-- links under "resources" from #top-bar #right .dropdown -->
-                            <ul id="mobile-nav-bottom-right">
-                                <li><a href="#">Drop Link 1</a></li>
-                                <li><a href="#">Drop Link 2</a></li>
-                                <li><a href="#">Drop Link 3</a></li>
-                                <li><a href="#">Drop Link 4</a></li>
-                            </ul>
-                        </div>
-                    </nav>                 
-                </div>            
-                <div id="right">
+                    <div id="parent-unit">
+                        <a href="#">Parent Unit Name</a>
+                    </div>                     
+                </div>         
+                <div id="global-links" aria-label="global links navigation">
                     <ul>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
-                        <li><a href="#">Link 4</a></li>
-                        <li class="resources">Resources <span class="dropdown-arrow"></span>
+                        <li><a href="#">Global Link 1</a></li>
+                        <li><a href="#">Global Link 2</a></li>
+                        <li class="resources">Global Dropdown <span class="dropdown-arrow"></span>
                             <ul>
-                                <li><a href="#">Drop Link 1</a></li>
-                                <li><a href="#">Drop Link 2</a></li>
-                                <li><a href="#">Drop Link 3</a></li>
-                                <li><a href="#">Drop Link 4</a></li>
+                                <li><a href="#">Global Drop Link 1</a></li>
+                                <li><a href="#">Global Drop Link 2</a></li>
+                                <li><a href="#">Global Drop Link 3</a></li>
                             </ul>    
                         </li>
                     </ul>
                 </div>
             </div>     
         </div>
-        <div class="bottom-bar contain-1120">
-            <div id="department">
-                <h1><a href="#">DEPARTMENT NAME</a></h1>
+        <div id="quick-links" aria-label="quick links navigation">
+            <ul>
+                <li><a href="#">Quick Link 1</a></li>
+                <li><a href="#">Quick Link 2</a></li>
+                <li><a href="#">Quick Link 3</a></li>
+            </ul>
+        </div>
+        <div id="bottom-bar" class="contain-1120">
+            <div id="site-name">
+                <h1><a href="#">SITE NAME</a></h1>
             </div>
             <div id="search" class="hide-mobile">
-                <div class="search-form">
-                    <form action="http://googlesearch.northwestern.edu/search">
-                        <label for="q-desktop" class="hide-label">Search this website</label>
-                        <input type="text" id="q-desktop" name="q" placeholder="Search this site" />
-                        <input type="hidden" value="default_collection" name="site" />
-                        <input type="hidden" value="default_oneboxes" name="client" />
-                        <input type="hidden" value="xml_no_dtd" name="output" />
-                        <input type="hidden" value="http://www.northwestern.edu/YOUR_SITE" name="sitesearch" />
-                        <input type="hidden" value="Undergraduate Admissions" name="sitetitle">
-                        <input type="hidden" value="default_oneboxes" name="proxystylesheet" />
+				<div class="search-form searchblox">
+					<form action="https://searchsite.northwestern.edu/searchblox/default_frontend/index.html" method="get" role="search">
+                        <label class="hide-label" for="q-desktop">Search this website</label>
+                        <input id="q-desktop" name="query" placeholder="Search this site" type="text"/>
+                        <input type="hidden" name="filter" value="http://www.northwestern.edu/YOUR_SITE"/>
+                        <input type="hidden" name="advanced" value="false"/>
                         <button type="submit"><span class="hide-label">Search</span></button>
-                    </form>
-                </div>					
+					</form>
+				</div>
             </div>
-        </div>            
+        </div>
+        <div id="mobile-links">
+            <a href="#mobile-nav" class="mobile-link mobile-nav-link"><span class="hide-label">Menu</span></a>
+            <nav id="mobile-nav" aria-label="mobile menu">
+                <ul>
+                    <li tabindex="0"><a href="#">About</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li><a href="#">Level 2, Link 1 </a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li><a href="#">Level 3, Link 2 the quick brown fox jumped over the lazy dog</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
+                                        <ul aria-expanded="false" aria-hidden="true">
+                                            <li><a href="#">Level 4, Link 1</a></li>
+                                            <li><a href="#">Level 4, Link 2</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
+                                                <ul aria-expanded="false" aria-hidden="true">
+                                                    <li><a href="#">Level 5, Link 1</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span>Submenu</a></span>
+                                                        <ul aria-expanded="false" aria-hidden="true">
+                                                            <li><a href="#">Level 6, Link 1</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Level 5, Link 2</a></li>
+                                                    <li><a href="#" class="active">Level 5, Link 3</a></li>
+                                                    <li><a href="#">Level 5, Link 4</a></li>
+                                                    <li><a href="#">Level 5, Link 5</a></li>
+                                                </ul>                                                
+                                            </li>
+                                            <li><a href="#">Level 4, Link 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Level 3, Link 2</a></li>
+                                    <li><a href="#">Level 3, Link 3</a></li>
+                                    <li><a href="#">Level 3, Link 4</a></li>
+                                    <li><a href="#">Level 3, Link 5</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">Academics</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li><a href="#">Level 2, Link 1</a></li>
+                        </ul>
+                    </li>                        
+                    <li><a href="#">Admissions</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li><a href="#">Level 2, Link 1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Campus Life</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li><a href="#">Level 2, Link 1</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">Research</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li><a href="#">Level 2, Link 1</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">Giving</a><span class="arrow"><a aria-haspopup="true" href="#" role="button"><span>Expand</span> Submenu</a></span>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li><a href="#">Level 2, Link 1</a></li>
+                        </ul>
+                    </li>                         
+                </ul>
+                <div id="mobile-nav-bottom">
+                    <!-- from #global-links --> 
+                    <ul id="mobile-nav-bottom-left">
+                        <li><a href="#">Global Link 1</a></li>
+                        <li><a href="#">Global Link 2</a>
+                            <ul>    
+                                <li><a href="#">Global Drop Link 1</a></li>
+                                <li><a href="#">Global Drop Link 2</a></li>
+                                <li><a href="#">Global Drop Link 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- from #quick-links -->
+                    <ul id="mobile-nav-bottom-right">
+                        <li><a href="#">Quick Link 1</a></li>
+                        <li><a href="#">Quick Link 2</a></li>
+                        <li><a href="#">Quick Link 3</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="#mobile-search" class="mobile-link mobile-search-link"><span class="hide-label">Search</span></a>
+            <div id="mobile-search">
+				<div class="search-form searchblox">
+					<form action="https://searchsite.northwestern.edu/searchblox/default_frontend/index.html" method="get" role="search">
+                        <label class="hide-label" for="q-mobile">Search this website</label>
+                        <input id="q-mobile" name="query" placeholder="Search this site" type="text"/>
+                        <input type="hidden" name="filter" value="http://www.northwestern.edu/YOUR_SITE"/>
+                        <input type="hidden" name="advanced" value="false"/>
+                        <button type="submit"><span class="hide-label">Search</span></button>
+					</form>
+				</div>
+            </div>
+        </div>
     </header>
     <nav id="top-nav" aria-label="main navigation menu">
         <div class="contain-1120">
             <ul>
                 <li><a href="#">About <span class="dropdown-arrow"></span></a>
-                    <ul class="dropdown">
+                    <ul class="dropdown" aria-label="navigation submenu">
                         <li class="nav-intro">
                             <p class="intro">Header</p>
-                            <a href="#" class="button">Button</a>
+                            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                         </li>
                         <li class="nav-links">
                             <ul>
@@ -189,12 +192,12 @@
                             </ul>
                         </li>
                     </ul>
-                </li>			
+                </li>		
                 <li><a href="#">Academics <span class="dropdown-arrow"></span></a>
-                    <ul class="dropdown">
+                    <ul class="dropdown" aria-label="navigation submenu">
                         <li class="nav-intro">
                             <p class="intro">Header</p>
-                            <a href="#" class="button">Button</a>
+                            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                         </li>
                         <li class="nav-links">
                             <ul>
@@ -208,10 +211,10 @@
                     </ul>
                 </li>			
                 <li><a href="#">Admissions <span class="dropdown-arrow"></span></a>
-                    <ul class="dropdown">
+                    <ul class="dropdown" aria-label="navigation submenu">
                         <li class="nav-intro">
                             <p class="intro">Header</p>
-                            <a href="#" class="button">Button</a>
+                            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                         </li>
                         <li class="nav-links">
                             <ul>
@@ -223,12 +226,12 @@
                             </ul>
                         </li>
                     </ul>
-                </li>					
+                </li>				
                 <li><a href="#">Campus Life <span class="dropdown-arrow"></span></a>
-                    <ul class="dropdown">
+                    <ul class="dropdown" aria-label="navigation submenu">
                         <li class="nav-intro">
                             <p class="intro">Header</p>
-                            <a href="#" class="button">Button</a>
+                            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                         </li>
                         <li class="nav-links">
                             <ul>
@@ -242,10 +245,10 @@
                     </ul>
                 </li>
                 <li><a href="#">Research <span class="dropdown-arrow"></span></a>
-                    <ul class="dropdown">
+                    <ul class="dropdown" aria-label="navigation submenu">
                         <li class="nav-intro">
                             <p class="intro">Header</p>
-                            <a href="#" class="button">Button</a>
+                            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                         </li>
                         <li class="nav-links">
                             <ul>
@@ -259,10 +262,10 @@
                     </ul>
                 </li>
                 <li><a href="#">Giving <span class="dropdown-arrow"></span></a>
-                    <ul class="dropdown">
+                    <ul class="dropdown" aria-label="navigation submenu">
                         <li class="nav-intro">
                             <p class="intro">Header</p>
-                            <a href="#" class="button">Button</a>
+                            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                         </li>
                         <li class="nav-links">
                             <ul>
@@ -279,41 +282,41 @@
         </div>
     </nav>
     <!-- for the default hero text behavior on mobile, remove .mobile-hero from section and delete entire .mobile-hero-text div -->
-    <section class="hero mobile-hero no-bottom-margin contain-1440">
+    <div class="section hero mobile-hero no-bottom-margin contain-1440">
         <!-- The hero image can align to left/center/right on mobile by changing the inline background-position property in .hero-image -->
         <div class="hero-image" style="background: url('images/1440x600.gif') no-repeat center / cover">
             <div class="contain-1120">
                 <h2>Page Title</h2>
                 <p>Optional Subhead</p>
-                <a class="button">Optional Button</a>
+                <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
             </div>
         </div>
         <div class="mobile-hero-text">
             <h2>Page Title</h2>
             <p>Optional Subhead</p>
-            <a class="button">Optional Button</a>
+            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
         </div>    
-    </section>
+    </div>
     <div id="page">    
-        <main id="main-content" class="content" tabindex="0">
+        <main id="main-content" class="content" tabindex="-1">
             
             <!-- announcement box -->
-            <section id="announcement">
+            <div class="section" id="announcement">
                 <div class="contain-1120">
                     <h2>Announcement Box</h2>
                     <p>Optional box for important announcements appearing under the hero image.</p>             
                 </div>
-            </section>     
+            </div>
 
             <!-- photo feature (2 across) -->
-            <section>
+            <div class="section">
                 <div class="section-top contain-970">
                     <h3>Photo Feature (2 Across)</h3>
                     <p class="subhead">Optional Subhead</p>
                     <p>Used to highlight a pair of internal or external links using imagery. There may be multiple rows.</p>
                     <ul class="center-list">
-                        <li><a href="#" class="button">Optional Button</a></li>
-                        <li><a href="#" class="button">Optional Button</a></li>
+                        <li><a href="#" class="button" aria-label="enter descriptive text">Optional Button</a></li>
+                        <li><a href="#" class="button" aria-label="enter descriptive text">Optional Button</a></li>
                     </ul>
                 </div>
                 <div class="photo-feature-2-across">
@@ -338,17 +341,17 @@
                         </a>
                     </article>       
                 </div>
-            </section>     
+            </div>
 
             <!-- photo feature (2 across) with Hover -->
-            <section>
+            <div class="section">
                 <div class="section-top contain-970">
                     <h3>Photo Feature (2 Across) with Hover</h3>
                     <p class="subhead">Optional Subhead</p>
                     <p>Same as above but with a more detailed description that appears on hover (desktop) or click (mobile).</p>
                     <ul class="center-list">
-                        <li><a href="#" class="button">Optional Button</a></li>
-                        <li><a href="#" class="button">Optional Button</a></li>
+                        <li><a href="#" class="button" aria-label="enter descriptive text">Optional Button</a></li>
+                        <li><a href="#" class="button" aria-label="enter descriptive text">Optional Button</a></li>
                     </ul>
                 </div>
                 <div class="photo-feature-2-across">
@@ -358,7 +361,7 @@
                                 <img src="images/720x350.gif" alt="" />  
                                 <div class="text-over-image">
                                     <h4>Title</h4>
-                                    <p class="link">Learn more</p>
+                                    <p class="link">Call to action</p>
                                 </div>
                             </div>
                             <div class="back">
@@ -376,7 +379,7 @@
                                 <img src="images/720x350.gif" alt="" />  
                                 <div class="text-over-image">
                                     <h4>Title</h4>
-                                    <p class="link">Learn more</p>
+                                    <p class="link">Call to action</p>
                                 </div>
                             </div>
                             <div class="back">
@@ -389,10 +392,10 @@
                         </a>
                     </article>       
                 </div>
-            </section>         
+            </div>
 
             <!-- photo feature (3 across) with Hover -->
-            <section>
+            <div class="section">
                 <div class="section-top contain-970">
                     <h3>Photo Feature (3 Across) with Hover</h3>
                     <p class="subhead">Optional Subhead</p>
@@ -405,7 +408,7 @@
                                 <img src="images/480x350.gif" alt="">   
                                 <div class="text-over-image">
                                     <h4>Title</h4>
-                                    <p class="link">Learn more</p>
+                                    <p class="link">Call to action</p>
                                 </div>
                             </div>
                             <div class="back">
@@ -423,7 +426,7 @@
                                 <img src="images/480x350.gif" alt="">   
                                 <div class="text-over-image">
                                     <h4>Title</h4>
-                                    <p class="link">Learn more</p>
+                                    <p class="link">Call to action</p>
                                 </div>
                             </div>
                             <div class="back">
@@ -441,7 +444,7 @@
                                 <img src="images/480x350.gif" alt="">   
                                 <div class="text-over-image">
                                     <h4>Title</h4>
-                                    <p class="link">Learn more</p>
+                                    <p class="link">Call to action</p>
                                 </div>
                             </div>
                             <div class="back">
@@ -454,14 +457,14 @@
                         </a>
                     </article> 
                 </div>
-            </section>            
+            </div>
             
             <!-- feature boxes (two columns) -->
-            <section class="contain-1120">
+            <div class="section contain-1120">
                 <div class="section-top contain-850">
                     <h3>Feature Boxes (Two Columns)</h3>
                     <p class="subhead">Optional Subhead</p>
-                    <p>Used to present sections in a visual manner, for example to highlight the most popular FAQ pages under different categories. Images optional. Add a no-button class to an article when omitting a button.</p>
+                    <p>Used to present sections in a visual manner, for example to highlight the most popular FAQ pages under different categories. Images optional. Add a no-button class to the &lt;article&gt; when omitting both buttons.</p>
                 </div>				      
                 <div class="feature-two-col">
                     <article class="feature-box">
@@ -475,9 +478,10 @@
                                 <li><a href="#">Link</a></li>
                             </ul>
                         </div>
-                        <a href="#" class="button">Optional Link</a>
+                        <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                     </article>
-                    <article class="feature-box no-button">
+                    <article class="feature-box">
+                        <img src="images/550x310.png" alt="" />
                         <div class="feature-copy">
                             <h4>Title</h4>
                             <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</p>
@@ -487,16 +491,17 @@
                                 <li><a href="#">Link</a></li>
                             </ul>
                         </div>
+                        <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                     </article>
                 </div> 
-            </section>        
+            </div>
 
             <!-- feature boxes (three columns) -->
-            <section class="contain-1120">
+            <div class="section contain-1120">
                 <div class="section-top">
                     <h3>Feature Boxes (Three Columns)</h3>
                     <p class="subhead">Optional Subhead</p>
-                    <p>Same as above but with three sections.</p>
+                    <p>Same as above but with three regions.</p>
                 </div>
                 <div class="feature-three-col">
                     <article class="feature-box">
@@ -510,7 +515,7 @@
                                 <li><a href="#">Link</a></li>
                             </ul>                      
                         </div>
-                        <a href="#" class="button">Learn More</a>
+                        <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                     </article>
                     <article class="feature-box">
                         <img src="images/360x200.gif" alt="" />
@@ -523,7 +528,7 @@
                                 <li><a href="#">Link</a></li>
                             </ul>                          
                         </div>
-                        <a href="#" class="button">Optional Link</a>
+                        <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                     </article>
                     <article class="feature-box">
                         <img src="images/360x200.gif" alt="" />
@@ -536,72 +541,76 @@
                                 <li><a href="#">Link</a></li>
                             </ul>                          
                         </div>
-                        <a href="#" class="button">Optional Link</a>
+                        <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                     </article>                
                 </div>     
-            </section>
+            </div>
 
             <!-- feature boxes (four columns) -->
-            <section>
+            <div class="section">
                 <div class="section-top">
                     <h3>Feature Boxes (Four Columns)</h3>
                     <p class="subhead">Optional Subhead</p>
-                    <p>Same as above but with four sections.  Note the absence of a width class on the &lt;section&gt;.</p>
+                    <p>Same as above but with four regions.  Note the absence of a width class on the &lt;div class=&quot;section&quot;&gt;.</p>
                 </div>
                 <div class="feature-four-col">
                     <article class="feature-box">
                         <img src="images/345x220.png" alt="" />
                         <div class="feature-copy">
-                            <h4>Undergraduates</h4>
+                            <h4>Title</h4>
+                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</p>
                             <ul>
-                                <li><a href="#">Successful Searching</a></li>
-                                <li><a href="#">Study Rooms</a></li>
-                                <li><a href="#">Computers &amp; Printing</a></li>
-                            </ul>                      
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>                       
                         </div>
-                        <a href="#" class="button">All Undergraduate Resources</a>
+                        <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                     </article>
                     <article class="feature-box">
                         <img src="images/345x220.png" alt="" />
                         <div class="feature-copy">
-                            <h4>Graduate Students</h4>
+                            <h4>Title</h4>
+                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</p>
                             <ul>
-                                <li><a href="#">Dissertation &amp; Thesis Resources</a></li>
-                                <li><a href="#">Subject Librarians</a></li>
-                                <li><a href="#">Working with Faculty</a></li>
-                            </ul>                          
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>                            
                         </div>
-                        <a href="#" class="button">All Graduate Resources</a>
+                        <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                     </article>
                     <article class="feature-box">
                         <img src="images/345x220.png" alt="" />
                         <div class="feature-copy">
-                            <h4>Faculty</h4>
+                            <h4>Title</h4>
+                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</p>
                             <ul>
-                                <li><a href="#">Borrowing &amp; Requesting Materials</a></li>
-                                <li><a href="#">Instructional Technology</a></li>
-                                <li><a href="#">Research Support</a></li>
-                            </ul>                          
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>                            
                         </div>
-                        <a href="#" class="button">All Faculty Resources</a>
+                        <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                     </article>  
                     <article class="feature-box">
                         <img src="images/345x220.png" alt="" />
                         <div class="feature-copy">
-                            <h4>Staff &amp; Public</h4>
+                            <h4>Title</h4>
+                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</p>
                             <ul>
-                                <li><a href="#">Library Hours</a></li>
-                                <li><a href="#">Borrowing Materials</a></li>
-                                <li><a href="#">Maps &amp; Floorplans</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
                             </ul>                          
                         </div>
-                        <a href="#" class="button">All Public Resources</a>
+                        <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
                     </article>                   
                 </div>     
-            </section>         
+            </div>
 
             <!-- three column links -->
-            <section class="contain-1120">
+            <div class="section contain-1120">
                 <div class="section-top contain-970">
                     <h3>Three Column Links</h3>
                     <p class="subhead">Optional Subhead</p>
@@ -632,6 +641,7 @@
                     </article>            
                     <article>
                         <h4>Title</h4>
+                        <img src="images/360x200.gif" alt="" />
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
                         <ul>
                             <li><a href="#">Link</a></li>
@@ -641,10 +651,10 @@
                         </ul>                   
                     </article>            
                 </div>   
-            </section>           
+            </div>
 
             <!-- responsive tabs --> 
-            <section class="contain-1120">
+            <div class="section contain-1120">
                 <div class="section-top">
                     <h3>Responsive Tabs</h3>
                     <p class="subhead">Optional Subhead</p>
@@ -658,42 +668,6 @@
                     </ul>
                     <div id="tab-content">
                         <div id="tab-panel1" role="tabpanel" aria-labelledby="tab1">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th>Table column 1</th>
-                                        <th>Table column 2</th>
-                                        <th>Table column 3</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Table row 1</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Table row 2</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Table row 3</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Table row 4</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Table row 5</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                    </tr>
-                                </tbody>
-                            </table>                                                  
-                        </div>
-                        <div id="tab-panel2" role="tabpanel" aria-labelledby="tab2">
                             <div class="row">
                                 <div class="headings">
                                     <h4>Line 1<span>Highlighted Line 2</span></h4>
@@ -701,17 +675,20 @@
                                 <div class="contents">
                                     <p>This pattern is useful for presenting events or deadlines.</p>
                                 </div>
-                            </div>                        
+                            </div>                                                  
+                        </div>
+                        <div id="tab-panel2" role="tabpanel" aria-labelledby="tab2">
+                            <p>Tab 2 Content</p>                       
                         </div>
                         <div id="tab-panel3" role="tabpanel" aria-labelledby="tab3">
-                             <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>
+                            <p>Tab 3 Content</p>
                         </div>
                     </div>
                 </div>
-            </section> 
+            </div>
 
             <!-- background image select -->
-            <section class="background-select">
+            <div class="section background-select">
                 <div class="background-select-image" style="background: url('http://common.northwestern.edu/v8/css/images/slashes-grey-bg.gif') no-repeat center / cover">
                     <div class="contain-780">
                         <h3>Background Image</h3>
@@ -720,22 +697,23 @@
                         <a href="#" class="button">Optional Link</a>
                     </div>
                 </div>
-            </section>          
+            </div>
 
             <!-- in-page hero - gradient automatically applied -->
-            <section class="hero">
+            <div class="section hero">
                 <div class="hero-image in-page" style="background: url('images/1440x540.gif') no-repeat center / cover">
                     <h3>In-page Hero</h3>
                     <p>Optional Subhead</p>
+                    <p class="description">This is optional descriptive text.</p>
                     <ul class="center-list">
                         <li><a href="#" class="button">Optional Link</a></li>
                         <li><a href="#" class="button">Optional Link</a></li>
                     </ul>
                 </div>
-            </section>           
+            </div>
 
             <!-- alternate photo float -->
-            <section class="contain-1120">
+            <div class="section contain-1120">
                 <div class="section-top contain-970">
                     <h3>Alternate Photo Float (Quotes or Link Columns or Videos)</h3>
                     <p class="subhead">Optional Subhead</p>
@@ -778,157 +756,10 @@
                         <img src="images/550x310.png" alt="" />             
                     </div> 
                 </div>
-            </section>            
-
-            <!-- news and events -->
-            <section class="contain-1120">
-                <div class="section-top">
-                    <h3>News and Events</h3>
-                    <p class="subhead">Optional Subhead</p>
-                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>                
-                </div>
-                <div class="news-event">
-                    <section class="news">
-                        <h4>Recent News</h4>
-                        <article class="news-box">
-                            <div class="news-image">
-                                <img src="images/170x170.gif" alt="" />
-                            </div>
-                            <div class="news-text">
-                                <h5><a href="#">Story Title</a></h5>
-                            </div>
-                        </article> 
-                        <article class="news-box">
-                            <div class="news-image">
-                                <img src="images/170x170.gif" alt="" />
-                            </div>
-                            <div class="news-text">
-                                <h5><a href="#">Story Title</a></h5>
-                            </div>
-                        </article>                     
-                        <article class="news-box">
-                            <div class="news-image">
-                                <img src="images/170x170.gif" alt="" />
-                            </div>
-                            <div class="news-text">
-                                <h5><a href="#">Story Title</a></h5>
-                            </div>
-                        </article>                    
-                        <article class="news-box">
-                            <div class="news-image">
-                                <img src="images/170x170.gif" alt="" />
-                            </div>
-                            <div class="news-text">
-                                <h5><a href="#">Story Title</a></h5>
-                            </div>
-                        </article>                    
-                        <p class="link"><a href="#">All News</a></p>
-                    </section>
-                    <section class="events">
-                        <h4>Events</h4>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>January 1 - January 31<br />
-                        All-day</p>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>February 10<br />
-                        6:00 PM - 7:30 PM</p>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>February 10<br />
-                        6:00 PM - 7:30 PM</p>
-                        <p class="link"><a href="#">All Events</a></p>
-                    </section>        
-                </div>
-            </section>   
-
-            <!-- news and events (no news photos) -->
-            <section class="contain-1120">
-                <div class="section-top">
-                    <h3>News and Events (no news photos)</h3>
-                    <p class="subhead">Optional Subhead</p>
-                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>     
-                </div>
-                <div class="news-event">
-                    <section class="news">
-                        <h4>News &amp; Announcements</h4>
-                        <article class="news-box">
-                            <h5><a href="#">Story Title Headline</a></h5>
-                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</p>
-                        </article> 
-                        <article class="news-box">
-                            <h5><a href="#">Story Title Headline</a></h5>
-                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</p>
-                        </article>                     
-                        <article class="news-box">
-                            <h5><a href="#">Story Title Headline</a></h5>
-                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</p>
-                        </article>                    
-                        <article class="news-box">
-                            <h5><a href="#">Story Title Headline</a></h5>
-                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</p>
-                        </article>                    
-                        <p class="link"><a href="#">All News</a></p>
-                    </section>
-                    <section class="events">
-                        <h4>Events</h4>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>January 1 - January 31<br />
-                        All-day</p>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>February 10<br />
-                        6:00 PM - 7:30 PM</p>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>February 10<br />
-                        6:00 PM - 7:30 PM</p>
-                        <p class="link"><a href="#">All Events</a></p>
-                    </section>        
-                </div>
-            </section>     
-            
-            <!-- news section (2 calendars) -->
-            <section class="contain-1120">
-                <div class="section-top">
-                    <h3>News and Events (2 Calendars)</h3>
-                    <p class="subhead">Optional Subhead</p>
-                    <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p> 
-                </div>
-                <div class="news-event showcase">
-                    <section class="news group">
-                        <h4>University News</h4>
-                        <img src="images/360x170.png" alt="" />
-                        <h5>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit.</h5>
-                        <a href="#" class="button">Link</a>
-                    </section>
-                    <section class="events">
-                        <h4>Calendar 1</h4>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>June 26<br />
-                        1:00 PM</p>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>July 1<br />
-                        12:00 PM</p>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>July 1<br />
-                        8:00 PM</p>
-                        <p class="link"><a href="#">Full Calendar</a></p>
-                    </section>   
-                    <section class="events">
-                        <h4>Calendar 2</h4>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>July 3<br />
-                        All Day</p>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>July 17<br />
-                        All Day</p>
-                        <h5><a href="#">Event Title</a></h5>
-                        <p>August 1<br />
-                        All Day</p>
-                        <p class="link"><a href="#">Full Calendar</a></p>
-                    </section>         
-                </div>
-            </section>                    
-
+            </div>
+             
             <!-- large feature -->
-            <section class="large-feature">
+            <div class="section large-feature">
                 <h3>Large Feature</h3>
                 <div class="large-feature-inner">
                     <div class="content-side">
@@ -936,6 +767,9 @@
                         <img src="images/455x255.gif" alt="" />
                         <div class="text">
                             <p>Used to highlight a topic with an image, description, and multiple links..</p>
+                            <ul>
+                                <li>blah blah</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="right-side">
@@ -950,10 +784,10 @@
                         </ul>
                     </div>
                 </div>    
-            </section>          
+            </div>
 
             <!-- statistics callout -->
-            <section class="contain-1120">
+            <div class="section contain-1120">
                 <div class="section-top">
                     <h3>Statistics Callout</h3>
                     <p class="subhead">Optional Subhead</p>
@@ -982,10 +816,10 @@
                 <ul class="center-list">
                     <li><a class="button" href="#">Optional Link</a></li>
                 </ul>
-            </section>  
+            </div>
 
             <!-- statistics callout - one item -->
-            <section class="contain-1120">
+            <div class="section contain-1120">
                 <div class="section-top">
                     <h3>Statistics Callout - One Item</h3>    
                     <p>To display a single statistic with the label alongside it, append the &quot;one-callout&quot; class to the &quot;stats-callout&quot; div.</p>
@@ -995,18 +829,15 @@
                         <span class="big">0%</span><span class="small">This is a label alongside the stat</span>
                     </div>                
                 </div>
-            </section>               
-            
-            <a href="#top" id="back-to-top">Back to top</a>     
-
-        </main>    
+            </div>
+        </main>
     </div>
     <footer>
         <div class="contain-970">
             <div class="footer-content">
                 <a href="http://www.northwestern.edu"><img src="https://common.northwestern.edu/v8/css/images/northwestern-university.svg" alt="Northwestern University" /></a>
                 <ul>
-                    <li>&copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> Northwestern University</li>
+                    <li>&copy; <script>document.write(new Date().getFullYear())</script> Northwestern University</li>
                     <li><a href="http://www.northwestern.edu/contact.html">Contact Northwestern University</a></li>
                     <li><a href="http://www.northwestern.edu/hr/careers/">Careers</a></li>
                     <li><a href="http://www.northwestern.edu/disclaimer.html">Disclaimer</a></li>
@@ -1035,8 +866,7 @@
                 </ul>
             </div>			
             <div class="footer-content">
-                <!-- change (department name) to your dept. -->
-                <p><strong>(Department Name) Social Media</strong></p>
+                <p><strong>Social Media</strong></p>
                 <a href="#" class="social facebook">Facebook</a>
                 <a href="#" class="social twitter">Twitter</a>
                 <a href="#" class="social social instagram">Instagram</a>
@@ -1055,7 +885,7 @@
                 <a href="#" class="social storify">Storify</a>
                 <a href="#" class="social pinterest">Pinterest</a>
                 <a href="#" class="social we-will">We Will</a>
-            </div>			
+            </div>
             <div class="footer-content">
                 <ul>
                     <li><a href="#">Link 1</a></li>
@@ -1069,8 +899,8 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-    <script type="text/javascript" src="js/scripts.js"></script>      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="js/scripts.js"></script>      
 
 </body>
 </html>

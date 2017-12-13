@@ -1,67 +1,69 @@
-// Northwestern University :: Departmental Templates v1.5.6 - 10 March 2017
-// developed by Christopher Garcia - Global Marketing & Communications
+// Northwestern University :: Departmental Templates v2.0 - 13 December 2017
+// developed by Christopher Garcia, Senior Front End Web Developer; Global Marketing and Communications
 // Questions? Email: webcomm-support@northwestern.edu
 
-
-// the base (do not modify)
+// base (do not modify)
 @import "base/reset";
 @import "base/variables";
-@import "base/ie";
 @import "base/mixins-extends";
 @import "base/core";
-@import "base/typography";
+@import "base/ie";
 @import "base/forms";
+@import "base/typography";
 
-// the main sections (do not modify)
+// main sections (do not modify)
+@import "sections/datatables";
 @import "sections/emergency";
+@import "sections/footer";
 @import "sections/header";
+@import "sections/heroes";
+@import "sections/left-nav";
+@import "sections/responsive-tabs";
 @import "sections/search";
 @import "sections/top-nav";
-@import "sections/left-nav";
 @import "sections/mobile-nav";
-@import "sections/footer";
-@import "sections/responsive-tabs";
-@import "sections/heroes";
 
 // standard-page modules (do not modify)
 @import "page-types/standard-page/main";
-@import "page-types/standard-page/photo-feature-2-across"; 
-@import "page-types/standard-page/feature-boxes-2-columns";
-@import "page-types/standard-page/stats-callout"; 
 @import "page-types/standard-page/alternate-photo-float";
 @import "page-types/standard-page/background-select";
-@import "page-types/standard-page/showcase";
-@import "page-types/standard-page/pullquotes";
-@import "page-types/standard-page/people-list";
-@import "page-types/standard-page/news-event";
-@import "page-types/standard-page/plus-section"; 
-@import "page-types/standard-page/two-column-links";
 @import "page-types/standard-page/expand-collapse";
+@import "page-types/standard-page/feature-boxes-2-columns";
 @import "page-types/standard-page/narrow-page";
+@import "page-types/standard-page/news-events-announcements";
+@import "page-types/standard-page/news-event-listing";
+@import "page-types/standard-page/people-list";
+@import "page-types/standard-page/people-list-two-column";
+@import "page-types/standard-page/photo-feature-2-across"; 
 @import "page-types/standard-page/photo-grid";
+@import "page-types/standard-page/plus-section"; 
+@import "page-types/standard-page/pullquotes";
+@import "page-types/standard-page/showcase";
+@import "page-types/standard-page/two-column-links";
+@import "page-types/standard-page/stats-callout"; 
 
 // landing-page modules (do not modify)
 @import "page-types/landing-page/main";
-@import "page-types/landing-page/photo-feature-2-across";
-@import "page-types/landing-page/photo-feature-3-across";
-@import "page-types/landing-page/photo-feature-3-across";
+@import "page-types/landing-page/alternate-photo-float";
+@import "page-types/landing-page/announcement";
+@import "page-types/landing-page/background-select";
 @import "page-types/landing-page/feature-boxes-2-columns";
 @import "page-types/landing-page/feature-boxes-3-columns";
 @import "page-types/landing-page/feature-boxes-4-columns";
+@import "page-types/landing-page/large-feature";
+@import "page-types/landing-page/news-events";
+@import "page-types/landing-page/news-events-announcements";
+@import "page-types/landing-page/number-boxes";
+@import "page-types/landing-page/photo-feature-2-across";
+@import "page-types/landing-page/photo-feature-3-across";
+@import "page-types/landing-page/photo-grid";
+@import "page-types/landing-page/pullquotes";
+@import "page-types/landing-page/slideshow";
+@import "page-types/landing-page/stats-callout";
 @import "page-types/landing-page/three-column-links";
 @import "page-types/landing-page/three-column-list";
-@import "page-types/landing-page/large-feature";
-@import "page-types/landing-page/stats-callout";
-@import "page-types/landing-page/alternate-photo-float";
-@import "page-types/landing-page/background-select";
-@import "page-types/landing-page/pullquotes";
-@import "page-types/landing-page/number-boxes";
-@import "page-types/landing-page/news-events";
-@import "page-types/landing-page/announcement";
-@import "page-types/landing-page/slideshow";
-@import "page-types/landing-page/photo-grid";
 
-// add your own modules below
-
-// for specificity (do not modify)
+// last for specificity (do not modify)
 @import "base/buttons";
+
+// add new modules below

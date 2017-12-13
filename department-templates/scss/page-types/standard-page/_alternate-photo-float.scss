@@ -3,7 +3,7 @@
 .standard-page {
 
     .alternate-photo-float {
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
         @extend %clearfix;
         
         h3, h4 {
@@ -14,7 +14,9 @@
             padding-bottom: .5rem;
         }
         
-        .image-left, .image-right, .text {
+        .image-left,
+        .image-right,
+        .text {
             width: 360px / 836px * 100%; 
             max-width: 360px;
             margin-right: 20px / 836px * 100%; 
@@ -60,7 +62,9 @@
                 margin-top: 1rem;
             }
 
-            .image-left, .image-right, .text  {
+            .image-left,
+            .image-right,
+            .text  {
                 width: 100%; 
                 float: none;
                 position: relative;

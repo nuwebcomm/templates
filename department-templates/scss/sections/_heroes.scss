@@ -44,13 +44,13 @@
         
         &:before {
             background: url("#{$path-images}/icons/ltpurple-slash.svg") no-repeat 50% / 17px 21px;
-            padding: 0 1.5rem;
+            padding: 0 20px;
             content: " ";
         }  
         
         &:after {
             background: url("#{$path-images}/icons/ltpurple-slash.svg") no-repeat 50% / 17px 21px;
-            padding: 0 1.5rem;
+            padding: 0 20px;
             content: " ";
         } 
     }   
@@ -61,6 +61,10 @@
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
         margin: 0 0 1rem 0;
         position: relative;
+    
+        &.description {
+            font: 24px/1.2em $AkkuratProRegular;
+        }
     }    
 }
 
@@ -84,13 +88,13 @@
 
                     &:before {
                         background: url("#{$path-images}/icons/ltpurple-slash.svg") no-repeat 50% / 17px 21px;
-                        padding: 0 1.5rem;
+                        padding: 0 20px;
                         content: " ";
                     }  
 
                     &:after {
                         background: url("#{$path-images}/icons/ltpurple-slash.svg") no-repeat 50% / 17px 21px;
-                        padding: 0 1.5rem;
+                        padding: 0 20px;
                         content: " ";
                     } 
                 }
@@ -216,7 +220,8 @@
 
 @media screen and (max-width: 480px) {
     
-    .landing-page, .standard-page {
+    .landing-page,
+    .standard-page {
         
         .hero {
   
@@ -264,6 +269,10 @@
 
             p {
                 font-size: 28px;
+            
+                &.description {
+                    font-size: 20px;
+                }
             }  
 
             &.mobile-hero { // append this class to .hero to move the overlapping hero text below the image

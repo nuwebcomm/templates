@@ -1,4 +1,4 @@
-// news and events
+// news and events (original versions with edits)
 
 .landing-page {
     
@@ -8,42 +8,29 @@
         display: flex; // equal height columns
         @extend %clearfix;
     
-        section {
+        .section {
             margin-bottom: 2rem;
         }
     }
 
-    .news, .events {
-        border-bottom: 4px solid $medium-grey;
-        position: relative;
+    .news, 
+    .events {
+        border-bottom: 4px solid $light-grey;
 
         h4 {
-            font: 30px $AkkuratProRegular;
-            color: $rich-black-50;
-            border-bottom: 4px solid $medium-grey;
-            padding-bottom: .5rem;
+            font: 30px/1.2em $AkkuratProRegular;
             margin-bottom: 1.5rem;
+            padding-bottom: .5rem;
+            color: $rich-black-50;
+            border-bottom: 4px solid $light-grey;
         }
         
         h5 {
             font: 18px/1.3em $AkkuratProBold;
-            color: $rich-black-80;
-            margin-bottom: 1rem; 
+            margin-bottom: .5rem;
+            padding-bottom: 0;
+            border: none;       
         }    
-
-        p.link {
-            font: 16px $AkkuratProBold;
-            position: absolute;
-            bottom: -2.5rem; // puts link below line (was -4rem for tl)
-            text-transform: uppercase;
-            margin-bottom: 0;
-
-            &:after {
-                background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat top 35% right 50% / 6px 10px;
-                padding-right: 1.5em;
-                content: " ";
-            }                     
-        } 
     }
 
     .news {
@@ -61,64 +48,9 @@
         &:nth-of-type(2n) {
             margin-right: 0;
         }
-
-        .news-image {
-            width: 170px / 360px * 100%;
-            float: left;
-            margin-right: 10px / 360px * 100%;
-        }
-
-        .news-text {
-            float: left;
-            width: 180px / 360px * 100%;    
-        }
-    }
-
-    // full-width news (6+ stories) (deprecated)
-    .news-full {
-        position: relative;
-        border-bottom: 4px solid #ccc;
-        margin-bottom: 6rem; // compensates for p.link
-        @extend %clearfix;
-
-        .news-box {
-
-            h4 {
-                font: 18px/1.3em $AkkuratProBold;
-                color: $nu-purple;
-                margin-bottom: 1rem; 
-            } 
-        }
-
-        .news-box {
-            float: left;
-            width: 360px / 1120px * 100%;
-            margin-right: 20px / 1120px * 100%;
-            margin-bottom: 1rem;
-            @extend %clearfix;
-
-            &:nth-of-type(3n) {
-                margin-right: 0;
-            }
-
-            .news-image {
-                width: 170px / 360px * 100%;
-                float: left;
-                margin-right: 10px / 360px * 100%;
-            }
-            
-            .news-text {
-                float: left;
-                width: 180px / 360px * 100%;
-            }
-        }
-
-        p.link {
-            font: 16px $AkkuratProBold;
-            position: absolute;
-            bottom: -2.5rem; // puts link below line (was -4rem for tl)
-            text-transform: uppercase;
-            margin-bottom: 0;
+        
+        > p {
+            margin-top: 0;
         }
     }
 
@@ -142,7 +74,6 @@
         margin-left: 20px / 1120px * 100%;
 
         h5 {
-            margin-bottom: .2rem;
             color: $rich-black-50;
         }
         
@@ -160,15 +91,6 @@
             .news-box {
                 width: 100%;
                 float: none;
-
-                .news-image {
-                    width: 170px / 564px * 100%;
-                    margin-right: 10px / 564px * 100%;
-                }
-                
-                .news-text {
-                    width: 384px / 564px * 100%;
-                }
             }
         }
 
@@ -178,30 +100,6 @@
         }    
     }
 
-    @media screen and (max-width: 900px) {
-
-        .news-full {
-
-            .news-box {
-                width: 430px / 900px * 100%;
-                margin-right: 20px / 900px * 100%;
-
-                &:nth-of-type(3n) {
-                    margin-right: 20px / 900px * 100%;
-                } 
-
-                .news-image {
-                    width: 170px / 430px * 100%;
-                    margin-right: 10px / 430px * 100%;
-                }
-                
-                .news-text {
-                    width: 250px / 430px * 100%;
-                }
-            }
-        }
-    }
-
     @media screen and (max-width: 768px) {
 
         .news-event {
@@ -209,12 +107,6 @@
             &.showcase {
                 display: inherit;
                 margin-bottom: 3rem;
-
-                p.link {
-                    position: relative;
-                    bottom: 0;
-                    margin-top: 2rem;
-                }  
                 
                 .news, .events {
                     width: 100%;
@@ -242,40 +134,20 @@
             margin-bottom: 3rem;
         }
 
-        .news, .events {
+        .news, 
+        .events {
             width: 100%;
             float: none;
             margin-bottom: 3rem;
             margin-left: 0;
             border-bottom: none;
-
-            p.link {
-                position: relative;
-                bottom: 0;
-                margin-top: 2rem;
-            }
-        }
-
-        .news-full {
-
-            .news-box {
-                width: 100%;
-                margin-right: 0;
-
-                .news-image {
-                    width: 170px / 550px * 100%;
-                    margin-right: 10px / 550px * 100%;
-                }
-                .news-text {
-                    width: 370px / 550px * 100%;
-                }
-            }
         }
     }
 
     @media screen and (max-width: 550px) {
 
-        .news, .events {
+        .news, 
+        .events {
 
             h5 {
                 font-size: 18px;
@@ -285,7 +157,8 @@
 
     @media screen and (max-width: 480px) {
 
-        .news, .events {
+        .news, 
+        .events {
 
             h4 {
                 font-size: 24px;

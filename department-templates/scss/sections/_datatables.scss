@@ -1,0 +1,582 @@
+// datables
+// modified from: https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css
+
+table.dataTable {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 1px 0 0 rgba(187, 184, 184,0.75);
+    margin-bottom: 1rem;        
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    padding: 10px 18px;
+}
+
+table.dataTable thead th:active,
+table.dataTable thead td:active {
+    outline: none;
+}
+
+table.dataTable tfoot th,
+table.dataTable tfoot td {
+    padding: 10px 18px 6px 18px;
+    border-top: 1px solid #111;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+table.dataTable thead .sorting {
+    background-image: url("//cdn.datatables.net/1.10.16/images/sort_both.png");
+}
+
+table.dataTable thead .sorting_asc {
+    background-image: url("//cdn.datatables.net/1.10.16/images/sort_asc.png");
+}
+
+table.dataTable thead .sorting_desc {
+    background-image: url("//cdn.datatables.net/1.10.16/images/sort_desc.png");
+}
+
+table.dataTable thead .sorting_asc_disabled {
+    background-image: url("//cdn.datatables.net/1.10.16/images/sort_asc_disabled.png");
+}
+
+table.dataTable thead .sorting_desc_disabled {
+    background-image: url("//cdn.datatables.net/1.10.16/images/sort_desc_disabled.png");
+}
+
+table.dataTable tbody tr {
+    background-color: $white
+}
+
+table.dataTable tbody tr.selected {
+    background-color: #B0BED9;
+}
+
+table.dataTable tbody th,
+table.dataTable thead th,
+table.dataTable tfoot th,
+table.dataTable tbody td {
+    padding: 8px 10px;
+    border: 1px solid $white;
+}
+
+//table.dataTable.row-border tbody th,
+//table.dataTable.row-border tbody td,
+//table.dataTable.display tbody th,
+//table.dataTable.display tbody td {
+//    border-top: 1px solid #ddd;
+//}
+
+table.dataTable.row-border tbody tr:first-child th,
+table.dataTable.row-border tbody tr:first-child td,
+table.dataTable.display tbody tr:first-child th,
+table.dataTable.display tbody tr:first-child td {
+    border-top: none;
+}
+
+table.dataTable.cell-border tbody th,
+table.dataTable.cell-border tbody td {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+table.dataTable.cell-border tbody tr th:first-child,
+table.dataTable.cell-border tbody tr td:first-child {
+    border-left: 1px solid #ddd;
+}
+
+table.dataTable.cell-border tbody tr:first-child th,
+table.dataTable.cell-border tbody tr:first-child td {
+    border-top: none;
+}
+
+table.dataTable.stripe tbody tr.odd,
+table.dataTable.display tbody tr.odd {
+    background-color: #f9f9f9;
+}
+
+table.dataTable.stripe tbody tr.odd.selected,
+table.dataTable.display tbody tr.odd.selected {
+    background-color: #acbad4;
+}
+
+table.dataTable.hover tbody tr:hover,
+table.dataTable.display tbody tr:hover {
+    background-color: #f6f6f6;
+}
+
+table.dataTable.hover tbody tr:hover.selected,
+table.dataTable.display tbody tr:hover.selected {
+    background-color: #aab7d1;
+}
+
+table.dataTable.order-column tbody tr>.sorting_1,
+table.dataTable.order-column tbody tr>.sorting_2,
+table.dataTable.order-column tbody tr>.sorting_3,
+table.dataTable.display tbody tr>.sorting_1,
+table.dataTable.display tbody tr>.sorting_2,
+table.dataTable.display tbody tr>.sorting_3 {
+    background-color: #fafafa;
+}
+
+table.dataTable.order-column tbody tr.selected>.sorting_1,
+table.dataTable.order-column tbody tr.selected>.sorting_2,
+table.dataTable.order-column tbody tr.selected>.sorting_3,
+table.dataTable.display tbody tr.selected>.sorting_1,
+table.dataTable.display tbody tr.selected>.sorting_2,
+table.dataTable.display tbody tr.selected>.sorting_3 {
+    background-color: #acbad5;
+}
+
+table.dataTable.display tbody tr.odd>.sorting_1,
+table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: #f1f1f1;
+}
+
+table.dataTable.display tbody tr.odd>.sorting_2,
+table.dataTable.order-column.stripe tbody tr.odd>.sorting_2 {
+    background-color: #f3f3f3;
+}
+
+table.dataTable.display tbody tr.odd>.sorting_3,
+table.dataTable.order-column.stripe tbody tr.odd>.sorting_3 {
+//    background-color: whitesmoke
+}
+
+table.dataTable.display tbody tr.odd.selected>.sorting_1,
+table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_1 {
+    background-color: #a6b4cd;
+}
+
+table.dataTable.display tbody tr.odd.selected>.sorting_2,
+table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_2 {
+    background-color: #a8b5cf;
+}
+
+table.dataTable.display tbody tr.odd.selected>.sorting_3,
+table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_3 {
+    background-color: #a9b7d1;
+}
+
+table.dataTable.display tbody tr.even>.sorting_1,
+table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+    background-color: #fafafa;
+}
+
+table.dataTable.display tbody tr.even>.sorting_2,
+table.dataTable.order-column.stripe tbody tr.even>.sorting_2 {
+    background-color: #fcfcfc;
+}
+
+table.dataTable.display tbody tr.even>.sorting_3,
+table.dataTable.order-column.stripe tbody tr.even>.sorting_3 {
+    background-color: #fefefe;
+}
+
+table.dataTable.display tbody tr.even.selected>.sorting_1,
+table.dataTable.order-column.stripe tbody tr.even.selected>.sorting_1 {
+    background-color: #acbad5;
+}
+
+table.dataTable.display tbody tr.even.selected>.sorting_2,
+table.dataTable.order-column.stripe tbody tr.even.selected>.sorting_2 {
+    background-color: #aebcd6;
+}
+
+table.dataTable.display tbody tr.even.selected>.sorting_3,
+table.dataTable.order-column.stripe tbody tr.even.selected>.sorting_3 {
+    background-color: #afbdd8;
+}
+
+table.dataTable.display tbody tr:hover>.sorting_1,
+table.dataTable.order-column.hover tbody tr:hover>.sorting_1 {
+    background-color: #eaeaea;
+}
+
+table.dataTable.display tbody tr:hover>.sorting_2,
+table.dataTable.order-column.hover tbody tr:hover>.sorting_2 {
+    background-color: #ececec;
+}
+
+table.dataTable.display tbody tr:hover>.sorting_3,
+table.dataTable.order-column.hover tbody tr:hover>.sorting_3 {
+    background-color: #efefef;
+}
+
+table.dataTable.display tbody tr:hover.selected>.sorting_1,
+table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_1 {
+    background-color: #a2aec7;
+}
+
+table.dataTable.display tbody tr:hover.selected>.sorting_2,
+table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_2 {
+    background-color: #a3b0c9
+}
+
+table.dataTable.display tbody tr:hover.selected>.sorting_3,
+table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_3 {
+    background-color: #a5b2cb;
+}
+
+table.dataTable.nowrap th,
+table.dataTable.nowrap td {
+    white-space: nowrap;
+}
+
+table.dataTable.compact thead th,
+table.dataTable.compact thead td {
+    padding: 4px 17px 4px 4px;
+}
+
+table.dataTable.compact tfoot th,
+table.dataTable.compact tfoot td {
+    padding: 4px;
+}
+
+table.dataTable.compact tbody th,
+table.dataTable.compact tbody td {
+    padding: 4px;
+}
+
+table.dataTable th.dt-left,
+table.dataTable td.dt-left {
+    text-align: left;
+}
+
+table.dataTable th.dt-center,
+table.dataTable td.dt-center,
+table.dataTable td.dataTables_empty {
+    text-align: center;
+}
+
+table.dataTable th.dt-right,
+table.dataTable td.dt-right {
+    text-align: right;
+}
+
+table.dataTable th.dt-justify,
+table.dataTable td.dt-justify {
+    text-align: justify;
+}
+
+table.dataTable th.dt-nowrap,
+table.dataTable td.dt-nowrap {
+    white-space: nowrap;
+}
+
+table.dataTable thead th.dt-head-left,
+table.dataTable thead td.dt-head-left,
+table.dataTable tfoot th.dt-head-left,
+table.dataTable tfoot td.dt-head-left {
+    text-align: left;
+}
+
+table.dataTable thead th.dt-head-center,
+table.dataTable thead td.dt-head-center,
+table.dataTable tfoot th.dt-head-center,
+table.dataTable tfoot td.dt-head-center {
+    text-align: center;
+}
+
+table.dataTable thead th.dt-head-right,
+table.dataTable thead td.dt-head-right,
+table.dataTable tfoot th.dt-head-right,
+table.dataTable tfoot td.dt-head-right {
+    text-align: right;
+}
+
+table.dataTable thead th.dt-head-justify,
+table.dataTable thead td.dt-head-justify,
+table.dataTable tfoot th.dt-head-justify,
+table.dataTable tfoot td.dt-head-justify {
+    text-align: justify;
+}
+
+table.dataTable thead th.dt-head-nowrap,
+table.dataTable thead td.dt-head-nowrap,
+table.dataTable tfoot th.dt-head-nowrap,
+table.dataTable tfoot td.dt-head-nowrap {
+    white-space: nowrap;
+}
+
+table.dataTable tbody th.dt-body-left,
+table.dataTable tbody td.dt-body-left {
+    text-align: left;
+}
+
+table.dataTable tbody th.dt-body-center,
+table.dataTable tbody td.dt-body-center {
+    text-align: center;
+}
+
+table.dataTable tbody th.dt-body-right,
+table.dataTable tbody td.dt-body-right {
+    text-align: right;
+}
+
+table.dataTable tbody th.dt-body-justify,
+table.dataTable tbody td.dt-body-justify {
+    text-align: justify;
+}
+
+table.dataTable tbody th.dt-body-nowrap,
+table.dataTable tbody td.dt-body-nowrap {
+    white-space: nowrap;
+}
+
+table.dataTable,
+table.dataTable th,
+table.dataTable td {
+    box-sizing: content-box;
+}
+
+
+// NU overrides
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+    
+    td {
+        position: relative;
+    }
+    
+    // expand/collapse arrow
+    a.details-control {
+        background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat center / 20px 20px;
+        height: 20px;
+        width: 20px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: .7rem;
+        left: 1rem;
+    }
+    
+    tr.shown td a.details-control {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    
+     td > span {
+        margin-left: 2.5rem;
+        display: block;
+    }  
+    
+    .dataTables_length {
+        float: left;
+        margin-bottom: 1rem;
+
+        label {
+            color: $rich-black-50;
+        }
+
+        select {
+            font: 16px/1.5em $AkkuratProBold;
+            color: $rich-black-50;
+            background-color: $white;
+            border: 1px solid $medium-grey;
+            display: inline-block;    
+            margin: 0;  
+            padding: 0.6em 1.5em 0.6em .5em;  
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-border-radius: 0;
+            border-radius: 0;        
+            background: url("#{$path-images}/icons/arrow-down-dkgrey.svg")  no-repeat top 50% right .5rem / 17px 10px;
+            width: 75px;
+
+            &::-ms-expand {
+                display: none;
+            } 
+
+            &:-moz-focusring {
+                color: transparent;
+                text-shadow: 0 0 0 #000;
+            }
+
+            option {
+                font-family: $AkkuratProRegular;
+            }        
+        }
+    }
+
+    .dataTables_filter {
+        float: right;
+        text-align: right;
+        margin-bottom: 1rem;
+
+        label {
+            color: $rich-black-50;
+        }           
+        
+        input {
+            margin-left: 0.5em;
+            font: 16px/1.5em $AkkuratProBold;
+            border: 1px solid $medium-grey;
+            padding: 0.4em 1.5em 0.4em .5em;              
+        }
+    } 
+
+    .dataTables_info {
+        clear: both;
+        float: left;
+        padding-top: 0.755em;
+        color: $rich-black-50;
+    }
+
+    .dataTables_paginate {
+        float: right;
+        text-align: right;
+        padding-top: 0.25em;
+    
+        .paginate_button {
+            box-sizing: border-box;
+            display: inline-block;
+            min-width: 1.5rem;
+            padding: .3rem .8rem;
+            margin-left: 2px;
+            text-align: center;
+            text-decoration: none !important;
+            cursor: pointer;
+            color: $nu-purple !important;
+            border: 1px solid transparent;
+            border-radius: 2px;
+
+            &.current,
+            &.current:hover {
+                color: $white !important;
+                border: none;
+                background-color: $nu-purple;
+            }
+
+            &.disabled,
+            &.disabled:hover,
+            &.disabled:active {
+                cursor: default;
+                color: $rich-black-10 !important;
+                border: 1px solid transparent;
+                background: transparent;
+                box-shadow: none;
+            }
+
+            &:hover {
+                color: white !important;
+                background-color: $nu-purple-30;
+            }
+
+            &:active {
+                outline: none;
+            }
+
+            &:focus {
+                outline: none;
+                border: 1px dashed $black;
+            }
+        }            
+
+        .ellipsis {
+            padding: 0 1em;
+        }
+    }
+
+    .dataTables_processing {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 40px;
+        margin-left: -50%;
+        margin-top: -25px;
+        padding-top: 20px;
+        text-align: center;
+        font-size: 1.2em;
+        background-color: white;
+    }
+
+    .dataTables_length,
+    .dataTables_filter,
+    .dataTables_info,
+    .dataTables_processing,
+    .dataTables_paginate {
+        color: #333;
+    }
+
+    .dataTables_scroll {
+        clear: both;
+
+        div.dataTables_scrollBody {
+            -webkit-overflow-scrolling: touch;
+        }
+
+        div.dataTables_scrollBody>table>thead>tr>th,
+        div.dataTables_scrollBody>table>thead>tr>td,
+        div.dataTables_scrollBody>table>tbody>tr>th,
+        div.dataTables_scrollBody>table>tbody>tr>td {
+            vertical-align: middle;
+        }
+
+        div.dataTables_scrollBody>table>thead>tr>th>div.dataTables_sizing,
+        div.dataTables_scrollBody>table>thead>tr>td>div.dataTables_sizing,
+        div.dataTables_scrollBody>table>tbody>tr>th>div.dataTables_sizing,
+        div.dataTables_scrollBody>table>tbody>tr>td>div.dataTables_sizing {
+            height: 0;
+            overflow: hidden;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        &:after {
+            visibility: hidden;
+            display: block;
+            content: "";
+            clear: both;
+            height: 0;
+        }
+    }        
+}
+
+@media screen and (max-width: 767px) {
+    
+    .dataTables_wrapper {
+        
+        .dataTables_info,
+        .dataTables_paginate {
+            float: none;
+            text-align: center;
+        }
+        
+        .dataTables_paginate {
+            margin-top: 0.5em;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    .dataTables_wrapper {
+        
+        .dataTables_length,
+        .dataTables_filter {
+            float: none;
+            text-align: center;
+        }
+        
+        .dataTables_filter {
+            margin-top: 0.5em;
+        }
+    }
+}

@@ -5,19 +5,23 @@
     .feature-two-col {
         display: -webkit-flex;
         display: -ms-flexbox;
-        display: flex; // equal height columns        
+        display: flex; // equal height columns  
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; // wrap child items           
         margin-bottom: 20px / 836px * 100%;
-        @extend %clearfix;
 
         .feature-box {
             width: 407px / 836px * 100%;   
-            float: left;
             background: $light-grey;
-            margin-left: 20px / 836px * 100%;
             position: relative;
 
-            &:first-child {
-                margin-left: 0;
+            &:nth-child(even) {
+                margin-left: 20px / 836px * 100%; 
+            }
+            
+            &:nth-child(n+3) { // adds margin when more than 2
+                margin-top: 1.25rem;
             }
 
             &.no-button { // tightens things up when there's no button
@@ -25,7 +29,7 @@
                 .feature-copy {
                     padding-bottom: 1rem;
                 }
-            }            
+            }
             
             .feature-copy {
                 padding: 1rem 1.5rem 4rem 1.5rem;
@@ -45,7 +49,7 @@
     }
     
     // media queries 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 600px) {
         
         .feature-two-col {
             display: inherit;
@@ -53,11 +57,20 @@
 
             .feature-box {
                 width: inherit;
-                max-width: 407px; 
-                float: none;
-                background: $light-grey;
-                margin-left: 0;
-                margin-bottom: 2rem;
+                max-width: 407px;
+                margin-bottom: 1.25rem;
+             
+                &:nth-child(even) {
+                    margin-left: 0; 
+                }
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                
+                &:nth-child(n+2) {
+                    margin-top: 0;
+                }
             }
         }        
     }

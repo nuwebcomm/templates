@@ -34,12 +34,21 @@
         
         a {
             color: $nu-purple;
-            font-weight: bold;
             text-decoration: none;
             
             &:hover {
                 text-decoration: underline;
             }
+            
+            &.button { // override
+                color: $white;
+                text-decoration: none;
+            }
+        }
+        
+        p.button a { // override
+            color: $white;
+            text-decoration: none;
         }
     
         @media screen and (max-width: 768px) {

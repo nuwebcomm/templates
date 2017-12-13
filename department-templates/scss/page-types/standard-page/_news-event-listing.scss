@@ -53,24 +53,27 @@
             }        
         }
         
+        .event-description {
+            margin-left: 105px;
+
+            h4 {
+                font: 18px/1.3em $AkkuratProBold;
+                margin-bottom: .5rem;
+                padding-bottom: 0;        
+            }              
+
+            > p {
+                margin-top: 0;  
+                line-height: 1.2em;
+            }            
+        }
+
         .event-time-location {
             font: 14px/1.4em $AkkuratProBold;
             color: $rich-black-80;
             margin-bottom: .5rem;
-        }
-        
-        .event-description {
-            margin-left: 105px;
-            
-            h4 {
-                font: 18px/1.3em $AkkuratProBold;
-                margin-bottom: 0          
-            }
-            
-            > p {
-                margin-top: .5rem;    
-            }            
-        }
+            margin-top: .5rem;
+        }  
     }
     
     // media queries
