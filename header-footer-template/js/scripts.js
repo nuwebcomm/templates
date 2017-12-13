@@ -1,11 +1,5 @@
 $(document).ready(function () {
 
-    //mobile nav hidden
-    $('#mobile-nav').attr({
-		'aria-expanded': 'false',
-		'aria-hidden': 'true'
-	});    
-    
     // expandable mobile elements
 	var _time = 100; // transition time
 
@@ -42,7 +36,7 @@ $(document).ready(function () {
     $('#mobile-nav').attr({
 		'aria-expanded': 'false',
 		'aria-hidden': 'true'
-	});    
+	});  
     
 	// open menu
 	$(".mobile-nav-link").click(function (e) {
@@ -121,15 +115,29 @@ $(document).ready(function () {
 			clicked.parent().removeClass('open');
 			clicked.find('span').html('Expand');
 		}
-	});	   
+	});
     
+    // accessible #top-nav dropdown
+    $("#top-nav").accessibleTopNavDropDown();
+    
+    // accessible #global-links dropdown
+    $("#global-links").accessibleGlobalLinksDropDown();
+
 });
 
-// accessible quick links dropdown in #top-bar #right
-$(document).ready(function() {	
-    $("#right").accessibleDropDown();
-});
-$.fn.accessibleDropDown = function ()
+// accessible #top-nav dropdown
+$.fn.accessibleTopNavDropDown = function ()
+{
+    var el = $(this);
+    $("a", el).focus(function() {
+        $(this).parents("li").addClass("hover");
+    }).blur(function() {
+        $(this).parents("li").removeClass("hover");
+    });
+}
+
+// accessible #global-links dropdown
+$.fn.accessibleGlobalLinksDropDown = function ()
 {
     var el = $(this);
     $("a", el).focus(function() {

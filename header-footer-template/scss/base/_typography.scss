@@ -36,10 +36,10 @@ h6 {
     max-width: 1120px;    
 }
 
-.content-full {
+.content {
     width: 100%;
     
-    a {  // default link based on parent class above
+    a {  // default link style
         font-family: $AkkuratProBold;
         color: $nu-purple;
         text-decoration: none;

@@ -1,8 +1,8 @@
 // variables
 
-// path to files - the default is common.northwestern.edu and can be http or https
-$path-fonts: 'https://common.northwestern.edu/v8/css/fonts';
-$path-images: 'https://common.northwestern.edu/v8/css/images';
+// path to image and font files - the default is common.northwestern.edu and can be http or https
+$path-fonts: '//common.northwestern.edu/v8/css/fonts';
+$path-images: '//common.northwestern.edu/v8/css/images';
 
 // colors
 
@@ -11,6 +11,7 @@ $path-images: 'https://common.northwestern.edu/v8/css/images';
     $black: #000;
     $medium-grey: #ccc;
     $light-grey: #f0f0f0;
+    $light-grey2: #e3e3e3;
     $red: #b2292e;
 
     // northwestern purples

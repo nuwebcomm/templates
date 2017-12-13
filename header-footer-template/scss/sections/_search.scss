@@ -1,4 +1,4 @@
-// Search
+// search
 
 #mobile-search {
 	display: none;
@@ -8,7 +8,7 @@
 	width: 265px / 1120px * 100%;
     display: table-cell;
     vertical-align: middle;
-    @extend %clearfix; // clearfix    
+    @extend %clearfix;   
 
     .search-form {
         width: 265px;
@@ -41,6 +41,10 @@
             &:-ms-input-placeholder {
                 color: $nu-purple-30;
             }
+            
+            &:focus {
+                outline: 1px dashed $white;
+            }
         }
         
         button {
@@ -53,10 +57,10 @@
             border: none;
             border-bottom: 1px solid $nu-purple-30;
             -webkit-appearance: none;
-        }
-
-        input:focus {
-            outline: 0;
+            
+            &:focus {
+                outline: 1px dashed $white;
+            }
         }
     }
 }
@@ -91,7 +95,7 @@
 	.search-form {
 		width: 100%;
 		height: auto;
-		background: $nu-purple;
+		background: $nu-purple-120;
 		float: none;
         position: relative;
 
@@ -111,7 +115,23 @@
             color: $white;
 			background: none;
 			border: none;
-		}
+		
+            &::-webkit-input-placeholder {
+                color: $nu-purple-30;
+            }
+
+            &::-moz-placeholder {
+                color: $nu-purple-30;
+            }
+
+            &:-moz-placeholder {
+                color: $nu-purple-30;
+            }
+
+            &:-ms-input-placeholder {
+                color: $nu-purple-30;
+            }        
+        }
 
 		button {
 			float: left;

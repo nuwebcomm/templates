@@ -15,117 +15,210 @@ header {
         float: left;
         padding-left: 0;
 
-        img { // northwestern logo
-            width: 170px;
-            margin: 1.1rem 0 1rem 0;
-        }    
-    }
-    
-    // quick links on right side with optional resources dropdown            
-    #right {
-        position: relative;
-        float: right;
-        color: $white;
-        text-transform: uppercase;
-        
-        > ul {
-            margin: 0;
-            display: table;
-
-            a {	
-                color: $white;
-                text-decoration: none; 
-                display: block;
-                position: relative;
-            }
-
-            a:hover, a:focus, a:active { 
-                text-decoration: underline;  
-            }            
+        #northwestern { // northwestern wordmark
             
-            li {
-                display: table-cell;
-                vertical-align: middle;
-                position: relative;
-                line-height: 100%;
-                padding-left: 1rem;
-                height: 60px;
- 
-                &:hover, &.hover {
-                    z-index: 100;
-                } 
-                
-                &:hover ul, &.hover ul {
-                    right: 0;
-                    top: 60px;
-                    z-index: 1000; // show dropdown
-                }  
-                
-                &.resources { // for "resources" dropdown
-                    cursor: pointer;
-                
-                    > a {
-                        display: inline;
-                    }
-                }    
-    
-                .dropdown-arrow {
-                    background: url("#{$path-images}/icons/arrow-down-white.svg") no-repeat 50% center;
-                    width: 10px;
-                    height: 10px;
-                    display: inline-block;
-                    margin-left: .5em;
-                }             
-            }     
-
-            // dropdown
-            ul {
-                position: absolute;
-                top: 100%;
-                width: 150px;
-                background: $nu-purple-70;
-                padding: .5rem;
-                text-align: right;
-                z-index: -1000; // hide dropdown
-                
-                li {
-                    float: none;
-                    padding: 0 0 .5rem 0;
-                    width: 100%;
-                    margin: 0;
-                    display: inline-block;
-                    line-height: 1.2em;
-                    height: inherit;
+            a { 
+                width: 170px;
+                height: 21px;
+                display: inline-block;
+                margin: 1.1rem 0 0 0;
+                background: url("#{$path-images}/northwestern.svg") no-repeat center;
             
-                    &:hover ul, &.hover ul {
-                        left: 0;
-                    }  
-                    
-                    &:last-child {
-                        padding-bottom: 0;
-                    }                    
-                }
+                &:focus {
+                    outline: 1px dashed $white;
+                }            
             }
-        }
+        }  
     } 
-}         
-
-.bottom-bar { // area where department name and search reside
-    display: table;
-    width: 100%;
-    @extend %clearfix;
+    
+    #parent-unit { // hide by default
+        display: none;
+    }
 }
 
-#department {
+// for templates with a parent unit utilizing "N" wordmark
+#parent {
+
+    #left {
+        position: relative;
+        display: table;
+
+        #northwestern { // northwestern wordmark
+            
+            a {
+                width: 78px;
+                height: 78px;
+                display: inline-block;
+                margin: 0;
+                background: url("#{$path-images}/northwestern-university-n.svg") no-repeat center;
+                position: absolute;
+                top: 10px;
+            
+                &:focus {
+                    outline: none;
+                    border: 1px dashed $white;
+                }              
+            }
+        } 
+    }
+
+    #parent-unit {
+        font: 18px/1.2em $AkkuratProRegular;
+        text-transform: uppercase;
+        padding-left: 6rem;
+        display: table-cell;
+        vertical-align: middle;
+        height: 60px;
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+
+        strong {
+            font-family: $AkkuratProBold;
+            font-weight: normal;
+        }
+
+        span { // for multi-line departments
+            display: block;
+        }
+    } 
+    
+    #bottom-bar {
+        margin-top: 0;
+    }
+}
+
+// optional global links with available dropdown            
+#global-links {
+    position: relative;
+    float: right;
+    color: $white;
+    text-transform: uppercase;
+
+    > ul {
+        margin: 0;
+        display: table;
+
+        a {	
+            color: $white;
+            text-decoration: none; 
+            display: block;
+            position: relative;
+        }
+
+        a:hover, a:focus, a:active { 
+            text-decoration: underline;  
+        }            
+
+        li {
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            line-height: 100%;
+            padding-left: 1rem;
+            height: 60px;
+
+            &:hover, &.hover {
+                z-index: 100;
+            } 
+
+            &:hover ul, &.hover ul {
+                right: 0;
+                top: 60px;
+                z-index: 1000; // show dropdown
+            }  
+
+            &.resources { // for "resources" dropdown
+                cursor: pointer;
+
+                > a {
+                    display: inline;
+                }
+            }    
+
+            .dropdown-arrow {
+                @extend %white-down-arrow;
+            }             
+        }     
+
+        // dropdown
+        ul {
+            position: absolute;
+            top: 100%;
+            width: 150px;
+            background: $nu-purple-70;
+            padding: .5rem;
+            text-align: right;
+            z-index: -1000; // hide dropdown
+
+            li {
+                float: none;
+                padding: 0 0 .5rem 0;
+                width: 100%;
+                margin: 0;
+                display: inline-block;
+                line-height: 1.2em;
+                height: inherit;
+
+                &:hover ul, &.hover ul {
+                    left: 0;
+                }  
+
+                &:last-child {
+                    padding-bottom: 0;
+                }                    
+            }
+        }
+    }
+} 
+
+// quick links
+#quick-links {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-right: .5rem;
+    text-align: right;
+    width: 100%;
+    
+    ul {
+        list-style-type: none;
+        margin: .75rem 0 -1rem 0;
+        padding: 0;
+    
+        li {
+            display: inline-block;
+            padding-left: 1rem;
+        }
+    }
+
+    a {
+        font: 12px/1em $AkkuratProBold;
+        color: $white;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover, &:focus, &:active { 
+            text-decoration: underline;  
+        }            
+    }
+}  
+
+#bottom-bar { // area where site name and search reside
+    display: table;
+    width: 100%;
+    padding: 2.25rem 0;
+}
+
+#site-name {
     display: table-cell;
     vertical-align: middle;
     width: 855px / 1120px * 100%;
-    height: 112px;
-    padding: 1rem 4rem 1rem 0;
+    padding-right: 2rem;
     
     h1 {
-        font: 32px $AkkuratProRegular;
-        line-height: 1em;
+        font: 32px/1em $AkkuratProRegular;
 
         &.small {
             font-size: 16px;
@@ -152,7 +245,7 @@ header {
         &:hover {
             text-decoration: none;
         }
-    }    
+    }  
 }
 
 // media queries
@@ -160,52 +253,97 @@ header {
     
     #top-bar {
         padding: 0 .5rem;
-    }
-    
-    #department {
+    }   
+}
+
+@media screen and (max-width: 1155px) {
+
+   #bottom-bar {
         padding-left: .5rem;
-    }     
+    }   
 }
 
 @media screen and (max-width: 768px) {
     
     #top-bar {
-        display: block;
         padding: 0;
         
         #left {
-            display: inline-block;
             float: none;
             margin-left: .5rem;           
         }
+    }
     
-        #right {
-            display: none;
-        }
-    }   
-    
-    #department {
-        width: 100%;
-        padding: .5rem;
-        height: auto;
-
-        h1 {
-            margin: .5rem 0;
-            font-size: 24px;
+    #parent #left {
+        
+        #northwestern a {
+            width: 60px;
+            height: 60px;
         }
         
-        h2 {
-            margin: .2rem .2rem .2rem 0;
-        }            
+        #parent-unit {
+            padding-left: 4.5rem;
+        }
+        
+        #site-name {
+            font-size: 16px;
+        }
+    }
+    
+    #global-links, #quick-links {
+        display: none;
+    }
+    
+    #bottom-bar {
+        padding: 1.75rem 1rem 1.5rem .5rem;
+    }
+    
+    #site-name {
+        width: 100%;
+        padding: 0;
+
+        h1 {
+            font-size: 24px;
+        } 
     } 
 } 
 
 @media screen and (max-width: 480px) {
     
-    #department {
-
-        h1, h2 {
-            font-size: 22px;
+    #top-bar {
+        min-height: 50px;
+        
+        #left {
+            
+            #northwestern a {
+                width: 130px;
+                margin: .8rem 0 0 0;
+            }
         }
+    }
+    
+    #parent {   
+        
+        #left {
+            
+            #northwestern a {
+                width: 55px;
+                height: 55px;
+                top: 5px;
+                margin: 0;
+            }
+        
+            #parent-unit {
+                height: 50px;
+                padding-left: 4.25rem;
+            }        
+        }
+    }
+    
+    #site-name {
+
+        h1 {
+            font-size: 22px;
+        }      
     }
 }

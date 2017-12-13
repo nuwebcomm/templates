@@ -23,6 +23,14 @@ body {
     overflow-x: hidden;
 }
 
+a:focus {  // for accessible links
+   outline: 1px dashed;
+}
+
+a:active { // remove outline from mouse clicks
+    outline: none;
+}
+
 a.screen-reader-shortcut {
     left: .5em;
     position: absolute;

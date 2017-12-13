@@ -15,3 +15,27 @@
         clear: both;
     }
 }
+
+// down-arrow for top-navigation
+%purple-right-arrow {
+
+    &:after {
+        background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 50% 45% / 6px 10px;
+        padding-right: 1.5rem;
+        content: " "; 
+    }
+}
+
+// down arrow for resources
+%white-down-arrow {
+
+    &:after {
+        content: "\003E";
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);            
+        transform: rotate(90deg);
+        margin-left: .4rem;
+        color: $white;
+        display: inline-block;  
+    }
+}
