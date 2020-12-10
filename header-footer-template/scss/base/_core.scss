@@ -19,8 +19,8 @@ body {
     color: $rich-black-80;
     background: $white;
     min-width: 98%;
-    height: 100%;
-    overflow-x: hidden;
+    height: auto; // was originally 100%
+//    overflow-x: hidden; // override this if using "position: sticky" anywhere
 }
 
 a:focus {  // for accessible links
@@ -47,76 +47,34 @@ a.screen-reader-shortcut {
     }
 }
 
-#main-content {
+#container { 
+    position: relative;
+    background: $white;
+}
+
+.content {
     font-size: 16px;
     line-height: 1.7em;
     outline: none !important; // removes outline from tabindex
 }
-    
-// centered containers
-.contain-780 {
-    margin: 0 auto;
-    max-width: 780px;
-    box-sizing: content-box;
-}
 
-.contain-850 {
-    margin: 0 auto;
-    max-width: 850px;
-    box-sizing: content-box;
-}
-
-.contain-970 {
-    margin: 0 auto;
-    max-width: 970px;
-    box-sizing: content-box;
-}
-
-.contain-1120 {
+.contain-1120 { 
     margin: 0 auto;
     max-width: 1120px;
-    box-sizing: content-box;    
 }
 
-.contain-1440 {
-    margin: 0 auto;
-    max-width: 1440px;
-}
-
-// misc
-img {
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
-}
-
-.hide-label {
+.hide-text, .hide-label {
     position: absolute;
-    left: -10000px;
+    left: -99999em;
     top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
 }
 
-.group:after { // the clearfix
-    content: "";
-    display: table;
-    clear: both;
-}
+@media screen and (max-width: 48em) {
 
-// media queries
-@media screen and (max-width: 1140px) { // adds left/right margin for smaller screen widths
-    
-    #main-content .contain-1120 {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    
-    .hide-mobile, a.screen-reader-shortcut {
+    .hide-mobile {
         display: none;
     }
 }

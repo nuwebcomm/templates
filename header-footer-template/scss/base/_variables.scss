@@ -1,8 +1,18 @@
 // variables
 
-// path to image and font files - the default is common.northwestern.edu and can be http or https
-$path-fonts: '//common.northwestern.edu/v8/css/fonts';
-$path-images: '//common.northwestern.edu/v8/css/images';
+// path to font files
+$path-fonts: 'https://common.northwestern.edu/v8/css/fonts';
+
+// comment in/out as necessary for custom projects
+    // path to CMS files:
+
+//    $open: '[system-asset]/dept/3.0/';
+//    $close: '[/system-asset]';
+
+    // path to local files:
+
+    $open: '';
+    $close: '';
 
 // colors
 
@@ -12,10 +22,9 @@ $path-images: '//common.northwestern.edu/v8/css/images';
     $medium-grey: #ccc;
     $light-grey: #f0f0f0;
     $light-grey2: #e3e3e3;
-    $red: #b2292e;
 
     // northwestern purples
-    $nu-purple: #4e2a84; // official NU Purple
+    $nu-purple: #4e2a84; // official NU Purple (default link color)
     $nu-purple-120: #401f68; // NU Purple 120
     $nu-purple-70: #765da0; // NU Purple 70
     $nu-purple-60: #836eaa; // NU Purple 60
@@ -28,30 +37,8 @@ $path-images: '//common.northwestern.edu/v8/css/images';
     $rich-black-20: #bbb8b8; // Rich Black 20
     $rich-black-10: #d8d6d6; // Rich Black 10
 
-    // secondary palette - brights
-    $bright-green: #58b947;
-    $aqua: #7fcecd;
-    $blue: #5091cd;
-    $yellow: #ede93b;
-    $gold: #ffc520;
-    $red2: #ef553f;
-
-    // secondary pallette - darks
-    $dark-green: #008656;
-    $turquoise: #007fa4;
-    $dark-blue: #0d2d6c;
-    $marigold: #d9c826;
-    $burnt-orange: #ca7c1b;
-    $blood-orange: #d85820;
-
 // font stack
-$AkkuratLight: "Akkurat Pro Light", Arial, sans-serif;
-$AkkuratLightItalic: "Akkurat Pro Light Italic", Arial, sans-serif;
 $AkkuratProRegular: "Akkurat Pro Regular", Arial, sans-serif;
-$AkkuratProItalic: "Akkurat Pro Italic", Arial, sans-serif;
 $AkkuratProBold: "Akkurat Pro Bold", "Arial Black", sans-serif;
-$AkkuratProBoldItalic: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
-$CamptonBook: "Campton Book", Tahoma, sans-serif;
 $CamptonBold: "Campton Bold", Impact, sans-serif;
-$CamptonExtraBold: "Campton Extra Bold", Impact, sans-serif;
-$CamptonExtraLight: "Campton Extra Light", "Courier New", sans-serif;
+$PeriodicoBoldItalic: "Periodico Bold Italic", Georgia, serif;

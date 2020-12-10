@@ -32,37 +32,19 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-#ie {
-  background: #fcf3c5;
-  font: .8em/1em Arial, sans-serif;
-  text-align: center;
-  padding: .5em;
-  border-bottom: 1px solid #000;
-}
-
-#ie a {
-  font-weight: bold;
-}
-
-#ie p {
-  margin: 0;
-}
-
-#top-bar:after, #search:after {
+#footer-bottom:after, #top-bar:after, #search:after {
   content: "";
   display: table;
   clear: both;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-quick-links ul li:after {
-  background: url("//common.northwestern.edu/v8/css/images/icons/arrow-right-dkpurple.svg") no-repeat 50% 45%/6px 10px;
-  padding-right: 1.5rem;
+#top-nav > ul .dropdown-quick-links .nav-quick-links ul li a:after {
+  background: url("images/icons/arrow-right-dkpurple.svg") no-repeat center/6px 10px;
+  padding-right: .8rem;
   content: " ";
+  height: 10px;
+  width: 6px;
+  display: inline-block;
 }
 
 #global-links > ul li .dropdown-arrow:after {
@@ -94,8 +76,7 @@ body {
   color: #342f2e;
   background: #fff;
   min-width: 98%;
-  height: 100%;
-  overflow-x: hidden;
+  height: auto;
 }
 
 a:focus {
@@ -122,219 +103,650 @@ a.screen-reader-shortcut:focus {
   z-index: 5;
 }
 
-#main-content {
+#container {
+  position: relative;
+  background: #fff;
+}
+
+.content {
   font-size: 16px;
   line-height: 1.7em;
   outline: none !important;
 }
 
-.contain-780 {
-  margin: 0 auto;
-  max-width: 780px;
-  box-sizing: content-box;
-}
-
-.contain-850 {
-  margin: 0 auto;
-  max-width: 850px;
-  box-sizing: content-box;
-}
-
-.contain-970 {
-  margin: 0 auto;
-  max-width: 970px;
-  box-sizing: content-box;
-}
-
 .contain-1120 {
   margin: 0 auto;
   max-width: 1120px;
-  box-sizing: content-box;
 }
 
-.contain-1440 {
-  margin: 0 auto;
-  max-width: 1440px;
-}
-
-img {
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-}
-
-.hide-label {
+.hide-text, .hide-label {
   position: absolute;
-  left: -10000px;
+  left: -99999em;
   top: auto;
   width: 1px;
   height: 1px;
   overflow: hidden;
 }
 
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 1140px) {
-  #main-content .contain-1120 {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hide-mobile, a.screen-reader-shortcut {
+@media screen and (max-width: 48em) {
+  .hide-mobile {
     display: none;
   }
 }
 
-h2 {
-  font: 46px/1.2em "Campton Book", Tahoma, sans-serif;
-  color: #4e2a84;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font: 34px/1.2em "Campton Bold", Impact, sans-serif;
-  color: #4e2a84;
-  margin-bottom: .5rem;
-}
-
-h4 {
-  font: 26px/1.2em "Akkurat Pro Regular", Arial, sans-serif;
-  color: #716c6b;
-  margin-bottom: 1rem;
-}
-
-h5 {
-  font: 21px/1.3em "Akkurat Pro Regular", Arial, sans-serif;
-  color: #4e2a84;
-  margin-bottom: 1rem;
-}
-
-h6 {
-  font: 18px/1.3em "Campton Bold", Impact, sans-serif;
-  color: #716c6b;
-  margin-bottom: 1rem;
-}
-
-#page {
-  margin: 2rem auto;
-  max-width: 1120px;
-}
-
-.content {
-  width: 100%;
-}
-
-.content a {
-  font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
-  color: #4e2a84;
-  text-decoration: none;
-}
-
-.content a:hover {
-  text-decoration: underline;
-}
-
-.content a em, .content em a, .content a i, .content i a {
-  font-family: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
-}
-
-.content strong, .content b {
-  font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
-  font-weight: normal;
-}
-
-.content em, .content i {
-  font-family: "Akkurat Pro Italic", Arial, sans-serif;
-  font-style: normal;
-}
-
-.content strong em, .content em strong, .content strong i, .content i strong, .content b i, .content i b {
-  font-family: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-}
-
-@media screen and (max-width: 1145px) {
-  #page {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
-
-@font-face {
-  font-family: "Akkurat Pro Light";
-  src: url("//common.northwestern.edu/v8/css/fonts/AkkuratProLight.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Akkurat Pro Light Italic";
-  src: url("//common.northwestern.edu/v8/css/fonts/AkkuratProLightItalic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 @font-face {
   font-family: "Akkurat Pro Regular";
-  src: url("//common.northwestern.edu/v8/css/fonts/AkkuratProRegular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Akkurat Pro Italic";
-  src: url("//common.northwestern.edu/v8/css/fonts/AkkuratProItalic.woff") format("woff");
+  src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProRegular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Akkurat Pro Bold";
-  src: url("//common.northwestern.edu/v8/css/fonts/AkkuratProBold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Akkurat Pro Bold Italic";
-  src: url("//common.northwestern.edu/v8/css/fonts/AkkuratProBoldItalic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Campton Book";
-  src: url("//common.northwestern.edu/v8/css/fonts/CamptonBook.woff") format("woff");
+  src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Campton Bold";
-  src: url("//common.northwestern.edu/v8/css/fonts/CamptonBold.woff") format("woff");
+  src: url("https://common.northwestern.edu/v8/css/fonts/CamptonBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Campton Extra Bold";
-  src: url("//common.northwestern.edu/v8/css/fonts/CamptonExtraBold.woff") format("woff");
+  font-family: "Periodico Bold Italic";
+  src: url("https://common.northwestern.edu/v8/css/fonts/PeriodicoBoldItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Campton Extra Light";
-  src: url("//common.northwestern.edu/v8/css/fonts/CamptonExtraLight.woff") format("woff");
+footer {
+  background: #4e2a84;
+  color: #fff;
+  font: 14px/1.3em "Akkurat Pro Regular", Arial, sans-serif;
+  padding: 3rem 0 0 0;
+  width: 100%;
+}
+
+footer .footer-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer h2 {
+  font: 16px/1.3em "Akkurat Pro Bold", "Arial Black", sans-serif;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+footer a {
+  font-family: "Akkurat Pro Regular", Arial, sans-serif;
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+footer .footer-logo {
+  width: 100%;
+  max-width: 390px;
+  height: 35px;
+  background: url("images/logos/northwestern-university-horizontal.svg") no-repeat;
+  margin-bottom: 2rem;
+}
+
+.footer-content {
+  margin-right: 4.46429%;
+  position: relative;
+  vertical-align: top;
+}
+
+.footer-content ul {
+  list-style-type: none;
+}
+
+.footer-content ul li {
+  padding-bottom: .8rem;
+}
+
+.footer-content p {
+  margin-top: 0;
+}
+
+.footer-content strong {
+  font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
   font-weight: normal;
-  font-style: normal;
+}
+
+.footer-content img {
+  margin-bottom: 1rem;
+  max-width: 200px;
+}
+
+.footer-content #cta {
+  margin-top: 1.5rem;
+}
+
+.footer-content #cta h3 {
+  font: 22px/1.2em "Campton Bold", Impact, sans-serif;
+  color: #fff;
+  margin: 1rem 0 .5rem 0;
+}
+
+.footer-content #cta p {
+  font: 16px/1.2em "Akkurat Pro Regular", Arial, sans-serif;
+}
+
+.footer-content #cta a.button,
+.footer-content #cta p.button a {
+  background: #836eaa;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font: 16px/1em "Akkurat Pro Bold", "Arial Black", sans-serif;
+  margin: 0;
+  padding: .8rem 1rem .7rem 1rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.footer-content #cta a.button:after,
+.footer-content #cta p.button a:after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+}
+
+.footer-content #cta a.button:hover, .footer-content #cta a.button:active,
+.footer-content #cta p.button a:hover,
+.footer-content #cta p.button a:active {
+  background: #e4e0ee;
+  color: #4e2a84;
+}
+
+.footer-content #cta a.button:focus,
+.footer-content #cta p.button a:focus {
+  border: 2px dashed #fff;
+  outline: none;
+}
+
+.footer-content.contact {
+  width: 26.78571%;
+}
+
+.footer-content.contact .address,
+.footer-content.contact .phone,
+.footer-content.contact .fax,
+.footer-content.contact .email,
+.footer-content.contact .feedback {
+  position: relative;
+  margin: 0 0 2.5rem 2rem;
+}
+
+.footer-content.contact .address span,
+.footer-content.contact .phone span,
+.footer-content.contact .fax span,
+.footer-content.contact .email span,
+.footer-content.contact .feedback span {
+  position: absolute;
+  left: -99999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.footer-content.contact .address .icon,
+.footer-content.contact .phone .icon,
+.footer-content.contact .fax .icon,
+.footer-content.contact .email .icon,
+.footer-content.contact .feedback .icon {
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  display: inline;
+}
+
+.footer-content.contact .address .icon {
+  background: url("images/footer/pin-drop.svg") no-repeat;
+  background-size: 17px 24px;
+  height: 24px;
+  width: 17px;
+}
+
+.footer-content.contact .phone .icon {
+  background: url("images/footer/mobile-phone.svg") no-repeat;
+  background-size: 14px 25px;
+  height: 25px;
+  width: 14px;
+}
+
+.footer-content.contact .fax .icon {
+  background: url("images/footer/fax.svg") no-repeat;
+  background-size: 18px 18px;
+  height: 28px;
+  width: 18px;
+}
+
+.footer-content.contact .email .icon {
+  background: url("images/footer/email.svg") no-repeat;
+  background-size: 18px 18px;
+  height: 18px;
+  width: 18px;
+}
+
+.footer-content.contact .email .text {
+  font-size: 12px;
+}
+
+.footer-content.contact .feedback {
+  margin-bottom: 0;
+}
+
+.footer-content.contact .feedback .icon {
+  background: url("images/footer/feedback.svg") no-repeat;
+  background-size: 17px 18px;
+  height: 18px;
+  width: 17px;
+}
+
+.footer-content.connect {
+  width: 17.85714%;
+}
+
+.footer-content.connect .social {
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  margin: 4px;
+  width: 39px;
+  height: 39px;
+  font-size: 0;
+  text-indent: -9999px;
+  background: url("images/footer/social-media-icons.svg");
+  background-color: #fff;
+  transition: background 0.3s;
+  border: 1px solid #fff;
+}
+
+.footer-content.connect .social:hover {
+  background-color: #b6acd1;
+}
+
+.footer-content.connect .social:focus {
+  outline: 2px dashed;
+}
+
+.footer-content.connect .facebook {
+  background-position: 0 0;
+}
+
+.footer-content.connect .facebook:hover {
+  background-position: 0 -39px;
+}
+
+.footer-content.connect .twitter {
+  background-position: -39px 0;
+}
+
+.footer-content.connect .twitter:hover {
+  background-position: -39px -39px;
+}
+
+.footer-content.connect .instagram {
+  background-position: -78px 0;
+}
+
+.footer-content.connect .instagram:hover {
+  background-position: -78px -39px;
+}
+
+.footer-content.connect .rss {
+  background-position: -117px 0;
+}
+
+.footer-content.connect .rss:hover {
+  background-position: -117px -39px;
+}
+
+.footer-content.connect .youtube {
+  background-position: -156px 0;
+}
+
+.footer-content.connect .youtube:hover {
+  background-position: -156px -39px;
+}
+
+.footer-content.connect .tumblr {
+  background-position: -195px 0;
+}
+
+.footer-content.connect .tumblr:hover {
+  background-position: -195px -39px;
+}
+
+.footer-content.connect .wordpress {
+  background-position: -234px 0;
+}
+
+.footer-content.connect .wordpress:hover {
+  background-position: -234px -39px;
+}
+
+.footer-content.connect .futurity {
+  background-position: -273px 0;
+}
+
+.footer-content.connect .futurity:hover {
+  background-position: -273px -39px;
+}
+
+.footer-content.connect .vimeo {
+  background-position: -312px 0;
+}
+
+.footer-content.connect .vimeo:hover {
+  background-position: -312px -39px;
+}
+
+.footer-content.connect .linkedin {
+  background-position: -351px 0;
+}
+
+.footer-content.connect .linkedin:hover {
+  background-position: -351px -39px;
+}
+
+.footer-content.connect .google-plus {
+  background-position: -390px 0;
+}
+
+.footer-content.connect .google-plus:hover {
+  background-position: -390px -39px;
+}
+
+.footer-content.connect .google-groups {
+  background-position: -429px 0;
+}
+
+.footer-content.connect .google-groups:hover {
+  background-position: -429px -39px;
+}
+
+.footer-content.connect .blog {
+  background-position: -468px 0;
+}
+
+.footer-content.connect .blog:hover {
+  background-position: -468px -39px;
+}
+
+.footer-content.connect .github {
+  background-position: -507px 0;
+}
+
+.footer-content.connect .github:hover {
+  background-position: -507px -39px;
+}
+
+.footer-content.connect .flickr {
+  background-position: -546px 0;
+}
+
+.footer-content.connect .flickr:hover {
+  background-position: -546px -39px;
+}
+
+.footer-content.connect .storify {
+  background-position: -585px 0;
+}
+
+.footer-content.connect .storify:hover {
+  background-position: -585px -39px;
+}
+
+.footer-content.connect .pinterest {
+  background-position: -624px 0;
+}
+
+.footer-content.connect .pinterest:hover {
+  background-position: -624px -39px;
+}
+
+.footer-content.connect .we-will {
+  background-position: -663px 0;
+}
+
+.footer-content.connect .we-will:hover {
+  background-position: -663px -39px;
+}
+
+.footer-content.connect .spotify {
+  background-position: -702px 0;
+}
+
+.footer-content.connect .spotify:hover {
+  background-position: -702px -39px;
+}
+
+.footer-content.links {
+  width: 17.85714%;
+}
+
+.footer-content.links ul li:last-child {
+  padding-bottom: 0;
+}
+
+.footer-content.resources {
+  width: 24.10714%;
+  margin-right: 0;
+}
+
+.footer-content.resources ul li:last-child {
+  padding-bottom: 0;
+}
+
+#footer-bottom {
+  background: #401f68;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 12px;
+}
+
+#footer-bottom .copyright {
+  font-size: 14px;
+}
+
+#footer-bottom .right {
+  float: right;
+}
+
+#footer-bottom ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+#footer-bottom ul li {
+  margin: 0;
+  padding: 0 .25rem;
+  display: inline;
+}
+
+#footer-bottom ul a {
+  text-decoration: none;
+  position: relative;
+}
+
+#footer-bottom ul .social {
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 20px;
+  position: relative;
+  top: 4px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+#footer-bottom ul .text {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  left: -9999em;
+}
+
+#footer-bottom ul .social:hover + .text {
+  display: inline;
+  position: static;
+  z-index: auto;
+  visibility: visible;
+  opacity: 1;
+  padding-left: .25rem;
+  width: 100px;
+  left: -9999em;
+}
+
+#footer-bottom ul .facebook {
+  background: url("images/footer/facebook-white.svg") no-repeat;
+  background-size: 18px 18px;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+#footer-bottom ul .facebook:hover {
+  background: url("images/footer/facebook-color.svg") no-repeat;
+}
+
+#footer-bottom ul .twitter {
+  background: url("images/footer/twitter-white.svg") no-repeat;
+  background-size: 18px 18px;
+  display: inline-block;
+}
+
+#footer-bottom ul .twitter:hover {
+  background: url("images/footer/twitter-color.svg") no-repeat;
+  background-size: 18px 17px;
+}
+
+#footer-bottom ul .instagram {
+  background: url("images/footer/instagram-white.svg") no-repeat;
+  background-size: 18px 18px;
+  display: inline-block;
+}
+
+#footer-bottom ul .instagram:hover {
+  background: url("images/footer/instagram-color.svg") no-repeat;
+}
+
+#footer-bottom ul .youtube {
+  background: url("images/footer/youtube-white.svg") no-repeat;
+  background-size: 20px 14px;
+  display: inline-block;
+  top: 7px;
+}
+
+#footer-bottom ul .youtube:hover {
+  background: url("images/footer/youtube-color.svg") no-repeat;
+}
+
+#footer-bottom ul .futurity {
+  background: url("images/footer/futurity-white.svg") no-repeat;
+  background-size: 15px 18px;
+  display: inline-block;
+}
+
+#footer-bottom ul .futurity:hover {
+  background: url("images/footer/futurity-color.svg") no-repeat;
+}
+
+#footer-bottom ul .rss {
+  background: url("images/footer/rss-white.svg") no-repeat;
+  background-size: 16px 16px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 71.25em) {
+  .footer-logo {
+    margin: 0 1rem 2rem 1rem;
+  }
+  .footer-wrap {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 61.25em) {
+  .footer-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .footer-content {
+    margin-bottom: 2.5rem;
+  }
+  .footer-content.contact, .footer-content.links {
+    width: 45%;
+    margin-right: 5%;
+  }
+  .footer-content.connect, .footer-content.resources {
+    width: 46%;
+    margin-right: 0;
+  }
+  #footer-bottom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 34.375em) {
+  footer .footer-logo {
+    max-width: 170px;
+    height: 52px;
+    background: url("images/logos/northwestern-university.svg") no-repeat;
+  }
+  footer h2 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: .25rem;
+  }
+  .footer-content.contact, .footer-content.connect, .footer-content.links, .footer-content.resources {
+    width: 100%;
+    margin-right: 0;
+  }
+  .footer-content.contact .address,
+  .footer-content.contact .phone,
+  .footer-content.contact .fax,
+  .footer-content.contact .email,
+  .footer-content.contact .feedback {
+    position: relative;
+    margin: 0 0 1.5rem 2rem;
+  }
+  #footer-bottom {
+    margin-top: 1rem;
+    padding-bottom: 4rem;
+  }
+  #footer-bottom .right {
+    margin-top: .5rem;
+    display: block;
+    float: none;
+  }
+  #footer-bottom ul {
+    display: block;
+    margin: 1rem 0 1rem 0;
+  }
+  #footer-bottom ul .facebook {
+    margin-left: 0;
+  }
 }
 
 header {
@@ -358,7 +770,7 @@ header {
   height: 21px;
   display: inline-block;
   margin: 1.1rem 0 0 0;
-  background: url("//common.northwestern.edu/v8/css/images/northwestern.svg") no-repeat center;
+  background: url("images/logos/northwestern.svg") no-repeat center;
 }
 
 #top-bar #left #northwestern a:focus {
@@ -379,7 +791,7 @@ header {
   height: 78px;
   display: inline-block;
   margin: 0;
-  background: url("//common.northwestern.edu/v8/css/images/northwestern-university-n.svg") no-repeat center;
+  background: url("images/logos/northwestern-university-n.svg") no-repeat center;
   position: absolute;
   top: 10px;
 }
@@ -413,6 +825,10 @@ header {
 }
 
 #parent #bottom-bar {
+  margin-top: 12px;
+}
+
+#parent > #quick-links + #bottom-bar {
   margin-top: 0;
 }
 
@@ -435,7 +851,9 @@ header {
   position: relative;
 }
 
-#global-links > ul a:hover, #global-links > ul a:focus, #global-links > ul a:active {
+#global-links > ul a:hover,
+#global-links > ul a:focus,
+#global-links > ul a:active {
   text-decoration: underline;
 }
 
@@ -452,7 +870,8 @@ header {
   z-index: 100;
 }
 
-#global-links > ul li:hover ul, #global-links > ul li.hover ul {
+#global-links > ul li:hover ul,
+#global-links > ul li.hover ul {
   right: 0;
   top: 60px;
   z-index: 1000;
@@ -473,7 +892,9 @@ header {
   background: #765da0;
   padding: .5rem;
   text-align: right;
+  right: 0;
   z-index: -1000;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 #global-links > ul ul li {
@@ -486,7 +907,8 @@ header {
   height: inherit;
 }
 
-#global-links > ul ul li:hover ul, #global-links > ul ul li.hover ul {
+#global-links > ul ul li:hover ul,
+#global-links > ul ul li.hover ul {
   left: 0;
 }
 
@@ -496,15 +918,14 @@ header {
 
 #quick-links {
   max-width: 1120px;
-  margin: 0 auto;
-  padding-right: .5rem;
+  margin: 12px auto -12px auto;
   text-align: right;
   width: 100%;
+  height: 13px;
 }
 
 #quick-links ul {
   list-style-type: none;
-  margin: .75rem 0 -1rem 0;
   padding: 0;
 }
 
@@ -535,27 +956,22 @@ header {
   vertical-align: middle;
   width: 76.33929%;
   padding-right: 2rem;
-}
-
-#site-name h1 {
   font: 32px/1em "Akkurat Pro Regular", Arial, sans-serif;
+  text-transform: uppercase;
 }
 
-#site-name h1.small {
+#site-name.normal-case {
+  text-transform: none;
+}
+
+#site-name.small {
   font-size: 16px;
 }
 
-#site-name h1 span {
+#site-name span {
   font-size: 14px;
   line-height: 1em;
   display: block;
-}
-
-#site-name h2 {
-  font: 32px "Akkurat Pro Regular", Arial, sans-serif;
-  line-height: 1em;
-  color: #fff;
-  margin: 1rem 0 0 0;
 }
 
 #site-name a {
@@ -567,25 +983,34 @@ header {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1445px) {
+@media screen and (max-width: 90.3125em) {
   #top-bar {
     padding: 0 .5rem;
   }
 }
 
-@media screen and (max-width: 1155px) {
+@media screen and (max-width: 72.1875em) {
   #bottom-bar {
     padding-left: .5rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 71.25em) {
+  #quick-links {
+    padding-right: .5rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
   #top-bar {
     padding: 0;
   }
   #top-bar #left {
     float: none;
     margin-left: .5rem;
+  }
+  #parent #bottom-bar {
+    margin-top: 0;
   }
   #parent #left #northwestern a {
     width: 60px;
@@ -597,7 +1022,8 @@ header {
   #parent #left #site-name {
     font-size: 16px;
   }
-  #global-links, #quick-links {
+  #global-links,
+  #quick-links {
     display: none;
   }
   #bottom-bar {
@@ -606,13 +1032,11 @@ header {
   #site-name {
     width: 100%;
     padding: 0;
-  }
-  #site-name h1 {
     font-size: 24px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 30em) {
   #top-bar {
     min-height: 50px;
   }
@@ -630,7 +1054,7 @@ header {
     height: 50px;
     padding-left: 4.25rem;
   }
-  #site-name h1 {
+  #site-name {
     font-size: 22px;
   }
 }
@@ -650,7 +1074,7 @@ header {
   float: right;
 }
 
-#search .search-form input {
+#search .search-form input[type=text] {
   width: 230px;
   height: 35px;
   padding: 0 .3em 0 0;
@@ -663,23 +1087,23 @@ header {
   -webkit-appearance: none;
 }
 
-#search .search-form input::-webkit-input-placeholder {
+#search .search-form input[type=text]::-webkit-input-placeholder {
   color: #b6acd1;
 }
 
-#search .search-form input::-moz-placeholder {
+#search .search-form input[type=text]::-moz-placeholder {
   color: #b6acd1;
 }
 
-#search .search-form input:-moz-placeholder {
+#search .search-form input[type=text]:-moz-placeholder {
   color: #b6acd1;
 }
 
-#search .search-form input:-ms-input-placeholder {
+#search .search-form input[type=text]:-ms-input-placeholder {
   color: #b6acd1;
 }
 
-#search .search-form input:focus {
+#search .search-form input[type=text]:focus {
   outline: 1px dashed #fff;
 }
 
@@ -688,7 +1112,7 @@ header {
   cursor: pointer;
   height: 35px;
   width: 35px;
-  background: url("//common.northwestern.edu/v8/css/images/icons/search.svg") no-repeat 1em 0.4em;
+  background: url("images/icons/search.svg") no-repeat 1em 0.4em;
   background-size: 20px 20px;
   border: none;
   border-bottom: 1px solid #b6acd1;
@@ -699,13 +1123,13 @@ header {
   outline: 1px dashed #fff;
 }
 
-@media screen and (max-width: 1145px) {
+@media screen and (max-width: 71.5625em) {
   #search {
     padding-right: 1rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
   header {
     position: relative;
   }
@@ -718,6 +1142,7 @@ header {
     left: 0;
     right: 0;
     z-index: 9998;
+    box-shadow: 0px 2000px 0px 2000px rgba(0, 0, 0, 0.8);
   }
   .search-form {
     width: 100%;
@@ -725,6 +1150,7 @@ header {
     background: #401f68;
     float: none;
     position: relative;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
   }
   .search-form form {
     margin: 0 20px;
@@ -732,7 +1158,7 @@ header {
     position: relative;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA/CAYAAAAhZaJUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OThCRkYyRUZFQUM5MTFFNDg4MkNDNUM0RUJBRUJDM0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OThCRkYyRjBFQUM5MTFFNDg4MkNDNUM0RUJBRUJDM0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5OEJGRjJFREVBQzkxMUU0ODgyQ0M1QzRFQkFFQkMzRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5OEJGRjJFRUVBQzkxMUU0ODgyQ0M1QzRFQkFFQkMzRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr4qas0AAAAeSURBVHjaYvj//z8DEwMQDHuCmf+n3n8G6vkXIMAAeQ0Iq8diMWYAAAAASUVORK5CYII=");
   }
-  .search-form input {
+  .search-form input[type=text] {
     width: 80%;
     height: 32px;
     margin: 15px 0;
@@ -742,16 +1168,16 @@ header {
     background: none;
     border: none;
   }
-  .search-form input::-webkit-input-placeholder {
+  .search-form input[type=text]::-webkit-input-placeholder {
     color: #b6acd1;
   }
-  .search-form input::-moz-placeholder {
+  .search-form input[type=text]::-moz-placeholder {
     color: #b6acd1;
   }
-  .search-form input:-moz-placeholder {
+  .search-form input[type=text]:-moz-placeholder {
     color: #b6acd1;
   }
-  .search-form input:-ms-input-placeholder {
+  .search-form input[type=text]:-ms-input-placeholder {
     color: #b6acd1;
   }
   .search-form button {
@@ -760,14 +1186,15 @@ header {
     height: 32px;
     width: 32px;
     padding: 10px 0 15px;
-    background: url("//common.northwestern.edu/v8/css/images/icons/search.svg") no-repeat 1em 0.4em/20px 20px;
+    background: url("images/icons/search.svg") no-repeat 1em 0.4em/20px 20px;
     background-position: right center;
     border-bottom: none;
     position: absolute;
     right: 0;
     bottom: 18px;
   }
-  .search-form .hide-label, .search-form input[type="hidden"] {
+  .search-form .hide-label,
+  .search-form input[type="hidden"] {
     visibility: hidden;
     display: none;
   }
@@ -781,164 +1208,228 @@ header {
   background: #f0f0f0;
 }
 
-#top-nav .contain-1120 > ul {
+#top-nav > ul {
   width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
   line-height: 0;
   position: relative;
 }
 
-#top-nav .contain-1120 > ul a {
+#top-nav > ul a {
   color: #4e2a84;
   text-decoration: none;
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.25rem;
 }
 
-#top-nav .contain-1120 > ul a:hover, #top-nav .contain-1120 > ul a:focus, #top-nav .contain-1120 > ul a:active {
+#top-nav > ul a:hover, #top-nav > ul a:focus, #top-nav > ul a:active {
   text-decoration: underline;
 }
 
-#top-nav .contain-1120 > ul a[href^="http://"]::after,
-#top-nav .contain-1120 > ul a[href^="https://"]::after {
-  content: url("//common.northwestern.edu/v8/css/images/icons/external-link-top-nav.png");
+#top-nav > ul a[href^="http://"]::after,
+#top-nav > ul a[href^="https://"]::after {
+  content: url("images/icons/external-link-top-nav.png");
   margin-left: 0.5em;
+  background: none;
 }
 
-#top-nav .contain-1120 > ul > li {
+#top-nav > ul > li {
   display: table-cell;
   text-align: center;
   line-height: 100%;
   font: 18px "Akkurat Pro Bold", "Arial Black", sans-serif;
 }
 
-#top-nav .contain-1120 > ul > li:hover, #top-nav .contain-1120 > ul > li.hover {
+#top-nav > ul > li.dropdown-relative {
+  position: relative;
+}
+
+#top-nav > ul > li.dropdown-relative:last-child .dropdown-basic {
+  position: absolute;
+  right: 0;
+  left: inherit;
+}
+
+#top-nav > ul > li:hover, #top-nav > ul > li.hover {
   z-index: 100;
 }
 
-#top-nav .contain-1120 > ul > li:hover .dropdown,
-#top-nav .contain-1120 > ul > li:hover .dropdown-one-column,
-#top-nav .contain-1120 > ul > li:hover .dropdown-two-column,
-#top-nav .contain-1120 > ul > li:hover .dropdown-quick-links, #top-nav .contain-1120 > ul > li.hover .dropdown,
-#top-nav .contain-1120 > ul > li.hover .dropdown-one-column,
-#top-nav .contain-1120 > ul > li.hover .dropdown-two-column,
-#top-nav .contain-1120 > ul > li.hover .dropdown-quick-links {
+#top-nav > ul > li:hover .dropdown-basic,
+#top-nav > ul > li:hover .dropdown-two-column,
+#top-nav > ul > li:hover .dropdown-three-column,
+#top-nav > ul > li:hover .dropdown-quick-links, #top-nav > ul > li.hover .dropdown-basic,
+#top-nav > ul > li.hover .dropdown-two-column,
+#top-nav > ul > li.hover .dropdown-three-column,
+#top-nav > ul > li.hover .dropdown-quick-links {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .2s linear;
   left: 0;
-  z-index: 1000;
 }
 
-#top-nav .contain-1120 > ul > li:hover a, #top-nav .contain-1120 > ul > li.hover a {
+#top-nav > ul > li:hover .dropdown-basic a,
+#top-nav > ul > li:hover .dropdown-two-column a,
+#top-nav > ul > li:hover .dropdown-three-column a,
+#top-nav > ul > li:hover .dropdown-quick-links a, #top-nav > ul > li.hover .dropdown-basic a,
+#top-nav > ul > li.hover .dropdown-two-column a,
+#top-nav > ul > li.hover .dropdown-three-column a,
+#top-nav > ul > li.hover .dropdown-quick-links a {
+  display: block;
+}
+
+#top-nav > ul > li:hover a, #top-nav > ul > li.hover a {
   background: #e3e3e3;
-  animation: inherit;
-  animation: none;
+  transition: background .2s ease-in-out;
 }
 
-#top-nav .contain-1120 > ul > li:hover a:focus, #top-nav .contain-1120 > ul > li.hover a:focus {
-  animation: none;
+#top-nav > ul > li .dropdown-arrow {
+  background: url("images/icons/arrow-down-ltpurple.svg") no-repeat 50%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 8px;
 }
 
-#top-nav .contain-1120 > ul > li:hover a.button, #top-nav .contain-1120 > ul > li.hover a.button {
-  background: #4e2a84;
+#top-nav > ul > li:hover .dropdown-arrow, #top-nav > ul > li:focus .dropdown-arrow {
+  background: url("images/icons/arrow-thin-right-purple.svg") no-repeat 50%;
+  width: 14px;
+  height: 10px;
+  margin-left: 4px;
 }
 
-#top-nav .contain-1120 > ul > li.active a {
+#top-nav > ul > li.active a {
   background: #836eaa;
   color: #fff;
 }
 
-#top-nav .contain-1120 > ul > li .dropdown-arrow {
-  background: url("//common.northwestern.edu/v8/css/images/icons/arrow-down-ltpurple.svg") no-repeat 50%;
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  margin-left: .5em;
+#top-nav > ul > li.active a .dropdown-arrow {
+  background: url("images/icons/arrow-down-white.svg") no-repeat 50%;
 }
 
-#top-nav .contain-1120 > ul .dropdown,
-#top-nav .contain-1120 > ul .dropdown-one-column,
-#top-nav .contain-1120 > ul .dropdown-two-column,
-#top-nav .contain-1120 > ul .dropdown-quick-links {
-  position: absolute;
-  background: #e3e3e3;
-  left: -9999em;
-  z-index: -9999;
-  top: 100%;
-  width: 100%;
-  padding: 2rem;
-  list-style-type: none;
-  display: -webkit-flex;
+#top-nav > ul > li.active a:hover .dropdown-arrow {
+  background: url("images/icons/arrow-thin-right-white.svg") no-repeat 50%;
+  width: 14px;
+  height: 10px;
+  margin-left: 4px;
+}
+
+#top-nav > ul .dropdown-basic,
+#top-nav > ul .dropdown-two-column,
+#top-nav > ul .dropdown-three-column,
+#top-nav > ul .dropdown-quick-links {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-#top-nav .contain-1120 > ul .dropdown .nav-intro,
-#top-nav .contain-1120 > ul .dropdown .nav-links,
-#top-nav .contain-1120 > ul .dropdown-one-column .nav-intro,
-#top-nav .contain-1120 > ul .dropdown-one-column .nav-links,
-#top-nav .contain-1120 > ul .dropdown-two-column .nav-intro,
-#top-nav .contain-1120 > ul .dropdown-two-column .nav-links,
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-intro,
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-links {
+  background: #e3e3e3;
+  position: absolute;
+  top: 100%;
+  left: -9999em;
+  width: 100%;
+  padding: 1.5rem 1.25rem;
   list-style-type: none;
-  width: 50%;
-  float: left;
-  text-align: left;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .2s, opacity .2s linear;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
 }
 
-#top-nav .contain-1120 > ul .dropdown p.intro,
-#top-nav .contain-1120 > ul .dropdown-one-column p.intro,
-#top-nav .contain-1120 > ul .dropdown-two-column p.intro,
-#top-nav .contain-1120 > ul .dropdown-quick-links p.intro {
-  font: 30px "Campton Bold", Impact, sans-serif;
-  color: #4e2a84;
-  margin: 0 0 1rem 0;
-  padding-right: 2rem;
-}
-
-#top-nav .contain-1120 > ul .dropdown .nav-links,
-#top-nav .contain-1120 > ul .dropdown-one-column .nav-links,
-#top-nav .contain-1120 > ul .dropdown-two-column .nav-links,
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-links {
-  border-left: 2px solid #ccc;
-  padding-left: 1rem;
-}
-
-#top-nav .contain-1120 > ul .dropdown ul,
-#top-nav .contain-1120 > ul .dropdown-one-column ul,
-#top-nav .contain-1120 > ul .dropdown-two-column ul,
-#top-nav .contain-1120 > ul .dropdown-quick-links ul {
+#top-nav > ul .dropdown-basic ul,
+#top-nav > ul .dropdown-two-column ul,
+#top-nav > ul .dropdown-three-column ul,
+#top-nav > ul .dropdown-quick-links ul {
   display: block;
   background: inherit;
+  padding: 0 0 0 1rem;
+  margin: 0;
 }
 
-#top-nav .contain-1120 > ul .dropdown ul li,
-#top-nav .contain-1120 > ul .dropdown-one-column ul li,
-#top-nav .contain-1120 > ul .dropdown-two-column ul li,
-#top-nav .contain-1120 > ul .dropdown-quick-links ul li {
+#top-nav > ul .dropdown-basic ul li,
+#top-nav > ul .dropdown-two-column ul li,
+#top-nav > ul .dropdown-three-column ul li,
+#top-nav > ul .dropdown-quick-links ul li {
   display: block;
   text-align: left;
   width: inherit;
   line-height: 1.4em;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-left: 2px solid #ccc;
+  padding-left: 1rem;
 }
 
-#top-nav .contain-1120 > ul .dropdown ul li a,
-#top-nav .contain-1120 > ul .dropdown-one-column ul li a,
-#top-nav .contain-1120 > ul .dropdown-two-column ul li a,
-#top-nav .contain-1120 > ul .dropdown-quick-links ul li a {
+#top-nav > ul .dropdown-basic ul li.home,
+#top-nav > ul .dropdown-two-column ul li.home,
+#top-nav > ul .dropdown-three-column ul li.home,
+#top-nav > ul .dropdown-quick-links ul li.home {
+  margin-left: -2rem;
+  border-left: none;
+  font-family: "Periodico Bold Italic", Georgia, serif;
+}
+
+#top-nav > ul .dropdown-basic ul li.home span,
+#top-nav > ul .dropdown-two-column ul li.home span,
+#top-nav > ul .dropdown-three-column ul li.home span,
+#top-nav > ul .dropdown-quick-links ul li.home span {
+  margin-bottom: .5rem;
+}
+
+#top-nav > ul .dropdown-basic ul li.home a,
+#top-nav > ul .dropdown-two-column ul li.home a,
+#top-nav > ul .dropdown-three-column ul li.home a,
+#top-nav > ul .dropdown-quick-links ul li.home a {
+  color: #401f68;
+}
+
+#top-nav > ul .dropdown-basic ul li.home a:after,
+#top-nav > ul .dropdown-two-column ul li.home a:after,
+#top-nav > ul .dropdown-three-column ul li.home a:after,
+#top-nav > ul .dropdown-quick-links ul li.home a:after {
+  background: url("images/icons/arrow-thin-right-purple.svg") no-repeat 50%;
+  padding-right: 1.5rem;
+  content: " ";
+  height: 12px;
+  width: 10px;
+  display: inline-block;
+}
+
+#top-nav > ul .dropdown-basic ul li span,
+#top-nav > ul .dropdown-two-column ul li span,
+#top-nav > ul .dropdown-three-column ul li span,
+#top-nav > ul .dropdown-quick-links ul li span {
+  display: block;
+  line-height: 1.3em;
+  font: 15px/1.2em "Akkurat Pro Regular", Arial, sans-serif;
+}
+
+#top-nav > ul .dropdown-basic ul li a,
+#top-nav > ul .dropdown-two-column ul li a,
+#top-nav > ul .dropdown-three-column ul li a,
+#top-nav > ul .dropdown-quick-links ul li a {
+  line-height: 1.3em;
   padding: 0;
   display: inline-block;
   background: inherit;
   color: #4e2a84;
 }
 
-#top-nav .contain-1120 > ul .dropdown ul li a:hover,
-#top-nav .contain-1120 > ul .dropdown-one-column ul li a:hover,
-#top-nav .contain-1120 > ul .dropdown-two-column ul li a:hover,
-#top-nav .contain-1120 > ul .dropdown-quick-links ul li a:hover {
+#top-nav > ul .dropdown-basic ul li a:hover,
+#top-nav > ul .dropdown-two-column ul li a:hover,
+#top-nav > ul .dropdown-three-column ul li a:hover,
+#top-nav > ul .dropdown-quick-links ul li a:hover {
   text-decoration: underline;
 }
 
-#top-nav .contain-1120 > ul .dropdown-two-column ul {
+#top-nav > ul .dropdown-basic {
+  width: 345px;
+}
+
+#top-nav > ul:last-of-type .dropdown-basic {
+  display: inherit;
+}
+
+#top-nav > ul .dropdown-two-column ul {
   width: 100% !important;
   -moz-column-count: 2;
   -webkit-column-count: 2;
@@ -946,14 +1437,9 @@ header {
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
-  -webkit-column-rule: 2px solid #ccc;
-  -moz-column-rule: 2px solid #ccc;
-  column-rule: 2px solid #ccc;
-  margin: 0;
-  padding: 0;
 }
 
-#top-nav .contain-1120 > ul .dropdown-two-column ul li {
+#top-nav > ul .dropdown-two-column ul li {
   background: none;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
@@ -961,27 +1447,40 @@ header {
   display: inline-block;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links ul {
-  display: block;
-  background: inherit;
+#top-nav > ul .dropdown-two-column ul li.overview {
+  margin-left: -4rem;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links ul li {
-  display: block;
-  text-align: left;
-  width: inherit;
-  line-height: 1.5em;
-  padding: 0;
+#top-nav > ul .dropdown-three-column ul {
+  width: 100% !important;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 3rem;
+  -moz-column-gap: 3rem;
+  column-gap: 3rem;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-links {
+#top-nav > ul .dropdown-three-column ul li {
+  background: none;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: inline-block;
+}
+
+#top-nav > ul .dropdown-three-column ul li.overview {
+  margin-left: -4rem;
+}
+
+#top-nav > ul .dropdown-quick-links .nav-links {
   width: 75%;
   float: left;
   text-align: left;
   border-left: none;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-links ul {
+#top-nav > ul .dropdown-quick-links .nav-links ul {
   width: 100% !important;
   -moz-column-count: 2;
   -webkit-column-count: 2;
@@ -989,11 +1488,9 @@ header {
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
-  margin: 0;
-  padding: 0;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-links ul li {
+#top-nav > ul .dropdown-quick-links .nav-links ul li {
   background: none;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
@@ -1001,96 +1498,107 @@ header {
   display: inline-block;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-links ul li span {
-  display: block;
-  line-height: 1.2em;
-  font: 16px/1.2em "Akkurat Pro Regular", Arial, sans-serif;
-}
-
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-quick-links {
-  border-left: 2px solid #ccc;
-  margin-left: 1rem;
-  padding-left: 2rem;
+#top-nav > ul .dropdown-quick-links .nav-quick-links {
+  margin-left: 2rem;
+  padding: 1.5rem;
   float: left;
   width: 25%;
   text-align: left;
+  background: #f0f0f0;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-quick-links p {
+#top-nav > ul .dropdown-quick-links .nav-quick-links p {
   margin-top: 0;
   font: 18px "Akkurat Pro Bold", "Arial Black", sans-serif;
   text-transform: uppercase;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-quick-links ul {
+#top-nav > ul .dropdown-quick-links .nav-quick-links ul {
   padding: 0;
 }
 
-#top-nav .contain-1120 > ul .dropdown-quick-links .nav-quick-links ul li {
+#top-nav > ul .dropdown-quick-links .nav-quick-links ul li {
   text-transform: none;
   font-size: 15px;
   line-height: 1.2em;
+  border-left: none;
+  padding-left: 0;
 }
 
-#top-nav.narrow-dropdown ul li {
-  position: relative;
+#top-nav > ul .dropdown-quick-links .nav-quick-links ul li:last-of-type {
+  padding-bottom: 0;
 }
 
-#top-nav.narrow-dropdown ul li:hover ul.nav-align-right {
-  right: 0;
-  left: inherit;
+#top-nav > ul .dropdown-quick-links .nav-quick-links ul li a {
+  display: inline-block;
 }
 
-#top-nav.narrow-dropdown ul li:hover ul.nav-align-right li {
-  text-align: right;
+#top-nav > ul .dropdown-quick-links .nav-quick-links ul li a:after {
+  margin-right: -.8rem;
 }
 
-#top-nav.narrow-dropdown .contain-1120 > ul .dropdown {
-  display: inherit;
-  width: 320px;
-  padding: 1em;
+#top-nav > ul .dropdown-quick-links .nav-quick-links ul li a[href^="http://"]::after,
+#top-nav > ul .dropdown-quick-links .nav-quick-links ul li a[href^="https://"]::after {
+  content: url("images/icons/external-link-top-nav.png");
+  margin-left: 0.5em;
+  background: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 56.25em) {
+  #top-nav > ul a {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
   #top-nav {
     display: none;
   }
 }
 
-#mobile-links, #mobile-nav {
+#mobile-links,
+#mobile-nav {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  #mobile-nav a[href^="http://"]::after,
-  #mobile-nav a[href^="https://"]::after {
-    content: url("//common.northwestern.edu/v8/css/images/icons/external-link-top-nav.png");
-    margin-left: 0.5em;
-  }
+@media screen and (max-width: 48em) {
   #mobile-links {
     display: block;
     background: #f0f0f0;
     height: 45px;
+    position: relative;
   }
   .mobile-link {
     display: inline-block;
-    padding: 1em;
+    padding: 1rem;
     height: 45px;
     width: 45px;
     cursor: pointer;
     position: relative;
   }
   .mobile-link.mobile-search-link {
-    background: url("//common.northwestern.edu/v8/css/images/icons/search-purple.svg") no-repeat center/20px 20px;
+    background: url("images/icons/search-purple.svg") no-repeat center/20px 20px;
   }
   .mobile-link.mobile-search-link.open {
-    background: #401f68 url("//common.northwestern.edu/v8/css/images/icons/alert-x-white-home.svg") no-repeat center/20px 20px;
+    background: #401f68 url("images/icons/alert-x-white-home.svg") no-repeat center/20px 20px;
   }
   .mobile-link.mobile-nav-link {
-    background: url("//common.northwestern.edu/v8/css/images/icons/hamburger-purple.svg") no-repeat center/20px 20px;
+    background: url("images/icons/hamburger-purple.svg") no-repeat center/20px 20px;
   }
   .mobile-link.mobile-nav-link.open {
-    background: #401f68 url("//common.northwestern.edu/v8/css/images/icons/alert-x-white-home.svg") no-repeat center/20px 20px;
+    background: #401f68 url("images/icons/alert-x-white-home.svg") no-repeat center/20px 20px;
+  }
+  #mobile-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: none;
+    overflow: hidden;
+    opacity: 0;
   }
   #mobile-nav {
     display: none;
@@ -1100,6 +1608,7 @@ header {
     right: 0;
     margin-top: -6px;
     z-index: 9998;
+    box-shadow: 0px 2000px 0px 2000px rgba(0, 0, 0, 0.8);
   }
   #mobile-nav ul {
     background: #401f68;
@@ -1120,16 +1629,18 @@ header {
   #mobile-nav ul li a.active {
     font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
   }
-  #mobile-nav ul li .arrow.open a {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    border: none;
+  #mobile-nav ul li a[href^="http://"]::after,
+  #mobile-nav ul li a[href^="https://"]::after {
+    content: url("images/icons/external-link-white.svg");
+    margin-left: 0.5rem;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
   }
-  #mobile-nav ul li .arrow a {
+  #mobile-nav ul li .arrow {
     width: 50px;
     height: 48px;
-    background: url("//common.northwestern.edu/v8/css/images/icons/arrow-down-white.svg") no-repeat center/20px 20px;
+    background: url("images/icons/circle-plus.svg") no-repeat center/30px 30px;
     display: block;
     position: absolute;
     top: 0;
@@ -1139,50 +1650,67 @@ header {
     border: none;
     padding: 0;
   }
+  #mobile-nav ul li .arrow.open {
+    background: url("images/icons/circle-minus.svg") no-repeat center/30px 30px;
+  }
   #mobile-nav ul ul {
     display: none;
     background: #b6acd1;
   }
+  #mobile-nav ul ul li.home {
+    margin-left: -1rem;
+    font-family: "Periodico Bold Italic", Georgia, serif;
+  }
+  #mobile-nav ul ul li.home a:after {
+    background: url("images/icons/arrow-thin-right-purple.svg") no-repeat 50%;
+    padding-right: 1.5rem;
+    content: " ";
+    height: 12px;
+    width: 10px;
+    display: inline-block;
+  }
   #mobile-nav ul ul li a {
-    padding-left: 1.5em;
+    padding-left: 2em;
     color: #000;
+  }
+  #mobile-nav ul ul li a[href^="http://"]::after,
+  #mobile-nav ul ul li a[href^="https://"]::after {
+    content: url("images/icons/external-link-purple.svg");
   }
   #mobile-nav ul ul ul {
     background-color: #bbb8b8;
   }
   #mobile-nav ul ul ul li a {
-    padding-left: 2em;
+    padding-left: 3em;
   }
   #mobile-nav ul ul ul ul {
     background-color: #d8d6d6;
   }
   #mobile-nav ul ul ul ul li a {
-    padding-left: 2.5em;
+    padding-left: 4em;
   }
   #mobile-nav ul ul ul ul ul {
     background-color: #e4e0ee;
   }
   #mobile-nav ul ul ul ul ul li a {
-    padding-left: 3em;
+    padding-left: 5em;
   }
   #mobile-nav ul ul ul ul ul ul {
     background-color: white;
   }
   #mobile-nav ul ul ul ul ul ul li a {
-    padding-left: 3.5em;
-  }
-  #mobile-nav ul ul ul ul ul ul .arrow a {
-    background: url("//common.northwestern.edu/v8/css/images/icons/mobile-down-arrow-ltpurple.svg") no-repeat center/20px 20px;
+    padding-left: 6em;
   }
   #mobile-nav-bottom {
-    background: #401f68;
+    background: #4e2a84;
   }
   #mobile-nav-bottom:after {
     content: "";
     display: table;
     clear: both;
   }
-  #mobile-nav-bottom #mobile-nav-bottom-left, #mobile-nav-bottom #mobile-nav-bottom-right {
+  #mobile-nav-bottom #mobile-nav-bottom-left,
+  #mobile-nav-bottom #mobile-nav-bottom-right {
     width: 50%;
     display: inline-block;
     float: left;
@@ -1190,406 +1718,30 @@ header {
     padding: 1rem;
     background: none;
   }
-  #mobile-nav-bottom #mobile-nav-bottom-left li, #mobile-nav-bottom #mobile-nav-bottom-right li {
+  #mobile-nav-bottom #mobile-nav-bottom-left li,
+  #mobile-nav-bottom #mobile-nav-bottom-right li {
     background: transparent;
     list-style: none;
   }
-  #mobile-nav-bottom #mobile-nav-bottom-left li:last-child, #mobile-nav-bottom #mobile-nav-bottom-right li:last-child {
+  #mobile-nav-bottom #mobile-nav-bottom-left li:last-child,
+  #mobile-nav-bottom #mobile-nav-bottom-right li:last-child {
     border: none;
   }
-  #mobile-nav-bottom #mobile-nav-bottom-left li a, #mobile-nav-bottom #mobile-nav-bottom-right li a {
+  #mobile-nav-bottom #mobile-nav-bottom-left li a,
+  #mobile-nav-bottom #mobile-nav-bottom-right li a {
     text-transform: uppercase;
     color: #fff;
     font: 12px/2em "Akkurat Pro Bold", "Arial Black", sans-serif;
     border: none;
     padding: inherit;
   }
-  #mobile-nav-bottom #mobile-nav-bottom-left li a.white-link, #mobile-nav-bottom #mobile-nav-bottom-right li a.white-link {
+  #mobile-nav-bottom #mobile-nav-bottom-left li a.white-link,
+  #mobile-nav-bottom #mobile-nav-bottom-right li a.white-link {
     color: #fff;
   }
-  #mobile-nav-bottom #mobile-nav-bottom-left ul, #mobile-nav-bottom #mobile-nav-bottom-right ul {
+  #mobile-nav-bottom #mobile-nav-bottom-left ul,
+  #mobile-nav-bottom #mobile-nav-bottom-right ul {
     display: block;
     background: none;
   }
-}
-
-footer {
-  background: #4e2a84;
-  color: #fff;
-  font: 14px/1.3em "Akkurat Pro Regular", Arial, sans-serif;
-  padding: 3rem 0;
-  width: 100%;
-}
-
-footer a {
-  font-family: "Akkurat Pro Regular", Arial, sans-serif;
-  color: #fff;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  text-decoration: none;
-}
-
-.footer-content {
-  margin-right: 5.15464%;
-  display: inline-block;
-  position: relative;
-  vertical-align: top;
-}
-
-.footer-content ul {
-  list-style-type: none;
-}
-
-.footer-content ul li {
-  padding-bottom: .8rem;
-}
-
-.footer-content:nth-of-type(1) {
-  width: 23.71134%;
-}
-
-.footer-content:nth-of-type(1) img:not(.png) {
-  width: 100%;
-}
-
-.footer-content:nth-of-type(2) {
-  width: 25.7732%;
-}
-
-.footer-content:nth-of-type(3) {
-  width: 18.04124%;
-}
-
-.footer-content:nth-of-type(4) {
-  width: 14.43299%;
-  margin-right: 0;
-}
-
-.footer-content p {
-  margin-top: 0;
-}
-
-.footer-content strong {
-  font-family: "Akkurat Pro Bold", "Arial Black", sans-serif;
-  font-weight: normal;
-}
-
-.footer-content .footer-icon {
-  height: 29px;
-  width: 18px;
-  left: -25px;
-  margin-top: .5em;
-}
-
-.footer-content img {
-  margin-bottom: 1rem;
-  max-width: 170px;
-}
-
-.footer-content.contact ul {
-  margin: 0 0 1rem 2rem;
-  position: relative;
-}
-
-.footer-content.contact ul:nth-of-type(3) {
-  margin-bottom: 0;
-}
-
-.footer-content.contact ul li.footer-pin-icon {
-  background: url("//common.northwestern.edu/v8/css/images/icons/pin-drop.svg") no-repeat;
-  background-size: 18px 24px;
-  position: absolute;
-  top: 2px;
-  left: -2rem;
-  height: 24px;
-  width: 18px;
-}
-
-.footer-content.contact ul li.footer-phone-icon {
-  background: url("//common.northwestern.edu/v8/css/images/icons/mobile-phone.svg") no-repeat;
-  background-size: 18px 24px;
-  position: absolute;
-  top: 2px;
-  left: -2rem;
-  height: 24px;
-  width: 18px;
-}
-
-.footer-content.contact ul li.footer-fax-icon {
-  background: url("//common.northwestern.edu/v8/css/images/icons/fax.svg") no-repeat;
-  background-size: 18px 24px;
-  position: absolute;
-  left: -2rem;
-  height: 20px;
-  width: 18px;
-}
-
-.footer-content.contact ul li.footer-email-icon {
-  background: url("//common.northwestern.edu/v8/css/images/icons/email.svg") no-repeat;
-  background-size: 18px 24px;
-  position: absolute;
-  top: 2px;
-  left: -2.2rem;
-  height: 24px;
-  width: 18px;
-}
-
-.footer-content.contact ul li.footer-email-icon + li {
-  font-size: 12px;
-}
-
-.social {
-  display: inline-block;
-  vertical-align: bottom;
-  overflow: hidden;
-  margin: 4px;
-  width: 39px;
-  height: 39px;
-  font-size: 0;
-  text-indent: -9999px;
-  background: url("//common.northwestern.edu/v8/css/images/icons/social-media-icons.svg");
-  background-color: #fff;
-  transition: background 0.3s;
-  border: 1px solid #fff;
-}
-
-.social:hover {
-  background-color: #b6acd1;
-}
-
-.facebook {
-  background-position: 0 0;
-}
-
-.facebook:hover {
-  background-position: 0 -39px;
-}
-
-.twitter {
-  background-position: -39px 0;
-}
-
-.twitter:hover {
-  background-position: -39px -39px;
-}
-
-.instagram {
-  background-position: -78px 0;
-}
-
-.instagram:hover {
-  background-position: -78px -39px;
-}
-
-.rss {
-  background-position: -117px 0;
-}
-
-.rss:hover {
-  background-position: -117px -39px;
-}
-
-.youtube {
-  background-position: -156px 0;
-}
-
-.youtube:hover {
-  background-position: -156px -39px;
-}
-
-.tumblr {
-  background-position: -195px 0;
-}
-
-.tumblr:hover {
-  background-position: -195px -39px;
-}
-
-.wordpress {
-  background-position: -234px 0;
-}
-
-.wordpress:hover {
-  background-position: -234px -39px;
-}
-
-.futurity {
-  background-position: -273px 0;
-}
-
-.futurity:hover {
-  background-position: -273px -39px;
-}
-
-.vimeo {
-  background-position: -312px 0;
-}
-
-.vimeo:hover {
-  background-position: -312px -39px;
-}
-
-.linkedin {
-  background-position: -351px 0;
-}
-
-.linkedin:hover {
-  background-position: -351px -39px;
-}
-
-.google-plus {
-  background-position: -390px 0;
-}
-
-.google-plus:hover {
-  background-position: -390px -39px;
-}
-
-.google-groups {
-  background-position: -429px 0;
-}
-
-.google-groups:hover {
-  background-position: -429px -39px;
-}
-
-.blog {
-  background-position: -468px 0;
-}
-
-.blog:hover {
-  background-position: -468px -39px;
-}
-
-.github {
-  background-position: -507px 0;
-}
-
-.github:hover {
-  background-position: -507px -39px;
-}
-
-.flickr {
-  background-position: -546px 0;
-}
-
-.flickr:hover {
-  background-position: -546px -39px;
-}
-
-.storify {
-  background-position: -585px 0;
-}
-
-.storify:hover {
-  background-position: -585px -39px;
-}
-
-.pinterest {
-  background-position: -624px 0;
-}
-
-.pinterest:hover {
-  background-position: -624px -39px;
-}
-
-.we-will {
-  background-position: -663px 0;
-}
-
-.we-will:hover {
-  background-position: -663px -39px;
-}
-
-@media screen and (max-width: 1140px) {
-  footer {
-    padding: 3rem 1rem;
-  }
-}
-
-@media screen and (max-width: 870px) {
-  .footer-content {
-    margin-bottom: 1.5rem;
-  }
-  .footer-content:nth-of-type(1), .footer-content:nth-of-type(3) {
-    width: 45%;
-    margin-right: 5%;
-  }
-  .footer-content:nth-of-type(2), .footer-content:nth-of-type(4) {
-    width: 46%;
-    margin-right: 0;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .footer-content:nth-of-type(1), .footer-content:nth-of-type(2), .footer-content:nth-of-type(3), .footer-content:nth-of-type(4) {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
-.content a.button, #top-nav ul li a.button {
-  font: 16px "Akkurat Pro Bold", "Arial Black", sans-serif;
-  color: #fff;
-  background: #4e2a84;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: normal;
-  margin: 0 .5em .5em 0;
-  padding: .8em 1em .7em 1em;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  min-width: 165px;
-  border: none;
-}
-
-.content a.button:before, #top-nav ul li a.button:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #b6acd1;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-
-.content a.button:hover, .content a.button:focus, .content a.button:active, #top-nav ul li a.button:hover, #top-nav ul li a.button:focus, #top-nav ul li a.button:active {
-  color: #fff;
-  text-decoration: none;
-}
-
-.content a.button:hover:before, .content a.button:focus:before, .content a.button:active:before, #top-nav ul li a.button:hover:before, #top-nav ul li a.button:focus:before, #top-nav ul li a.button:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-.content a.button.normal-case, #top-nav ul li a.button.normal-case {
-  text-transform: none;
 }

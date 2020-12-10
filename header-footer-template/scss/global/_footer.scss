@@ -1,0 +1,621 @@
+// footer
+
+footer {
+    background: $nu-purple;
+    color: $white;
+    font: 14px/1.3em $AkkuratProRegular;
+    padding: 3rem 0 0 0;
+    width: 100%;
+    
+    .footer-wrap {
+        @include flexbox;
+    }
+    
+    h2 {
+        font: 16px/1.3em $AkkuratProBold;
+        color: $white;
+        margin-bottom: 2rem;
+    }
+
+    a {
+        font-family: $AkkuratProRegular;
+        color: $white;
+        text-decoration: underline;          
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .footer-logo {
+        width: 100%;
+        max-width: 390px;
+        height: 35px;
+        background: url("#{$open}images/logos/northwestern-university-horizontal.svg#{$close}") no-repeat;
+        margin-bottom: 2rem;
+    }
+}
+
+.footer-content {
+    margin-right: 50px / 1120px * 100%;    
+    position: relative;
+    vertical-align: top;
+    
+    ul {
+        list-style-type: none;
+    
+        li {
+            padding-bottom: .8rem;
+        }    
+    }   
+
+    p {
+        margin-top: 0;
+    }
+    
+    strong {
+        font-family: $AkkuratProBold;
+        font-weight: normal;
+    }
+    
+    img {
+        margin-bottom: 1rem;
+        max-width: 200px;
+    }
+    
+    // cta region in footer
+    #cta {
+        margin-top: 1.5rem;
+
+        h3 {
+            font: 22px/1.2em $CamptonBold;
+            color: $white;
+            margin: 1rem 0 .5rem 0;
+        }
+
+        p {
+            font: 16px/1.2em $AkkuratProRegular;
+        }
+
+        a.button,
+        p.button a {        
+            background: $nu-purple-60;
+            border: none;
+            color: $white;
+            cursor: pointer;
+            display: inline-block;
+            font: 16px/1em $AkkuratProBold;
+            margin: 0;
+            padding: .8rem 1rem .7rem 1rem;
+            position: relative;
+            text-transform: uppercase;
+            transition: all 0.3s ease 0s;
+            text-decoration: none;
+
+            &:after {
+                content: "";
+                position: absolute;
+                transition: all 0.3s ease 0s;
+                z-index: -1;
+            }
+
+            &:hover, &:active {
+                background: $nu-purple-10;
+                color: $nu-purple;
+            }
+
+            &:focus {
+                border: 2px dashed $white;
+                outline: none;
+            }
+        }
+    }
+    
+    // department contact info
+    &.contact {
+        width: 300px / 1120px * 100%;
+        
+        .address,
+        .phone,
+        .fax,
+        .email,
+        .feedback {
+            position: relative;
+            margin: 0 0 2.5rem 2rem;
+            
+            span {
+                position: absolute;
+                left: -99999em;
+                top: auto;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            
+            .icon {
+                position: absolute;
+                top: 0;
+                left: -2rem;
+                display: inline;
+            }
+        }
+        
+        .address {
+            
+            .icon {
+                background: url("#{$open}images/footer/pin-drop.svg#{$close}") no-repeat;
+                background-size: 17px 24px;
+                height: 24px;
+                width: 17px; 
+            }
+        }
+        
+        .phone {
+            
+            .icon {
+                background: url("#{$open}images/footer/mobile-phone.svg#{$close}") no-repeat;
+                background-size: 14px 25px;
+                height: 25px;
+                width: 14px; 
+            }
+        }
+        
+        .fax {
+            
+            .icon {
+                background: url("#{$open}images/footer/fax.svg#{$close}") no-repeat;
+                background-size: 18px 18px;
+                height: 28px;
+                width: 18px; 
+            }
+        }
+        
+        .email {
+            
+            .icon {
+                background: url("#{$open}images/footer/email.svg#{$close}") no-repeat;
+                background-size: 18px 18px;
+                height: 18px;
+                width: 18px; 
+            }
+            
+            .text {
+                font-size: 12px; // smaller font size for email address
+            }
+        }
+        
+        .feedback {
+            margin-bottom: 0;
+            
+            .icon {
+                background: url("#{$open}images/footer/feedback.svg#{$close}") no-repeat;
+                background-size: 17px 18px;
+                height: 18px;
+                width: 17px; 
+            }
+        } 
+    }
+
+    // connect social media icons
+    &.connect { 
+        width: 200px / 1120px * 100%;
+        
+        // social media icons
+        .social {
+            display: inline-block;
+            vertical-align: bottom;
+            overflow: hidden;
+            margin: 4px;
+            width: 39px;
+            height: 39px;
+            font-size: 0;
+            text-indent: -9999px;   
+            background: url("#{$open}images/footer/social-media-icons.svg#{$close}");
+            background-color: #fff;
+            transition: background 0.3s;
+            border: 1px solid $white;
+
+            &:hover {
+                background-color: $nu-purple-30;
+            }
+            
+            &:focus {
+                outline: 2px dashed;
+            }
+        }
+
+        .facebook {
+            background-position: 0 0;
+
+            &:hover {
+                background-position: 0 -39px;   
+            }
+        }
+
+        .twitter {
+            background-position: -39px 0;
+
+            &:hover {
+                background-position: -39px -39px;   
+            }
+        }
+
+        .instagram {
+            background-position: -78px 0;
+
+            &:hover {
+                background-position: -78px -39px;   
+            }
+        }
+
+        .rss {
+            background-position: -117px 0;
+
+            &:hover {
+                background-position: -117px -39px;   
+            }
+        }
+
+        .youtube {
+            background-position: -156px 0;
+
+            &:hover {
+                background-position: -156px -39px;   
+            }
+        }
+
+        .tumblr {
+            background-position: -195px 0;
+
+            &:hover {
+                background-position: -195px -39px;   
+            }
+        }
+
+        .wordpress {
+            background-position: -234px 0;
+
+            &:hover {
+                background-position: -234px -39px;   
+            }
+        }
+
+        .futurity {
+            background-position: -273px 0;
+
+            &:hover {
+                background-position: -273px -39px;   
+            }
+        }
+
+        .vimeo {
+            background-position: -312px 0;
+
+            &:hover {
+                background-position: -312px -39px;   
+            }
+        }
+
+        .linkedin {
+            background-position: -351px 0;
+
+            &:hover {
+                background-position: -351px -39px;   
+            }
+        }
+
+        .google-plus {
+            background-position: -390px 0;
+
+            &:hover {
+                background-position: -390px -39px;   
+            }
+        }
+
+        .google-groups {
+            background-position: -429px 0;
+
+            &:hover {
+                background-position: -429px -39px;   
+            }
+        }
+        .blog {
+            background-position: -468px 0;
+
+            &:hover {
+                background-position: -468px -39px;   
+            }
+        }
+
+        .github {
+            background-position: -507px 0;
+
+            &:hover {
+                background-position: -507px -39px;   
+            }
+        }
+
+        .flickr {
+            background-position: -546px 0;
+
+            &:hover {
+                background-position: -546px -39px;   
+            }
+        }
+
+        .storify {
+            background-position: -585px 0;
+
+            &:hover {
+                background-position: -585px -39px;   
+            }
+        }
+
+        .pinterest {
+            background-position: -624px 0;
+
+            &:hover {
+                background-position: -624px -39px;   
+            }
+        }
+
+        .we-will {
+            background-position: -663px 0;
+
+            &:hover {
+                background-position: -663px -39px;   
+            }
+        }
+        
+        .spotify {
+            background-position: -702px 0;
+
+            &:hover {
+                background-position: -702px -39px;   
+            }
+        }
+    }  
+    
+    // quick links
+    &.links {
+        width: 200px / 1120px * 100%;
+        
+        ul li:last-child {
+            padding-bottom: 0;
+        }
+    }
+    
+    // northwestern resources
+    &.resources {
+        width: 270px / 1120px * 100%; 
+        margin-right: 0;
+        
+        ul li:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+#footer-bottom {
+    background: $nu-purple-120;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 12px;
+    @extend %clearfix;
+
+    .copyright {
+        font-size: 14px;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: inline;
+
+        li {
+            margin: 0;
+            padding: 0 .25rem;
+            display: inline;
+        }
+        
+        a {
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .social {
+            background-repeat: no-repeat;
+            height: 18px;
+            width: 20px; // matches youtube icon (longest width)
+            position: relative;
+            top: 4px;
+            overflow: hidden;
+            text-indent: -9999px;
+        }
+
+        .text {
+            position: absolute;
+            z-index: -1;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            left: -9999em;
+        }
+        
+        .social:hover + .text {
+            display: inline;
+            position: static;
+            z-index: auto;
+            visibility: visible;
+            opacity: 1;
+            padding-left: .25rem;
+            width: 100px;
+            left: -9999em;
+        }
+
+        .facebook {
+            background: url("#{$open}images/footer/facebook-white.svg#{$close}") no-repeat;
+            background-size: 18px 18px;
+            display: inline-block;
+            margin-left: 1rem;
+            
+            &:hover {
+                background: url("#{$open}images/footer/facebook-color.svg#{$close}") no-repeat;
+            }
+        }
+
+        .twitter {
+            background: url("#{$open}images/footer/twitter-white.svg#{$close}") no-repeat;
+            background-size: 18px 18px;
+            display: inline-block;
+            
+            &:hover {
+                background: url("#{$open}images/footer/twitter-color.svg#{$close}") no-repeat;
+                background-size: 18px 17px;
+            }
+        }
+        
+        .instagram {
+            background: url("#{$open}images/footer/instagram-white.svg#{$close}") no-repeat;
+            background-size: 18px 18px;
+            display: inline-block;
+            
+            &:hover {
+                background: url("#{$open}images/footer/instagram-color.svg#{$close}") no-repeat;
+            }
+        }
+
+        .youtube {
+            background: url("#{$open}images/footer/youtube-white.svg#{$close}") no-repeat;
+            background-size: 20px 14px;
+            display: inline-block;
+            top: 7px;
+            
+            &:hover {
+                background: url("#{$open}images/footer/youtube-color.svg#{$close}") no-repeat;
+            }
+        }
+
+        .futurity {
+            background: url("#{$open}images/footer/futurity-white.svg#{$close}") no-repeat;
+            background-size: 15px 18px;
+            display: inline-block;
+            
+            &:hover {
+                background: url("#{$open}images/footer/futurity-color.svg#{$close}") no-repeat;
+            }
+        }
+
+        .rss {
+            background: url("#{$open}images/footer/rss-white.svg#{$close}") no-repeat;
+            background-size: 16px 16px;
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (max-width: 71.25em) { 
+    
+    .footer-logo {
+        margin: 0 1rem 2rem 1rem;
+    }
+    
+    .footer-wrap { 
+        padding: 0 1rem; // gives left/right padding to smaller screen widths
+    }
+}
+
+@media screen and (max-width: 61.25em) {
+
+    .footer-wrap {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; // wrap children
+    }
+ 
+    .footer-content { // two columns
+        margin-bottom: 2.5rem;
+        
+        &.contact,
+        &.links {
+            width: 45%;
+            margin-right: 5%;
+        }
+        
+        &.connect,
+        &.resources {
+            width: 46%;
+            margin-right: 0;        
+        }
+    }
+    
+    #footer-bottom {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 34.375em) {
+    
+    footer {
+        
+        .footer-logo { // swap footer logo
+            max-width: 170px;
+            height: 52px;
+            background: url("#{$open}images/logos/northwestern-university.svg#{$close}") no-repeat;
+        }
+        
+        h2 {
+            border-bottom: 1px solid $white;
+            padding-bottom: .25rem;
+        }
+    }
+    
+    .footer-content {
+        
+        &.contact,
+        &.connect,
+        &.links,
+        &.resources {
+            width: 100%;
+            margin-right: 0;
+        }
+        
+        &.contact {
+            
+            .address,
+            .phone,
+            .fax,
+            .email,
+            .feedback {
+                position: relative;
+                margin: 0 0 1.5rem 2rem;
+            }
+        }
+    }
+    
+    #footer-bottom {
+        margin-top: 1rem;
+        padding-bottom: 4rem;
+        
+        .right {
+            margin-top: .5rem;
+            display: block;
+            float: none;
+        }
+        
+        ul {
+            display: block;
+            margin: 1rem 0 1rem 0;
+                
+            .facebook {
+                margin-left: 0;
+            }
+        }
+    }
+}

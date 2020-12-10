@@ -1,4 +1,10 @@
+// scripts.js
+
 $(document).ready(function () {
+    
+    // top navigation - if ul.basic-dropdown is used, add li.dropdown-relative parent class
+    // this is to allow basic dropdowns to work alongside other dropdowns.
+    $('.dropdown-basic').parent().addClass('dropdown-relative');
 
     // expandable mobile elements
 	var _time = 100; // transition time
@@ -36,7 +42,7 @@ $(document).ready(function () {
     $('#mobile-nav').attr({
 		'aria-expanded': 'false',
 		'aria-hidden': 'true'
-	});  
+	});
     
 	// open menu
 	$(".mobile-nav-link").click(function (e) {
@@ -80,19 +86,24 @@ $(document).ready(function () {
 	});
     
     // mobile drill down navigation
-    $('.arrow a').click(function(e) {
+    $('#mobile-nav a[href="#"]').click(function(e) {
         e.preventDefault();
 		var clicked = $(this);
-		// hide all
+		// hide all non-parent unordered lists
 		var parents = $(clicked).parentsUntil('#mobile-nav', 'ul');
-		var lists = $('.arrow a').parent().next('ul').not(parents);
+		var lists = $('#mobile-nav a[href="#"]').next('ul').not(parents);
 		
 		$.each(lists,(function(index, obj) {
-            $(obj).parent().find('.open').removeClass('open');
+            $(obj).parent('li').find('span').removeClass('open');
+            $(obj).parent('li').find('a').removeClass('expand');
+            $(obj).attr({
+    			'aria-hidden': 'true',
+           	    'aria-expanded': 'false'
+			});
 			$(obj).slideUp('fast');
 		}));
 		// open the clicked item
-		var item = clicked.parent().next('ul');
+		var item = clicked.next('ul');
 		if (item.is(':hidden')) {
 			item.slideDown('fast', function() {
 				item.children('li:first-child').children('a').focus();
@@ -101,8 +112,10 @@ $(document).ready(function () {
     			'aria-hidden': 'false',
            	    'aria-expanded': 'true'
 			});
-			clicked.parent().addClass('open');
-			clicked.find('span').html('Collapse');
+			// clicked.addClass('open');
+			clicked.addClass('expand');
+			clicked.children('span').addClass('open');
+//			clicked.find('span').html('Collapse');
            
 		} else {
 			item.slideUp('fast', function() {
@@ -112,32 +125,19 @@ $(document).ready(function () {
     			'aria-hidden': 'true',
            	    'aria-expanded': 'false'
 			});
-			clicked.parent().removeClass('open');
-			clicked.find('span').html('Expand');
+			clicked.removeClass('expand');
+			clicked.children('span').removeClass('open');
+//			clicked.find('span').html('Expand');
 		}
-	});
+	});	      
     
     // accessible #top-nav dropdown
     $("#top-nav").accessibleTopNavDropDown();
-    
-    // accessible #global-links dropdown
-    $("#global-links").accessibleGlobalLinksDropDown();
 
-});
+}); // end ready event
 
 // accessible #top-nav dropdown
 $.fn.accessibleTopNavDropDown = function ()
-{
-    var el = $(this);
-    $("a", el).focus(function() {
-        $(this).parents("li").addClass("hover");
-    }).blur(function() {
-        $(this).parents("li").removeClass("hover");
-    });
-}
-
-// accessible #global-links dropdown
-$.fn.accessibleGlobalLinksDropDown = function ()
 {
     var el = $(this);
     $("a", el).focus(function() {

@@ -1,14 +1,17 @@
 // mixins and extends
 
 // mixins
+// clearfix in media queries
 @mixin clearfix() {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
-// extends
+// extends (don't use in media queries.  duh.)
+// clearfix
 %clearfix {
+
     &:after {
         content: "";
         display: table;
@@ -20,9 +23,12 @@
 %purple-right-arrow {
 
     &:after {
-        background: url("#{$path-images}/icons/arrow-right-dkpurple.svg") no-repeat 50% 45% / 6px 10px;
-        padding-right: 1.5rem;
-        content: " "; 
+        background: url("#{$open}images/icons/arrow-right-dkpurple.svg#{$close}") no-repeat center / 6px 10px;
+        padding-right: .8rem;
+        content: " ";
+        height: 10px;
+        width: 6px;
+        display: inline-block;
     }
 }
 
@@ -38,4 +44,24 @@
         color: $white;
         display: inline-block;  
     }
+}
+
+// external link indicator (light purple)
+%external-link-light-purple {
+
+	&:after {
+        background: url("#{$open}images/icons/external-link-top-nav.png#{$close}") no-repeat center / 14px 14px;
+        padding-right: .8rem;
+        content: " ";
+        height: 14px;
+        width: 14px;
+        display: inline-block;
+	}
+}
+
+// flexbox
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }

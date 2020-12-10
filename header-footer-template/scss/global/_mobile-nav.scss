@@ -1,0 +1,237 @@
+// mobile navigation
+
+#mobile-links,
+#mobile-nav {
+    display: none;
+}
+
+@media screen and (max-width: 48em) {
+
+    // adds mobile menu and search links
+    #mobile-links {
+        display: block;
+        background: $light-grey;
+        height: 45px;
+        position: relative;
+    }
+    
+    .mobile-link {
+        display: inline-block;
+        padding: 1rem;
+        height: 45px;
+        width: 45px;
+        cursor: pointer;  
+        position: relative;
+
+        &.mobile-search-link {
+            background: url("#{$open}images/icons/search-purple.svg#{$close}") no-repeat center / 20px 20px;
+
+			&.open {
+                background: $nu-purple-120 url("#{$open}images/icons/alert-x-white-home.svg#{$close}") no-repeat center / 20px 20px;
+			}
+        }
+
+        &.mobile-nav-link {
+            background: url("#{$open}images/icons/hamburger-purple.svg#{$close}") no-repeat center / 20px 20px;
+
+            &.open {
+                background: $nu-purple-120 url("#{$open}images/icons/alert-x-white-home.svg#{$close}") no-repeat center / 20px 20px;
+            }
+        }
+    }
+
+    #mobile-overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: none;
+        overflow: hidden;
+        opacity: 0;
+    }
+    
+	#mobile-nav {
+        display: none;
+        background: $white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: -6px;
+        z-index: 9998;
+        box-shadow: 0px 2000px 0px 2000px rgba(0,0,0,.8); // faux background cover
+            
+        ul { // first level
+            background: $nu-purple-120;
+
+            li {
+                position: relative;
+                font-size: 18px;
+                line-height: 1.2em;
+
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    display: block;
+                    border-bottom: 1px solid $light-grey;
+                    position: relative;
+                    padding: .75em 3em .75em .75em;
+
+                    &.active {
+                        font-family: $AkkuratProBold;
+                    }
+                }
+                
+                a[href^="http://"]::after, 
+                a[href^="https://"]::after {
+                    content: url("#{$open}images/icons/external-link-white.svg#{$close}");
+                    margin-left: 0.5rem;
+                    display:inline-block;
+                    height: 14px;
+                    width: 14px;
+                }
+                
+                .arrow {
+                    width: 50px;
+                    height: 48px;
+                    background: url("#{$open}images/icons/circle-plus.svg#{$close}") no-repeat center / 30px 30px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    text-indent: -9999px;
+                    overflow: hidden;
+                    border: none;
+                    padding: 0;
+
+                    &.open {
+                        background: url("#{$open}images/icons/circle-minus.svg#{$close}") no-repeat center / 30px 30px;
+                    }
+                }
+            }
+            
+            ul { // second level
+                display: none;
+                background: $nu-purple-30;
+                
+                li {
+                    
+                    &.home { // for overview link
+                        margin-left: -1rem;
+                        font-family: $PeriodicoBoldItalic;
+                    
+                        a:after {
+                            background: url("#{$open}images/icons/arrow-thin-right-purple.svg#{$close}") no-repeat 50%;
+                            padding-right: 1.5rem;
+                            content: " ";
+                            height: 12px;
+                            width: 10px;
+                            display: inline-block;
+                        }
+                    }
+                    
+                    a {
+                        padding-left: 2em;
+                        color: $black;
+                    }
+                    
+                    a[href^="http://"]::after, 
+                    a[href^="https://"]::after {
+                        content: url("#{$open}images/icons/external-link-purple.svg#{$close}");
+                    }
+                }
+                
+                ul { // third level
+                    background-color: $rich-black-20;
+                    
+                    li {
+                        
+                        a {
+                            padding-left: 3em;
+                        }
+                    }
+                    
+                    ul { // fourth level
+                        background-color: $rich-black-10;
+                        
+                        li {
+                            
+                            a {
+                                padding-left: 4em;
+                            }
+                        }                        
+                        
+                        ul { // fifth level
+                            background-color: $nu-purple-10;
+                            
+                            li {
+                                
+                                a {
+                                    padding-left: 5em;
+                                }
+                            }
+                            
+                            ul { // sixth level
+                                background-color: white;   
+                                
+                                li {
+
+                                    a {
+                                        padding-left: 6em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }   
+        }        
+    }
+
+    // for bottom part of navigation (links from #top-bar)
+	#mobile-nav-bottom {
+		background: $nu-purple;
+
+		&:after {
+			@include clearfix();
+		}            
+
+        #mobile-nav-bottom-left,
+        #mobile-nav-bottom-right {
+            width: 50%;
+            display: inline-block;
+            float: left;
+            margin: 0;
+            padding: 1rem;
+            background: none;
+
+            li {
+                background: transparent;
+                list-style: none;
+
+                &:last-child {
+                    border: none;
+                }            
+
+                a {
+                    text-transform: uppercase;
+                    color: $white;
+                    font: 12px/2em $AkkuratProBold;
+                    border: none;
+                    padding: inherit;
+
+                    &.white-link {
+                        color: $white;
+                    }
+                }
+            }
+
+            ul {
+                display: block;
+                background: none;
+            }                
+        }
+    }
+}
