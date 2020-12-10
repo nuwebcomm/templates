@@ -1,0 +1,76 @@
+// photo grid
+
+.full-width-page {
+    
+    .photo-grid {
+        @include flexbox;      
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; // wrap children 
+        margin-top: 1.5rem;
+        
+        a img { // 
+            opacity: 1;
+            transition: opacity .3s ease-in-out;
+        
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+        article {
+            width: 265px / 1120px * 100%;
+            margin-right: 20px / 1120px * 100%;
+            margin-bottom: 20px;
+            line-height: 1.5rem;
+
+            &:nth-of-type(4n+4) { // every 4th item
+                margin-right: 0;
+            }
+
+            h2,
+            h3 {
+                font: 16px $AkkuratProBold;
+                color: $rich-black-80;
+                margin: 1rem 0 0 0;
+                text-align: inherit;
+                
+                &:before, &:after {
+                    display: none;
+                }
+            }
+
+            h2+p,
+            h3+p {
+                margin-top: .5rem;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 71.25em) { 
+    
+        .photo-grid {
+            margin: 0 1rem;
+        }
+    }
+
+    @media screen and (max-width: 48em) { 
+        
+        .photo-grid article {
+            width: 372.48px / 768px * 100%;
+            max-width: 265px;
+            margin-right: 23.04px / 768px * 100%;  
+            
+            &:nth-of-type(2n+2) { // every 2nd item
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 30em) { 
+        
+        .photo-grid article {
+            width: 100%;
+        }
+    }
+}

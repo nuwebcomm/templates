@@ -8,7 +8,6 @@
 
 	fieldset {
 		border: 1px solid $light-grey;
-//		padding: .35em .625em .75em;
 		margin-bottom: 1em;
 		border: 0;
 	
@@ -55,14 +54,16 @@
 		-webkit-appearance: none;
 	}
 
-	input, select, textarea {
+	input[type=text], 
+    input[type=email],
+    input[type=password],
+    select, 
+    textarea {
 		display: inline-block;
 		border: 1px solid $medium-grey;
         font: inherit;
 		color: $rich-black-80;
 		border-radius: 0;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		-webkit-font-smoothing: antialiased;
 		width: 50%; // previously: min-width: 30rem
@@ -70,9 +71,9 @@
         padding: .5em;
 		@include borderFade();
 
-		&.required {
-			border: 1px solid $red;
-		}
+//		&.required {
+//			border: 1px solid $red;
+//		}
         
         // for smaller input fields
         &.narrow { 
@@ -90,26 +91,22 @@
 
 	input[type=search] {
 		-webkit-appearance: textfield;
-		-moz-box-sizing: content-box;
-		-webkit-box-sizing: content-box;
 		box-sizing: content-box;
 	}    
 
 	input:focus, 
     select:focus, 
     textarea:focus {
-//		outline: thin dashed;
 		border-color: $nu-purple;
 	}
     
-	input.required:focus,
-    select.required:focus,
-    textarea.required:focus {
-		border-color: $red;
-	}
+//	input.required:focus,
+//    select.required:focus,
+//    textarea.required:focus {
+//		border-color: $red;
+//	}
 
 	input:focus {
-//		outline: thin dotted $rich-black-80;
 		outline: 1px auto $nu-purple;
 	}
 
@@ -141,7 +138,7 @@
 	}
 
 	select {
-		background: $white url("#{$path-images}/icons/arrow-down-dkpurple.svg")  no-repeat top 50% right .5rem / 17px 10px;
+		background: $white url("#{$open}images/icons/arrow-down-dkpurple.svg#{$close}")  no-repeat top 50% right .5rem / 17px 10px;
 		color: $rich-black-50;
         width: inherit;
         padding-right: 2rem;
@@ -166,7 +163,15 @@
     }
 
 	select[multiple] {
-		height: auto
+		height: auto;
+        background: none;
+        margin: 0;
+        padding: 0;
+        overflow-y: scroll;
+        
+        option {
+            padding: .25rem 1rem .25rem .25rem;
+        }
 	}
 
 	textarea {
@@ -188,7 +193,7 @@
 		font-weight: normal;
 	}
 
-	label, .label {
+	label, .label, legend {
         
 		span {
             
@@ -228,7 +233,6 @@
     input,
     select,
     textarea {
-		font-size: 100%;
 		vertical-align: baseline;
 		vertical-align: middle;
 	}
@@ -246,34 +250,48 @@
 		cursor: pointer;
 		overflow: visible;
 	}
+    
+    // submit button
+    input[type=submit] {
+        background: $nu-purple;
+        border: none;
+        color: $white;
+        cursor: pointer;
+        display: inline-block;
+        font: 16px $AkkuratProBold;
+        padding: .8em 1.5em .7em 1.5em;
+        position: relative;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+        text-decoration: none;
+        margin: 2rem 0;
+        
+        &:hover, &:active {
+            background: $nu-purple-30;
+        }
+
+        &:focus {
+            border: 1px dashed $white;
+            outline: none;
+        }
+    }
 
 	button[disabled],
     input[disabled] {
 		cursor: default;
 	}
 
-    // media queries
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 30em) {
 
-        button[type=submit] {
-            margin: .7em 0 0
-        }
-
-        input,
-        label {
-            margin-bottom: .3em;
-            display: block;
-        }
-
-        input,
+        input[type=text],
+        input[type=text].narrow,
+        input[type=email],
+        input[type=email].narrow,
+        label,
         select,
         textarea {
+            display: block;
             width: 100%;
-
-            // for smaller input fields
-            &.narrow { 
-                width: 50%;
-            }        
         }
 
         .form-help-inline, 

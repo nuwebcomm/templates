@@ -1,0 +1,285 @@
+// showcase areas - can include mini slideshow (swiper)
+
+.standard-page {
+
+    .useful-links {  
+    
+        .left-content .swiper-container { // forces max-width for smaller slideshow w/ right-content links
+            max-width: 550px;
+            margin: 0;
+        }
+        
+        .caption { // this is the caption for when the swiper gallery is included
+            font: 14px $AkkuratProItalic;  
+            margin: 0;
+            position: absolute;
+            bottom: 0;
+            padding: .75rem;
+            background: rgba(0, 0, 0, .5);
+            color: $white;
+            width: 100%;
+        
+            strong {
+                font-family: $AkkuratProBoldItalic;
+            }
+        }
+        
+        .swiper-container {
+            width: 100%;
+        }
+
+        .swiper-wrapper {
+            margin-bottom: 2rem;
+        }
+        
+        // if single image change flex to block
+        &.single-image .swiper-wrapper {
+            display: block;
+        }
+
+        .swiper-slide {
+            padding: 0;
+            width: auto;
+
+            h4 {
+                margin-bottom: 2rem;
+
+                a {
+                    font: 24px/1.4em $CamptonExtraBold;
+                    color: $black;
+                }
+            }
+
+            .date {
+                font: 14px/1em $AkkuratProRegular;
+                text-transform: uppercase;
+                color: $rich-black-50;
+            }
+        }
+
+        .swiper-nav {
+            position: absolute;
+            top: 0;
+            right: 0; 
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 100%;
+            height: 35px;
+        }
+        
+        .swiper-button-prev {
+            background-image: url("#{$open}images/icons/arrow-right-purple-white.svg#{$close}");
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+            background-size: 35px 35px;
+            width: 35px;
+            height: 35px;
+            left: .5rem;
+            top: inherit;
+            display: inline-block;
+            margin-right: .5rem;
+
+            &:after {
+                position: absolute;
+                left: -99999em;
+                top: auto;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+        }
+
+        .swiper-button-next {
+            background-image: url("#{$open}images/icons/arrow-right-purple-white.svg#{$close}");
+            background-size: 35px 35px;
+            width: 35px;
+            height: 35px;
+            right: .5rem;
+            top: inherit;
+            display: inline-block;
+
+            &:after {
+                position: absolute;
+                left: -99999em;
+                top: auto;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+        }
+        
+        .swiper-pagination {
+            bottom: .25rem;
+        }
+        
+        .swiper-pagination-bullet {
+            opacity: 1;
+            background: $medium-grey;
+            height: 12px;
+            width: 12px;
+            margin-right: .5rem;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: $nu-purple;
+        }
+        
+        p+h3 {
+            margin: 1.5rem 0 .5rem 0;
+        }
+        
+        .left-content {
+            width: 550px / 836px * 100%;
+            float: left;
+        }
+        
+        .right-content {
+            width: 250px / 836px * 100%;
+            float: left;
+            margin-left: 35px / 836px * 100%;
+        }
+        
+        .below-content {
+            @extend %clearfix;
+        }
+        
+        .quote {
+            float: left;
+            width: 265px;
+            margin: 0 2rem 1rem 0;
+            line-height: 1.4em;
+        }
+        
+        .stat-list {
+            color: $nu-purple;  
+            font: 24px/1.3em $CamptonExtraLight;
+                        
+            .big {
+                font: 72px/1em $CamptonBold;
+            }
+            
+            .text {
+                font: 24px/1.3em $CamptonExtraLight;
+            }
+            
+            h3 {
+                font: 26px/1.2em $CamptonBold;
+                color: $nu-purple;
+                margin: 1rem 0 .5rem 0;
+            }
+            
+            ul {
+                margin: .5rem 0 0 0;
+                padding: 0;
+                color: $rich-black-50;  
+                
+                &.no-border { // for library page
+                    border-top: none;
+                    padding-top: 0;
+                }
+
+                li {
+                    background: none;
+                    padding: 0;
+                }
+                
+                &.bullet { // for diversity page
+                    margin: 0 0 -2rem 0;
+                    padding: inherit;
+                
+                    li {
+                        background: url("#{$open}images/icons/bullet.png#{$close}") top left no-repeat;
+                        background-position: 0 .5rem;
+                        padding: 0 0 .5rem 1em;
+                        font-size: 20px;                                  
+                    }
+                }
+            }
+        }
+        
+        .links {
+            
+            h3 {
+                font: 18px/1.2em $AkkuratProBold;
+                color: $rich-black-50;
+                border-bottom: 4px solid $light-grey;
+                padding-bottom: .5rem;
+            }
+            
+            ul {
+                padding: 0;
+                margin: 0;
+            
+                li {
+                    background: none;
+                    padding: 0;
+                    margin-bottom: 1rem;
+                    
+                    a {
+                        @extend %purple-right-arrow;
+                    }
+                }           
+            }
+        }
+    }
+       
+    @media screen and (max-width: 71.25em) {    
+        
+        .useful-links .stat-list .big {
+            font-size: 54px;
+        }
+    }
+
+    @media screen and (max-width: 62.5em) {
+
+        .useful-links {
+            
+            .left-content {
+                float: none;
+                width: 100%;
+            }  
+            
+            .quote {
+                display: none;
+            }
+            
+            .right-content {
+                float: none;
+                width: 100%;
+                margin: 0;
+            }  
+            
+            ul.three-columns {
+                display: none;            
+            }
+        }
+    }
+    
+    @media screen and (max-width: 50em) {
+
+        .useful-links {
+            
+            .caption {
+                position: relative;
+                background: $nu-purple-60;
+                bottom: .6rem;
+            }
+            
+            .swiper-nav {
+                height: 25px;
+            }
+            
+            .swiper-button-next,
+            .swiper-button-prev {
+                width: 25px;
+                height: 25px;
+                -moz-background-size: 25px 25px;
+                -webkit-background-size: 25px 25px;
+                background-size: 25px 25px;
+                margin-top: -2rem;
+            }
+        }
+    }
+}

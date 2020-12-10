@@ -3,26 +3,29 @@
 .standard-page {  
     
     .photo-grid {
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex; // equal height columns        
+        @include flexbox;   
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-        flex-wrap: wrap; // wrap child items 
+        flex-wrap: wrap; // wrap children 
         margin-top: 1.5rem;
-        @extend %clearfix;      
         
-        h4, h3 {
+        h2,
+        h3,
+        h4 {
             font: 16px/1.5em $AkkuratProBold;
             color: $rich-black-80;
             margin: 1rem 0 0 0;
         }
 
-        h4+p, h3+p {
+        h2+p,
+        h3+p,
+        h4+p {
             margin-top: .5rem;
         }
         
-        a h4, a h3 {
+        a h2,
+        a h3,
+        a h4 {
             color: $nu-purple;
         }
         
@@ -41,7 +44,6 @@
                 width: 408px / 836px * 100%;
                 margin-right: 20px / 836px * 100%;
                 margin-bottom: 20px;
-                float: left;
                 line-height: 1.5rem;
 
                 &:nth-of-type(2n+2) { // every 3rd item
@@ -56,7 +58,6 @@
                 width: 265px / 836px * 100%;
                 margin-right: 20px / 836px * 100%;
                 margin-bottom: 20px;
-                float: left;
                 line-height: 1.5rem;
 
                 &:nth-of-type(3n+3) { // every 3rd item
@@ -71,7 +72,6 @@
                 width: 265px / 1120px * 100%;
                 margin-right: 20px / 1120px * 100%;
                 margin-bottom: 20px;
-                float: left;
                 line-height: 1.5rem;
                 
                 &:nth-of-type(4n+4) { // every 4th item
@@ -81,7 +81,6 @@
         }    
     }
     
-    //  media queries
     @media screen and (max-width: 900px) { 
 
         .photo-grid {
@@ -105,11 +104,12 @@
         }
     }
     
-    @media screen and (max-width: 768px) {        
+    @media screen and (max-width: 48em) {        
         
         .photo-grid {
         
-            &.four-grid, .two-grid {
+            &.four-grid,
+            &.two-grid {
 
                 article {
                     width: 372.48px / 768px * 100%;
@@ -123,11 +123,13 @@
         }
     }        
 
-    @media screen and (max-width: 475px) { 
+    @media screen and (max-width: 30em) { 
         
         .photo-grid {
             
-            &.two-grid, &.three-grid, &.four-grid {
+            &.two-grid,
+            &.three-grid,
+            &.four-grid {
          
                 article {
                     width: 100%;
@@ -135,5 +137,4 @@
             }
         }
     }
-
-} // end
+}

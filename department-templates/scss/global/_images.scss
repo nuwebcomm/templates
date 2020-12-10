@@ -1,0 +1,118 @@
+// images
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    &.inline-block {
+        display: inline-block;
+    }
+    
+    &.outline {
+        border: 1px solid $medium-grey;
+    }
+
+    // image floats
+    &.align-image-left {
+        float: left;
+        margin: .5rem 1.5rem .5rem 0;
+    }
+
+    &.align-image-right {
+        float: right;
+        margin: .5rem 0 .5rem 1.5rem;
+    }
+
+    &.align-image-center {
+        margin: 0 auto;
+    }
+}
+
+// captioned images
+figure {
+
+    &.horizontal-image-left {
+        max-width: 335px;
+        float: left;
+        margin: 0 1.5rem 1.5rem 0;
+    }
+
+    &.horizontal-image-right {
+        max-width: 335px;
+        float: right;
+        margin: 0 0 1.5rem 1.5rem;
+    }
+
+    &.vertical-image-left { 
+        max-width: 240px;
+        float: left;
+        margin: 0 1.5rem 1.5rem 0;
+    }
+
+    &.vertical-image-right { 
+        max-width: 240px;
+        float: right;
+        margin: 0 0 1.5rem 1.5rem;
+    }
+
+    &.portrait-image-left {
+        max-width: 170px;
+        float: left;
+        margin: 0 1.5rem 1.5rem 0;
+    }
+
+    &.portrait-image-right {
+        max-width: 170px;
+        float: right;
+        margin: 0 0 1.5rem 1.5rem;
+    }
+
+    &.horizontal-image-left,
+    &.horizontal-image-right, 
+    &.vertical-image-left,
+    &.vertical-image-right,
+    &.portrait-image-left,
+    &.portrait-image-right {
+        display: inline-block;
+
+        figcaption {
+            font-size: 12px;
+            line-height: 1.4em;
+            position: relative;
+            bottom: 0;
+            background: $white;
+            padding: 0;
+            margin: .5rem 0 0 0;
+            color: $rich-black-80;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 48em) {    
+
+    .align-image-left,
+    .align-image-right,
+    .align-image-center {
+        float: none;
+        margin: 0 0 1rem 0;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 40em) {
+
+    figure {
+
+        &.horizontal-image-left,
+        &.horizontal-image-right, 
+        &.vertical-image-left,
+        &.vertical-image-right,
+        &.portrait-image-left,
+        &.portrait-image-right {
+            float: none;
+            margin: 0 0 1rem 0;
+        }
+    }    
+}

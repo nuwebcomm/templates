@@ -1,0 +1,76 @@
+// stats callout
+
+.full-width-page {
+    
+    .stats-callout {
+        @include flexbox;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap; // break into multiple lines   
+        border-top: 4px solid $light-grey;
+        border-bottom: 4px solid $light-grey;
+        text-align: center;
+        padding: 2rem 0;
+        
+        // by default groups by threes and grows trailing children
+        > div {
+            flex-grow: 1; // grow div larger than min-width
+            max-width: 33%;
+            width: 100%;
+            padding: 1rem;
+            margin: 0 auto;
+        }
+        
+        // group in twos
+        &.twos {
+            
+            > div {
+                max-width: 50%;
+                width: 100%;
+            }
+        }
+
+        .big {
+            font: 72px/1.1em $CamptonBold;
+            color: $nu-purple;
+        }
+
+        .text {
+            font: 24px $CamptonExtraLight;
+            color: $nu-purple;
+        }
+    }
+
+    @media screen and (max-width: 70em) {
+        
+        .stats-callout {
+                
+            .big {
+                font: 48px $CamptonBold;
+            }
+
+            .text {
+                font: 20px $CamptonExtraLight;
+            }
+        }
+    }
+
+    @media screen and (max-width: 48em) {    
+        
+        .stats-callout {
+            
+            > div {
+                min-width: 50%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 30em) {    
+        
+        .stats-callout {
+            
+            > div {
+                min-width: 100%;
+            }
+        }
+    }
+}

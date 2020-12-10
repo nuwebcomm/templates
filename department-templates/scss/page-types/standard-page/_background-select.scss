@@ -18,7 +18,9 @@
             padding: 2rem 1em; 
         }
         
-        h3 {
+        h2,
+        h3,
+        h4 {
             font: 42px $CamptonBook;
             color: $white;
             margin-bottom: 1rem;
@@ -27,21 +29,24 @@
         p {
             font-size: 18px;
             margin-bottom: 2rem;
-        }  
+        }
         
-        .select-date {
+        .subhead {
             font: 18px $CamptonBold;
             text-transform: uppercase;
             margin-bottom: 1.5rem;
-        }        
-    }   
+        }
+    }
     
-    // media queries
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 30em) {
 
-        .background-select h3 {
-            font-size: 28px;    
-        }     
-    }    
-    
-} // end
+        .background-select {
+            
+            h2,
+            h3,
+            h4 {
+                font-size: 28px;    
+            }
+        }
+    }
+}

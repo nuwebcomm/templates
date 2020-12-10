@@ -1,0 +1,136 @@
+// news / events / announcement module
+
+.standard-page {
+
+    .feature-events {
+        @include flexbox;
+
+        h3 {
+            font: 30px/1.3em $AkkuratProRegular;
+            margin-bottom: 1.5rem;
+            padding-bottom: .5rem;
+            color: $rich-black-50;
+            border-bottom: 4px solid $light-grey;
+        }
+
+        h4 {
+            font: 18px/1.5em $AkkuratProBold;
+            border: none;
+            margin-bottom: .5rem;
+        }
+        
+        p.button {
+            margin-bottom: 0;
+        }        
+        
+        .column-narrow,
+        .column-wide {
+            position: relative;                 
+        }        
+
+        > div {
+            margin-right: 30px / 1120px * 100%;
+        }
+        
+        .column-narrow {
+            width: 275px / 836px * 100%;
+        }
+        
+        .column-wide {
+            width: 531px / 836px * 100%;
+        }        
+        
+        // news section
+        .news-section {
+            font-size: 15px;
+            line-height: 1.5em;
+            
+            img {
+                margin-bottom: .5rem;
+            }
+        }   
+        
+        // events section
+        .events-section {
+        
+            .event {
+                position: relative;
+                min-height: 100px;
+                margin-bottom: 1rem;
+                
+                &:last-child {
+                    margin-bottom: 1rem;
+                }
+
+                .event-date {
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    width: 90px;
+                    padding: .25rem;
+                    background: $nu-purple;
+                    font-family: $CamptonBold;
+                    color: $white;
+                    float: left;
+
+                    .month, year {
+                        font-size: 14px;
+                    }
+
+                    .day {
+                        font-size: 36px;
+                    }        
+                }
+
+                .event-content {
+                    margin-left: 105px;
+                    font-size: 15px;
+                    line-height: 1.5em;
+                }
+
+                .time-location {
+                    color: $rich-black-80;
+                    margin-bottom: .25rem;
+                }  
+            }
+        }
+
+        // button
+        p.button {
+
+            a {
+                margin: 0;
+            }
+        } 
+    }
+
+    @media screen and (max-width: 62.5em) { 
+        
+        .feature-events {
+            display: block;
+
+            .column-narrow,
+            .column-wide {
+                width: 100%;
+                margin-right: 0;
+            }  
+            
+            .news-section {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 30em) { 
+    
+        .feature-events {
+            
+            .events-section {
+                
+                strong {
+                    display: block;
+                }
+            }
+        }
+    }
+}

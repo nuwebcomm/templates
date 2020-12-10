@@ -1,0 +1,41 @@
+// twitter feed (aka plus section)
+
+.standard-page {
+
+    .twitter-feed { 
+        margin: 2rem 0;
+        padding-bottom: 1rem;
+        @include flexbox;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; // evenly spaces items
+        
+        &:last-of-type {
+            border-bottom: none;
+        }
+        
+        .content-side {
+            width: 418px / 836px * 100%;
+        }
+        
+        .twitter-side {
+            width: 365px / 836px * 100%;        
+        }
+    }
+          
+    @media screen and (max-width: 48em) {    
+        
+        .twitter-feed {
+            display: block;
+            
+            .content-side {
+                width: 100%;
+            }
+            
+            .twitter-side {
+                width: 90%;
+                margin: 0 2rem;
+            }
+        }
+    }
+}

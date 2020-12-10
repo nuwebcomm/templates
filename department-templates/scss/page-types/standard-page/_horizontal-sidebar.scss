@@ -1,0 +1,52 @@
+// horizontal sidebar
+.standard-page {
+    
+    .horizontal-sidebar {
+        width: 100%;
+        margin: 2rem 0;
+
+        .box {
+            background: $light-grey; 
+            padding: 1.5rem 2rem 1.5rem 2rem;
+            margin-bottom: 2rem;
+            font-size: 15px;
+            line-height: 1.6em;           
+
+            h2,
+            h3 {
+                font: 18px/1.2em $CamptonBold;
+                color: $rich-black-80;
+                margin: 1rem 0;
+            }
+
+            h4 {
+                font: 16px/1.2em $AkkuratProBold;
+                color: $rich-black-80;
+                margin: 1rem 0;
+            }
+            
+            p {
+                margin: 1rem 0;
+            }
+
+            ul {
+                padding-left: .5rem;
+                margin: 1rem 0;
+
+                li { 
+                    background-position: 0 .5rem
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 48em) {
+
+        .horizontal-sidebar {
+
+            .box {
+                padding: 1.5rem 1.5rem 1rem 1.5rem;
+            }
+        }
+    }
+}

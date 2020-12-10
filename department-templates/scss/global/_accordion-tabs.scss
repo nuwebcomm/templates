@@ -1,0 +1,318 @@
+// accordion tabs - https://github.com/matthiasott/a11y-accordion-tabs
+// customizations by cgarcia@northwestern.edu
+// the only class modification was changing .content to .tab-content (also in markup and js)
+
+.accordion-tabs {
+    background-color: $white;
+    margin: 2rem 0;
+
+    &.white-background { // used to present content like photo-grid without
+    
+        .tabs-panel {
+            background: $white;
+            padding: 2.5rem 0;
+        }
+    }
+}
+
+ul.tabs-tab-list {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    > li {
+        background: none;
+        margin: 0 2px 0 0;
+        padding: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+a.tabs-trigger {
+    font: 18px/1.3em $AkkuratProBold;
+    color: $white;
+    background: $nu-purple;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    display: inline-block;
+    border: none; // removes default border
+    transition: all ease .2s;
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    transform: translateY(4px);
+    display: none; // important
+
+    &:hover {
+        border-bottom: none;
+        color: #000;
+    }
+
+    &:active {
+        outline: none;
+    }
+
+    &.is-selected {
+        background: $light-grey;
+        color: $nu-purple;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        box-shadow: 6px 6px 0 0 rgba(0,0,0,.3);   
+        
+        &:hover {
+            background: $light-grey;
+            color: $nu-purple;
+        }
+    }
+    
+    &:hover {
+        border: none;
+        background: $nu-purple-60;
+        color: $white;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    } 
+
+    &:focus {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        box-shadow: 6px 6px 0 0 rgba(0,0,0,.3);
+    }
+}
+
+.tabs-panel {
+    margin: 0 0 3rem 0;
+    padding: 2.5rem 2.5rem;
+    background: $light-grey;
+    position: relative;
+    z-index: 1;
+    
+    &:active,
+    &:focus {
+        outline: none;
+    }
+    
+    // content overrides
+    .tab-content {
+        
+        h2 {
+            font-size: 26px;
+        }
+        
+        h3 {
+            font-size: 22px;
+        }
+        
+        h4 {
+            font-size: 20px;
+        }
+        
+        h5 {
+            font-size: 18px;
+        }
+        
+        table {
+            
+            th {
+                border: 1px solid $white;
+            }
+            
+            td {
+                border: 1px solid $rich-black-20;
+            }
+            
+            tr.stripe {
+                background: $rich-black-10;
+            }
+            
+            caption {
+                border-top: none;
+            }
+            
+            &.table-no-hover { // removes hover state on rows
+
+                tr {
+
+                    &.hover td {
+                        background: transparent;
+                        color: inherit;
+                    }
+
+                    &.hover.stripe {
+                        background: $light-grey;
+                    }
+                }
+            }
+            
+            &.table-no-stripe {
+                
+                tr.stripe {
+                    background: transparent;
+                }
+                
+                &.table-no-hover { // removes hover state if no stripe
+
+                    tr.hover.stripe {
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-hidden .tab-content {
+        display: none;
+    }
+}
+
+.is-initialized.tabs-allowed .tabs-panel {
+    display: inherit;
+}
+
+.accordeon-trigger {
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.accordeon-trigger-icon {
+    pointer-events: none;
+}
+
+.accordeon-trigger-icon {
+    display: inline-block;
+    float: right;
+    width: 22px;
+    height: 22px;
+
+    svg {
+        margin: 0;
+    }
+}
+
+[aria-expanded="true"] .vert {
+    display: none;
+}
+
+.label--open,
+.label--close {
+    display: block;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.label--close {
+    display: none;
+}
+
+.is-open {
+    
+    .label--open {
+        display: none;
+    }
+    
+    .label--close {
+        display: block;
+    }
+}
+
+// use pixels for accordion media queries!!
+@media screen and (max-width: 768px) {
+    
+    .full-width-page {
+    
+        .accordion-tabs {
+            margin: 0 1rem;
+        }
+    }
+}
+
+// use pixels for accordion media queries!!
+@media (min-width: 640px) {
+    
+    .tabs-allowed {
+        
+        .accordeon-trigger {
+            display: none;
+        }
+        
+        .tabs-trigger {
+            display: block;
+        }
+        
+        .tabs-panel {
+            display: none;
+        }
+        
+        .tabs-panel.is-hidden {
+            display: none;
+        }
+        
+        .tabs-panel {
+            border-top: 2px solid #eee;
+        }
+        
+        .tabs-tab-list {
+            margin-bottom: -2px;
+        }
+    }
+}
+
+// use pixels for accordion media queries!!
+@media screen and (max-width: 640px) {
+    
+    .accordion-tabs {
+        
+        &.white-background {
+            
+            .tabs-panel {
+                padding: 0;
+            }
+        } 
+    }
+    
+    ul.tabs-tab-list {
+        display: none;
+    }
+    
+    .full-width-page {
+        
+        .accordion-tabs {
+            margin-top: -1.75rem; // removes artificial space on mobile
+        }
+    }
+
+    .accordeon-trigger {
+        background:  $nu-purple;
+        color: $white;
+        font: 18px/1.3em $AkkuratProBold;
+        padding: 1rem;
+    
+        &:focus {
+            outline: 1px dashed $black;
+        }
+    }
+    
+    .tabs-panel {
+        background: none;
+        padding: 0;
+        margin-bottom: .5rem;
+    }
+    
+    .tab-content {
+        
+        &.is-open {
+            padding: 1rem 0;
+        }
+    }
+}

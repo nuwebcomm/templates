@@ -1,0 +1,223 @@
+// events boxes layout
+
+.full-width-page {
+    
+    .news-event-boxes {
+        
+        h4 {
+            font: 18px/1.5em $AkkuratProBold;
+            border: none;    
+            margin-bottom: .5rem;
+        }
+    }
+    
+    // hides description and puts time on single line when using date boxes in certain scenarios in two-thirds layout
+    .news-event-boxes {
+        
+        // if using thirds layout
+        &.thirds {
+            
+            .event {
+
+                // and has date box
+                .event-date + .event-content {
+
+                    strong {
+                        display: block;
+                    }
+
+                    .description {
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+        // if using two-thirds layout
+        &.two-thirds {
+            
+            &.wide-first {
+                
+                > div {
+                    
+                    // if left side
+                    &:first-of-type {
+                    
+                        // and displays as two columns
+                        .two-columns .event {
+
+                            // and has date box
+                            .event-date + .event-content {
+
+                                strong {
+                                    display: block;
+                                }
+
+                                .description {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    
+                    // if right side
+                    &:last-of-type {
+                        
+                        .event {
+
+                            // and has date box
+                            .event-date + .event-content {
+
+                                strong {
+                                    display: block;
+                                }
+
+                                .description {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.wide-last {
+            
+                > div {
+                    
+                    // if left side
+                    &:first-of-type {
+                    
+                        .event {
+
+                            // and has date box
+                            .event-date + .event-content {
+
+                                strong {
+                                    display: block;
+                                }
+
+                                .description {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    
+                    // if right side
+                    &:last-of-type {
+                        
+                        // and displays as two columns
+                        .two-columns .event {
+
+                            // and has date box
+                            .event-date + .event-content {
+
+                                strong {
+                                    display: block;
+                                }
+
+                                .description {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // event calendar
+    .event-list {
+        
+        // for two column version
+        .two-columns {
+            @include flexbox;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap; // wrap children
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between; // evenly spaces items
+            
+            .event {
+                width: 360px / 740px * 100%;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+
+        .event {
+            position: relative;
+            margin-bottom: 1.5rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }                
+
+            .event-date {
+                position: absolute;
+                text-align: center;
+                top: 0;
+                width: 90px;
+                padding: .25rem;
+                background: $nu-purple;
+                font-family: $CamptonBold;
+                color: $white;
+
+                .month, .year {
+                    font-size: 14px;
+                }
+
+                .day {
+                    font-size: 36px;
+                }        
+            }
+
+            .event-date + .event-content {
+                margin-left: 105px;
+                min-height: 90px;
+            }
+
+            .event-content {
+                margin-left: 0;
+                font-size: 15px;
+                line-height: 1.5em;
+            }
+
+            .date-time-location {
+                margin-bottom: .25rem;
+                line-height: 1.5em;
+            }        
+        } 
+    }
+    
+    @media screen and (max-width: 56.25em) {
+    
+        .event-list {
+
+            .two-columns {
+
+                .event {
+                    width: 440px / 900px * 100%;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 40em) {
+    
+        .event-list {
+
+            .two-columns {
+                display: block;
+
+                .event {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

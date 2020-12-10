@@ -7,143 +7,148 @@
         @extend %clearfix;
         
         .photo-feature { 
-            width: 50%;
+            width: 418px / 836px * 100%;
             float: left;
             position: relative;
             max-height: 235px;
-
+            @extend %gradient-overlay;
+            
+            &:after {
+                content: " ";
+                background: url("#{$open}images/icons/square-arrow-right-white.svg#{$close}") no-repeat center / 30px 30px;
+                height: 30px;
+                width: 30px;
+                position: absolute;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+            
+            &:hover:before { // hide gradient overlay on hover
+                display: none;
+            }
+            
             // for hover state when no back text
             a:hover {
+                opacity: 1;
+            }
+        }
+            
+        img {
+            display: block;    
+        }
+        
+        .front {
+            height: 100%;
+        }
+
+        .back {
+            display: none;
+            background-color: $nu-purple;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            
+            &:hover { // hover opacity with back text
                 opacity: .8;
-            }                  
-            
-            img {
-                display: block;    
             }
-            
-            .back {
-                display: none;
-                background-color: $nu-purple-60;
-                width: 100%;
-            }  
-            
-            .text-over-image {
-                color: $white;
-                padding: 0 2em;
-                position: absolute;
-                bottom: 1rem;
-                z-index: 31;
-                width: 90%;
-            }
-            
+        }  
+
+        .text-over-image {
+            color: $white;
+            padding: 0 2rem;
+            position: absolute;
+            bottom: 1rem;
+            z-index: 31;
+            width: 90%;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
+
+            h2,
+            h3,
             h4 {
-                font: 30px $AkkuratProBold;
+                font: 26px/1.2em $AkkuratProBold;
                 color: $white;
-                margin-bottom: -.5rem;
-                text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
+                margin-bottom: .5rem;
             }
             
-            p {
-                font: 16px/1.3em $AkkuratProRegular;
-                text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
-
-                &.link {
-                    font-family: $AkkuratProBold;
-                    text-transform: uppercase;
-                    @extend %white-right-arrow;
-                }
+            .description {
+                margin-bottom: 1rem;
+                line-height: 1.3em;
             }
+        }
 
-            .back-text {
-                color: $white;
-                padding: 0 2em;
+        .back-text {
+            color: $white;
+            padding: 5%;
+            z-index: 31;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            line-height: 1.4em;
+
+            .cta {
                 position: absolute;
-                z-index: 31;
-                width: 100%;
-                top: 50%;
-                left: 50%;
-                // vertically center absolutely positioned text
-                -ms-transform: translate(-50%,-50%);
-                -webkit-transform: translate(-50%,-50%);
-                transform: translate(-50%,-50%);
-                text-align: center;
-
-                h4 {
-                    font: 18px $AkkuratProBold;
-                    color: #fff;
-                    margin-bottom: 1.5em;
-                    text-shadow: none;
-                }
-                
-                p {
-                    text-shadow: none;
-                
-                    &.link {
-                        margin-top: 1em;
-                    }
-                }
+                bottom: 1.75rem;
+                right: 4.25rem;
+                text-align: right;
+                font-size: 16px; //
             }
-     
-            .text-over-image {
-                color: $white;
-                padding: 0 2em;
-                position: absolute;
-                bottom: 1rem;
-                z-index: 31;
-            }   
-        } 
+        }
+
+        .cta {
+            text-transform: uppercase;
+            line-height: 1em;
+        }
     }
-    
-    // media queries       
-    @media screen and (max-width: 1000px) {
+          
+    @media screen and (max-width: 62.5em) {
         
         .photo-feature-2-across { 
             
             .photo-feature { 
-                width: inherit;
+                width: 100%;
                 max-width: 418px;
                 float: none;
-            }   
-        }     
-    }    
+            }  
+        }
+    }
     
-    @media screen and (max-width: 480px) {    
+    @media screen and (max-width: 30em) {    
         
         .photo-feature-2-across {
             
-            .photo-feature { 
+            .photo-feature {
                 
-                .back-text {
-                    padding: 0 .5rem;
+                &:after {
+                    background-size: 25px 25px;
+                    height: 25px;
+                    width: 25px;
+                    bottom: 1rem;
+                    right: 1rem;
+                }
+            }
+            
+            .text-over-image {
+                padding: 0 1em;
 
-                    h4 {
-                        margin-bottom: .5rem;
-                    }
+                h2,
+                h3,
+                h4 {
+                   font-size: 20px; 
+                }
+            }
+                
+            .back-text {
+                font-size: 18px;
+                padding: 1rem;
 
-                    p {
-                        font-size: 14px;
-                    }
+                .cta {
+                    position: absolute;
+                    bottom: 1.25rem;
+                    right: 3.75rem;
+                    text-align: right;
                 }
             }
         }
     }
-    
-    @media screen and (max-width: 420px) {
-        
-        .photo-feature-2-across {
-            
-            .photo-feature { 
-                
-                .text-over-image {
-                    padding: 0 1em;
-                    bottom: 0;
-                }
-
-                h4 {
-                   font-size: 20px; 
-                }
-            } 
-        }     
-    } 
-    
-}  // end
+}

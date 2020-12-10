@@ -5,25 +5,38 @@
     // for news listing page
     .news {
         margin: 2rem 0;
+        font-size: 15px;
+        line-height: 1.5em;
         @extend %clearfix;
         
         img {
             float: left;
-            margin: 0 1rem 1rem 0;
+            margin: 0 1rem .5rem 0;
         }
 
-        h4.news-title {
-            font: 18px/1.3em $AkkuratProBold;
-            margin-bottom: .5rem;
+        h2,
+        h3,
+        h4 {
+            
+            &.news-title {
+                font: 18px/1.5em $AkkuratProBold;
+                margin-bottom: .5rem;
+            }
         }
 
         .news-date {
-            font: 14px/1.4em $AkkuratProBold;
+            font-family: $AkkuratProBold;
             color: $rich-black-80;
-        }
-
-        .news-description {
-            margin-top: .5rem;
+            margin-bottom: .25rem;
+            
+            span.source {
+                color: $rich-black-50;
+                font-family: $AkkuratProRegular;
+                
+                span {
+                    font-family: $PeriodicoBoldItalic;
+                }
+            }
         }
     }        
     
@@ -31,7 +44,7 @@
     .event {
         position: relative;
         min-height: 100px;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         
         .event-date {
             position: absolute;
@@ -50,43 +63,36 @@
             
             .day {
                 font-size: 36px;
-            }        
+            }
         }
         
-        .event-description {
+        .event-content {
             margin-left: 105px;
+            font-size: 15px;
+            line-height: 1.5em;
 
+            h2,
+            h3,
             h4 {
-                font: 18px/1.3em $AkkuratProBold;
+                font: 18px/1.5em $AkkuratProBold;
                 margin-bottom: .5rem;
-                padding-bottom: 0;        
-            }              
-
-            > p {
-                margin-top: 0;  
-                line-height: 1.2em;
-            }            
+            }
         }
 
-        .event-time-location {
-            font: 14px/1.4em $AkkuratProBold;
+        .time-location {
             color: $rich-black-80;
-            margin-bottom: .5rem;
-            margin-top: .5rem;
-        }  
+            margin-bottom: .25rem;
+        }
     }
     
-    // media queries
-    @media screen and (max-width: 420px) {
+    @media screen and (max-width: 30em) {
      
         .news {
             
             img {
                 float: none;
                 margin: 0 0 1rem 0;
-                
             }
         }
     }
-    
-}  // end
+}

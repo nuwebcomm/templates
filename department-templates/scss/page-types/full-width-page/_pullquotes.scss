@@ -1,0 +1,28 @@
+// pullquotes
+
+.full-width-page {
+    
+    .quote {
+        font: 24px/1.4em $CamptonBook;
+        color: $nu-purple;
+        margin-bottom: 1em;
+        position: relative;
+        text-indent: 2.5rem;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            background: url("#{$open}images/icons/quote.png#{$close}") no-repeat;
+            width: 35px;
+            height: 24px;
+            display: block;
+            content: "";
+        }
+        
+        figcaption {
+            font: 16px/1.4em $AkkuratProRegular;
+            color: $rich-black-50;
+            text-indent: 0;
+        }
+    }
+}

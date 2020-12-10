@@ -1,0 +1,69 @@
+// three columns of links with images
+
+.full-width-page {
+    
+    .three-column-links {
+        @include flexbox;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; // wrap children
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; // evenly spaces items 
+        
+        h3 {
+            font: 30px/1.2em $AkkuratProRegular;
+            color: $rich-black-50;
+            border-bottom: 4px solid $medium-grey;
+            text-transform: none;
+            padding-bottom: .5rem;
+        } 
+        
+        article {
+            width: 360px / 1120px * 100%;
+            
+            img {
+                margin-bottom: 1rem;
+            }
+            
+            p {
+                margin-top: 0;
+            }
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+    
+    @media screen and (max-width: 48em) {
+
+        .three-column-links {        
+                    
+            article {
+                float: none;
+                width: inherit;
+                max-width: 360px;
+                margin: 0 auto 2rem auto;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 71.875em) {
+        
+        // ~ 1150px breathing room
+        .three-column-links {
+            margin: 0 1rem;
+        }
+    }
+
+    @media screen and (max-width: 30em) {
+        
+        .three-column-links {
+            
+            h3 {
+                font-size: 24px;
+            }
+        }
+    }
+}

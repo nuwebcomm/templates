@@ -1,0 +1,46 @@
+// emergency/breaking news section for top of home page (not for use on most sites)
+
+#emergency, #breaking_news {
+    background: $red;
+    padding: 1rem 5rem 1.5rem 5rem;
+    font: 16px/1.3em $AkkuratProRegular;
+    color:$white;
+    text-align: center;
+    
+    a {
+        color: $white;
+        text-decoration: underline;
+        font-family: $AkkuratProBold;
+    
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    h1,
+    h2 {
+        color: $white;
+        font: 26px/1.3em $CamptonBold;
+    }
+    
+    &.purple {
+        background: $nu-purple-10;
+        
+        a {
+            color: $nu-purple;
+        }   
+        
+        h1,
+        h2 {
+            color: $rich-black-80;
+        }
+    }
+}
+
+@media screen and (max-width: 48em) {
+    
+    #emergency {
+        padding: 1rem 1rem 1.5rem 1rem;
+        text-align: left;
+    }
+}

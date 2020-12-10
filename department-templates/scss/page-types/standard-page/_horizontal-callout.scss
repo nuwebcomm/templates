@@ -1,0 +1,15 @@
+// horizontal callout
+
+.standard-page {
+
+    .horizontal-callout { 
+        width: 100%;
+        margin: 2rem auto;
+        border-top: 4px solid $light-grey;
+        border-bottom: 4px solid $light-grey;
+        font: 20px/1.3em $CamptonBook;
+        color: $nu-purple;
+        position: relative;
+        padding: 2rem 0;
+    }
+}

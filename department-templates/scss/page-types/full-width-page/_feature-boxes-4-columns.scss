@@ -1,0 +1,102 @@
+// feature boxes (4 columns)
+
+.full-width-page {
+    
+    .feature-four-col {
+        @include flexbox;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; // wrap children
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+//        justify-content: space-between; // evenly spaces items
+
+        .feature-box {
+            width: 345px / 1440px * 100%;   
+            background: $light-grey;
+            margin-bottom: 20px / 1440px * 100%;
+            margin-right: 20px / 1440px * 100%;
+            @include flexbox;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column; // arrange as column for button positioning (in buttons.scss)
+            
+            &:nth-of-type(4n) {
+                margin-right: 0;
+            }
+
+            .feature-copy {
+                padding: 1.5rem 1.5rem .5rem 1.5rem;
+            
+                h3 { 
+                    font: 21px $AkkuratProBold;
+                    text-transform: uppercase;
+                    color: $rich-black-50;
+                }
+                
+                ul {
+                    margin-left: 0;
+                    padding-left: .5em;
+                }
+            }
+            
+            + .button { // removes space when there is no div.feature-copy
+                margin-top: 0;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 70em) {  
+      
+        .feature-four-col {
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap; // wrap children
+            margin: 0 auto;
+            max-width: 920px;
+
+            .feature-box {
+                max-width: inherit;
+                width: 450px / 920px * 100%;
+                margin-bottom: 20px;
+                margin-right: 20px / 920px * 100%;
+                
+                &:nth-of-type(4n) {
+                    margin-right: inherit;
+                }
+                
+                &:nth-of-type(2n) {
+                    margin-right: 0;
+                }
+                
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 59.375em) {  
+    
+        .feature-four-col {
+            margin: 0 1rem;
+        }
+    }
+    
+    @media screen and (max-width: 36.875em) {    
+        
+        .feature-four-col {
+            display: inherit;
+
+            .feature-box {
+                max-width: 345px;
+                width: inherit;
+                margin: 0 auto 1rem auto !important;
+                
+                &:nth-of-type(2n) {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

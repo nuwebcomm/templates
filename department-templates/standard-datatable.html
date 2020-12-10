@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <title>DataTable Page</title>
+</head> 
+
+<body>
+    
+    <script>
+        document.getElementsByTagName('body')[0].setAttribute('class','standard-page');
+    </script>    
+    <header>
+        <a href="#main-content" class="screen-reader-shortcut">Skip to main content</a>
+        <div id="top-bar">
+            <div class="contain-1120">
+                <div id="left">
+                    <div id="northwestern">
+                        <a href="http://www.northwestern.edu/" title="Northwestern University Home"><span class="hide-label">Northwestern University</span></a>
+                    </div>
+                    <div id="parent-unit">
+                        <a href="#">Parent Unit Name</a>
+                    </div>
+                </div>
+                <nav id="global-links" aria-label="global links">
+                    <ul>
+                        <li><a href="#">Global Link 1</a></li>
+                        <li><a href="#">Global Link 2</a></li>
+                        <li><a href="#">Global Link 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <nav id="quick-links" aria-label="quick links">
+            <ul>
+                <li><a href="#">Quick Link 1</a></li>
+                <li><a href="#">Quick Link 2</a></li>
+                <li><a href="#">Quick Link 3</a></li>
+            </ul>
+        </nav>
+        <div id="bottom-bar" class="contain-1120">
+            <div id="site-name">
+                <a href="#">Site Name</a>
+            </div>
+            <!-- search -->
+            <div id="search" class="hide-mobile">
+                <div class="search-form">
+                    <form action="https://search.northwestern.edu/" method="get" role="search">
+                        <label class="hide-label" for="q-desktop">Search this site</label>
+                        <input id="q-desktop" name="q" placeholder="Search this site" type="text">
+                        <input name="as_sitesearch" type="hidden" value="https://your.site.url">
+                        <input name="sitetitle" type="hidden" value="Your Site Name">
+                        <button type="submit"><span class="hide-label">Search</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- mobile navigation and search -->
+        <div id="mobile-links">
+            <a href="#mobile-nav" class="mobile-link mobile-nav-link"><span class="hide-label">Menu</span></a>
+            <!-- mobile nav -->
+            <!-- three levels are recommended, six levels are the maximum -->
+            <nav id="mobile-nav" aria-label="mobile menu">
+                <!-- first level -->
+                <ul>
+                    <li tabindex="0"><a aria-haspopup="true" href="#" role="button">Academics<span class="arrow"></span></a>
+                        <!-- second level -->
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Academics Overview</a></li>
+                            <li><a aria-haspopup="true" href="#" role="button">Degree Options<span class="arrow"></span></a>
+                                <!-- third level -->
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li class="home"><a href="#">Degree Options Overview</a></li>
+                                    <li><a aria-haspopup="true" href="#" role="button">Majors and Minors<span class="arrow"></span></a>
+                                        <!-- fourth level -->
+                                        <ul aria-expanded="false" aria-hidden="true">
+                                            <li class="home"><a href="#">Majors and Minors Overview</a></li>
+                                            <li><a aria-haspopup="true" href="#" role="button">Majors<span class="arrow"></span></a>
+                                                <!-- fifth level -->
+                                                <ul aria-expanded="false" aria-hidden="true">
+                                                    <li class="home"><a href="#">Majors Overview</a></li>
+                                                    <li><a aria-haspopup="true" href="#" role="button">Majors by School<span class="arrow"></span></a>
+                                                        <!-- sixth level -->
+                                                        <ul aria-expanded="false" aria-hidden="true">
+                                                            <li class="home"><a href="#">Majors by School Overview</a></li>
+                                                            <li><a href="#">Weinberg Majors</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Link</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Minors</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Student Life<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Student Life Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Tuition &amp; Aid<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Tuition &amp; Aid Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Visit and Engage<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Visit and Engage Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Apply<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Apply Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">FAQs<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">FAQs Overview</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="mobile-nav-bottom">
+                    <!-- from #global-links -->
+                    <ul id="mobile-nav-bottom-left">
+                        <li><a href="#">Global Link 1</a></li>
+                        <li><a href="#">Global Link 2</a></li>
+                        <li><a href="#">Global Link 3</a></li>
+                    </ul>
+                    <!-- from #quick-links -->
+                    <ul id="mobile-nav-bottom-right">
+                        <li><a href="#">Quick Link 1</a></li>
+                        <li><a href="#">Quick Link 2</a></li>
+                        <li><a href="#">Quick Link 3</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="#mobile-search" class="mobile-link mobile-search-link"><span class="hide-label">Search</span></a>
+            <!-- mobile search -->
+            <div id="mobile-search">
+                <div class="search-form">
+                    <form action="https://search.northwestern.edu/" method="get" role="search">
+                        <label class="hide-label" for="q-mobile">Search this site</label> 
+                        <input id="q-mobile" name="q" placeholder="Search this site" type="text"> 
+                        <input name="as_sitesearch" type="hidden" value="https://YOUR.SITE.URL"> 
+                        <input name="sitetitle" type="hidden" value="Your Site Name"> 
+                        <button type="submit"><span class="hide-label">Search</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="top-nav" aria-label="main menu">
+        <ul>
+            <li id="menu1"><a href="#">Academics <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu1">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Academics Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu2"><a href="#">Student Life <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu2">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Student Life Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu3"><a href="#">Tuition &amp; Aid <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu3">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Tuition &amp; Aid Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu4"><a href="#">Visit and Engage <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu4">
+                    <li>
+                        <ul class="overview">
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Visit and Engage Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu5"><a href="#">Apply <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu5">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Apply Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu6"><a href="#">FAQs <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu6">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">FAQs Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="standard-wrap">
+            <nav id="left-nav" aria-label="section navigation menu" tabindex="-1">
+                <div class="section-name"><a href="#">Section Header</a></div>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#" class="active">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </nav>
+            <div class="content" tabindex="-1">
+                <ul id="breadcrumbs">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Active Page</li>
+                </ul>
+                <h1>DataTables</h1>
+                <p>DataTables is a jQuery plugin that sorts and filters your tablular data. It's very flexible and documentation can be found on their site: <a href="https://datatables.net/">https://www.datatables.net/</a>.
+                <p>This plugin will work on any page type, however, additional styling may be necessary.</p>
+                <p>Datatable CSS is included with the Northwestern styles.css (scss/global/_datatables.scss).</p>
+                <ol>
+                    <li>Make your table.</li>
+                    <li>Your &lt;table&gt; tag must have a unique ID and the following classes: along with the following classes:
+                        <pre style="font: 14px sans-serif">
+                        &lt;table id=&quot;example&quot; class=&quot;display table-no-stripe table-no-hover&quot;
+                        </pre>
+                    </li>
+                    <li>Append the following javascript to the bottom of your document just above the closing &lt;/body&gt; tag (replace #example with your table id):
+                        <pre style="font: 14px sans-serif;">
+                            &lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js&quot;>&lt;/script&gt;    
+                            &lt;script type=&quot;text/javascript&quot;&gt;	
+                                $(document).ready(function() {
+                                    $('#example').DataTable();
+                                } );
+                            &lt;/script&gt;        
+                        </pre>
+                    </li>
+                </ol>
+                <table id="example" class="display table-no-stripe table-no-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+    <!--
+                    <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot>
+    -->
+                    <tbody>
+                        <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
+                        </tr>
+                        <tr>
+                            <td>Garrett Winters</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                            <td>2011/07/25</td>
+                            <td>$170,750</td>
+                        </tr>
+                        <tr>
+                            <td>Ashton Cox</td>
+                            <td>Junior Technical Author</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                            <td>2009/01/12</td>
+                            <td>$86,000</td>
+                        </tr>
+                        <tr>
+                            <td>Cedric Kelly</td>
+                            <td>Senior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>2012/03/29</td>
+                            <td>$433,060</td>
+                        </tr>
+                        <tr>
+                            <td>Airi Satou</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>33</td>
+                            <td>2008/11/28</td>
+                            <td>$162,700</td>
+                        </tr>
+                        <tr>
+                            <td>Brielle Williamson</td>
+                            <td>Integration Specialist</td>
+                            <td>New York</td>
+                            <td>61</td>
+                            <td>2012/12/02</td>
+                            <td>$372,000</td>
+                        </tr>
+                        <tr>
+                            <td>Herrod Chandler</td>
+                            <td>Sales Assistant</td>
+                            <td>San Francisco</td>
+                            <td>59</td>
+                            <td>2012/08/06</td>
+                            <td>$137,500</td>
+                        </tr>
+                        <tr>
+                            <td>Rhona Davidson</td>
+                            <td>Integration Specialist</td>
+                            <td>Tokyo</td>
+                            <td>55</td>
+                            <td>2010/10/14</td>
+                            <td>$327,900</td>
+                        </tr>
+                        <tr>
+                            <td>Colleen Hurst</td>
+                            <td>Javascript Developer</td>
+                            <td>San Francisco</td>
+                            <td>39</td>
+                            <td>2009/09/15</td>
+                            <td>$205,500</td>
+                        </tr>
+                        <tr>
+                            <td>Sonya Frost</td>
+                            <td>Software Engineer</td>
+                            <td>Edinburgh</td>
+                            <td>23</td>
+                            <td>2008/12/13</td>
+                            <td>$103,600</td>
+                        </tr>
+                        <tr>
+                            <td>Jena Gaines</td>
+                            <td>Office Manager</td>
+                            <td>London</td>
+                            <td>30</td>
+                            <td>2008/12/19</td>
+                            <td>$90,560</td>
+                        </tr>
+                        <tr>
+                            <td>Quinn Flynn</td>
+                            <td>Support Lead</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>2013/03/03</td>
+                            <td>$342,000</td>
+                        </tr>
+                        <tr>
+                            <td>Charde Marshall</td>
+                            <td>Regional Director</td>
+                            <td>San Francisco</td>
+                            <td>36</td>
+                            <td>2008/10/16</td>
+                            <td>$470,600</td>
+                        </tr>
+                        <tr>
+                            <td>Haley Kennedy</td>
+                            <td>Senior Marketing Designer</td>
+                            <td>London</td>
+                            <td>43</td>
+                            <td>2012/12/18</td>
+                            <td>$313,500</td>
+                        </tr>
+                        <tr>
+                            <td>Tatyana Fitzpatrick</td>
+                            <td>Regional Director</td>
+                            <td>London</td>
+                            <td>19</td>
+                            <td>2010/03/17</td>
+                            <td>$385,750</td>
+                        </tr>
+                        <tr>
+                            <td>Michael Silva</td>
+                            <td>Marketing Designer</td>
+                            <td>London</td>
+                            <td>66</td>
+                            <td>2012/11/27</td>
+                            <td>$198,500</td>
+                        </tr>
+                        <tr>
+                            <td>Paul Byrd</td>
+                            <td>Chief Financial Officer (CFO)</td>
+                            <td>New York</td>
+                            <td>64</td>
+                            <td>2010/06/09</td>
+                            <td>$725,000</td>
+                        </tr>
+                        <tr>
+                            <td>Gloria Little</td>
+                            <td>Systems Administrator</td>
+                            <td>New York</td>
+                            <td>59</td>
+                            <td>2009/04/10</td>
+                            <td>$237,500</td>
+                        </tr>
+                        <tr>
+                            <td>Bradley Greer</td>
+                            <td>Software Engineer</td>
+                            <td>London</td>
+                            <td>41</td>
+                            <td>2012/10/13</td>
+                            <td>$132,000</td>
+                        </tr>
+                        <tr>
+                            <td>Dai Rios</td>
+                            <td>Personnel Lead</td>
+                            <td>Edinburgh</td>
+                            <td>35</td>
+                            <td>2012/09/26</td>
+                            <td>$217,500</td>
+                        </tr>
+                        <tr>
+                            <td>Jenette Caldwell</td>
+                            <td>Development Lead</td>
+                            <td>New York</td>
+                            <td>30</td>
+                            <td>2011/09/03</td>
+                            <td>$345,000</td>
+                        </tr>
+                        <tr>
+                            <td>Yuri Berry</td>
+                            <td>Chief Marketing Officer (CMO)</td>
+                            <td>New York</td>
+                            <td>40</td>
+                            <td>2009/06/25</td>
+                            <td>$675,000</td>
+                        </tr>
+                        <tr>
+                            <td>Caesar Vance</td>
+                            <td>Pre-Sales Support</td>
+                            <td>New York</td>
+                            <td>21</td>
+                            <td>2011/12/12</td>
+                            <td>$106,450</td>
+                        </tr>
+                        <tr>
+                            <td>Doris Wilder</td>
+                            <td>Sales Assistant</td>
+                            <td>Sidney</td>
+                            <td>23</td>
+                            <td>2010/09/20</td>
+                            <td>$85,600</td>
+                        </tr>
+                        <tr>
+                            <td>Angelica Ramos</td>
+                            <td>Chief Executive Officer (CEO)</td>
+                            <td>London</td>
+                            <td>47</td>
+                            <td>2009/10/09</td>
+                            <td>$1,200,000</td>
+                        </tr>
+                        <tr>
+                            <td>Gavin Joyce</td>
+                            <td>Developer</td>
+                            <td>Edinburgh</td>
+                            <td>42</td>
+                            <td>2010/12/22</td>
+                            <td>$92,575</td>
+                        </tr>
+                        <tr>
+                            <td>Jennifer Chang</td>
+                            <td>Regional Director</td>
+                            <td>Singapore</td>
+                            <td>28</td>
+                            <td>2010/11/14</td>
+                            <td>$357,650</td>
+                        </tr>
+                        <tr>
+                            <td>Brenden Wagner</td>
+                            <td>Software Engineer</td>
+                            <td>San Francisco</td>
+                            <td>28</td>
+                            <td>2011/06/07</td>
+                            <td>$206,850</td>
+                        </tr>
+                        <tr>
+                            <td>Fiona Green</td>
+                            <td>Chief Operating Officer (COO)</td>
+                            <td>San Francisco</td>
+                            <td>48</td>
+                            <td>2010/03/11</td>
+                            <td>$850,000</td>
+                        </tr>
+                        <tr>
+                            <td>Shou Itou</td>
+                            <td>Regional Marketing</td>
+                            <td>Tokyo</td>
+                            <td>20</td>
+                            <td>2011/08/14</td>
+                            <td>$163,000</td>
+                        </tr>
+                        <tr>
+                            <td>Michelle House</td>
+                            <td>Integration Specialist</td>
+                            <td>Sidney</td>
+                            <td>37</td>
+                            <td>2011/06/02</td>
+                            <td>$95,400</td>
+                        </tr>
+                        <tr>
+                            <td>Suki Burks</td>
+                            <td>Developer</td>
+                            <td>London</td>
+                            <td>53</td>
+                            <td>2009/10/22</td>
+                            <td>$114,500</td>
+                        </tr>
+                        <tr>
+                            <td>Prescott Bartlett</td>
+                            <td>Technical Author</td>
+                            <td>London</td>
+                            <td>27</td>
+                            <td>2011/05/07</td>
+                            <td>$145,000</td>
+                        </tr>
+                        <tr>
+                            <td>Gavin Cortez</td>
+                            <td>Team Leader</td>
+                            <td>San Francisco</td>
+                            <td>22</td>
+                            <td>2008/10/26</td>
+                            <td>$235,500</td>
+                        </tr>
+                        <tr>
+                            <td>Martena Mccray</td>
+                            <td>Post-Sales support</td>
+                            <td>Edinburgh</td>
+                            <td>46</td>
+                            <td>2011/03/09</td>
+                            <td>$324,050</td>
+                        </tr>
+                        <tr>
+                            <td>Unity Butler</td>
+                            <td>Marketing Designer</td>
+                            <td>San Francisco</td>
+                            <td>47</td>
+                            <td>2009/12/09</td>
+                            <td>$85,675</td>
+                        </tr>
+                        <tr>
+                            <td>Howard Hatfield</td>
+                            <td>Office Manager</td>
+                            <td>San Francisco</td>
+                            <td>51</td>
+                            <td>2008/12/16</td>
+                            <td>$164,500</td>
+                        </tr>
+                        <tr>
+                            <td>Hope Fuentes</td>
+                            <td>Secretary</td>
+                            <td>San Francisco</td>
+                            <td>41</td>
+                            <td>2010/02/12</td>
+                            <td>$109,850</td>
+                        </tr>
+                        <tr>
+                            <td>Vivian Harrell</td>
+                            <td>Financial Controller</td>
+                            <td>San Francisco</td>
+                            <td>62</td>
+                            <td>2009/02/14</td>
+                            <td>$452,500</td>
+                        </tr>
+                        <tr>
+                            <td>Timothy Mooney</td>
+                            <td>Office Manager</td>
+                            <td>London</td>
+                            <td>37</td>
+                            <td>2008/12/11</td>
+                            <td>$136,200</td>
+                        </tr>
+                        <tr>
+                            <td>Jackson Bradshaw</td>
+                            <td>Director</td>
+                            <td>New York</td>
+                            <td>65</td>
+                            <td>2008/09/26</td>
+                            <td>$645,750</td>
+                        </tr>
+                        <tr>
+                            <td>Olivia Liang</td>
+                            <td>Support Engineer</td>
+                            <td>Singapore</td>
+                            <td>64</td>
+                            <td>2011/02/03</td>
+                            <td>$234,500</td>
+                        </tr>
+                        <tr>
+                            <td>Bruno Nash</td>
+                            <td>Software Engineer</td>
+                            <td>London</td>
+                            <td>38</td>
+                            <td>2011/05/03</td>
+                            <td>$163,500</td>
+                        </tr>
+                        <tr>
+                            <td>Sakura Yamamoto</td>
+                            <td>Support Engineer</td>
+                            <td>Tokyo</td>
+                            <td>37</td>
+                            <td>2009/08/19</td>
+                            <td>$139,575</td>
+                        </tr>
+                        <tr>
+                            <td>Thor Walton</td>
+                            <td>Developer</td>
+                            <td>New York</td>
+                            <td>61</td>
+                            <td>2013/08/11</td>
+                            <td>$98,540</td>
+                        </tr>
+                        <tr>
+                            <td>Finn Camacho</td>
+                            <td>Support Engineer</td>
+                            <td>San Francisco</td>
+                            <td>47</td>
+                            <td>2009/07/07</td>
+                            <td>$87,500</td>
+                        </tr>
+                        <tr>
+                            <td>Serge Baldwin</td>
+                            <td>Data Coordinator</td>
+                            <td>Singapore</td>
+                            <td>64</td>
+                            <td>2012/04/09</td>
+                            <td>$138,575</td>
+                        </tr>
+                        <tr>
+                            <td>Zenaida Frank</td>
+                            <td>Software Engineer</td>
+                            <td>New York</td>
+                            <td>63</td>
+                            <td>2010/01/04</td>
+                            <td>$125,250</td>
+                        </tr>
+                        <tr>
+                            <td>Zorita Serrano</td>
+                            <td>Software Engineer</td>
+                            <td>San Francisco</td>
+                            <td>56</td>
+                            <td>2012/06/01</td>
+                            <td>$115,000</td>
+                        </tr>
+                        <tr>
+                            <td>Jennifer Acosta</td>
+                            <td>Junior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>43</td>
+                            <td>2013/02/01</td>
+                            <td>$75,650</td>
+                        </tr>
+                        <tr>
+                            <td>Cara Stevens</td>
+                            <td>Sales Assistant</td>
+                            <td>New York</td>
+                            <td>46</td>
+                            <td>2011/12/06</td>
+                            <td>$145,600</td>
+                        </tr>
+                        <tr>
+                            <td>Hermione Butler</td>
+                            <td>Regional Director</td>
+                            <td>London</td>
+                            <td>47</td>
+                            <td>2011/03/21</td>
+                            <td>$356,250</td>
+                        </tr>
+                        <tr>
+                            <td>Lael Greer</td>
+                            <td>Systems Administrator</td>
+                            <td>London</td>
+                            <td>21</td>
+                            <td>2009/02/27</td>
+                            <td>$103,500</td>
+                        </tr>
+                        <tr>
+                            <td>Jonas Alexander</td>
+                            <td>Developer</td>
+                            <td>San Francisco</td>
+                            <td>30</td>
+                            <td>2010/07/14</td>
+                            <td>$86,500</td>
+                        </tr>
+                        <tr>
+                            <td>Shad Decker</td>
+                            <td>Regional Director</td>
+                            <td>Edinburgh</td>
+                            <td>51</td>
+                            <td>2008/11/13</td>
+                            <td>$183,000</td>
+                        </tr>
+                        <tr>
+                            <td>Michael Bruce</td>
+                            <td>Javascript Developer</td>
+                            <td>Singapore</td>
+                            <td>29</td>
+                            <td>2011/06/27</td>
+                            <td>$183,000</td>
+                        </tr>
+                        <tr>
+                            <td>Donna Snider</td>
+                            <td>Customer Support</td>
+                            <td>New York</td>
+                            <td>27</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contain-1120">
+            <a href="https://www.northwestern.edu">
+                <div class="footer-logo"><span class="hide-text">Northwestern University</span></div>
+            </a>
+            <div class="footer-wrap">
+                <div class="footer-content contact">
+                    <h2>Department Name Goes Here</h2>
+                    <div class="address">
+                        <div class="icon">
+                            <span>Address</span>
+                        </div>
+                        <div class="text">
+                            <p>123 Sheridan Road<br>
+                                Suite 100<br>
+                            Evanston, IL 60208</p>
+                        </div>
+                    </div>
+                    <div class="phone">
+                        <div class="icon">
+                            <span>Phone number</span>
+                        </div>
+                        <div class="text">
+                            <p><strong>Header option</strong><br>
+                            (123) 456-7890</p>
+                            <p><strong>Header option</strong><br>
+                            (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="fax">
+                        <div class="icon">
+                            <span>Fax number</span>
+                        </div>
+                        <div class="text">
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <div class="icon">
+                            <span>Email address</span>
+                        </div>
+                        <div class="text">
+                            <p><a href="#">your-department@northwestern.edu</a></p>
+                        </div>
+                    </div>
+                    <div class="feedback">
+                        <div class="icon">
+                            <span>Feedback</span>
+                        </div>
+                        <div class="text">
+                            <p><a href="#">Feedback</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content connect">
+                    <h2>Connect</h2>
+                    <a href="#" class="social facebook">Facebook</a>
+                    <a href="#" class="social twitter">Twitter</a>
+                    <a href="#" class="social social instagram">Instagram</a>
+                    <a href="#" class="social rss">RSS</a>
+                    <a href="#" class="social youtube">YouTube</a>
+                    <a href="#" class="social tumblr">Tumblr</a>
+                    <a href="#" class="social wordpress">WordPress</a>
+                    <a href="#" class="social futurity">Futurity</a>
+                    <a href="#" class="social vimeo">Vimeo</a>
+                    <a href="#" class="social linkedin">Linkedin</a>
+                    <a href="#" class="social google-groups">Google Groups</a>
+                    <a href="#" class="social blog">Blog</a>
+                    <a href="#" class="social github">Github</a>
+                    <a href="#" class="social flickr">Flickr</a>
+                    <a href="#" class="social storify">Storify</a>
+                    <a href="#" class="social pinterest">Pinterest</a>
+                    <a href="#" class="social we-will">We Will</a>
+                    <a href="#" class="social spotify">Spotify</a>
+                    <div id="cta">
+                        <h3>Call to Action</h3>
+                        <p>Lorum ipsum dolor sit amet.</p>
+                        <p class="button"><a href="#">Button Text</a></p>
+                    </div>
+                </div>
+                <div class="footer-content links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#">Link 1 is a really long title</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                        <li><a href="#">Link 5</a></li>
+                        <li><a href="#">Link 6</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content resources">
+                    <h2>Northwestern Resources</h2>
+                    <ul>
+                        <li><a href="https://www.northwestern.edu/accessibility">Accessibility</a></li>
+                        <li><a href="https://www.northwestern.edu/emergency/index.html">Campus Emergency Information</a></li>
+                        <li><a href="https://www.northwestern.edu/hr/careers/">Careers</a></li>
+                        <li><a href="https://www.northwestern.edu/contact.html">Contact Northwestern University</a></li>
+                        <li><a href="https://policies.northwestern.edu/">University Policies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            <div class="contain-1120">
+                <span class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Northwestern University</span>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/NorthwesternU">
+                            <span class="social facebook">Facebook</span>
+                            <span class="text">@NorthwesternU</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/northwesternu">
+                            <span class="social twitter">Twitter</span>
+                            <span class="text">@northwesternU</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/northwesternu">
+                            <span class="social instagram">Instagram</span>
+                            <span class="text">@northwesternu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/NorthwesternU">
+                            <span class="social youtube">YouTube</span>
+                            <span class="text">@NorthwesternU</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.futurity.org/university/northwestern-university/">
+                            <span class="social futurity">Futurity</span>
+                            <span class="text">Futurity</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://news.northwestern.edu/feeds/allStories">
+                            <span class="social rss">RSS</span>
+                            <span class="text">RSS Feed</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="right"><a href="https://www.northwestern.edu/disclaimer.html">Disclaimer</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- add this to all datatables pages -->
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script>	
+        $(document).ready(function() {
+            $('#example').DataTable( {
+//                "ordering": false,
+//                "info":     false
+            } );
+        } );
+    </script>
+    
+</body>
+</html>

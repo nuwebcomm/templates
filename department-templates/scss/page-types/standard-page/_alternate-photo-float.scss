@@ -3,10 +3,13 @@
 .standard-page {
 
     .alternate-photo-float {
+        margin-top: 2rem;
         margin-bottom: 3rem;
         @extend %clearfix;
         
-        h3, h4 {
+        h2,
+        h3,
+        h4 {
             font: 30px $AkkuratProRegular;
             color: $rich-black-50;
             border-bottom: 4px solid $medium-grey;
@@ -37,60 +40,71 @@
             
             &:last-child {
                 margin-right: 0;
-            }            
+            }
+            
+            .quote {
+                font: 24px/1.4em $CamptonBook;
+                text-indent: 2.5rem;
+            
+                &:before {
+                    background: url("#{$open}images/icons/quote.png#{$close}") no-repeat center / 35px 24px;
+                    width: 35px;
+                    height: 24px;
+                }
+            }
             
             img {
                 z-index: 30;
             }
         }
-    }      
+    }
     
-    // media queries
-    @media screen and (max-width: 875px) {
+    @media screen and (max-width: 54.6875em) {
         
         .alternate-photo-float {
-            display: -webkit-flex;
-            display: -ms-flexbox;            
-            display: flex;
+            @include flexbox;
             -webkit-flex-direction: column;
             flex-direction: column;
             -webkit-justify-content: flex-start;
             justify-content: flex-start;  
             margin-bottom: 2rem;
 
-            h3, h4 {
+            h2,
+            h3,
+            h4 {
                 margin-top: 1rem;
             }
 
             .image-left,
             .image-right,
-            .text  {
+            .text {
                 width: 100%; 
                 float: none;
                 position: relative;
 
                 &:last-child {
                     margin-right: auto;
-                }     
-
-                .quote p {
-                    margin-top: 1em;
                 }
-            } 
+            }
 
             .text {
                 max-width: 360px;
             }
 
+            .image-left {
+                margin-bottom: 1rem;
+            }
+            
             .image-right {
                 -webkit-order: -1;
                 -ms-flex-order: -1;                
                 order: -1; // flexbox moves content to top
-            }            
-        } 
-    }    
+                margin-bottom: 1rem;
+            }
+        }
+    }
 
-    @media screen and (max-width: 480px) {    
+    @media screen and (max-width: 30em) {    
          
         .alternate-photo-float {
             
@@ -98,30 +112,8 @@
                 
                 .column { // multiple column option
                     width: 100%;
-                }              
+                }
             }
         }
     }
-    
-    @media screen and (max-width: 420px) {
-        
-        .alternate-photo-float {
-            
-            .text {
-                
-                ul {
-                    
-                    &.two-columns {
-                        -moz-column-count: inherit;
-                        -moz-column-gap: inherit;;
-                        -webkit-column-count: inherit;
-                        -webkit-column-gap: inherit;
-                        column-count: inherit;
-                        column-gap: inherit;
-                    }
-                }
-            }
-        }      
-    }  
-     
-}  // end
+}

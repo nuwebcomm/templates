@@ -1,0 +1,362 @@
+// header
+
+header {
+    background: $nu-purple;
+}
+
+#top-bar {
+    background: $nu-purple-120;
+    font: 12px/1.4em $AkkuratProBold;
+    min-height: 60px;
+    @extend %clearfix;
+
+    #left {
+        display: block;
+        float: left;
+        padding-left: 0;
+
+        #northwestern { // northwestern wordmark
+            
+            a { 
+                width: 170px;
+                height: 21px;
+                display: inline-block;
+                margin: 1.1rem 0 0 0;
+                background: url("#{$open}images/logos/northwestern.svg#{$close}") no-repeat center;
+            
+                &:focus {
+                    outline: 1px dashed $white;
+                }
+            }
+        }
+    }
+    
+    #parent-unit { // hide by default
+        display: none;
+    }
+}
+
+// for templates with a parent unit utilizing "N" wordmark
+#parent {
+
+    #left {
+        position: relative;
+        display: table;
+
+        #northwestern { // northwestern wordmark
+            
+            a {
+                width: 78px;
+                height: 78px;
+                display: inline-block;
+                margin: 0;
+                background: url("#{$open}images/logos/northwestern-university-n.svg#{$close}") no-repeat center;
+                position: absolute;
+                top: 10px;
+            
+                &:focus {
+                    outline: none;
+                    border: 1px dashed $white;
+                }
+            }
+        }
+    }
+
+    #parent-unit {
+        font: 18px/1.2em $AkkuratProRegular;
+        text-transform: uppercase;
+        padding-left: 6rem;
+        display: table-cell;
+        vertical-align: middle;
+        height: 60px;
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+
+        strong {
+            font-family: $AkkuratProBold;
+            font-weight: normal;
+        }
+
+        span { // for multi-line departments
+            display: block;
+        }
+    }
+    
+    #bottom-bar { // adds space under N
+        margin-top: 12px;
+    }
+    
+    > #quick-links + #bottom-bar { // removes space under N if quick-links present
+        margin-top: 0;
+    }
+}
+
+// optional global links with available dropdown            
+#global-links {
+    position: relative;
+    float: right;
+    color: $white;
+    text-transform: uppercase;
+
+    > ul {
+        margin: 0;
+        display: table;
+
+        a {	
+            color: $white;
+            text-decoration: none; 
+            display: block;
+            position: relative;
+        }
+
+        a:hover,
+        a:focus,
+        a:active { 
+            text-decoration: underline;  
+        }
+
+        li {
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            line-height: 100%;
+            padding-left: 1rem;
+            height: 60px;
+
+            &:hover,
+            &.hover {
+                z-index: 100;
+            }
+
+            &:hover ul,
+            &.hover ul {
+                right: 0;
+                top: 60px;
+                z-index: 1000; // show dropdown
+            }
+
+            &.resources { // for "resources" dropdown
+                cursor: pointer;
+
+                > a {
+                    display: inline;
+                }
+            }
+
+            .dropdown-arrow {
+                @extend %white-down-arrow;
+            }
+        }
+
+        // dropdown
+        ul {
+            position: absolute;
+            top: 100%;
+            width: 150px;
+            background: $nu-purple-70;
+            padding: .5rem;
+            text-align: right;
+            right: 0;
+            z-index: -1000; // hide dropdown
+            box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.2);
+
+            li {
+                float: none;
+                padding: 0 0 .5rem 0;
+                width: 100%;
+                margin: 0;
+                display: inline-block;
+                line-height: 1.2em;
+                height: inherit;
+
+                &:hover ul,
+                &.hover ul {
+                    left: 0;
+                }  
+
+                &:last-child {
+                    padding-bottom: 0;
+                }              
+            }
+        }
+    }
+}
+
+// quick links
+#quick-links {
+    max-width: 1120px;
+    margin: 12px auto -12px auto;
+    text-align: right;
+    width: 100%;
+    height: 13px;
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    
+        li {
+            display: inline-block;
+            padding-left: 1rem;
+        }
+    }
+
+    a {
+        font: 12px/1em $AkkuratProBold;
+        color: $white;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover, &:focus, &:active { 
+            text-decoration: underline;  
+        }        
+    }
+}
+
+#bottom-bar { // area where site name and search reside
+    display: table;
+    width: 100%;
+    padding: 2.25rem 0;
+}
+
+#site-name {
+    display: table-cell;
+    vertical-align: middle;
+    width: 855px / 1120px * 100%;
+    padding-right: 2rem;
+    font: 32px/1em $AkkuratProRegular;
+    text-transform: uppercase;
+    
+    &.normal-case {
+        text-transform: none;
+    }
+    
+    &.small {
+        font-size: 16px;
+    }
+
+    span {
+        font-size: 14px;
+        line-height: 1em;
+        display: block;
+    }
+    
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width: 90.3125em) {
+    
+    #top-bar {
+        padding: 0 .5rem;
+    }
+}
+
+@media screen and (max-width: 72.1875em) {
+
+   #bottom-bar {
+        padding-left: .5rem;
+    }
+}
+
+@media screen and (max-width: 71.25em) { 
+    
+    #quick-links { // matches spacing with #global-links within .contain-1120
+        padding-right: .5rem;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    
+    #top-bar {
+        padding: 0;
+        
+        #left {
+            float: none;
+            margin-left: .5rem;           
+        }
+    }
+    
+    #parent {
+        
+        #bottom-bar {
+            margin-top: 0;
+        }
+        
+        #left {
+        
+            #northwestern a {
+                width: 60px;
+                height: 60px;
+            }
+
+            #parent-unit {
+                padding-left: 4.5rem;
+            }
+
+            #site-name {
+                font-size: 16px;
+            }
+        }
+    }
+    
+    #global-links,
+    #quick-links {
+        display: none;
+    }
+    
+    #bottom-bar {
+        padding: 1.75rem 1rem 1.5rem .5rem;
+    }
+    
+    #site-name {
+        width: 100%;
+        padding: 0;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    
+    #top-bar {
+        min-height: 50px;
+        
+        #left {
+            
+            #northwestern a {
+                width: 130px;
+                margin: .8rem 0 0 0;
+            }
+        }
+    }
+    
+    #parent {   
+        
+        #left {
+            
+            #northwestern a {
+                width: 55px;
+                height: 55px;
+                top: 5px;
+                margin: 0;
+            }
+        
+            #parent-unit {
+                height: 50px;
+                padding-left: 4.25rem;
+            }
+        }
+    }
+    
+    #site-name {
+        font-size: 22px;    
+    }
+}

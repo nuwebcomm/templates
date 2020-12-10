@@ -1,0 +1,72 @@
+// feature boxes (3 columns)
+
+.full-width-page {
+    
+    .feature-three-col {
+        @include flexbox;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; // wrap children
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+//        justify-content: space-between; // evenly spaces items
+
+        .feature-box {
+            width: 360px / 1120px * 100%;   
+            background: $light-grey;
+            margin-bottom: 20px / 1120px * 100%;
+            margin-right: 20px / 1120px * 100%;
+            @include flexbox;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column; // arrange as column for button positioning (in buttons.scss)
+            
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+            
+            .feature-copy {
+                padding: 1.5rem 1.5rem .5rem 1.5rem;
+            
+                h3 { 
+                    font: 21px $AkkuratProBold;
+                    text-transform: uppercase;
+                    color: $rich-black-50;
+                }
+                
+                ul {
+                    margin-left: 0;
+                    padding-left: .5em;
+                }
+            }
+            
+            + .button { // removes space when there is no div.feature-copy
+                margin-top: 0;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 71.25em) { 
+    
+        .feature-three-col {
+            margin: 0 1rem;
+        }
+    }
+    
+    @media screen and (max-width: 54.6875em) {    
+        
+        .feature-three-col {
+            display: inherit;
+
+            .feature-box {
+                width: inherit;
+                max-width: 360px; 
+                margin: 0 auto 1rem auto;
+            
+                &:nth-of-type(3n) {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

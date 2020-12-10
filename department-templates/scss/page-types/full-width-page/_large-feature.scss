@@ -1,0 +1,153 @@
+// large feature (photo/text/links)
+
+.full-width-page {
+
+    .large-feature {
+        padding: 4rem;
+        background: url("#{$open}images/bg/slashes-grey-bg.gif#{$close}") repeat; 
+    }
+    
+    .large-feature-inner {
+        max-width: 1120px;
+        margin: 3rem auto 0 auto;
+        box-sizing: content-box;   
+        @extend %clearfix;
+    
+       .content-side {
+            width: 880px / 1120px * 100%;
+            float: left;   
+            border-right: 1px solid $medium-grey;
+            padding-right: 40px / 1120px * 100%;
+
+            img {
+                float: left;
+                margin: 0 2rem 2rem 0
+            }
+           
+            h3 {
+                font: 48px/1.1em $CamptonBold;
+                margin-bottom: 2rem;
+                color: $nu-purple;
+            }
+           
+           .text ul {
+               overflow: hidden;
+           }
+        }
+        
+        .right-side { // new setup for links/other content on right side
+            width: 240px / 1120px * 100%;
+            float: left;
+            padding-left: 1.5rem;
+            
+            h3 {
+                font: 24px $AkkuratProRegular;
+                padding-bottom: .5rem;
+                margin-bottom: 1.5rem;
+                border-bottom: 4px solid $medium-grey;
+                color: $rich-black-50;
+            }
+            
+            ul {
+                padding-left: 0;
+                margin-left: 0;
+                
+                li {
+                    background: none;
+                    line-height: 1.2rem;
+                    margin: 0 0 1rem 0;
+                    padding-left: 0;
+                    @extend %purple-right-arrow;
+
+                    a {
+                        font-family: $AkkuratProBold;
+                    }                     
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 68.75em) {
+        
+        .large-feature-inner {
+            
+            .content-side, 
+            > ul, 
+            .right-side {
+                float: none;
+                width: 100%;
+                border: none;
+                border-right: 0;
+            } 
+            
+            .content-side {
+                padding-right: 0;
+                
+                &:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }                   
+            }
+            
+            .right-side {
+                padding-left: 0;
+            }
+        }     
+    }    
+    
+    @media screen and (max-width: 53.125em) {
+        
+        .large-feature-wrap {
+            padding: 2rem;
+        }
+        
+        .large-feature {
+            padding: 2rem;
+            
+            .content-side {
+            
+                .text {
+                    margin-bottom: 2rem;
+                }
+                
+                img {
+                    float: none;
+                    margin-bottom: 1rem;
+                    margin-right: 0;
+                }
+                
+                h3 {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 30em) {
+        
+        .large-feature-wrap {
+            padding: 1rem;
+        }
+        
+        .large-feature {
+            padding: 2rem 1rem;
+                
+            h2 {
+                font-size: 20px;
+                
+                &:before, &:after {
+                    background: none;
+                }
+            }
+            
+            .content-side {
+                
+                h3 {
+                    font-size: 28px;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

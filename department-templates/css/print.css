@@ -4,7 +4,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-#top-bar #global-links, #top-bar #left, #quick-links, #search, nav, #breadcrumbs, #left-nav, #mobile-links, .hero-image, #left img, footer img, #back-to-top, .screen-reader-shortcut, .footer-content:nth-of-type(1), .footer-content:nth-of-type(3), .footer-content:nth-of-type(4) {
+#top-bar #global-links, #top-bar #left, #quick-links, #search, nav, #breadcrumbs, #left-nav, #mobile-links, .hero-image, #left img, footer img, .screen-reader-shortcut, .footer-content:nth-of-type(1), .footer-content:nth-of-type(3), .footer-content:nth-of-type(4) {
 	display: none;
 }
 #site-name a:link:after, #site-name a:visited:after {
@@ -30,6 +30,9 @@ h5 {
 }
 h6 {
     font-size: 1.2em;
+}
+.expander > div {
+    display: block !important;
 }
 .footer-content {
     margin-top: 2rem;

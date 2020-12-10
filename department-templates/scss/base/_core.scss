@@ -19,8 +19,8 @@ body {
     color: $rich-black-80;
     background: $white;
     min-width: 98%;
-    height: 100%;
-    overflow-x: hidden;
+    height: auto; // was originally 100%
+//    overflow-x: hidden; // override this if using "position: sticky" anywhere
 }
 
 a:focus {  // for accessible links
@@ -52,35 +52,31 @@ a.screen-reader-shortcut {
     background: $white;
 }
 
-#main-content {
+.content {
     font-size: 16px;
     line-height: 1.7em;
     outline: none !important; // removes outline from tabindex
 }
     
-// centered containers
+// centered containers for full-width pages
 .contain-780 { // small text regions for section-top
     margin: 0 auto;
     max-width: 780px;
-    box-sizing: content-box;
 }
 
 .contain-850 { // medium text regions for section-top
     margin: 0 auto;
     max-width: 850px;
-    box-sizing: content-box;
 }
 
 .contain-970 { // big text regions for section-top
     margin: 0 auto;
     max-width: 970px;
-    box-sizing: content-box;
 }
 
 .contain-1120 { 
     margin: 0 auto;
     max-width: 1120px;
-    box-sizing: content-box;    
 }
 
 .contain-1440 {
@@ -91,22 +87,22 @@ a.screen-reader-shortcut {
 // breadcrumbs
 ul#breadcrumbs {
     list-style: none;
-    font: 12px/1.5rem $AkkuratProBold;
+    font: 12px/1.5em $AkkuratProBold;
     text-transform: uppercase;
     padding: 0 0 .5rem 0;
     margin-bottom: 2rem;
     border-bottom: 4px solid $light-grey;
-    min-height: 30px;
+    min-height: 36px;
 
     li {
         display: inline;
-        background: url("#{$path-images}/icons/arrow-right-ltpurple.svg") no-repeat center left 8px / 8px 8px;
+        background: url("#{$open}images/icons/arrow-right-ltpurple.svg#{$close}") no-repeat center left 8px / 8px 8px;
         padding-left: 2em;  
         
         &:first-child {
             background: none;
             padding-left: 0;
-        }        
+        }
 
         &.active {
             color: $nu-purple-120;
@@ -125,17 +121,6 @@ ul#breadcrumbs {
     }
 }
 
-// misc
-img {
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
-
-    .outline { // adds border around images
-        border: 1px solid $medium-grey;
-    }
-}
-
 // scroll to top
 a#scrollup {
 	display: none;
@@ -144,12 +129,13 @@ a#scrollup {
 	height: 50px;
 	text-indent: -9999px;
 	position: fixed;
-	z-index: 999;
-	right: 2rem;
-	bottom: 2rem;
-	background: $nu-purple-120 url("#{$path-images}/icons/arrow-right-white.svg") no-repeat 50% / 14px 18px;
+	z-index: 9998;
+	right: 1.25rem;
+	bottom: 1rem;
+	background: $nu-purple-120 url("#{$open}images/icons/arrow-right-white.svg#{$close}") no-repeat 50% / 14px 18px;
     border: 1px solid $white;
     transform: rotate(270deg);
+    border-radius: 50%;
 }
 
 a:hover#scrollup {
@@ -160,14 +146,6 @@ a:hover#scrollup {
 a:focus#scrollup {
     border: 2px dashed $white;
     outline: none;
-}
-
-.responsive-table { // enables horizontal scrolling on large tables for small screens
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    margin: 1em 0 2em 0;
 }
 
 .responsive-container { // makes iframes, objects and embeds responsive
@@ -184,29 +162,18 @@ a:focus#scrollup {
         left: 0; 
         height: 100%;
         width: 100%;
-
-    }
-    .overlay {
-        position: absolute;
-        bottom: 20%;
-        width: 100%;
-        text-align: center;
-        z-index: 5000;
-        cursor: default;  
-
-        h2 {
-            color: white;
-            font: 60px/1.2em $CamptonBold;
-            margin-bottom: 1rem;
-            position: relative;
-            text-shadow: 2px 2px 0 black;
-        }        
     }
 }
 
-.hide-label {
+// this kills extra twitter iframe inserted below </footer> (removes extra white space)
+footer ~ iframe,
+footer ~ .responsive-container {
+    display: none !important;
+}
+
+.hide-text, .hide-label {
     position: absolute;
-    left: -10000px;
+    left: -99999em;
     top: auto;
     width: 1px;
     height: 1px;
@@ -222,126 +189,61 @@ a:focus#scrollup {
 // adds icons to matched file type
 a[href$=".pdf"],
 a[href$=".PDF"] {
-    padding-right: 1.25rem;
-    background: url("#{$path-images}/icons/pdf.png") no-repeat right center;
+
+    &:after {
+        content: "";
+        padding-right: 1.25rem;
+        background: url("#{$open}images/icons/pdf.png#{$close}") no-repeat right center;
+    }
 }
 
 a[href$=".docx"],
 a[href$=".DOCX"],
 a[href$=".doc"],
 a[href$=".DOC"] {
-    padding-right: 1.25rem;
-    background: url("#{$path-images}/icons/word.png") no-repeat right center;
+    
+    &:after {
+        content: "";
+        padding-right: 1.25rem;
+        background: url("#{$open}images/icons/word.png#{$close}") no-repeat right center;
+    }
 }
 
 a[href$=".xlsx"],
 a[href$=".XLSX"],
 a[href$=".xls"],
 a[href$=".XLS"] {
-    padding-right: 1.25rem;
-    background: url("#{$path-images}/icons/excel.png") no-repeat right center;
+    
+    &:after {
+        content: "";
+        padding-right: 1.25rem;
+        background: url("#{$open}images/icons/excel.png#{$close}") no-repeat right center;
+    }
 }
 
-// media queries
-@media screen and (max-width: 1140px) { // adds left/right margin for smaller screen widths
+@media screen and (max-width: 71.25em) { // adds left/right margin for smaller screen widths
     
     #main-content .contain-1120 {
         margin-left: 1rem;
         margin-right: 1rem;
     }
-    
-    .responsive-container {
-        
-        .overlay {
-            bottom: 20%;
-            
-            h2 {
-                font-size: 48px;
-            }        
-        }
-    } 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
     
     a#scrollup {
         right: 1rem;
-        bottom: 1rem;        
     }
     
     .hide-mobile {
         display: none;
     }
     
-    #page { // sets stage to reorder #left-nav for mobile
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
+    #main-content { // sets stage to reorder #left-nav for mobile
+        @include flexbox;
         -webkit-flex-direction: column;
         flex-direction: column;
         -webkit-justify-content: flex-start;
         justify-content: flex-start;              
-    }   
-    
-    .responsive-container {
-        
-        .overlay {
-            bottom: 15%;
-            
-            h2 {
-                font-size: 36px;
-                margin-bottom: .5rem;
-            }        
-        }
-    }  
-    
-    #back-to-top {
-        display: block;
-        font: 18px $AkkuratProBold;
-        color: $nu-purple-120;
-        text-align: center;
-        text-transform: uppercase;
-        margin: 2rem 0;
-
-        &:before {
-            background: url("#{$path-images}/icons/arrow-down-ltpurple.svg") no-repeat 50% / 15px 19px;
-            padding: 0 25px;
-            content: " ";    
-        }
-
-        &:after {
-            background: url("#{$path-images}/icons/arrow-down-ltpurple.svg") no-repeat 50% / 15px 19px;
-            background-size: 15px 19px;
-            padding: 0 25px;
-            content: " ";    
-        }
     }
-    
-    #back-to-top {
-        margin: 2rem 0 2rem 0;
-
-        &:before {
-            background: url("#{$path-images}/icons/arrow-up-ltpurple.svg") no-repeat 50% / 15px 19px;             
-        }
-        
-        &:after {
-            background: url("#{$path-images}/icons/arrow-up-ltpurple.svg") no-repeat 50% / 15px 19px;
-        }
-    }
-}
-
-@media screen and (max-width: 480px) {
-    
-    .responsive-container {
-        
-        .overlay {
-            bottom: 10%;
-            
-            h2 {
-                font-size: 24px;
-                margin-bottom: .5rem;
-            }        
-        }
-    }     
 }

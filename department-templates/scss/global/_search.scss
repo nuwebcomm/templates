@@ -1,0 +1,156 @@
+// search
+
+#mobile-search {
+	display: none;
+}
+
+#search {
+	width: 265px / 1120px * 100%;
+    display: table-cell;
+    vertical-align: middle;
+    @extend %clearfix;   
+
+    .search-form {
+        width: 265px;
+        float: right;
+
+        input[type=text] {
+            width: 230px;
+            height: 35px;
+            padding: 0 .3em 0 0;
+            float: left;
+            font: 18px $AkkuratProBold;
+            background: none;
+            color: $white;
+            border: none;
+            border-bottom: 1px solid $nu-purple-30;
+            -webkit-appearance: none;
+
+            &::-webkit-input-placeholder {
+                color: $nu-purple-30;
+            }
+
+            &::-moz-placeholder {
+                color: $nu-purple-30;
+            }
+
+            &:-moz-placeholder {
+                color: $nu-purple-30;
+            }
+
+            &:-ms-input-placeholder {
+                color: $nu-purple-30;
+            }
+            
+            &:focus {
+                outline: 1px dashed $white;
+            }
+        }
+        
+        button {
+            float: left;
+            cursor: pointer;
+            height: 35px;
+            width: 35px;
+            background: url("#{$open}images/icons/search.svg#{$close}") no-repeat 1em .4em;
+            background-size: 20px 20px;
+            border: none;
+            border-bottom: 1px solid $nu-purple-30;
+            -webkit-appearance: none;
+            
+            &:focus {
+                outline: 1px dashed $white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 71.5625em) {
+    
+    #search {
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    
+    header {
+		position: relative;
+	}
+    
+    #search {
+        display: none;
+    }
+    
+	#mobile-search {
+		position: absolute;
+        margin-top: -6px; // artifically pushes search dropdown up
+		left: 0;
+		right: 0;
+		z-index: 9998;
+        box-shadow: 0px 2000px 0px 2000px rgba(0,0,0,0.8); // faux modal background
+	}
+    
+	.search-form {
+		width: 100%;
+		height: auto;
+		background: $nu-purple-120;
+		float: none;
+        position: relative;
+        box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.2);
+
+		form {
+			margin: 0 20px;
+			height: 63px;
+            position: relative;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA/CAYAAAAhZaJUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OThCRkYyRUZFQUM5MTFFNDg4MkNDNUM0RUJBRUJDM0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OThCRkYyRjBFQUM5MTFFNDg4MkNDNUM0RUJBRUJDM0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5OEJGRjJFREVBQzkxMUU0ODgyQ0M1QzRFQkFFQkMzRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5OEJGRjJFRUVBQzkxMUU0ODgyQ0M1QzRFQkFFQkMzRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr4qas0AAAAeSURBVHjaYvj//z8DEwMQDHuCmf+n3n8G6vkXIMAAeQ0Iq8diMWYAAAAASUVORK5CYII=');
+		}
+
+		input[type=text] {
+			width: 80%;
+            height: 32px;
+            margin: 15px 0;
+            float: left;
+            font: 18px $AkkuratProBold;
+            color: $white;
+			background: none;
+			border: none;
+		
+            &::-webkit-input-placeholder {
+                color: $nu-purple-30;
+            }
+
+            &::-moz-placeholder {
+                color: $nu-purple-30;
+            }
+
+            &:-moz-placeholder {
+                color: $nu-purple-30;
+            }
+
+            &:-ms-input-placeholder {
+                color: $nu-purple-30;
+            }
+        }
+
+		button {
+			float: left;
+            cursor: pointer;
+            height: 32px;
+			width: 32px;
+			padding: 10px 0 15px;
+            background: url("#{$open}images/icons/search.svg#{$close}") no-repeat 1em .4em / 20px 20px;
+			background-position: right center;
+            border-bottom: none;
+            position: absolute;
+            right: 0;
+            bottom: 18px;
+		}
+        
+		.hide-label,
+        input[type="hidden"] {
+			visibility: hidden;
+			display: none;
+		}
+	}
+}

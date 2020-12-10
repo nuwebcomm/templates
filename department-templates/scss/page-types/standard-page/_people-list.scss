@@ -2,8 +2,10 @@
 
 .standard-page {
 
-    .people-big, .people-medium, .people-small {
-        margin: 1rem 0 2rem 0;
+    .people-big,
+    .people-medium,
+    .people-small {
+        margin: 2rem 0;
         
         // removes margin for optional paragraph below div.people-wrap
         > p:first-of-type {
@@ -31,10 +33,13 @@
             margin-right: 20px / 836px * 100%;
             margin-bottom: .5rem;
         }
+        
         .people-content {
             float: right;
             
-            h3, h4 {
+            h2,
+            h3,
+            h4 {
                 font: 24px/1.2em $CamptonBold;
                 color: $rich-black-50;
                 margin-bottom: 0;
@@ -55,7 +60,7 @@
 
         .people-content {
             width: 456px / 836px * 100%;
-        }        
+        }
     }
     
     // 265px square image
@@ -67,7 +72,7 @@
         
         .people-content {
             width: 551px / 836px * 100%;
-        }      
+        }
     }
     
     // 170px square image
@@ -79,24 +84,27 @@
         
         .people-content {
             width: 646px / 836px * 100%;
-        }          
+        }
     }
-    
-    // media queries   
-    @media screen and (max-width: 600px) {    
+      
+    @media screen and (max-width: 37.5em) {
+        
         .people-big {
         
-            .people-image, .people-content {
+            .people-image,
+            .people-content {
                 float: none;
                 width: 100%;
             }
         }
     }
     
-    @media screen and (max-width: 540px) {    
+    @media screen and (max-width: 33.75em) {    
+        
         .people-medium {
         
-            .people-image, .people-content {
+            .people-image,
+            .people-content {
                 float: none;
                 width: 100%;
             }
@@ -104,11 +112,11 @@
         
         .people-small {
         
-            .people-image, .people-content {
+            .people-image,
+            .people-content {
                 float: none;
                 width: 100%;
             }
-        }        
-    } 
-    
-}  // end
+        }      
+    }
+}

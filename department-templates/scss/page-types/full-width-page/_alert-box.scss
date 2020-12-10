@@ -1,0 +1,161 @@
+// alert box (below top-nav)
+
+.full-width-page {
+
+    #alert-box {
+        background: $nu-purple-10;
+        border-left: 10px solid $nu-purple;
+        max-width: 1200px;
+        padding: 1.5rem 3rem 1.5rem 5rem;
+        margin: 5px auto;
+        font: 16px/1.3em$AkkuratProRegular;
+        min-height: 100px;
+        position: relative;
+        
+        .left-image,
+        .right-image {
+            display: none;
+        }
+        
+        &.exclamation { // show exclamation point 
+            
+            .left-image {
+                position: relative;
+                display: block;
+                
+                img {
+                    position: absolute;
+                    left: 0; 
+                }
+            }
+        
+            .alert-content {
+                margin-left: 80px;
+            }
+            
+            .right-image {
+                display: none;
+            }
+        }
+        
+        &.together { // show "we're n this together" 
+            
+            .left-image {
+                display: none;
+            }
+            
+            .alert-content {
+                margin-right: 7rem;
+            }
+            
+            .right-image {
+                position: absolute;
+                top: 1rem;
+                right: 5rem;
+                display: block;
+                
+                img {
+                
+                    &.mobile {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .alert-content {
+
+            p {
+                margin-top: 0;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .heading {
+                font: 28px/1.1em $CamptonBold;
+                color: $nu-purple;
+                margin-bottom: .5rem;
+                position: relative;
+            }
+
+            a {
+                color: $nu-purple;
+                font-family: $AkkuratProBold;
+                display: inline-block;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 71.25em) {
+
+        #alert-box {
+            border-left: none;
+            padding: 1rem 2rem;
+        
+            &.together {
+                
+                .right-image {
+                    right: 2rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 30em) {
+
+        #alert-box {
+            padding: 1rem;
+            
+            .alert-content .heading {
+                font-size: 24px;
+            }
+            
+            &.exclamation {
+                
+                .left-image {
+                    
+                    img {
+                        margin-bottom: .5rem;
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
+
+                .alert-content {
+                    margin-left: 55px;
+                }
+            }
+            
+            &.together {
+                
+                .right-image {
+                    position: relative;
+                    top: inherit;
+                    right: inherit;
+                    
+                    img {
+                        
+                        &.desktop {
+                            display: none;
+                        }
+
+                        &.mobile {
+                            display: block;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+                
+                .alert-content {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

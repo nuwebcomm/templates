@@ -1,0 +1,144 @@
+// no-left-nav page (formerly narrow-page)
+// <body> must include: <body class="standard-page no-left-nav">
+
+.no-left-nav {
+    
+    #left-nav {
+        display: none;
+    }
+
+    #main-content {
+        margin: 0 auto 5rem auto;
+          
+        .content { // override _main.scss
+            max-width: 930px;  
+            width: 100%;
+            float: none;
+            margin: 0 auto;
+        }
+    }
+    
+    .photo-grid { // reduces spacing between images
+        max-width: 836px;
+    }
+    
+    #news-story {
+        
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .wrap {
+            margin-bottom: 1.5rem;
+            @extend %clearfix;
+        
+            #credit {
+                font: 16px/1.4em $CamptonBold;
+                color: $rich-black-80;
+                width: 645px / 930px * 100%;
+            }
+
+            #share {
+                float: right;
+                width: 265px / 930px * 100%;
+            }
+        }
+        
+        #story-floater {
+            float: right;
+            width: 265px / 930px * 100%;
+            margin-left: 20px / 930px * 100%;
+            margin-bottom: 20px / 930px * 100%;
+            
+            figure + .news-tidbit {
+                margin-top: 2rem;
+            }
+
+            #story-callout {
+                border-top: 4px solid $light-grey;
+                border-bottom: 4px solid $light-grey;
+                padding: 1.5rem 0;
+                font: 20px $CamptonBook;
+                color: $nu-purple;
+            }
+            
+            .quote {
+                font: 24px/1.2em $CamptonBook;
+                text-indent: 2.75rem;
+                
+                &:before {
+                    background: url("#{$open}images/icons/quote.png#{$close}") no-repeat center / 35px 24px;
+                    width: 35px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+    
+    // center modules
+    main {
+    
+        section {
+            max-width: 836px;
+        
+            &.hero {
+                max-width: 100%;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 60.625em) {
+        
+        #news-story {
+ 
+            #story-floater {
+                float: none;
+                width: 100%;
+                padding-top: 1.5rem;
+                margin-left: 0;
+                margin-bottom: 1.5rem;
+                border-top: 4px solid $light-grey;             
+
+                .quote {
+                    float: none;
+                    width: 100%;
+                    font-size: 18px;
+                    padding-bottom: 1.5rem;
+                    border-bottom: 4px solid $light-grey;
+                    text-indent: 2rem;
+                    line-height: 1.3em;
+                
+                    &:before {
+                        background: url("#{$open}images/icons/quote.png#{$close}") no-repeat center / 26px 18px;
+                        width: 26px;
+                        height: 18px;
+                    }
+                }
+                
+                #story-callout {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 43.75em) {    
+    
+        #news-story {
+            
+            .wrap {
+        
+                #share {
+                    float: none;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+
+                #credit {
+                    float: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

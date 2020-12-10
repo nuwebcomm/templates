@@ -3,41 +3,48 @@
 .standard-page {
 
     .stats-callout {
+        @include flexbox;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap; // break into multiple lines   
         border-top: 4px solid $light-grey;
         border-bottom: 4px solid $light-grey;
         text-align: center;
-        color: $nu-purple;
         padding: 1rem 0;
     
-        div {
+        > div {
+            flex-grow: 1; // grow div larger than min-width
+            max-width: 50%;
+            width: 100%;
+            padding: 1rem;
             margin: 0 auto;
+            color: $nu-purple;
         }
         
-        span {  
-            display: block;
+        .big {
+           font: 72px/1.2em $CamptonBold; 
+        }
 
-            &.big {
-               font: 72px/1.2em $CamptonBold; 
-            }
-
-            &.small {
-                font: 24px/1.2em $CamptonExtraLight;
-            }
+        .small {
+            font: 24px/1.2em $CamptonExtraLight;
         }
     }
-
-    // media queries       
-    @media screen and (max-width: 480px) {
+          
+    @media screen and (max-width: 54.6875em) {
         
         .stats-callout {
+            display: block;
             
-            span {
-
-                &.big {
-                    font-size: 48px;
-                }
+            > div {
+                max-width: inherit;
             }
-        } 
+                
+            .big {
+                font: 48px $CamptonBold;
+            }
+
+            .text {
+                font: 20px $CamptonExtraLight;
+            }
+        }
     }
-     
-}  // end
+}

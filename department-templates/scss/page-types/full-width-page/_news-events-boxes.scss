@@ -1,0 +1,99 @@
+// news and events column framework
+
+.full-width-page {
+    
+    .news-event-boxes {
+        @include flexbox;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; // evenly spaces items
+        
+        h3 {
+            font: 30px/1.2em $AkkuratProRegular;
+            margin-bottom: 1.5rem;
+            padding-bottom: .5rem;
+            color: $rich-black-50;
+            border-bottom: 4px solid $light-grey;
+        }
+        
+        &.thirds {
+            
+            > div {
+                width: 360px / 1120px * 100%;
+            }
+        }
+        
+        &.two-thirds {
+            
+            // two-thirds column goes first
+            &.wide-first {
+            
+                > div {
+                    width: 740px / 1120px * 100%;
+
+
+                    &:last-of-type {
+                        width: 360px / 1120px * 100%;
+                    }
+                }
+            }
+            
+            // two thirds column goes last
+            &.wide-last {
+                
+                > div {
+                    width: 360px / 1120px * 100%;
+
+                    &:last-of-type {
+                        width: 740px / 1120px * 100%;
+                    }
+                }
+            }
+        }
+        
+        &.halves {
+            
+            > div {
+                width: 550px / 1120px * 100%;
+            }
+        }
+        
+        &.full-width {
+            
+            > div {
+                width: 100%;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 71.25em) {
+    
+        .news-event-boxes {
+            margin: 0 1rem;
+        }
+    }
+    
+    @media screen and (max-width: 56.25em) {
+        
+        .news-event-boxes {
+            display: block;
+        
+            &.thirds,
+            &.two-thirds.wide-first,
+            &.two-thirds.wide-last,
+            &.halves,
+            &.full-width {
+
+                > div {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                
+                    &:last-of-type {
+                        width: 100%;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    } 
+}

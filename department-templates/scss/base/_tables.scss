@@ -1,0 +1,135 @@
+// tables 
+
+.responsive-table { // applied automatically to all <table> tags in scripts.js
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+}
+
+table {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    font: 15px/1.5em $AkkuratProRegular;
+
+    caption {
+        caption-side: bottom;
+        text-align: left;
+        font-size: 14px;
+        color: $rich-black-80;
+        padding-top: .5rem;
+        margin-top: .5rem;
+        border-top: 1px solid $light-grey;
+    }
+
+    th {
+        background: $nu-purple;
+        vertical-align: middle;
+        font: 16px/1.3em $AkkuratProBold;
+        color: $white;
+        padding: .7rem 1rem .7rem 1rem;
+        text-align: left;
+        border: 2px solid $white;
+
+        &.align-text-center {
+            text-align: center;
+        }
+        
+        a {
+            color: $white !important; // overrides .content a
+        
+            &:hover {
+                border-bottom: 1px solid $white !important; // overrides .content a:hover 
+            }
+        }
+    }
+
+    tr.align-text-center th { // centers text
+        text-align: center;
+    }
+
+    td {
+        padding: .7rem 1rem .7rem 1rem;
+        border: 2px solid $white;
+        vertical-align: top;
+    }
+
+    tr.stripe {
+        background: $light-grey;
+    }
+
+    tr.hover td {
+        background: $nu-purple-10;
+        color: $rich-black-80;
+    }
+
+    &.table-no-hover { // removes hover state on rows
+
+        tr {
+
+            &.hover td {
+                background: transparent;
+                color: inherit;
+            }
+
+            &.hover.stripe {
+                background: $light-grey;
+            }
+        }
+    }
+
+    &.table-center-header { // centers headers
+
+        th {
+            text-align: center;
+        }
+    }
+
+    &.table-no-stripe { // removes auto striping
+
+        tr.stripe {
+            background: transparent;
+        }
+
+        &.table-no-hover { // removes hover state if no stripe
+
+            tr.hover.stripe {
+                background: transparent;
+            }
+        }
+    }
+
+    &.table-borders { // adds borders to table
+        border: 3px solid $light-grey;
+
+        caption {
+            padding-top: 0;
+            border-top: none
+        }
+
+        th {
+            border: 2px solid $light-grey;
+        }
+
+        td {
+            border: 2px solid $light-grey;
+        }
+
+        tr.stripe td {
+            border: 2px solid $white;  
+        }
+
+        &.table-no-stripe { // adds border back if class applied
+
+            tr.stripe td {
+                border: 2px solid $light-grey;
+            }
+        }
+    }
+
+    ul {
+        margin-left: 0;
+        padding-top: .5rem;
+    }
+}

@@ -2,27 +2,29 @@
 
 .standard-page {
     
-    .section {
+    section {
+        margin-top: 3rem;
         margin-bottom: 3rem;
-    
-        &:first-of-type { // gives extra space to first module
-            margin-top: 3rem;
-        }
         
-        &.hero:first-of-type { // removes from hero
+        &.hero { // removes from hero
             margin-top: 0;
         }
-    }     
+    }
     
-    #page {
+    h1 + section { // fixes space between page title and first wysiwyg section
+        margin-top: 0;
+    }
+    
+    #main-content {
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+    
+    #standard-wrap {
         margin: 2rem auto 0 auto;
         max-width: 1120px;
         @extend %clearfix;
     }
-    
-    .hero + #page { 
-        margin-top: -1em;
-    }      
     
     // main content regions
     #main-content { // gives content space before hitting footer
@@ -33,65 +35,58 @@
     .content {
         width: 836px / 1120px * 100%;     
         float: right;
-        margin-bottom: 3rem;
-    } 
-    
-    ul + h4,
-    ul + h5,  
-    ul + h6,
-    ol + h4, 
-    ol + h5, 
-    ol + h6 {
-        margin-top: 2rem;
     }
     
+    &.full-width { // full-width content page with no left nav
+        
+        .content {
+            width: 100%;
+            float: none;
+        }
+    }
+    
+    // for a to z type listings
+    .a-to-z {
+        list-style-type: none;
+        margin-bottom: 2rem;
+        padding: 0 0 .25rem 0;
+        border-bottom: 1px solid $rich-black-20;
+        @extend %clearfix;
+    
+        li {
+            background: none;
+            padding: 0 .5rem 0 0;
+            float: left;
+            color: $rich-black-20;
+            font: 18px/1.3em $AkkuratProBold;
+            text-transform: uppercase;
+            
+            a {
+                border-bottom: none;
+            
+                &:hover {
+                    border-bottom: 1px solid $nu-purple;
+                }
+            }
+        }
+    }
+    
+    p + h2, 
     p + h3, 
     p + h4, 
     p + h5, 
     p + h6, 
-    ul + h3, 
+    ul + h2, 
+    ul + h3,
     ul + h4,
     ul + h5,
     ul + h6,
-    ol + h3,    
-    ol + h4,     
-    ol + h5 ,    
+    ol + h2,    
+    ol + h3,     
+    ol + h4,    
+    ol + h5,
     ol + h6 {
         margin-top: 3rem;
-    }        
-    
-    // right sidebar option
-    #sidebar {
-        width: 260px / 836px * 100%;
-        float: right;
-        margin: 0 0 2rem 2rem;
-        
-        .box {
-            background: $nu-purple-10; 
-            padding: 1rem;
-            margin-bottom: 2rem;
-            font-size: 14px;
-            line-height: 1.4em;           
-            
-            h3 {
-                font: 18px/1.2em $CamptonBold;
-                color: $rich-black-80;
-            }
-            
-            h4 {
-                font: 16px/1.2em $AkkuratProBold;
-                color: $rich-black-80;
-                margin-top: inherit;
-            }
-            
-            ul {
-                padding-left: .5rem; 
-                
-                li { 
-                    background-position: 0 .3em
-                }
-            }
-        }
     }
 
     // pagination 
@@ -105,18 +100,19 @@
             display: inline-block;
             padding: 0;
             background-image: none;
-            font: 16px $AkkuratProBold;
-            color: $rich-black-20;
+            font: 16px/1em $AkkuratProBold;
+            margin-right: .25rem;
           
             &.disabled {
-                padding: .8rem 1rem;
-            }            
+                padding: .75rem 1rem;
+                color: $rich-black-20
+            }
         }
 
         a {
             border: none;
             display: inline-block;
-            padding: .8rem 1rem;
+            padding: .6rem .8rem;
             text-decoration: none;
             color: $rich-black-80;
 
@@ -124,110 +120,100 @@
                 background: $nu-purple-30;
                 color: $white;
             }
+        }
+        
+        span {
+            border: none;
+            display: inline-block;
+            padding: .6rem .8rem;
+            text-decoration: none;
+            color: $rich-black-80;
+            
+            &.prev, &.next {
+                color: inherit;
+                padding: 0;
+            }
 
             &.current {
                 background: $nu-purple;
                 color: $white;
             }
         }
-    }    
+    }
     
     // ordered list for steps (big numbers)
-    ol {
-        
-        &.steps {
-            counter-reset: li;
-            list-style: none;
+    ol.steps {
+        counter-reset: li;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2em;
+
+        li {
+            position: relative;
+            display: block;
             padding: 0;
             margin-bottom: 1em;
-        
-            li {
-                position: relative;
-                display: block;
-                padding: 0;
-                margin-bottom: 1em;
-                padding: 1em .5em 0 5em;
-                min-height: 90px;
+            padding: 1em .5em 0 5em;
+            min-height: 90px;
 
-                &:before {
-                    content: counter(li);
-                    counter-increment: li;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    font: 72px $CamptonBold;
-                    color: $nu-purple;
-                    margin: 0;
-                    padding: 0 .15em 0 .15em;
-                    text-align: center;
-                } 
+            &:before {
+                content: counter(li);
+                counter-increment: li;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                font: 72px $CamptonBold;
+                color: $nu-purple;
+                margin: 0;
+                padding: 0 .15em 0 .15em;
+                text-align: center;
             }
         }
     }
     
-    // media queries
-    @media screen and (max-width: 1145px) {
+    @media screen and (max-width: 71.25em) {
         
-        #page { // gives left/right margin for smaller screen widths
+        #standard-wrap { // gives left/right margin for smaller screen widths
             margin-left: 1rem;
             margin-right: 1rem;
         }
     }
     
-    @media screen and (max-width: 970px) {    
+    @media screen and (max-width: 60.625em) {    
         
         #page-narrow { // gives left/right margin for smaller screen widths 
             margin-left: 1rem;
             margin-right: 1rem;
-        }    
-    
-        #sidebar {
-            width: 300px / 768px * 100%;
         }
     }
     
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 48em) {
         
         .content {
             float: none;
             width: 100%;
-         
-            h2 {
-                font-size: 36px;
-            }        
         }
-
-        #sidebar {
-            width: 300px / 768px * 100%;
-        }
-    }
-
-    @media screen and (max-width: 700px) {
         
-        #sidebar {
-            margin-left: 0;
-            width: 100%;
-            float: none;
-    
-            .box {
-                margin-bottom: 1rem;
+        .content {
+            
+            h1 {
+                font-size: 36px;
             }
         }
-    }    
+    }
     
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 30em) {
 
-        .content {        
+        #content {        
             
-            h2 {
+            h1 {
                 font-size: 32px;
             }
 
-            h3 {
+            h2 {
                 font-size: 24px;
-            } 
+            }
         }
     }
-
-} // end
+}

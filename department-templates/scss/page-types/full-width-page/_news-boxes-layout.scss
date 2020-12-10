@@ -1,0 +1,123 @@
+// news/feature boxes layout
+
+.full-width-page {
+        
+    .news-list {
+
+        .news {
+            position: relative;
+            margin-bottom: 1.5rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            
+            .date {
+                font-size: 15px;
+                line-height: 1.5em;
+                color: $rich-black-50; 
+            }
+            
+            .source {
+                color: $rich-black-50;
+                font-size: 13px;
+                line-height: 1.5em;
+                
+                span {
+                    font-family: $PeriodicoBoldItalic;
+                }
+            }
+            
+            .image {
+                margin-bottom: .5rem;
+            }
+            
+            .description {
+                font-size: 15px;
+                line-height: 1.5em;
+            }
+            
+            .source + .description, 
+            .date + .description {
+                margin-top: .5rem;
+            }
+        }
+        
+        // for two column version
+        .two-columns {
+            @include flexbox;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap; // wrap children
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between; // evenly spaces items
+            
+            .news {
+                width: 360px / 740px * 100%;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+        
+        // for two column version
+        .three-columns {
+            @include flexbox;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap; // wrap children
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between; // evenly spaces items
+            
+            .news {
+                width: 360px / 1120px * 100%;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 56.25em) {
+    
+        .news-list {
+
+            .two-columns {
+
+                .news {
+                    width: 440px / 900px * 100%;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 48em) {
+    
+        .news-list {
+
+            .three-columns {
+                display: block;
+
+                .news {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 40em) {
+    
+        .news-list {
+
+            .two-columns {
+                display: block;
+
+                .news {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

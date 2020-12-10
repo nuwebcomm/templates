@@ -1,0 +1,28 @@
+.standard-page {
+    
+    .quote {
+
+        &.horizontal-quote { 
+            width: 100%;
+            margin: 2rem auto;
+            border-top: 4px solid $light-grey;
+            border-bottom: 4px solid $light-grey;
+            font: 26px/1.3em $CamptonBook;
+            color: $nu-purple;
+            position: relative;
+            padding: 2rem 0 2rem 0;
+            text-indent: 2.75rem;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: inherit;
+                background: url("#{$open}images/icons/quote.png#{$close}") no-repeat;
+                width: 35px;
+                height: 24px;
+                display: block;
+                content: "";
+            }
+        }
+    }
+}

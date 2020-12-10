@@ -2,9 +2,10 @@
 
 .people-columns {
     margin-top: 2rem;
-    display: flex; // equal height
+    @include flexbox;
     -webkit-flex-wrap: wrap;
-    flex-wrap: wrap; // break into multiple lines
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; // wrap children
     @extend %clearfix;
 
     .people {
@@ -46,16 +47,12 @@
             line-height: 1.2em;
         }
         
-        h3, h4 {
+        h2,
+        h3,
+        h4 {
             margin-bottom: 0;
             font: 22px/1.2em $CamptonBook;
             color: $rich-black-80;
-            text-align: inherit;
-
-            &:before, &:after { 
-                background: none;
-                padding: 0;
-            }        
         }       
         
         p.title {
@@ -63,9 +60,8 @@
             font: 18px/1.2em $AkkuratProRegular;
         }
     }
-    
-    // media queries   
-    @media screen and (max-width: 1120px) {    
+      
+    @media screen and (max-width: 70em) {    
     
         .people {
             float: none;
@@ -80,7 +76,7 @@
         }
     }
     
-    @media screen and (max-width: 480px) {   
+    @media screen and (max-width: 30em) {   
         
         .people {
             
@@ -94,7 +90,6 @@
                 float: none;
                 width: 100%
             }
-        } 
+        }
     }
-    
-} // end
+}

@@ -1,0 +1,57 @@
+// background select (selects a background image behind a large text area)
+
+.full-width-page {
+    
+    .background-select {
+        width: 100%;
+        display: table;
+        min-height: 400px;
+    
+        .background-select-image {
+            text-align: center;
+            display: table-cell;
+            width: 100%;
+            vertical-align: middle;
+            position: relative;   
+            padding: 5rem 1em 3rem 1em; 
+        }
+        
+        h2 {
+            margin-bottom: 2rem;
+        }
+        
+        p {
+            margin-bottom: 3rem;
+        }
+        
+        a.button {
+            margin-bottom: 2rem;
+        }
+        
+        // for purple background with faint slashes
+        &.purple-slashes {
+            
+            p {
+                color: $white;
+            }
+
+            h2 {
+                color: $white;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 60em) {
+         
+        .purple-slashes .purple-half {
+            padding: 2rem;
+        }
+    }
+    
+    @media screen and (max-width: 54.6875em) {    
+        
+        .background-select p.subhead {
+            font-size: 36px;
+        }
+    }
+}

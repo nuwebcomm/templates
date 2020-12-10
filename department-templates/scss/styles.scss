@@ -1,69 +1,73 @@
-// Northwestern University :: Departmental Templates v2.0 - 13 December 2017
-// developed by Christopher Garcia, Senior Front End Web Developer; Global Marketing and Communications
+// Northwestern University :: Departmental Templates v3.0 - 9 December 2020
+// developed by Christopher Garcia, Senior Front End Web Developer - Office of Global Marketing and Communications
 // Questions? Email: webcomm-support@northwestern.edu
 
-// base (do not modify)
+// base
 @import "base/reset";
 @import "base/variables";
 @import "base/mixins-extends";
 @import "base/core";
-@import "base/ie";
+@import "base/fonts";
 @import "base/forms";
 @import "base/typography";
+@import "base/tables";
 
-// main sections (do not modify)
-@import "sections/datatables";
-@import "sections/emergency";
-@import "sections/footer";
-@import "sections/header";
-@import "sections/heroes";
-@import "sections/left-nav";
-@import "sections/responsive-tabs";
-@import "sections/search";
-@import "sections/top-nav";
-@import "sections/mobile-nav";
+// global
+@import "global/datatables";
+@import "global/emergency";
+@import "global/footer";
+@import "global/header";
+@import "global/heroes";
+@import "global/images";
+@import "global/left-nav";
+@import "global/accordion-tabs";
+@import "global/search";
+@import "global/top-nav";
+@import "global/mobile-nav";
+@import "global/info-box";
 
-// standard-page modules (do not modify)
+// full-width modules
+@import "page-types/full-width-page/main";
+@import "page-types/full-width-page/alert-box";
+@import "page-types/full-width-page/alternate-photo-float";
+@import "page-types/full-width-page/announcement";
+@import "page-types/full-width-page/background-select";
+@import "page-types/full-width-page/feature-boxes-2-columns";
+@import "page-types/full-width-page/feature-boxes-3-columns";
+@import "page-types/full-width-page/feature-boxes-4-columns";
+@import "page-types/full-width-page/large-feature";
+@import "page-types/full-width-page/news-events-boxes"; // news/feature/event framework
+@import "page-types/full-width-page/news-boxes-layout"; // news/feature modules
+@import "page-types/full-width-page/event-boxes-layout"; // event modules
+@import "page-types/full-width-page/photo-feature-2-across";
+@import "page-types/full-width-page/photo-feature-3-across";
+@import "page-types/full-width-page/photo-grid";
+@import "page-types/full-width-page/pullquotes";
+@import "page-types/full-width-page/stats-callout";
+@import "page-types/full-width-page/three-column-links";
+
+// standard-page modules
 @import "page-types/standard-page/main";
 @import "page-types/standard-page/alternate-photo-float";
 @import "page-types/standard-page/background-select";
 @import "page-types/standard-page/expand-collapse";
 @import "page-types/standard-page/feature-boxes-2-columns";
-@import "page-types/standard-page/narrow-page";
-@import "page-types/standard-page/news-events-announcements";
+@import "page-types/standard-page/feature-events";
+@import "page-types/standard-page/horizontal-callout"; 
+@import "page-types/standard-page/horizontal-quote";
+@import "page-types/standard-page/horizontal-sidebar";
+@import "page-types/standard-page/no-left-nav"; // formerly narrow-page
 @import "page-types/standard-page/news-event-listing";
 @import "page-types/standard-page/people-list";
 @import "page-types/standard-page/people-list-two-column";
 @import "page-types/standard-page/photo-feature-2-across"; 
 @import "page-types/standard-page/photo-grid";
-@import "page-types/standard-page/plus-section"; 
 @import "page-types/standard-page/pullquotes";
-@import "page-types/standard-page/showcase";
+@import "page-types/standard-page/sidebar"; 
+@import "page-types/standard-page/stats-callout";
+@import "page-types/standard-page/twitter-feed";
 @import "page-types/standard-page/two-column-links";
-@import "page-types/standard-page/stats-callout"; 
-
-// landing-page modules (do not modify)
-@import "page-types/landing-page/main";
-@import "page-types/landing-page/alternate-photo-float";
-@import "page-types/landing-page/announcement";
-@import "page-types/landing-page/background-select";
-@import "page-types/landing-page/feature-boxes-2-columns";
-@import "page-types/landing-page/feature-boxes-3-columns";
-@import "page-types/landing-page/feature-boxes-4-columns";
-@import "page-types/landing-page/large-feature";
-@import "page-types/landing-page/news-events";
-@import "page-types/landing-page/news-events-announcements";
-@import "page-types/landing-page/number-boxes";
-@import "page-types/landing-page/photo-feature-2-across";
-@import "page-types/landing-page/photo-feature-3-across";
-@import "page-types/landing-page/photo-grid";
-@import "page-types/landing-page/pullquotes";
-@import "page-types/landing-page/slideshow";
-@import "page-types/landing-page/stats-callout";
-@import "page-types/landing-page/three-column-links";
-@import "page-types/landing-page/three-column-list";
-
-// last for specificity (do not modify)
+@import "page-types/standard-page/useful-links";
+ 
+// load last
 @import "base/buttons";
-
-// add new modules below

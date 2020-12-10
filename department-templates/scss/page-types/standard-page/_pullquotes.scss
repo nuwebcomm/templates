@@ -3,41 +3,51 @@
 .standard-page {
 
     .quote {
-        font: 24px/1.2em $CamptonBook;
+        font: 22px/1.4em $CamptonBook;
         color: $nu-purple;
-        margin-bottom: .5em;
+        margin-bottom: 1.5rem;
+        margin-top: 2px;
+        text-indent: 2rem;
+        position: relative;
 
-        span {
-            background: url("#{$path-images}/icons/quote.png") no-repeat;
-            width: 35px;
-            height: 24px;
-            display: inline-block;
-            margin-right: .5rem;
-        }  
-        
-        p {
-            margin-top: 0;
-        }
+        &:before {
+            position: absolute;
+            left: 0;
+            top: -2px;
+            background: url("#{$open}images/icons/quote.png#{$close}") no-repeat center / 26px 18px;
+            width: 26px;
+            height: 18px;
+            display: block;
+            content: "";
+        }   
         
         figcaption {
             font: 16px/1.4em $AkkuratProRegular;
             color: $rich-black-50;
+            text-indent: 0;
+            
+            p {
+                margin-bottom: 0;
+            }
         }
-    }   
-    
-    // media queries
-    @media screen and (max-width: 1145px) {
         
-        .quote {
-            font-size: 20px;
+        .name {
+            font-family: $AkkuratProBold;
+            margin-bottom: .5rem;
         }
-    }    
+    }
     
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 71.25em) {
         
         .quote {
             font-size: 18px;
         }
-    }    
- 
-} // end
+    }
+    
+    @media screen and (max-width: 56.25em) {
+        
+        .quote {
+            font-size: 16px;
+        }
+    }
+}

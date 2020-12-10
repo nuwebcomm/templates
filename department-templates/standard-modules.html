@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="css/swiper.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/nanogallery2.min.css" type="text/css" media="screen" />
+    <title>Standard Page With Modules</title>
+</head> 
+
+<body>
+    
+    <script>
+        document.getElementsByTagName('body')[0].setAttribute('class','standard-page');
+    </script>
+    <header>
+        <a href="#main-content" class="screen-reader-shortcut">Skip to main content</a>
+        <div id="top-bar">
+            <div class="contain-1120">
+                <div id="left">
+                    <div id="northwestern">
+                        <a href="http://www.northwestern.edu/" title="Northwestern University Home"><span class="hide-label">Northwestern University</span></a>
+                    </div>
+                    <div id="parent-unit">
+                        <a href="#">Parent Unit Name</a>
+                    </div>
+                </div>
+                <nav id="global-links" aria-label="global links">
+                    <ul>
+                        <li><a href="#">Global Link 1</a></li>
+                        <li><a href="#">Global Link 2</a></li>
+                        <li><a href="#">Global Link 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <nav id="quick-links" aria-label="quick links">
+            <ul>
+                <li><a href="#">Quick Link 1</a></li>
+                <li><a href="#">Quick Link 2</a></li>
+                <li><a href="#">Quick Link 3</a></li>
+            </ul>
+        </nav>
+        <div id="bottom-bar" class="contain-1120">
+            <div id="site-name">
+                <a href="#">Site Name</a>
+            </div>
+            <!-- search -->
+            <div id="search" class="hide-mobile">
+                <div class="search-form">
+                    <form action="https://search.northwestern.edu/" method="get" role="search">
+                        <label class="hide-label" for="q-desktop">Search this site</label>
+                        <input id="q-desktop" name="q" placeholder="Search this site" type="text">
+                        <input name="as_sitesearch" type="hidden" value="https://your.site.url">
+                        <input name="sitetitle" type="hidden" value="Your Site Name">
+                        <button type="submit"><span class="hide-label">Search</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- mobile navigation and search -->
+        <div id="mobile-links">
+            <a href="#mobile-nav" class="mobile-link mobile-nav-link"><span class="hide-label">Menu</span></a>
+            <!-- mobile nav -->
+            <!-- three levels are recommended, six levels are the maximum -->
+            <nav id="mobile-nav" aria-label="mobile menu">
+                <!-- first level -->
+                <ul>
+                    <li tabindex="0"><a aria-haspopup="true" href="#" role="button">Academics<span class="arrow"></span></a>
+                        <!-- second level -->
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Academics Overview</a></li>
+                            <li><a aria-haspopup="true" href="#" role="button">Degree Options<span class="arrow"></span></a>
+                                <!-- third level -->
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li class="home"><a href="#">Degree Options Overview</a></li>
+                                    <li><a aria-haspopup="true" href="#" role="button">Majors and Minors<span class="arrow"></span></a>
+                                        <!-- fourth level -->
+                                        <ul aria-expanded="false" aria-hidden="true">
+                                            <li class="home"><a href="#">Majors and Minors Overview</a></li>
+                                            <li><a aria-haspopup="true" href="#" role="button">Majors<span class="arrow"></span></a>
+                                                <!-- fifth level -->
+                                                <ul aria-expanded="false" aria-hidden="true">
+                                                    <li class="home"><a href="#">Majors Overview</a></li>
+                                                    <li><a aria-haspopup="true" href="#" role="button">Majors by School<span class="arrow"></span></a>
+                                                        <!-- sixth level -->
+                                                        <ul aria-expanded="false" aria-hidden="true">
+                                                            <li class="home"><a href="#">Majors by School Overview</a></li>
+                                                            <li><a href="#">Weinberg Majors</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Link</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Minors</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Student Life<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Student Life Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Tuition &amp; Aid<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Tuition &amp; Aid Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Visit and Engage<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Visit and Engage Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Apply<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Apply Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">FAQs<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">FAQs Overview</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="mobile-nav-bottom">
+                    <!-- from #global-links -->
+                    <ul id="mobile-nav-bottom-left">
+                        <li><a href="#">Global Link 1</a></li>
+                        <li><a href="#">Global Link 2</a></li>
+                        <li><a href="#">Global Link 3</a></li>
+                    </ul>
+                    <!-- from #quick-links -->
+                    <ul id="mobile-nav-bottom-right">
+                        <li><a href="#">Quick Link 1</a></li>
+                        <li><a href="#">Quick Link 2</a></li>
+                        <li><a href="#">Quick Link 3</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="#mobile-search" class="mobile-link mobile-search-link"><span class="hide-label">Search</span></a>
+            <!-- mobile search -->
+            <div id="mobile-search">
+                <div class="search-form">
+                    <form action="https://search.northwestern.edu/" method="get" role="search">
+                        <label class="hide-label" for="q-mobile">Search this site</label> 
+                        <input id="q-mobile" name="q" placeholder="Search this site" type="text"> 
+                        <input name="as_sitesearch" type="hidden" value="https://YOUR.SITE.URL"> 
+                        <input name="sitetitle" type="hidden" value="Your Site Name"> 
+                        <button type="submit"><span class="hide-label">Search</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="top-nav" aria-label="main menu">
+        <ul>
+            <li id="menu1"><a href="#">Academics <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu1">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Academics Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu2"><a href="#">Student Life <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu2">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Student Life Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu3"><a href="#">Tuition &amp; Aid <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu3">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Tuition &amp; Aid Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu4"><a href="#">Visit and Engage <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu4">
+                    <li>
+                        <ul class="overview">
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Visit and Engage Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu5"><a href="#">Apply <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu5">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Apply Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu6"><a href="#">FAQs <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu6">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">FAQs Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        
+        <!-- optional hero -->
+        <section class="hero">
+            <div class="hero-image" style="background: url('images/1440x420.gif') no-repeat center / cover">
+                <div class="contain-1120">
+                    <h1>Standard Page With Modules</h1>
+                    <p>Optional Large Text</p>
+                </div>    
+            </div>
+        </section>
+        
+        <div id="standard-wrap">
+            <nav id="left-nav" aria-label="section navigation menu" tabindex="-1">
+                <div class="section-name"><a href="#">Section Header</a></div>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#" class="active">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </nav>
+            <div class="content" tabindex="-1">
+                <ul id="breadcrumbs">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Active Page</li>
+                </ul>
+                <p>This is a standard modules page with a content width of 836px. There is a <a href="standard-no-left-nav-modules.html">no left navigation version</a> as well. Both pages contain the same modules.</p>
+
+                <!-- photo feature (2 across) -->
+                <section>
+                    <h2>Photo Feature (2 Across)</h2>
+                    <p>Used to highlight a pair of internal or external links using imagery. There may be multiple rows. Optionally, you can include a more detailed description that appears on hover (desktop) or click (mobile).  Gradient over image is automatically applied. See below for example.</p>
+                    <div class="photo-feature-2-across">
+                        <article class="photo-feature">
+                            <a href="#">
+                                <img src="images/418x235.png" alt="enter descriptive text">   
+                                <div class="text-over-image">
+                                    <h3>Lorum Ipsum Dolor Sit Amet</h3>
+                                    <div class="cta">Call to action</div>
+                                </div>
+                            </a>     
+                        </article>
+                         <article class="photo-feature">
+                            <a href="#">
+                                <img src="images/418x235.png" alt="enter descriptive text">   
+                                <div class="text-over-image">
+                                    <h3>Lorum Ipsum Dolor Sit Amet</h3>
+                                    <div class="cta">Call to action</div>
+                                </div>
+                            </a>
+                        </article>       
+                    </div>
+                </section>
+
+                <!-- photo feature (2 across) with Hover -->
+                <section>
+                    <h2>Photo Feature (2 Across) with Hover</h2>
+                    <p>This is the same as above, only with a hover state (desktop) or click event (mobile). Gradient over image is automatically applied.</p>
+                    <div class="photo-feature-2-across">
+                        <article class="photo-feature">
+                            <a href="#">
+                                <img src="images/418x235.png" alt="enter descriptive text">
+                                <div class="front">
+                                    <div class="text-over-image">
+                                        <h3>Lorum Ipsum Dolor Sit Amet</h3>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="back-text">
+                                        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit.</div>
+                                        <div class="cta">Call to action</div>
+                                    </div>
+                                </div>                      
+                            </a>     
+                        </article>
+                         <article class="photo-feature">
+                            <a href="#">
+                                <img src="images/418x235.png" alt="enter descriptive text">
+                                <div class="front">
+                                    <div class="text-over-image">
+                                        <h3>Lorum Ipsum Dolor Sit Amet</h3>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="back-text">
+                                        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit.</div>
+                                        <div class="cta">Call to action</div>
+                                    </div>
+                                </div> 
+                            </a>
+                        </article>       
+                    </div>
+                </section>
+
+                <!-- background image select -->
+                <section class="background-select">
+                    <div class="background-select-image" style="background: url('css/images/bg/slashes-purple-bg.gif') no-repeat center / cover">
+                        <div class="contain-780">
+                            <h2>Background Image</h2>
+                            <p class="subhead">Optional Subhead</p>
+                            <p>Used to showcase a single item such as news or an event.</p>
+                            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- in-page hero -->
+                <section class="hero">
+                    <div class="hero-image in-page" style="background: url('images/836x400.png') no-repeat center / cover">
+                        <h2>In-page Hero</h2>
+                        <p class="subhead">Optional Subhead</p>
+                        <p>Used to call out a single item with a large image.</p><a class="button" href="#" aria-label="enter descriptive text">Optional button</a>
+                    </div>
+                </section>
+
+                <!-- feature boxes (2 columns) -->
+                <section>
+                    <h2>Feature Boxes (Two Columns)</h2>
+                    <p>Used to present sections in a visual manner, for example to highlight the most popular FAQ pages under different categories. Images and all text are optional.</p>
+                    <div class="feature-two-col">
+                        <article class="feature-box">
+                            <img src="images/407x235.png" alt="enter descriptive text" />
+                            <div class="feature-copy">
+                                <h3>Title</h3>
+                                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Ea augue legimus intellegat pri, vel congue democritum ei. Errem tibique vivendum at nec, cu accusam menandri dissentias vel, in mei facilisi expetendis.</p>
+                                <ul>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
+                        </article>
+                        <article class="feature-box">
+                            <img src="images/407x235.png" alt="enter descriptive text" />
+                            <div class="feature-copy">
+                                <h3>Title</h3>
+                                <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut.</p>   
+                                <ul>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="button" aria-label="enter descriptive text">Optional Button</a>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- two column links -->
+                <section>
+                    <h2>Two Column Links</h2>
+                    <p>Used to organize link lists. Images are optional. May have multiple rows.</p>
+                    <div class="two-column-links">
+                        <article>
+                            <h3><a href="#">Title (optional link)</a></h3>
+                            <img src="images/400x210.png" alt="enter descriptive text" />
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </article>     
+                        <article>
+                            <h3>Title</h3>
+                            <img src="images/400x210.png" alt="enter descriptive text" />
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                
+                <!-- nanogallery2 -->
+                <section>
+                    <h2>NanoGallery2</h2>
+                    <p>To use, load nanogallery2.min.css, nanogallery2.core.min.js and the nanogallery2 settings. Change id if using multiple on a page.</p>
+                    <div class="nanogallery" id="nanogallery1" aria-label="image gallery">
+                        <a href="images/gallery/2.jpg" data-ngthumb="images/gallery/2-thumb.jpg" data-ngdesc="Image Description">Image Title</a>
+                        <a href="images/gallery/1.jpg" data-ngthumb="images/gallery/1-thumb.jpg" data-ngdesc="Image Description">Image Title</a>
+                        <a href="images/gallery/3.jpg" data-ngthumb="images/gallery/3-thumb.jpg" data-ngdesc="Image Description">Image Title</a>
+                        <a href="images/gallery/4.jpg" data-ngthumb="images/gallery/4-thumb.jpg" data-ngdesc="Image Description">Image Title</a>
+                        <a href="images/gallery/5.jpg" data-ngthumb="images/gallery/5-thumb.jpg" data-ngdesc="Image Description">Image Title</a>
+                    </div>
+                </section>
+                
+                <!-- four variations of useful links hybrids -->
+                <!-- 1. useful links -->
+                <section class="useful-links">
+                    <h2>Useful Links</h2>
+                    <p>Used for two columns of content where the left column is a paragraph and the right column is a list of links. See &quot;Gallery: Links and Quote&quot; below for a similar layout with images.</p>
+                    <div class="group">
+                        <div class="left-content">
+                            <p>Ea augue legimus intellegat pri, vel congue democritum ei. Errem tibique vivendum at nec, cu accusam menandri dissentias vel, in mei facilisi expetendis. Ut sed accusata definitiones, dicat inciderint at per. Ad quot persecuti quo.</p>
+                        </div>
+                        <div class="right-content links">
+                            <h3>Heading 3</h3>
+                            <ul>
+                                <li>This is some random text</li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>Full-width content.</p>
+                </section>
+
+                <!-- 2. gallery: links and quote -->
+                <section class="useful-links">
+                    <h2>Gallery: Links and Quote</h2>
+                    <p>Used for two columns of content where the left column is a slideshow or image and the right column is a list of links. Optional left floating quotation below. Note that quotation is hidden at smaller device widths.</p>
+                    <div class="group">
+                        <div class="left-content">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/550x310.png" alt="enter descriptive text">
+                                        <div class="caption">This is a caption for the first image</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/550x310-2.png" alt="enter descriptive text">
+                                        <div class="caption">This is a caption for the second image</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-nav">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div> 
+                        </div>
+                        <div class="right-content links">
+                            <h3>Heading 3</h3>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="below-content">
+                        <figure class="quote">
+                            <p>Optional quotation.&#8221;</p>
+                            <figcaption>
+                                <p>Name<br>
+                                School<br>
+                                Title or program</p>
+                            </figcaption>
+                        </figure>
+                        <p>Paragraph content expands to fill space if quotation not entered.</p>
+                    </div>
+                </section>
+
+                <!-- 3. gallery: statistics (large text) -->
+                <section class="useful-links">
+                    <h2>Gallery: Statistics (Large Text)</h2>
+                    <p>Used for a slideshow with an optional statistic and a labeled large list. The first list items is auto-styled bold purple. Applying the class &quot;bullet&quot; to the unordered list will apply bullets.</p>
+                    <div class="group">
+                        <div class="left-content">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/550x310.png" alt="enter descriptive text" />
+                                        <div class="caption">This is a caption for the first image</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/550x310-2.png" alt="enter descriptive text" />
+                                        <div class="caption">This is a caption for the second image</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-nav">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div> 
+                            <p>Lorem ipsum dolor sit amet, ei pri wisi quaestio iudicabit. Dolorum omittantur nam ut. Mazim electram persecuti est no, eu maiestatis deterruisset mei.</p>
+                            <p><a href="#" class="button" aria-label="enter descriptive text">Optional Button</a></p>
+                        </div>
+                        <div class="right-content stat-list">
+                            <div class="big">0%</div>
+                            <div class="text">label</div>
+                            <h3>Heading 3</h3>
+                            <ul>
+                                <li>List item 1</li>
+                                <li>List item 2</li>
+                                <li>List item 3</li>
+                                <li>List item 4</li>
+                                <li>List item 5</li>                        
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. gallery: full-width -->
+                <section class="useful-links">
+                    <h2>Gallery: Full-width</h2>
+                    <p>Used for a large slideshow or image. Optional left floating quotation below. Note that quotation is hidden at smaller device widths.</p>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/836x400.png" alt="enter descriptive text">
+                                <div class="caption">This is a caption for the first image</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/836x400-2.png" alt="enter descriptive text">
+                                <div class="caption">This is a caption for the second image</div>
+                            </div>
+                        </div>
+                        <div class="swiper-nav">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div> 
+                    <div class="below-content">
+                        <figure class="quote">
+                            <p>Optional quotation.&#8221;</p>
+                            <figcaption>
+                                <p>Name<br>
+                                School<br>
+                                Title or program</p>
+                            </figcaption>
+                        </figure>
+                        <p>Paragraph content expands to fill space if quotation not entered.</p>
+                    </div>
+                </section>
+
+                <!-- 4. gallery: full-width (single image) -->
+                <section class="useful-links single-image">
+                    <h2>Gallery: Full-width</h2>
+                    <p>Same as above but shows only a single image.</p>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/836x400.png" alt="enter descriptive text">
+                                <div class="caption">This is a caption for the first image</div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="below-content">
+                        <figure class="quote">
+                            <p>Optional quotation.&#8221;</p>
+                            <figcaption>
+                                <p>Name<br>
+                                School<br>
+                                Title or program</p>
+                            </figcaption>
+                        </figure>
+                        <p>Paragraph content expands to fill space if quotation not entered.</p>
+                    </div>
+                </section>
+
+                <!-- alternate photo float -->
+                <section>
+                    <h2>Alternate Photo Float</h2>
+                    <p>Allows for alternating images with quotations, link lists, or paragraphs. Put &quot;image-left&quot; before the &quot;text&quot; div and &quot;image-right&quot; after.</p>
+                    <div class="alternate-photo-float">
+                        <div class="image-left">
+                            <img src="images/360x360.gif" alt="enter descriptive text" />
+                        </div>
+                        <div class="text">
+                            <figure class="quote">
+                                <p>Optional quotation.&#8221;</p>
+                                <figcaption>
+                                    <p>Name<br>
+                                    School<br>
+                                    Title or program</p>
+                                </figcaption>
+                            </figure>
+                        </div>  
+                    </div>   
+                    <div class="alternate-photo-float">
+                        <div class="text">
+                            <h3>Heading 3</h3>
+                            <ul>
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
+                                <li><a href="#">Link 6</a></li>
+                            </ul> 
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>  
+                        <div class="image-right">
+                            <img src="images/360x360.gif" alt="enter descriptive text" />
+                        </div>
+                    </div>   
+                </section>
+
+                <!-- twitter feed (plus section) -->     
+                <section class="twitter-feed">
+                    <p class="hide-label"><a href="https://twitter.com/NorthwesternU">NorthwesternU Twitter Feed</a></p>
+                    <div class="content-side">
+                        <h2>Twitter Feed w/ Content</h2>
+                        <p>Used to present content, images, and links with a right column Twitter field.</p>
+                        <p><a href="#" class="button" aria-label="enter descriptive text">Optional Button</a></p>
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <img src="images/418x235.gif" alt="enter descriptive text"> 
+                        <p>Optional image above.</p>
+                        <p><a href="#" class="button" aria-label="enter descriptive text">Optional Button</a></p>
+                    </div>
+                    <div class="twitter-side">
+                        <a href="#skip-twitter" class="hide-label">Skip Twitter Feed</a>
+                        <a class="twitter-timeline" data-height="740" data-link-color="#3b2064" href="https://twitter.com/NorthwesternU?ref_src=twsrc%5Etfw">Tweets by NorthwesternU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                        <div id="skip-twitter"></div>
+                    </div>
+                </section>
+
+                <!-- horizontal quote -->
+                <section>
+                    <figure class="quote horizontal-quote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&rdquo;</p>
+                        <figcaption>
+                            <p>Name<br>
+                            School<br>
+                            Title or program</p>
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <!-- horizontal callout -->
+                <section>
+                    <div class="horizontal-callout">
+                        The wry, uncomfortable comedy of these works makes for a breath of  fresh air in our acrimonious, often terrifying humorless times.
+                    </div>
+                </section>
+
+                <!-- horizontal sidebar -->
+                <section>
+                    <div class="horizontal-sidebar">
+                        <div class="box">
+                            <h3>Optional Section Header</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- statistics callout -->
+                <h2>Statistics Callout</h2>
+                <p>Used for highlighting statistics.</p>
+                <section>
+                    <div class="stats-callout">
+                        <div>
+                            <div class="big">0%</div>
+                            <div class="small">label</div>
+                        </div>
+                        <div>
+                            <div class="big">0%</div>
+                            <div class="small">label</div>
+                        </div>
+                        <div>
+                            <div class="big">0%</div>
+                            <div class="small">label</div>
+                        </div>
+                        <div>
+                            <div class="big">0%</div>
+                            <div class="small">label</div>
+                        </div>
+                    </div>   
+                </section>    
+
+                <!-- news, events, announcements -->
+                <section>
+                    <h2>News Feature and Events</h2>
+                    <p>This shows a WYSIWYG main feature and a visual event feed.</p>
+                    <div class="feature-events">
+                        <div class="column-narrow news-section">
+                            <h3><a href="#">News</a></h3>
+                            <a href="#"><img src="images/275x200.png" alt="enter descriptive text" /></a>
+                            <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id interdum velit. Sed quis sapien dignissim, dictum nulla cursus.</p>
+                        </div>
+                        <div class="column-wide events-section">
+                            <h3><a href="#">Events</a></h3>
+                            <div class="event">
+                                <div class="event-date">
+                                    <div class="month">Sep</div>
+                                    <div class="day">18</div>
+                                    <div class="year">2017</div>
+                                </div>
+                                <div class="event-content">
+                                    <h4><a href="#">Event Title</a></h4>
+                                    <div class="time-location"><strong>7:00 PM</strong> Building Name, Address</div>
+                                    <div class="description">Lorem ipsum dolor sit amet, consectetur ad>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id interdum velit. Sed quis sapien dignissim, dictum nulla cursus.</div>
+                                </div>
+                            </div>     
+                            <div class="event">
+                                <div class="event-date">
+                                    <div class="month">Sep</div>
+                                    <div class="day">18</div>
+                                    <div class="year">2017</div>
+                                </div>
+                                <div class="event-content">
+                                    <h4><a href="#">Event Title</a></h4>
+                                    <div class="time-location"><strong>7:00 PM</strong> Building Name, Address</div>
+                                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id interdum velit. Sed quis sapien dignissim, dictum nulla cursus.</div>
+                                </div>
+                            </div>                             
+                            <div class="event">
+                                <div class="event-date">
+                                    <div class="month">Sep</div>
+                                    <div class="day">18</div>
+                                    <div class="year">2017</div>
+                                </div>
+                                <div class="event-content">
+                                    <h4><a href="#">Event Title</a></h4>
+                                    <div class="time-location"><strong>7:00 PM</strong> Building Name, Address</div>
+                                    <div class="description">Lorem ipsum dolor sit amet, consectetur ad. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id interdum velit. Sed quis sapien dignissim, dictum nulla cursus.</div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </section>    
+
+                <!-- feature and wysiwyg -->
+                <section>
+                    <h2>News Feature and WYSIWYG</h2>
+                    <p>This shows a WYSIWYG main feature on the left and a WYSIWYG content region on the right side.</p>
+                    <div class="feature-events">
+                        <div class="column-narrow news-section">
+                            <h3><a href="#">Title</a></h3>
+                            <a href="#"><img src="images/275x200.png" alt="enter descriptive text" /></a>
+                            <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id interdum velit. Sed quis sapien dignissim, dictum nulla cursus.</p>
+                        </div>
+                        <div class="column-wide news-section">
+                            <h3><a href="#">Title</a></h3>
+                            <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id interdum velit. Sed quis sapien dignissim, dictum nulla cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id interdum velit. <a href="#">Sed quis sapien dignissim</a>, dictum nulla cursus.</p>
+                            <p class="button"><a href="#">Optional Button</a></p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contain-1120">
+            <a href="https://www.northwestern.edu">
+                <div class="footer-logo"><span class="hide-text">Northwestern University</span></div>
+            </a>
+            <div class="footer-wrap">
+                <div class="footer-content contact">
+                    <h2>Department Name Goes Here</h2>
+                    <div class="address">
+                        <div class="icon">
+                            <span>Address</span>
+                        </div>
+                        <div class="text">
+                            <p>123 Sheridan Road<br>
+                                Suite 100<br>
+                            Evanston, IL 60208</p>
+                        </div>
+                    </div>
+                    <div class="phone">
+                        <div class="icon">
+                            <span>Phone number</span>
+                        </div>
+                        <div class="text">
+                            <p><strong>Header option</strong><br>
+                            (123) 456-7890</p>
+                            <p><strong>Header option</strong><br>
+                            (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="fax">
+                        <div class="icon">
+                            <span>Fax number</span>
+                        </div>
+                        <div class="text">
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <div class="icon">
+                            <span>Email address</span>
+                        </div>
+                        <div class="text">
+                            <p><a href="#">your-department@northwestern.edu</a></p>
+                        </div>
+                    </div>
+                    <div class="feedback">
+                        <div class="icon">
+                            <span>Feedback</span>
+                        </div>
+                        <div class="text">
+                            <p><a href="#">Feedback</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content connect">
+                    <h2>Connect</h2>
+                    <a href="#" class="social facebook">Facebook</a>
+                    <a href="#" class="social twitter">Twitter</a>
+                    <a href="#" class="social social instagram">Instagram</a>
+                    <a href="#" class="social rss">RSS</a>
+                    <a href="#" class="social youtube">YouTube</a>
+                    <a href="#" class="social tumblr">Tumblr</a>
+                    <a href="#" class="social wordpress">WordPress</a>
+                    <a href="#" class="social futurity">Futurity</a>
+                    <a href="#" class="social vimeo">Vimeo</a>
+                    <a href="#" class="social linkedin">Linkedin</a>
+                    <a href="#" class="social google-groups">Google Groups</a>
+                    <a href="#" class="social blog">Blog</a>
+                    <a href="#" class="social github">Github</a>
+                    <a href="#" class="social flickr">Flickr</a>
+                    <a href="#" class="social storify">Storify</a>
+                    <a href="#" class="social pinterest">Pinterest</a>
+                    <a href="#" class="social we-will">We Will</a>
+                    <a href="#" class="social spotify">Spotify</a>
+                    <div id="cta">
+                        <h3>Call to Action</h3>
+                        <p>Lorum ipsum dolor sit amet.</p>
+                        <p class="button"><a href="#">Button Text</a></p>
+                    </div>
+                </div>
+                <div class="footer-content links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#">Link 1 is a really long title</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                        <li><a href="#">Link 5</a></li>
+                        <li><a href="#">Link 6</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content resources">
+                    <h2>Northwestern Resources</h2>
+                    <ul>
+                        <li><a href="https://www.northwestern.edu/accessibility">Accessibility</a></li>
+                        <li><a href="https://www.northwestern.edu/emergency/index.html">Campus Emergency Information</a></li>
+                        <li><a href="https://www.northwestern.edu/hr/careers/">Careers</a></li>
+                        <li><a href="https://www.northwestern.edu/contact.html">Contact Northwestern University</a></li>
+                        <li><a href="https://policies.northwestern.edu/">University Policies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            <div class="contain-1120">
+                <span class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Northwestern University</span>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/NorthwesternU">
+                            <span class="social facebook">Facebook</span>
+                            <span class="text">@NorthwesternU</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/northwesternu">
+                            <span class="social twitter">Twitter</span>
+                            <span class="text">@northwesternU</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/northwesternu">
+                            <span class="social instagram">Instagram</span>
+                            <span class="text">@northwesternu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/NorthwesternU">
+                            <span class="social youtube">YouTube</span>
+                            <span class="text">@NorthwesternU</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.futurity.org/university/northwestern-university/">
+                            <span class="social futurity">Futurity</span>
+                            <span class="text">Futurity</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://news.northwestern.edu/feeds/allStories">
+                            <span class="social rss">RSS</span>
+                            <span class="text">RSS Feed</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="right"><a href="https://www.northwestern.edu/disclaimer.html">Disclaimer</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/content-slider.js"></script>
+    <script src="js/jquery.nanogallery2.core.min.js"></script>
+    <script>
+        $(".nanogallery").nanogallery2({
+            itemsBaseURL: '',
+            thumbnailHeight: 'auto',
+            thumbnailWidth: 270,
+            thumbnailLabel: {display: false},
+            thumbnailGutterWidth: 10,
+            thumbnailGutterHeight: 10,
+            thumbnailBorderHorizontal: 0,
+            thumbnailBorderVertical: 0
+        });
+    </script>
+    
+</body>
+</html>

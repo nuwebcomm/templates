@@ -1,0 +1,185 @@
+// photo feature (2 across) 
+
+.full-width-page {
+    
+    .photo-feature-2-across {
+        @extend %clearfix;
+        
+        .photo-feature { 
+            width: 720px / 1440px * 100%;
+            float: left;
+            position: relative;
+            max-height: 350px;
+            @extend %gradient-overlay;
+            
+            &:after {
+                content: " ";
+                background: url("#{$open}images/icons/square-arrow-right-white.svg#{$close}") no-repeat center / 30px 30px;
+                height: 30px;
+                width: 30px;
+                position: absolute;
+                bottom: 2rem;
+                right: 2rem;
+            }
+            
+            &:hover:before { // hide gradient overlay on hover
+                display: none;
+            }
+            
+            // hover opacity with no back text
+            a:hover {
+                opacity: 1;
+            }
+        }
+            
+        img {
+            display: block;
+        }
+
+        .front {
+            height: 100%;
+        }
+
+        .back {
+            display: none;
+            background-color: $nu-purple;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            
+            &:hover { // hover opacity with back text
+                opacity: .8;
+            }
+        }            
+
+        .text-over-image {
+            color: $white;
+            padding: 0 4rem 1rem 2rem;
+            position: absolute;
+            bottom: 1rem;
+            z-index: 31;
+            width: 80%;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); 
+
+            h3 {
+                font: 30px/1.3em $AkkuratProBold;
+                color: $white;
+                margin-bottom: .5rem;
+            }
+
+            .description {
+                margin-bottom: 1rem;
+                line-height: 1.3em;
+            }
+        }
+
+        .back-text {
+            color: $white;
+            padding: 10%;
+            z-index: 31;
+            width: 100%;
+            height: 100%;
+            font-size: 24px;
+            line-height: 1.5em;
+
+            .cta {
+                position: absolute;
+                bottom: 2.25rem;
+                right: 5rem;
+                text-align: right;
+                font-size: 16px;
+            }
+        }
+
+        .cta {
+            text-transform: uppercase;
+            line-height: 1em;
+        }
+    }
+
+    @media screen and (max-width: 78.125em) {
+        
+        .photo-feature-2-across {        
+            
+            .text-over-image { 
+                width: 100%;
+
+                h3 {
+                   font-size: 26px; 
+                }
+            }
+        }   
+    }
+    
+    @media screen and (max-width: 71.25em) { 
+
+        .photo-feature-2-across { 
+            
+            .photo-feature { 
+                width: 100%;
+                max-width: 720px;
+                float: none;
+                margin: 0 auto 0 auto;
+            }
+        }
+    }
+      
+    @media screen and (max-width: 48em) {         
+        
+        .photo-feature-2-across {
+                
+            .text-over-image {
+
+                h3 {
+                    font-size: 24px; 
+                }
+
+                .description { 
+                    display: none;
+                }
+            }
+
+            .back-text {
+                padding: 2rem;
+            }
+        }
+    }
+         
+    @media screen and (max-width: 30em) {
+
+        .photo-feature-2-across {
+            
+            .photo-feature {
+                
+                &:after {
+                    background-size: 25px 25px;
+                    height: 25px;
+                    width: 25px;
+                    bottom: 1rem;
+                    right: 1rem;
+                }
+            }
+                
+            .text-over-image {
+                padding: 0 3rem 0 1rem;
+
+                h3 {
+                   font-size: 20px; 
+                }
+            }
+
+            .back-text {
+                font-size: 18px;
+                padding: 1rem;
+
+                .cta {
+                    position: absolute;
+                    bottom: 1.25rem;
+                    right: 3.75rem;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

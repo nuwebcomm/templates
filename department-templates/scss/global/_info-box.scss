@@ -1,0 +1,78 @@
+// information popup box
+
+.info-box-wrap {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.info-box {
+	background: $nu-purple-30;
+	width: 240px;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	right: 10%;
+	z-index: 9997;
+	padding: .5em;
+	border: 1px solid #e1e1e1;
+	border-bottom: none;
+
+    a.header {
+        font: 22px/1em $CamptonBold;
+        color: $nu-purple-120;
+        background: $nu-purple-30 url("images/icons/info-icon.svg") no-repeat .5rem .5rem;
+        background-size: 34px 34px;
+        overflow: hidden;
+        display: block;
+        text-decoration: none;
+        padding: 1rem 1rem .5rem 3.25rem;
+        height: 54px;
+    
+        &:focus {
+            outline: 3px solid $nu-purple-120;
+        }
+    }
+    
+    .info-message {
+        background: $white;
+        overflow: auto;
+        padding: 0 .7rem;
+        font: 14px/1.3em $AkkuratProRegular;
+        overflow: hidden;
+        
+        a {
+            font-family: $AkkuratProBold;
+            color: $nu-purple;
+            
+            &:hover {
+                text-decoration: none;
+            }
+
+            &.button {
+                color: $white;
+                font-size: 13px;
+            }
+        }
+    }
+    
+    .logo {
+        margin: 1rem auto;
+    }
+}
+
+@media screen and (max-width: 40em) {
+
+    .info-box {
+        right: inherit;
+        left: 3%;
+        width: 200px;
+    
+        a.header {
+            font: 19px/1em $CamptonBold;
+            background: $nu-purple-30 url("images/icons/info-icon.svg") no-repeat .5rem .5rem;
+            background-size: 22px 22px;
+            padding: .7rem .5rem .5rem 2.5rem;
+            height: 45px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+// announcement box (below hero)
+ 
+.full-width-page {
+
+    #announcement {
+        background: $nu-purple-10;
+        font-size: 18px;
+        line-height: 1.3em;
+        padding: 1.5rem;
+        max-width: 1440px;
+    
+        h2 {
+            font: 34px/1.2em $CamptonBold;
+            text-align: left;
+            margin-bottom: 1rem;
+            
+            &::before,
+            &::after {
+                background: none;
+                padding: 0;
+            }
+        }
+        
+        h3 {
+            font: 26px/1.2em $CamptonBold;
+        }
+        
+        h4 {
+            font: 21px/1.2em $CamptonBold;
+        }
+        
+        h5 {
+            font: 18px/1.2em $CamptonBold;
+        }
+        
+        a {
+            color: $nu-purple;
+            text-decoration: none;
+            
+            &.button { // override
+                color: $white;
+                text-decoration: none;
+            }
+        }
+        
+        p.button a { // override
+            color: $white;
+            text-decoration: none;
+        }
+        
+        @media screen and (max-width: 48em) {
+        
+            h2 {
+                font-size: 26px;
+                line-height: 1.2em;
+            }
+            
+            h3 {
+                font-size: 21px;
+            }
+            
+            h4 {
+                font-size: 18px;
+            }
+        }
+    }
+}

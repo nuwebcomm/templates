@@ -1,57 +1,44 @@
 // typography
 
+h1 { // standard-page page title
+    font: 46px/1.2em $CamptonExtraLight;
+    color: $nu-purple;
+    margin-bottom: 1.5rem;
+}
+
 // headers
 h2 {
-    font: 46px/1.2em $CamptonExtraLight;
+    font: 30px/1.2em $CamptonBold;
     color: $nu-purple;
     margin-bottom: 1rem;
 }
 
 h3 {
-    font: 30px/1.2em $CamptonBold;
-    color: $nu-purple;
-    margin-bottom: .5rem;
-
-    &.demo { // used only for boilerplate.html (not for production!)
-        font: 26px/1.2em $CamptonBold;
-        background: $nu-purple-120;
-        color: $white;
-        padding: 1rem;
-        display: inline-block;
-    }
+    font: 26px/1.2em $AkkuratProRegular;
+    color: $rich-black-50;
+    margin-bottom: 1rem; 
 }
 
 h4 {
-    font: 26px/1.2em $AkkuratProRegular;
-    color: $rich-black-50;
-    margin-bottom: .5rem; 
+    font: 22px/1.3em $AkkuratProRegular;
+    color: $nu-purple;
+    margin-bottom: 1rem; 
 }
 
 h5 {
-    font: 21px/1.3em $AkkuratProRegular;
-    color: $nu-purple;
-    margin-bottom: .5rem; 
+    font: 20px/1.3em $CamptonBold;
+    color: $rich-black-80;
+    margin-bottom: 1rem; 
 }
 
 h6 {
     font: 18px/1.3em $CamptonBold;
     color: $rich-black-50;
-    margin-bottom: .5rem; 
+    margin-bottom: 1rem; 
 }
 
-// center buttons within a <ul>
-.center-list {
-    list-style: none;
-    margin: 2rem 0 0 0;
-    padding: 0;
-    text-align: center;
-
-    li {
-        background: none;
-        display: inline;
-        margin: 0;
-        padding: 0;
-    }
+.uppercase {
+    text-transform: uppercase;
 }
 
 // basic styles
@@ -59,10 +46,15 @@ h6 {
     
     p,
     a,
-    span {
+    span,
+    li {
 
         &.arrow-link {
             @extend %purple-right-arrow;
+        }
+        
+        &.external-link {
+			@extend %external-link-light-purple;
         }
     }
  
@@ -84,6 +76,10 @@ h6 {
         &.no-dash { // apply to anchors to remove bottom border
             border-bottom: none;
         }
+    }
+    
+    p {
+        margin-top: 0;
     }
     
     a em,
@@ -116,38 +112,52 @@ h6 {
         font-weight: normal;
     }
     
-    // bullets
+    hr {
+        background: $light-grey;
+        height: 3px;
+        margin: 2rem 0;
+        border: none;
+    }
+    
+    // lists
     ul {
-        padding-left: 1em;
+        padding-left: 1rem;
 
         > li {
             list-style: none;
-            background: url("#{$path-images}/icons/bullet.png") 0 .6em no-repeat;
-            padding: 0 0 .5em 1.5em;
+            background: url("#{$open}images/icons/bullet.png#{$close}") 0 .6rem no-repeat;
+            padding: 0 0 .5rem 1.5rem;
             
             &:last-child {
                 padding-bottom: 0;
             }
         
-            > ul {
-                margin-top: .5em;
+            ul {
+                margin-top: .5rem;
 
-                li {
+                > li {
                     background: none;
                     list-style: circle;
-                    padding-left: .5em;
+                    padding-left: .5rem;
+                }
+                
+                ul {
+                    
+                    > li {
+                        list-style: disc;
+                    }
                 }
             }
             
             > ol {
-                padding-left: 1em;
-                margin-top: .5em;    
+                padding-left: 1rem;
+                margin-top: .5rem;    
 
                 > li {
                     background: none;
-                    list-style-type: decimal;
+                    list-style: decimal;
                     overflow: inherit;
-                    padding-left: .5em;
+                    padding-left: .5rem;
                     
                     &:last-child {
                         padding-bottom: 0;
@@ -155,14 +165,20 @@ h6 {
                 }
             }
         }
-        
+
         // center list items
-        &.center-list > li { // used for centering buttons
-            background: none;
+        &.center-list {
             padding: 0;
+            text-align: center;
+            
+            li { // used for centering buttons
+                background: none;
+                padding: 0;
+                display: inline;
         
-            &:last-of-type a.button { // removes right margin on last button in unordered list
-                margin-right: 0;
+                &:last-of-type a.button { // removes right margin on last button in unordered list
+                    margin-right: 0;
+                }
             }
         }
         
@@ -197,19 +213,19 @@ h6 {
     }
 
     ol {
-        padding-left: 2.2em;
+        padding-left: 2.2rem;
 
         > li {
             list-style-type: decimal;
-            padding: 0 0 .5em .5em; 
+            padding: 0 0 .5rem .5rem; 
             
             &:last-child {
                 padding-bottom: 0;
             }
   
             > ol {
-                margin-top: .5em; 
-                padding-left: 1.2em;
+                margin-top: .5rem; 
+                padding-left: 1.2rem;
 
                 li {
                     list-style: lower-alpha;
@@ -218,10 +234,17 @@ h6 {
                         padding-bottom: 0;
                     }
                 }
+                
+                ol {
+                    
+                    li {
+                        list-style: lower-roman;
+                    }
+                }
             }
 
             > ul {
-                margin-top: .5em;
+                margin-top: .5rem;
                 padding-left: 0;
                 
                 > li:last-child {
@@ -229,196 +252,43 @@ h6 {
                 }
             }
         }
-    }
+        
+        // two column list items
+        &.two-column-list {
+            width: 100% !important; // important
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            column-count: 2;
+            -webkit-column-gap: 2rem;
+            -moz-column-gap: 2rem;
+            column-gap: 2rem;
 
-    // tables 
-    table {
-        width: 100%;
-        margin: 1em 0 0 0;
-        font-family: $AkkuratProRegular;
-        line-height: 1.5em;
-
-        th {
-            background: $nu-purple;
-            font: 18px $AkkuratProBold;
-            color: $white;
-            padding: .7rem 1rem .7rem 1rem;
-            text-align: left;
-            border: 2px solid $white;
-        }
-        
-        td {
-            padding: .7rem 1rem .7rem 1rem;
-            border: 2px solid $white;
-            vertical-align: top;
-        }
-        
-        tr.stripe {
-            background: $light-grey;
-        }
-        
-        tr.hover td {
-            background: $nu-purple-10;
-            color: $rich-black-80;
-        }
-
-        &.table-no-hover { // removes hover state on rows
-        
-            tr {
-                
-                &.hover td {
-                    background: transparent;
-                    color: inherit;
-                }
-                
-                &.hover.stripe {
-                    background: $light-grey;
-                }
+            li {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
             }
         }
         
-        &.table-center-header { // centers headers
+        @media screen and (max-width: 768px) {
             
-            th {
-                text-align: center;
+            &.two-column-list {
+                -moz-column-count: 1;
+                -webkit-column-count: 1;
+                column-count: 1;
+                -webkit-column-gap: 0;
+                -moz-column-gap: 0;
+                column-gap: 0;
             }
-        }
-        
-        &.table-no-stripe { // removes auto striping
-        
-            tr.stripe {
-                background: transparent;
-            }
-        }
-        
-        &.table-borders { // adds borders to table
-            border: 3px solid $light-grey;
-            
-            th {
-                border: 2px solid $light-grey;
-            }
-            
-            td {
-                border: 2px solid $light-grey;
-            }
-            
-            tr.stripe td {
-                border: 2px solid $white;  
-            }
-            
-            &.table-no-stripe { // adds border back if class applied
-                
-                tr.stripe td {
-                    border: 2px solid $light-grey;
-                }
-            }
-        }
-        
-        ul {
-            margin-left: 0;
-            padding-top: .5rem;
         }
     }
 }
  
-// formatting of text/images 
+// text alignment
 .align-text-center {
 	text-align: center;
 }
 
-.align-image-left {
-	float: left;
-	margin: .5rem 1.5rem .5rem 0;
-}
-
-.align-image-right {
-	float: right;
-	margin: .5rem 0 .5rem 1.5rem;
-}
-
-.align-image-center {
-	margin: 0 auto;
-	display: block;
-}
-
-@media screen and (max-width: 768px) {    
-
-    .align-image-left,
-    .align-image-right,
-    .align-image-center {
-        float: none;
-        margin: 0 0 1rem 0;
-        display: block;
-    }
-}
-
-// web fonts
-@font-face {
-    font-family: "Akkurat Pro Light";
-    src: url("#{$path-fonts}/AkkuratProLight.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;    
-}
-
-@font-face {
-    font-family: "Akkurat Pro Light Italic";
-    src: url("#{$path-fonts}/AkkuratProLightItalic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
-}
-
-@font-face {
-    font-family: "Akkurat Pro Regular";
-    src: url("#{$path-fonts}/AkkuratProRegular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
-}
-
-@font-face {
-    font-family: "Akkurat Pro Italic";
-    src: url("#{$path-fonts}/AkkuratProItalic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
-}
-
-@font-face {
-    font-family: "Akkurat Pro Bold";
-    src: url("#{$path-fonts}/AkkuratProBold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
-}
-
-@font-face {
-    font-family: "Akkurat Pro Bold Italic";
-    src: url("#{$path-fonts}/AkkuratProBoldItalic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
-}
-
-@font-face {
-    font-family: "Campton Book";
-    src: url("#{$path-fonts}/CamptonBook.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
-}
-
-@font-face {
-    font-family: "Campton Bold";
-    src: url("#{$path-fonts}/CamptonBold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
-}
-
-@font-face {
-    font-family: "Campton Extra Bold";
-    src: url("#{$path-fonts}/CamptonExtraBold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
-}
-
-@font-face {
-    font-family: "Campton Extra Light";
-    src: url("#{$path-fonts}/CamptonExtraLight.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
+.align-text-right {
+    text-align: right;
 }

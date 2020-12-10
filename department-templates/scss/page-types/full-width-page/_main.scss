@@ -1,0 +1,100 @@
+// landing pages (full-width)
+
+.full-width-page {
+    
+    section {
+        margin-bottom: 5rem;
+
+        &.no-bottom-margin { // this is for heroes when you don't want bottom margin
+            margin-bottom: 0;
+        }
+    }
+
+    #main-content {
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+    
+     // main content region
+    .content {
+        font-size: 16px;
+        line-height: 1.7em;
+        width: 100%;
+        @extend %clearfix;
+        
+        // section headers
+        h2 {
+            font: 24px $CamptonExtraBold;
+            color: $nu-purple;
+            text-align: center;
+
+            &:before,
+            &:after {
+                background: url("#{$open}images/icons/grey-slash.svg#{$close}") no-repeat 50% / 17px 21px;
+                padding: 0 20px;
+                content: " ";
+            }
+        }
+
+        p.subhead {
+            color: #4e2a84;
+            font: 46px/1.2em $CamptonExtraLight;
+            margin-bottom: 1rem;
+        }
+        
+        // section top wrapper for non-hero and non-background-select areas
+        .section-top {
+            margin-bottom: 3rem;
+            text-align: center;
+            padding: 0 1rem;
+            
+            h2 {
+               margin-bottom: 4rem; 
+            
+                &+p {
+                    margin-top: -2rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 30em) {
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .content {
+            
+            // consistent headers across elements
+            .section-top,
+            .background-select,
+            .large-feature-wrap,
+            .in-page {
+                
+                h2 {
+                    font: 20px $CamptonExtraBold;
+                    margin-bottom: 1rem;
+
+                    &+p {
+                        margin-top: 0;
+                    }
+                    
+                    &:before {
+                        background: none;
+                        padding: 0;
+                    }
+
+                    &:after {
+                        background: none;
+                        padding: 0;
+                    }
+                }
+                
+                p.subhead {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}

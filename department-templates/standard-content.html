@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <title>Standard Content Page</title>
+</head> 
+
+<body>
+    
+    <script>
+        document.getElementsByTagName('body')[0].setAttribute('class','standard-page');
+    </script>
+    <header>
+        <a href="#main-content" class="screen-reader-shortcut">Skip to main content</a>
+        <div id="top-bar">
+            <div class="contain-1120">
+                <div id="left">
+                    <div id="northwestern">
+                        <a href="http://www.northwestern.edu/" title="Northwestern University Home"><span class="hide-label">Northwestern University</span></a>
+                    </div>
+                    <div id="parent-unit">
+                        <a href="#">Parent Unit Name</a>
+                    </div>
+                </div>
+                <nav id="global-links" aria-label="global links">
+                    <ul>
+                        <li><a href="#">Global Link 1</a></li>
+                        <li><a href="#">Global Link 2</a></li>
+                        <li><a href="#">Global Link 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <nav id="quick-links" aria-label="quick links">
+            <ul>
+                <li><a href="#">Quick Link 1</a></li>
+                <li><a href="#">Quick Link 2</a></li>
+                <li><a href="#">Quick Link 3</a></li>
+            </ul>
+        </nav>
+        <div id="bottom-bar" class="contain-1120">
+            <div id="site-name">
+                <a href="#">Site Name</a>
+            </div>
+            <!-- search -->
+            <div id="search" class="hide-mobile">
+                <div class="search-form">
+                    <form action="https://search.northwestern.edu/" method="get" role="search">
+                        <label class="hide-label" for="q-desktop">Search this site</label>
+                        <input id="q-desktop" name="q" placeholder="Search this site" type="text">
+                        <input name="as_sitesearch" type="hidden" value="https://your.site.url">
+                        <input name="sitetitle" type="hidden" value="Your Site Name">
+                        <button type="submit"><span class="hide-label">Search</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- mobile navigation and search -->
+        <div id="mobile-links">
+            <a href="#mobile-nav" class="mobile-link mobile-nav-link"><span class="hide-label">Menu</span></a>
+            <!-- mobile nav -->
+            <!-- three levels are recommended, six levels are the maximum -->
+            <nav id="mobile-nav" aria-label="mobile menu">
+                <!-- first level -->
+                <ul>
+                    <li tabindex="0"><a aria-haspopup="true" href="#" role="button">Academics<span class="arrow"></span></a>
+                        <!-- second level -->
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Academics Overview</a></li>
+                            <li><a aria-haspopup="true" href="#" role="button">Degree Options<span class="arrow"></span></a>
+                                <!-- third level -->
+                                <ul aria-expanded="false" aria-hidden="true">
+                                    <li class="home"><a href="#">Degree Options Overview</a></li>
+                                    <li><a aria-haspopup="true" href="#" role="button">Majors and Minors<span class="arrow"></span></a>
+                                        <!-- fourth level -->
+                                        <ul aria-expanded="false" aria-hidden="true">
+                                            <li class="home"><a href="#">Majors and Minors Overview</a></li>
+                                            <li><a aria-haspopup="true" href="#" role="button">Majors<span class="arrow"></span></a>
+                                                <!-- fifth level -->
+                                                <ul aria-expanded="false" aria-hidden="true">
+                                                    <li class="home"><a href="#">Majors Overview</a></li>
+                                                    <li><a aria-haspopup="true" href="#" role="button">Majors by School<span class="arrow"></span></a>
+                                                        <!-- sixth level -->
+                                                        <ul aria-expanded="false" aria-hidden="true">
+                                                            <li class="home"><a href="#">Majors by School Overview</a></li>
+                                                            <li><a href="#">Weinberg Majors</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Link</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Minors</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Student Life<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Student Life Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Tuition &amp; Aid<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Tuition &amp; Aid Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Visit and Engage<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Visit and Engage Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">Apply<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">Apply Overview</a></li>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true" href="#" role="button">FAQs<span class="arrow"></span></a>
+                        <ul aria-expanded="false" aria-hidden="true">
+                            <li class="home"><a href="#">FAQs Overview</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="mobile-nav-bottom">
+                    <!-- from #global-links -->
+                    <ul id="mobile-nav-bottom-left">
+                        <li><a href="#">Global Link 1</a></li>
+                        <li><a href="#">Global Link 2</a></li>
+                        <li><a href="#">Global Link 3</a></li>
+                    </ul>
+                    <!-- from #quick-links -->
+                    <ul id="mobile-nav-bottom-right">
+                        <li><a href="#">Quick Link 1</a></li>
+                        <li><a href="#">Quick Link 2</a></li>
+                        <li><a href="#">Quick Link 3</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="#mobile-search" class="mobile-link mobile-search-link"><span class="hide-label">Search</span></a>
+            <!-- mobile search -->
+            <div id="mobile-search">
+                <div class="search-form">
+                    <form action="https://search.northwestern.edu/" method="get" role="search">
+                        <label class="hide-label" for="q-mobile">Search this site</label> 
+                        <input id="q-mobile" name="q" placeholder="Search this site" type="text"> 
+                        <input name="as_sitesearch" type="hidden" value="https://YOUR.SITE.URL"> 
+                        <input name="sitetitle" type="hidden" value="Your Site Name"> 
+                        <button type="submit"><span class="hide-label">Search</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="top-nav" aria-label="main menu">
+        <ul>
+            <li id="menu1"><a href="#">Academics <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu1">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Academics Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu2"><a href="#">Student Life <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu2">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Student Life Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu3"><a href="#">Tuition &amp; Aid <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu3">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Tuition &amp; Aid Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu4"><a href="#">Visit and Engage <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu4">
+                    <li>
+                        <ul class="overview">
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Visit and Engage Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu5"><a href="#">Apply <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu5">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">Apply Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu6"><a href="#">FAQs <span class="dropdown-arrow"></span></a>
+                <ul class="dropdown-basic" aria-labelledby="menu6">
+                    <li>
+                        <ul>
+                            <!-- first link should be index page -->
+                            <li class="home"><a href="#">FAQs Overview</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="standard-wrap">
+            <nav id="left-nav" aria-label="section navigation menu" tabindex="-1">
+                <div class="section-name"><a href="#">Section Header</a></div>
+                <ul>
+                    <li><a href="../index.html" class="active">Active Parent</a>
+                        <ul>
+                            <li><a href="#" class="active">Active Child</a>
+                                <ul>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#" class="active">Active Grandchild</a>
+                                        <ul class="open">
+                                            <li><a href="#" class="active">Active Link</a></li>
+                                            <li><a href="#">Link</a></li>
+                                        </ul>                    
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </nav>
+            <div class="content" tabindex="-1">
+                <ul id="breadcrumbs">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Active Page</li>
+                </ul>
+                <h1>Standard Content Page</h1>
+                <div id="sidebar">        
+                    <div class="box">
+                        <h2>H2 Header</h2>
+                        <p>Lorum ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor.</p>
+                        <ul>
+                            <li><a href="#">Lorum ipsum dolor sit amet</a></li>
+                            <li><a href="#">Lorum ipsum dolor sit amet</a></li>
+                        </ul>
+                        <h3>Optional H3 Subhead</h3>
+                        <p>Lorum ipsum dolor sit amet</p>
+                    </div>       
+                </div>
+                <p>This page shows default styles for wysiwyg features on a basic content page.</p>
+
+                <p>The default link style is <a href="#">bold and purple with a dashed bottom border</a>. If a dashed bottom border is undesireable, use &lt;a href=&quot;#&quot; class=&quot;no-dash&quot;&gt;.</p>
+                <p>You can also apply an arrow link style by using: &lt;p class=&quot;arrow-link&quot;&gt;&lt;a href=&quot;#&quot;&gt;Arrow Link&lt;/a&gt;&lt;/p&gt;. This also works on spans and anchors but anchor classes have less desireable results.</p>
+                <p class="arrow-link"><a href="#"><em>arrow-link</em> class on paragraph</a></p>
+                <p><span class="arrow-link"><a href="#"><em>arrow-link</em> class on span</a></span></p>
+                <p><a href="#" class="arrow-link"><em>arrow-link</em> class on anchor</a></p>            
+
+                <p>Similarly, you can add an external link icon: &lt;a href=&quot;#&quot; class=&quot;external-link&quot;&gt;. It will also work on paragraphs and spans as shown below.</p>
+                <p class="external-link"><a href="#"><em>external-link</em> class on paragraph</a></p>
+                <p><span class="external-link"><a href="#"><em>external-link</em> class on span</a></span></p>
+                <p><a href="#" class="external-link"><em>external-link</em> class on anchor</a></p>  
+
+                <p>Horizontal rule below:</p>
+                <hr>
+
+                <h2>Headings</h2>
+                <p>The <strong>&lt;h1&gt;</strong> should be only used once and is reserved for the page title. Body copy headings should begin with an <strong>&lt;h2&gt;</strong>. Other heading examples below:</p>
+                <h2>Heading H2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</p>
+                <h3>Heading H3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</p>
+                <h4>Heading H4</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</p>
+                <h5>Heading H5</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</p>
+                <h6>Heading H6</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</p>
+
+                <h2>Lists</h2>
+                <p>Below are examples of list styles:</p>
+                <h3>Nested Unordered</h3>
+                <ul>
+                    <li>Unordered item 1.1</li>
+                    <li>Unordered item 1.2
+                        <ul>
+                            <li>Unordered item 2.1</li>
+                            <li>Unordered item 2.2
+                                <ul>
+                                    <li>Unordered item 3.1</li>
+                                    <li>Unordered item 3.2</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Unordered with Nested Ordered</h3>
+                <ul>
+                    <li>Unordered item 1.1</li>
+                    <li>Unordered item 1.2
+                        <ol>
+                            <li>Ordered item 2.1</li>
+                            <li>Ordered item 2.2
+                        </ol>
+                    </li>
+                </ul>        
+                <h3>Nested Ordered</h3>      
+                <ol>
+                    <li>Ordered item 1.1</li>
+                    <li>Ordered item 1.2
+                        <ol>
+                            <li>Ordered item 2.1</li>
+                            <li>Ordered item 2.2
+                                <ol>
+                                    <li>Ordered item 3.1</li>
+                                    <li>Ordered item 3.2</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+                <h3>Ordered with Nested Unordered</h3>     
+                <ol>
+                    <li>Ordered item 1.1</li>
+                    <li>Ordered item 1.2
+                        <ul>
+                            <li>Unordered item 2.1</li>
+                            <li>Unordered item 2.2
+                        </ul>
+                    </li>
+                </ol>
+                <h3>Two Column Unordered List</h3>
+                <p>Use &lt;ul class=&quot;two-column-list&quot;&gt; This class can also be used on an ordered list.</p>
+                <ul class="two-column-list">
+                    <li>Unordered item 1</li>
+                    <li>Unordered item 2</li>
+                    <li>Unordered item 3</li>
+                    <li>Unordered item 4</li>
+                    <li>Unordered item 5</li>
+                    <li>Unordered item 6</li>
+                </ul>
+
+                <h3>Large Ordered List</h3>
+                <p>Use &lt;ol class=&quot;steps&quot;&gt; for the result below:</p>
+                <ol class="steps">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>   
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>  
+                </ol>
+
+                <h2>A to Z Listing</h2>
+                <p>Use &lt;ul class=&quot;a-to-z&quot;&gt; to style A-Z jump menus or sorting. Feel free to add additional styles and functionality.</p>
+                <ul class="a-to-z" aria-label="Click a letter from the alphabet to filter by">
+                    <li><a href="#a">a</a></li>
+                    <li><a href="#b">b</a></li>
+                    <li><a href="#c">c</a></li>
+                    <li><a href="#d">d</a></li>
+                    <li><a href="#e">e</a></li>
+                    <li><a href="#f">f</a></li>
+                    <li><a href="#g">g</a></li>
+                    <li><a href="#h">h</a></li>
+                    <li><a href="#i">i</a></li>
+                    <li><a href="#j">j</a></li>
+                    <li><a href="#k">k</a></li>
+                    <li><a href="#l">l</a></li>
+                    <li><a href="#m">m</a></li>
+                    <li><a href="#n">n</a></li>
+                    <li><a href="#o">o</a></li>
+                    <li><a href="#p">p</a></li>
+                    <li><a href="#q">q</a></li>
+                    <li><a href="#r">r</a></li>
+                    <li><a href="#s">s</a></li>
+                    <li><a href="#t">t</a></li>
+                    <li><a href="#u">u</a></li>
+                    <li><a href="#v">v</a></li>
+                    <li><a href="#w">w</a></li>
+                    <li><a href="#x">x</a></li>
+                    <li><a href="#z">z</a></li>
+                </ul>
+
+                <h2>Tables</h2>
+                <p>Tables are automatically wrapped in a "responsive-table" div for mobile scrolling with default table row stripe and table row hover options.</p>
+                <p>Multiple classes can be used on the same &lt;table&gt; to achieve your desired outcome. You can use following classes:</p>
+                <ul>
+                    <li>&lt;table class=&quot;table-borders&quot;&gt; - adds a light grey border around table and cell</li>
+                    <li>&lt;table class=&quot;table-no-stripe&quot;&gt; - removes alternating grey  row stripes</li>
+                    <li>&lt;table class=&quot;table-no-hover&quot;&gt; - removes purple table row hover state</li>
+                    <li>&lt;table class=&quot;table-center-header&quot;&gt; - centers all text within &lt;th&gt;</li>
+                </ul>
+                <h3>Standard Table</h3>
+                <table>
+                    <caption>This is a caption for a standard table.</caption>
+                    <tbody>
+                        <tr>
+                            <th>Table column 1</th>
+                            <th>Table column 2</th>
+                            <th>Table column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Table row 1</td>
+                            <td>Table cell</td>
+                            <td>Table cell with longer line and with_some_unbreakable_text to see what happens</td>
+                        </tr>
+                        <tr>
+                            <td>Table row 2</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td>Table row 1</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>                    
+                    </tbody>
+                </table>     
+                <h3>Table (with borders)</h3>
+                <p>Use &lt;table class=&quot;table-borders&quot;&gt;</p>
+                <table class="table-borders">
+                    <caption>This is a caption for table with borders.</caption>
+                    <tbody>
+                        <tr>
+                            <th>Table column 1</th>
+                            <th>Table column 2</th>
+                            <th>Table column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Table row 1</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td>Table row 2</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td>Table row 1</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>                    
+                    </tbody>
+                </table>             
+                <h3>Table (no hover)</h3>
+                <p>Use &lt;table class=&quot;table-no-hover&quot;&gt;</p>
+                <table class="table-no-hover">
+                    <caption>This is a caption for a table with no hover state.</caption>
+                    <tbody>
+                        <tr>
+                            <th>Table column 1</th>
+                            <th>Table column 2</th>
+                            <th>Table column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Table row 1</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td>Table row 2</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td>Table row 1</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>                    
+                    </tbody>
+                </table>
+                <h3>Table (no alternating stripes)</h3>
+                <p>Use &lt;table class=&quot;table-no-stripe&quot;&gt;</p>
+                <table class="table-no-stripe">
+                    <caption>This is a caption for a table with no alternating stripes.</caption>
+                    <tbody>
+                        <tr>
+                            <th>Table column 1</th>
+                            <th>Table column 2</th>
+                            <th>Table column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Table row 1</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td>Table row 2</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td>Table row 1</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>                    
+                    </tbody>
+                </table>            
+
+                <h2>Floating Images</h2>
+                <p>Images can float left, float right or be centered.</p>            
+                <h3>Float Left</h3>
+                <img class="align-image-left" src="images/265x265.png" alt="" />
+                <p>To float an image left, apply class=&quot;align-image-left&quot; to the image tag.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris. Vestibulum <a href="#">dignissim mauris</a> nec dolor semper commodo. Sed nibh sapien, mollis eget congue non, congue accumsan diam. 
+                <p>Maecenas blandit neque nisl, id egestas velit. Aliquam convallis dictum enim, gravida scelerisque odio sollicitudin at. Duis fringilla luctus mi, ultrices facilisis ipsum ultricies sit amet.</p>
+                <h3>Float Right</h3>
+                <img class="align-image-right" src="images/265x265.png" alt="" />
+                <p>To float an image right, apply the class=&quot;align-image-right&quot; to the image tag.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at faucibus dolor. Fusce vel vulputate nulla. In consectetur elit interdum justo imperdiet hendrerit. Vestibulum in bibendum mauris. Vestibulum <a href="#">dignissim mauris</a> nec dolor semper commodo. Sed nibh sapien, mollis eget congue non, congue accumsan diam. 
+                <p>Maecenas blandit neque nisl, id egestas velit. Aliquam convallis dictum enim, gravida scelerisque odio sollicitudin at. Duis fringilla luctus mi, ultrices facilisis ipsum ultricies sit amet.</p>
+                <h3>Centered Image</h3>
+                <img class="align-image-center" src="images/265x265.png" alt="" />
+                <p>To center an image, apply class=&quot;align-image-center&quot; to the image tag.</p>
+                
+                <h2>Captioned Images</h2>
+                <h3>Horizontal image right</h3>
+                <p>Lorem ipsum dolor sit amet, in ante voluptate dictum sit ullamcorper, quis erat in arcu, posuere sed odio, et vivamus vitae consectetuer egestas rutrum. Nullam vivamus elit. Ornare nullam sed aliquam lorem faucibus, odio nunc justo felis, porttitor ut, orci nullam maecenas aliquet, ut consectetuer turpis natoque.</p>
+
+                <figure class="horizontal-image-right">
+                    <img src="images/335x240.png" alt="">
+                    <figcaption>
+                        Use class=&quot;horizontal-image-right&quot;. Can also be horizontal-image-left. Width must be 335px.
+                    </figcaption>
+                </figure>
+
+                <p>Laoreet justo sed, ultricies libero lectus enim wisi, erat sed sem id. Amet lectus hendrerit bibendum curabitur nunc. Mauris a massa dolor eget, metus luctus, malesuada dis posuere nunc ac ac, per a wisi id, ipsum lectus et.</p>
+                <p>Dui quis faucibus purus neque amet ac, hac ac nec vestibulum libero. Justo sem tortor morbi nec rhoncus. At tempus et tellus. Sodales primis suscipit sed proin, nibh praesent, eget vestibulum leo quam ipsum tempor, fermentum at. In leo arcu, fringilla dolor pulvinar, quis et, eu sapien at eu tortor suspendisse, ullamco ornare sodales eget.</p>
+
+                <figure class="vertical-image-left">
+                    <img src="images/240x320.png" alt="">
+                    <figcaption>
+                        Use class=&quot;vertical-image-left&quot;. Can also be vertical-image-right. Width must be 240px.
+                    </figcaption>
+                </figure>
+
+                <p>Lorem ipsum dolor sit amet, in ante voluptate dictum sit ullamcorper, quis erat in arcu, posuere sed odio, et vivamus vitae consectetuer egestas rutrum. Nullam vivamus elit. Ornare nullam sed aliquam lorem faucibus, odio nunc justo felis, porttitor ut, orci nullam maecenas aliquet, ut consectetuer turpis natoque.</p>
+                <p>Laoreet justo sed, ultricies libero lectus enim wisi, erat sed sem id. Amet lectus hendrerit bibendum curabitur nunc. Mauris a massa dolor eget, metus luctus, malesuada dis posuere nunc ac ac, per a wisi id, ipsum lectus et.</p>
+                <p>Dui quis faucibus purus neque amet ac, hac ac nec vestibulum libero. Justo sem tortor morbi nec rhoncus. At tempus et tellus. Sodales primis suscipit sed proin, nibh praesent, eget vestibulum leo quam ipsum tempor, fermentum at. In leo arcu, fringilla dolor pulvinar, quis et, eu sapien at eu tortor suspendisse, ullamco ornare sodales eget.</p>
+
+                <figure class="portrait-image-right">
+                    <img src="images/170x220.png" alt="">
+                    <figcaption>
+                        Use class=&quot;portrait-image-right&quot;. Can also be portrait-image-left. Width must be 170px.
+                    </figcaption>
+                </figure>
+
+                <p>Lorem ipsum dolor sit amet, in ante voluptate dictum sit ullamcorper, quis erat in arcu, posuere sed odio, et vivamus vitae consectetuer egestas rutrum. Nullam vivamus elit. Ornare nullam sed aliquam lorem faucibus, odio nunc justo felis, porttitor ut, orci nullam maecenas aliquet, ut consectetuer turpis natoque.</p>
+                <p>Laoreet justo sed, ultricies libero lectus enim wisi, erat sed sem id. Amet lectus hendrerit bibendum curabitur nunc. Mauris a massa dolor eget, metus luctus, malesuada dis posuere nunc ac ac, per a wisi id, ipsum lectus et.</p>
+                <p>Dui quis faucibus purus neque amet ac, hac ac nec vestibulum libero. Justo sem tortor morbi nec rhoncus. At tempus et tellus. Sodales primis suscipit sed proin, nibh praesent, eget vestibulum leo quam ipsum tempor, fermentum at. In leo arcu, fringilla dolor pulvinar, quis et, eu sapien at eu tortor suspendisse, ullamco ornare sodales eget.</p>            
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contain-1120">
+            <a href="https://www.northwestern.edu">
+                <div class="footer-logo"><span class="hide-text">Northwestern University</span></div>
+            </a>
+            <div class="footer-wrap">
+                <div class="footer-content contact">
+                    <h2>Department Name Goes Here</h2>
+                    <div class="address">
+                        <div class="icon">
+                            <span>Address</span>
+                        </div>
+                        <div class="text">
+                            <p>123 Sheridan Road<br>
+                                Suite 100<br>
+                            Evanston, IL 60208</p>
+                        </div>
+                    </div>
+                    <div class="phone">
+                        <div class="icon">
+                            <span>Phone number</span>
+                        </div>
+                        <div class="text">
+                            <p><strong>Header option</strong><br>
+                            (123) 456-7890</p>
+                            <p><strong>Header option</strong><br>
+                            (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="fax">
+                        <div class="icon">
+                            <span>Fax number</span>
+                        </div>
+                        <div class="text">
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <div class="icon">
+                            <span>Email address</span>
+                        </div>
+                        <div class="text">
+                            <p><a href="#">your-department@northwestern.edu</a></p>
+                        </div>
+                    </div>
+                    <div class="feedback">
+                        <div class="icon">
+                            <span>Feedback</span>
+                        </div>
+                        <div class="text">
+                            <p><a href="#">Feedback</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content connect">
+                    <h2>Connect</h2>
+                    <a href="#" class="social facebook">Facebook</a>
+                    <a href="#" class="social twitter">Twitter</a>
+                    <a href="#" class="social social instagram">Instagram</a>
+                    <a href="#" class="social rss">RSS</a>
+                    <a href="#" class="social youtube">YouTube</a>
+                    <a href="#" class="social tumblr">Tumblr</a>
+                    <a href="#" class="social wordpress">WordPress</a>
+                    <a href="#" class="social futurity">Futurity</a>
+                    <a href="#" class="social vimeo">Vimeo</a>
+                    <a href="#" class="social linkedin">Linkedin</a>
+                    <a href="#" class="social google-groups">Google Groups</a>
+                    <a href="#" class="social blog">Blog</a>
+                    <a href="#" class="social github">Github</a>
+                    <a href="#" class="social flickr">Flickr</a>
+                    <a href="#" class="social storify">Storify</a>
+                    <a href="#" class="social pinterest">Pinterest</a>
+                    <a href="#" class="social we-will">We Will</a>
+                    <a href="#" class="social spotify">Spotify</a>
+                    <div id="cta">
+                        <h3>Call to Action</h3>
+                        <p>Lorum ipsum dolor sit amet.</p>
+                        <p class="button"><a href="#">Button Text</a></p>
+                    </div>
+                </div>
+                <div class="footer-content links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#">Link 1 is a really long title</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                        <li><a href="#">Link 5</a></li>
+                        <li><a href="#">Link 6</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content resources">
+                    <h2>Northwestern Resources</h2>
+                    <ul>
+                        <li><a href="https://www.northwestern.edu/accessibility">Accessibility</a></li>
+                        <li><a href="https://www.northwestern.edu/emergency/index.html">Campus Emergency Information</a></li>
+                        <li><a href="https://www.northwestern.edu/hr/careers/">Careers</a></li>
+                        <li><a href="https://www.northwestern.edu/contact.html">Contact Northwestern University</a></li>
+                        <li><a href="https://policies.northwestern.edu/">University Policies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            <div class="contain-1120">
+                <span class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Northwestern University</span>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/NorthwesternU">
+                            <span class="social facebook">Facebook</span>
+                            <span class="text">@NorthwesternU</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/northwesternu">
+                            <span class="social twitter">Twitter</span>
+                            <span class="text">@northwesternU</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/northwesternu">
+                            <span class="social instagram">Instagram</span>
+                            <span class="text">@northwesternu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/NorthwesternU">
+                            <span class="social youtube">YouTube</span>
+                            <span class="text">@NorthwesternU</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.futurity.org/university/northwestern-university/">
+                            <span class="social futurity">Futurity</span>
+                            <span class="text">Futurity</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://news.northwestern.edu/feeds/allStories">
+                            <span class="social rss">RSS</span>
+                            <span class="text">RSS Feed</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="right"><a href="https://www.northwestern.edu/disclaimer.html">Disclaimer</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+</body>
+</html>

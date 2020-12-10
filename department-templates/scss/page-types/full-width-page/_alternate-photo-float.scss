@@ -1,0 +1,253 @@
+// alternating photo float (images and text)
+
+.full-width-page {
+
+    .alternate-photo-float {
+        margin-bottom: 5rem;
+        @extend %clearfix;
+        
+        h3 {
+            font: 30px $AkkuratProRegular;
+            color: $rich-black-50;
+            border-bottom: 4px solid $medium-grey;
+            text-transform: none;
+            padding-bottom: .5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .image-left,
+        .image-right,
+        .text {
+            width: 550px / 1120px * 100%; 
+            max-width: 550px;
+            margin-right: 40px / 1120px * 100%; 
+            float: left;
+            position: relative;
+            max-height: 310px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            &.background { // when using text over image
+                @extend %gradient-overlay;
+            }
+        }
+        
+        .text {    
+            width: 530px / 1120px * 100%; 
+            max-width: 530px;  
+            margin-right: 40px / 1120px * 100%;
+            max-height: none;       
+        
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                column-count: 2;
+                -webkit-column-gap: 2rem;
+                -moz-column-gap: 2rem;
+                column-gap: 2rem;
+                margin: 0;
+                padding: 0;  
+                
+                li {
+                    background: none;
+                    padding: 0 0 .5rem 0;
+                    line-height: 1.5em;
+                    -webkit-column-break-inside: avoid;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+            }
+            
+            .column { // multiple column option
+                width: 45%;
+                margin-right: 5%;
+                float: left;
+                
+                &:last-child {
+                    margin-right: 0;
+                }
+                
+                ul {
+                    -moz-column-count: 1;
+                    -webkit-column-count: 1;
+                    column-count: 1;
+                    -webkit-column-gap: normal;
+                    -moz-column-gap: normal;
+                    column-gap: normal;
+                }
+            }
+            
+            img {
+                z-index: 30;
+            }
+        }
+        
+        .text-over-image {
+            position: absolute;
+            top: 3rem; 
+            margin: auto;
+            width: 100%;            
+            color: $white;
+            text-align: center;
+            z-index: 31;
+            padding: 0 1em;
+            
+            .big {
+                font: 72px/1.3em $CamptonBold;
+            }
+            
+            .small {
+                font: 24px/1.3em $CamptonExtraBold;
+            }
+        }
+    }
+
+    @media screen and (max-width: 71.875em) {
+        
+        .alternate-photo-float { 
+            margin: 0 1rem 2rem 1rem;
+            
+            .quote {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 56.25em) {
+        
+        .alternate-photo-float { 
+            
+            .quote {
+                font-size: 18px;
+            }
+
+            .text-over-image {
+                top: 1rem; // positions text
+
+                .big {
+                    font-size: 58px;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 54.6875em) {
+        
+        .alternate-photo-float {
+            @include flexbox;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;  
+            margin-bottom: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 550px;
+
+            h3 {
+                font-size: 24px;
+                margin-top: 1rem;
+            }
+
+            .image-left,
+            .image-right,
+            .text  {
+                width: 100%; 
+                float: none;
+                position: relative;
+                margin-right: 0;
+
+                &:last-child {
+                    margin-right: auto;
+                }         
+            }
+
+            .image-right {
+                -webkit-order: -1;
+                -ms-flex-order: -1;
+                order: -1; // flexbox moves content to top
+            }
+            
+            .image-right, .image-left {
+                margin-bottom: 1rem;
+            }
+
+            .text-over-image {
+                top: 20%; // positions text
+            }
+        }
+    }
+    
+    @media screen and (max-width: 48em) {
+        
+        .alternate-photo-float {
+            
+            .text {
+                padding: 0 1rem;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 40em) {
+        
+        .alternate-photo-float {
+            
+            .text-over-image {
+                top: 1em; // positions text
+                font-size: 20px;
+
+                .big {
+                    font-size: 42px;
+                }
+            }
+
+            .text {
+                .column { // multiple column option
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 26.25em) {
+        
+        .alternate-photo-float {
+            
+            .text {
+                
+                ul {
+                    -moz-column-count: inherit;
+                    -moz-column-gap: inherit;;
+                    -webkit-column-count: inherit;
+                    -webkit-column-gap: inherit;
+                    column-count: inherit;
+                    column-gap: inherit;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 23.75em) {
+        
+        .alternate-photo-float {
+            
+            .text-over-image {
+                font-size: 18px;
+                line-height: 1em;
+
+                .big {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}

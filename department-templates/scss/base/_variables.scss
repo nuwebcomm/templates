@@ -1,19 +1,18 @@
 // variables
 
-// path to image and font files - the default is common.northwestern.edu and can be http or https
+// path to font files
 $path-fonts: 'https://common.northwestern.edu/v8/css/fonts';
-$path-images: 'https://common.northwestern.edu/v8/css/images';
 
 // comment in/out as necessary for custom projects
-    // path to Cascade files:
+    // path to CMS files:
 
-//        $open: '[system-asset]/css/';
-//        $close: '[/system-asset]';
+//    $open: '[system-asset]/dept/3.0/';
+//    $close: '[/system-asset]';
 
     // path to local files:
 
-//        $open: '';
-//        $close: '';
+    $open: '';
+    $close: '';
 
 // colors
 
@@ -66,3 +65,6 @@ $CamptonBook: "Campton Book", Tahoma, sans-serif;
 $CamptonBold: "Campton Bold", Impact, sans-serif;
 $CamptonExtraBold: "Campton Extra Bold", Impact, sans-serif;
 $CamptonExtraLight: "Campton Extra Light", "Courier New", sans-serif;
+$PeriodicoLightItalic: "Periodico Light Italic", Georgia, serif;
+$PeriodicoRegularItalic: "Periodico Regular Italic", Georgia, serif;
+$PeriodicoBoldItalic: "Periodico Bold Italic", Georgia, serif;
