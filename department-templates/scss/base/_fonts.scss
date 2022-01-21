@@ -71,22 +71,15 @@
 }
 
 @font-face {
-    font-family: "Periodico Light Italic";
-    src: url("#{$path-fonts}/PeriodicoLightItalic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
+    font-family: "Noto Serif Italic";
+    font-style: italic;
+    font-weight: 400;
+    src: url("#{$path-fonts}/nn/noto-serif-v16-latin-italic.woff") format('woff');
 }
 
 @font-face {
-    font-family: "Periodico Regular Italic";
-    src: url("#{$path-fonts}/PeriodicoRegularItalic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
-}
-
-@font-face {
-    font-family: "Periodico Bold Italic";
-    src: url("#{$path-fonts}/PeriodicoBoldItalic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;        
+    font-family: "Noto Serif Bold Italic";
+    font-style: italic;
+    font-weight: 700;
+    src: url("#{$path-fonts}/nn/noto-serif-v16-latin-700italic.woff") format('woff');
 }

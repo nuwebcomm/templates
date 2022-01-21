@@ -120,7 +120,7 @@
                     
                     &.home { // for overview link
                         margin-left: -1rem;
-                        font-family: $PeriodicoBoldItalic;
+                        font-family: $NotoSerifBoldItalic;
                     
                         a:after {
                             background: url("#{$open}images/icons/arrow-thin-right-purple.svg#{$close}") no-repeat 50%;
